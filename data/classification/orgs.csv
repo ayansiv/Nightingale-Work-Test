@@ -19,150 +19,160 @@
 #
 # Coverage note: the top 100 orgs by posting count carry 76% of AI-relevant roles. The long tail
 # is deliberately left untagged rather than guessed — see the untagged handling in ingest-roles.ts.
-org,primary_agenda_id,secondary_agenda_ids,maturity_tier,confidence,note
-Anthropic,iterative_alignment_at_post_train_time,sparse_coding;control;model_specs_and_constitutions;ai_scheming_evals;character_training_and_persona_steering;safeguards_inference_time_auxiliaries;chain_of_thought_monitoring;various_redteams;model_values_model_preferences;pol_security_infosec;reverse_engineering,established,high,"Frontier lab. Runs several agendas at once; single primary is a compression, per the spec §7 caveat on orgs as points."
-OpenAI,iterative_alignment_at_post_train_time,supervising_ais_improving_ais;capability_evals;weak_to_strong_generalization;chain_of_thought_monitoring;safeguards_inference_time_auxiliaries;various_redteams;pol_security_infosec;aligned_to_who;autonomy_evals,established,high,"Frontier lab. Alignment, Safety Systems, Preparedness and Model Policy teams."
-Google DeepMind,iterative_alignment_at_post_train_time,debate;sparse_coding;capability_evals;agent_foundations;safeguards_inference_time_auxiliaries;chain_of_thought_monitoring;various_redteams;autonomy_evals,established,high,"Frontier lab. Source names amplified oversight, interpretability and automated alignment."
-xAI,various_redteams,capability_evals,established,low,"Applied Safety and Model Evaluation teams; source describes the safety focus as nominal and misuse-oriented."
-Meta,iterative_alignment_at_post_train_time,harm_reduction_for_open_weights,established,low,"Safety work integrated into capabilities; FAIR Alignment team."
-Apollo Research,ai_scheming_evals,ai_deception_evals;sandbagging_evals;chain_of_thought_monitoring,established,high,"Scheming and deception evaluations are the org's public identity."
-Redwood Research,control,ai_scheming_evals;chain_of_thought_monitoring,established,high,"Originated the control agenda."
-Goodfire,sparse_coding,reverse_engineering;pragmatic_interpretability;activation_engineering,new_entrant,high,"Interpretability company."
-Transluce,pragmatic_interpretability,other_interpretability;extracting_latent_knowledge;various_redteams;ai_explanations_of_ais,new_entrant,high,"Open interpretability and model-behaviour tooling."
-Tilde Research,sparse_coding,reverse_engineering;representation_structure_and_geometry,new_entrant,high,"Interpretability startup."
-EleutherAI,harm_reduction_for_open_weights,data_filtering;other_interpretability,established,medium,"Open-weights research org."
-Model Evaluation and Threat Research,autonomy_evals,capability_evals;agi_metrics,established,high,"METR. Autonomy and time-horizon evaluation."
-Gray Swan,various_redteams,capability_evals;safeguards_inference_time_auxiliaries,new_entrant,high,"Adversarial robustness and red-teaming products."
-Haize Labs,various_redteams,capability_evals,new_entrant,high,"Red-teaming and evaluation."
-White Circle,various_redteams,safeguards_inference_time_auxiliaries,new_entrant,medium,"Guardrails and moderation evaluation."
-Palisade Research,capability_evals,various_redteams;self_replication_evals,new_entrant,high,"Demonstrates offensive capabilities to inform policy."
-Apart Research,various_redteams,other_evals;other_interpretability,new_entrant,medium,"Distributed research sprints across several agendas."
-FAR AI,other_interpretability,various_redteams;control;ai_deception_evals;capability_evals;theory_for_aligning_multiple_ais,established,medium,"Research org with a broad technical portfolio plus field-building."
-Alignment Research Center,heuristic_explanations,asymptotic_guarantees;extracting_latent_knowledge,established,high,"ARC theory. Heuristic arguments and formal explanation."
-Machine Intelligence Research Institute,pol_public_narrative,agent_foundations;other_corrigibility;pol_frontier_regulation,established,high,"Now substantially communications-focused, but the research identity remains agent foundations."
-Center on Long-Term Risk,theory_for_aligning_multiple_ais,tools_for_aligning_multiple_ais;aligning_to_context,established,high,"Multi-agent conflict and cooperative AI."
-LawZero,scientist_ai,guaranteed_safe_ai;asymptotic_guarantees,new_entrant,high,"Bengio's non-agentic Scientist AI programme."
-Atlas Computing,guaranteed_safe_ai,asymptotic_guarantees,new_entrant,high,"Safety-by-construction and formal specification tooling."
-Beneficial AI Foundation,agent_foundations,behavior_alignment_theory,new_entrant,low,"Thin public evidence; low confidence."
-AIXI Labs,the_learning_theoretic_agenda,agent_foundations,new_entrant,medium,"Name signals the learning-theoretic tradition."
-Principia,agent_foundations,natural_abstractions,new_entrant,low,"Thin public evidence."
-Neo Research,other_interpretability,reverse_engineering,new_entrant,low,"Thin public evidence."
-Timaeus,learning_dynamics_and_developmental_interpretability,sparse_coding,new_entrant,high,"Developmental interpretability and singular learning theory."
-Simplex,learning_dynamics_and_developmental_interpretability,representation_structure_and_geometry,new_entrant,medium,"Computational mechanics applied to model internals."
-Elicit,supervising_ais_improving_ais,ai_explanations_of_ais,established,medium,"Automating research workflows; adjacent to the make-AI-solve-it family."
-Andon Labs,autonomy_evals,capability_evals;various_redteams,new_entrant,medium,"Agentic evaluation in embodied and long-horizon settings."
-Aligned AI,capability_removal_unlearning,mild_optimisation,new_entrant,medium,"Concept extrapolation and goal generalisation."
-Conjecture,other_interpretability,pol_public_narrative,established,low,"Direction has shifted; low confidence."
-AE Studio,the_neglected_approaches_approach,other_interpretability,new_entrant,high,"Explicitly runs the neglected-approaches portfolio."
-Meridian Labs,other_interpretability,various_redteams,new_entrant,low,"Thin public evidence."
-Syntony,other_interpretability,safeguards_inference_time_auxiliaries,new_entrant,low,"Thin public evidence."
-Resolution,various_redteams,capability_evals,new_entrant,low,"Thin public evidence."
-Frame,other_evals,various_redteams,new_entrant,low,"Thin public evidence."
-Augur,other_evals,capability_evals,new_entrant,low,"Thin public evidence."
-0Labs,other_interpretability,,new_entrant,low,"Thin public evidence."
-Alice,pol_security_infosec,various_redteams;safeguards_inference_time_auxiliaries;wmd_evals_weapons_of_mass_destruction,new_entrant,low,"Role mix is dominated by information security."
-Irregular,pol_security_infosec,various_redteams;capability_evals,new_entrant,high,"Frontier security evaluation; formerly Pattern Labs."
-10a Labs,pol_security_infosec,various_redteams,new_entrant,medium,"Trust, safety and threat intelligence."
-Intelligence Security Laboratories,pol_security_infosec,,new_entrant,medium,"Security-focused."
-Asymmetric Security,pol_security_infosec,,new_entrant,low,"Thin public evidence."
-SL5 Task Force,pol_security_infosec,pol_testing_evaluation;pol_state_capacity,new_entrant,high,"Named for the RSP security level; the entire remit is securing frontier weights."
-Trajectory Labs,pol_security_infosec,various_redteams,new_entrant,low,"Role mix dominated by security and engineering."
-Pattern Labs,pol_security_infosec,various_redteams,new_entrant,medium,"Security evaluation."
-"UK Government, AI Security Institute",capability_evals,autonomy_evals;wmd_evals_weapons_of_mass_destruction;pol_testing_evaluation;various_redteams;control;pol_security_infosec;ai_scheming_evals,established,high,"State evaluation capacity. Tagged technical because the published output is evaluations."
-"US Government, National Institute of Standards and Technology",pol_testing_evaluation,capability_evals,structurally_understaffed,high,"NIST/CAISI. Standards and measurement remit far exceeds headcount."
-"European Union, AI Office",pol_frontier_regulation,pol_testing_evaluation,structurally_understaffed,high,"GPAI chapter implementation across the whole EU market."
-"US Government, Congress",pol_state_capacity,pol_frontier_regulation,structurally_understaffed,high,"Congressional staff. Technical capacity is the binding shortage."
-"US Government, Senate",pol_state_capacity,pol_frontier_regulation,structurally_understaffed,high,"As above."
-Various US Federal Government Departments,pol_state_capacity,pol_industrial_rd,structurally_understaffed,high,"Aggregate listing."
-Sandia National Laboratories,pol_security_infosec,pol_industrial_rd,established,medium,"National lab."
-"Massachusetts Institute of Technology, Lincoln Laboratory",pol_security_infosec,pol_industrial_rd,established,medium,"FFRDC."
-RAND Corporation,pol_security_infosec,pol_liability_insurance;pol_compute_governance;pol_biosecurity_misuse;pol_international;pol_testing_evaluation;pol_incident_response,established,high,"The article's named example of an FFRDC doing technical and policy work for agencies."
-Center for a New American Security,pol_compute_governance,pol_international;pol_security_infosec,established,high,"National security think tank; export controls and competition."
-Center for Strategic and International Studies,pol_international,pol_compute_governance,established,high,"Foreign policy think tank."
-Council on Foreign Relations,pol_international,pol_compute_governance,established,high,"Foreign policy."
-German Marshall Fund,pol_international,pol_public_narrative,established,medium,"Transatlantic policy."
-Geneva Centre for Security Policy,pol_international,,established,medium,"International security."
-Asia Society Policy Institute,pol_international,,established,medium,"Regional policy."
-Hudson Institute,pol_compute_governance,pol_international,established,medium,"National security think tank."
-Carnegie Endowment for International Peace,pol_international,pol_frontier_regulation,established,high,"Named in the spec's reading list for SB 53 and RAISE coverage."
-Brookings Institution,pol_frontier_regulation,pol_public_narrative,established,high,"Named in the spec's reading list."
-GovAI,pol_state_capacity,pol_frontier_regulation;pol_international,established,high,"Governance research plus a fellowship talent pipeline."
-Institute for AI Policy and Strategy,pol_compute_governance,pol_testing_evaluation,established,high,"IAPS. Named in the spec's reading list for compute policy explainers."
-Centre for Long-Term Resilience,pol_incident_response,pol_frontier_regulation,established,high,"UK risk-management policy."
-SaferAI,pol_testing_evaluation,pol_frontier_regulation,new_entrant,high,"Risk-management standards and lab ratings."
-AI Verification and Evaluation Research Institute,pol_testing_evaluation,pol_international,new_entrant,medium,"Verification for agreements."
-Center for AI Safety,pol_public_narrative,various_redteams;pol_frontier_regulation;capability_evals;wmd_evals_weapons_of_mass_destruction,established,medium,"CAIS runs both a technical arm and an advocacy arm; the advocacy is the more visible."
-Center for AI Risk Management and Alignment,pol_incident_response,pol_testing_evaluation,new_entrant,medium,"CARMA. Risk management framing."
-Future of Life Institute,pol_public_narrative,pol_international;pol_frontier_regulation,established,high,"Advocacy and international coordination."
-Encode,pol_public_narrative,pol_frontier_regulation,new_entrant,high,"Youth advocacy; state and federal legislative work."
-PauseAI,pol_public_narrative,,structurally_understaffed,high,"Single-issue advocacy."
-The AI Policy Network,pol_public_narrative,pol_frontier_regulation,new_entrant,high,"Federal advocacy."
-New Movement Organization for AI Regulation,pol_public_narrative,pol_frontier_regulation,new_entrant,high,"Advocacy."
-Humans in Control,pol_public_narrative,pol_power_concentration,new_entrant,medium,"Advocacy."
-AI & Democracy Foundation,pol_power_concentration,pol_public_narrative,new_entrant,high,"Democratic safeguards."
-Windfall Trust,pol_power_concentration,pol_industrial_rd,new_entrant,high,"Distribution of gains from advanced AI."
-CivAI,pol_public_narrative,,new_entrant,high,"Demonstrations of AI capability for policymakers."
-AIGS Canada,pol_public_narrative,pol_state_capacity,new_entrant,medium,"National advocacy and governance."
-AI Safety Asia,pol_public_narrative,pol_international,new_entrant,medium,"Regional field-building."
-Federation of American Scientists,pol_state_capacity,pol_biosecurity_misuse,established,high,"Science policy and government talent placement."
-Horizon Institute for Public Service,pol_state_capacity,,established,high,"Places technical talent into US government roles."
-American Association for the Advancement of Science,pol_state_capacity,,established,high,"AAAS science and technology policy fellowships."
-TechCongress,pol_state_capacity,,established,high,"Places technologists in congressional offices."
-California Council on Science and Technology,pol_state_capacity,pol_frontier_regulation,established,medium,"State-level science advice."
-Committee for a Responsible Federal Budget,pol_industrial_rd,,established,low,"Fiscal policy org; AI relevance is indirect."
-Aspen Institute,pol_public_narrative,pol_frontier_regulation,established,medium,"Convening and policy."
-Center for Democracy and Technology,pol_frontier_regulation,pol_public_narrative,established,medium,"Civil liberties and tech policy."
-Future of Privacy Forum,pol_frontier_regulation,,established,low,"Privacy focus; AI relevance is partial."
-The British Academy,pol_industrial_rd,,established,low,"Research funder; AI relevance is partial."
-The Royal Society,pol_industrial_rd,pol_public_narrative,established,low,"Learned society."
-Advanced Research and Invention Agency,pol_industrial_rd,guaranteed_safe_ai,established,high,"ARIA funds the Safeguarded AI programme."
-Artificial Intelligence Underwriting Company,pol_liability_insurance,,new_entrant,high,"AI-specific insurance underwriting."
-Armilla,pol_liability_insurance,pol_testing_evaluation,new_entrant,high,"AI warranty and assurance."
-SecureBio,pol_biosecurity_misuse,wmd_evals_weapons_of_mass_destruction,established,high,"Biosecurity; nucleic acid synthesis screening."
-BioTrust,pol_biosecurity_misuse,,new_entrant,medium,"Biosecurity."
-Arc Institute,pol_biosecurity_misuse,,established,low,"Biology research institute; AI safety relevance is indirect."
-Epoch AI,agi_metrics,capability_evals;pol_compute_governance,established,high,"Measurement and forecasting of AI capability and compute trends."
-Forecasting Research Institute,agi_metrics,,established,medium,"Forecasting methodology."
-AI Futures Project,agi_metrics,pol_public_narrative,new_entrant,high,"Scenario forecasting; AI 2027."
-"Massachusetts Institute of Technology, FutureTech",agi_metrics,pol_industrial_rd,established,medium,"Technology forecasting."
-"Carnegie Mellon University, Software Engineering Institute",pol_security_infosec,various_redteams;pol_testing_evaluation;pol_incident_response,established,high,"FFRDC. CERT and AI security engineering."
-"University of California, Center for Human-Compatible Artificial Intelligence",assistance_games_assistive_agents,agent_foundations,established,high,"CHAI. Assistance games are Russell's programme."
-Shanghai Artificial Intelligence Laboratory,capability_evals,various_redteams,established,low,"Limited public safety-agenda evidence."
-Beijing Academy of AI,capability_evals,pol_international,established,low,"Limited public safety-agenda evidence."
-China AI Safety and Development Association,pol_international,pol_testing_evaluation,new_entrant,medium,"State-linked coordination body."
-Scale AI,capability_evals,data_quality_for_alignment,established,medium,"Evaluation and data services."
-Faculty,various_redteams,capability_evals,established,low,"Applied AI consultancy; safety relevance is partial."
-Alignerr,data_quality_for_alignment,,new_entrant,low,"Data labelling for alignment."
-Foresight Institute,agent_foundations,pol_power_concentration,established,medium,"Grants and convening across neglected approaches."
-MATS Research,,,established,,"Field-building. Fellows work across every agenda, so a primary tag would be misleading — see the field-building rule in ingest-roles.ts."
-Constellation,,,established,,"Field-building / residency."
-Cambridge Boston Alignment Initiative,,,established,,"Field-building."
-BlueDot Impact,,,established,,"Field-building / courses."
-ERA,,,established,,"Fellowship."
-Kairos,,,new_entrant,,"Field-building."
-Arcadia Impact,,,new_entrant,,"Field-building."
-London AI Safety Research Labs,,,new_entrant,,"Field-building / research programme."
-AI Safety Quest,,,structurally_understaffed,,"Field-building."
-AI Safety Awareness Project,,,structurally_understaffed,,"Field-building."
-AISafety.com,,,structurally_understaffed,,"Field-building / infrastructure."
-Apart Sprints,,,new_entrant,,"Field-building."
-"80,000 Hours",,,established,,"Career advice. Tagging its own roles to an agenda would be circular."
-Lightcone Infrastructure,,,established,,"Infrastructure (LessWrong, Lighthaven)."
-Centre for Effective Altruism,,,established,,"Field-building."
-Coefficient Giving,,,established,,"Grantmaker (formerly Open Philanthropy)."
-Founders Pledge,,,established,,"Grantmaker."
-Carnegie Corporation of New York,,,established,,"Grantmaker."
-OpenAI Foundation,,,new_entrant,,"Grantmaker."
-Collider,,,new_entrant,,"Incubator."
-SASH,,,new_entrant,,"Field-building."
-Amodo Design,,,new_entrant,,"Design studio; not an AI safety research org."
-American Academy of Arts and Sciences,,,established,,"Learned society."
-"Cambridge University, Centre for Science and Policy",,,established,,"Science policy convening."
-Blue Origin,,,established,,"Not an AI safety org; appears via the career-development filter."
-Apple,,,established,,"Not an AI safety org; appears via the career-development filter."
-AI Alignment Network,,,new_entrant,,"Field-building (Japan)."
-AI Diplomatic Engagement Network,pol_international,,new_entrant,low,"Thin public evidence."
-AIM Intelligence,various_redteams,,new_entrant,low,"Thin public evidence."
-ALLAI,pol_frontier_regulation,pol_public_narrative,established,medium,"EU policy advocacy."
-Astralis Foundation,,,new_entrant,,"Thin public evidence."
-General-Purpose AI Policy Lab,pol_frontier_regulation,pol_testing_evaluation,new_entrant,medium,"EU GPAI implementation."
+#
+# insider_note: what someone already in the field knows about this organization that is not on
+#   its website — how selective it really is, what the work is actually like, who it suits, what
+#   a listing understates. This is the column that makes the difference between a newcomer and
+#   someone with context, and it is DELIBERATELY EMPTY.
+#
+#   We are not filling it. Guessing at non-public facts about named organizations would be
+#   fabrication dressed as insider knowledge, and it is exactly the kind of claim a reader would
+#   have no way to check. It has to come from someone who actually knows. See OWNER-DATA OD-13.
+#   Empty renders as nothing at all — no placeholder, no empty section.
+org,primary_agenda_id,secondary_agenda_ids,maturity_tier,confidence,insider_note,note
+Anthropic,iterative_alignment_at_post_train_time,sparse_coding;control;model_specs_and_constitutions;ai_scheming_evals;character_training_and_persona_steering;safeguards_inference_time_auxiliaries;chain_of_thought_monitoring;various_redteams;model_values_model_preferences;pol_security_infosec;reverse_engineering,established,high,,"Frontier lab. Runs several agendas at once; single primary is a compression, per the spec §7 caveat on orgs as points."
+OpenAI,iterative_alignment_at_post_train_time,supervising_ais_improving_ais;capability_evals;weak_to_strong_generalization;chain_of_thought_monitoring;safeguards_inference_time_auxiliaries;various_redteams;pol_security_infosec;aligned_to_who;autonomy_evals,established,high,,"Frontier lab. Alignment, Safety Systems, Preparedness and Model Policy teams."
+Google DeepMind,iterative_alignment_at_post_train_time,debate;sparse_coding;capability_evals;agent_foundations;safeguards_inference_time_auxiliaries;chain_of_thought_monitoring;various_redteams;autonomy_evals,established,high,,"Frontier lab. Source names amplified oversight, interpretability and automated alignment."
+xAI,various_redteams,capability_evals,established,low,,Applied Safety and Model Evaluation teams; source describes the safety focus as nominal and misuse-oriented.
+Meta,iterative_alignment_at_post_train_time,harm_reduction_for_open_weights,established,low,,Safety work integrated into capabilities; FAIR Alignment team.
+Apollo Research,ai_scheming_evals,ai_deception_evals;sandbagging_evals;chain_of_thought_monitoring,established,high,,Scheming and deception evaluations are the org's public identity.
+Redwood Research,control,ai_scheming_evals;chain_of_thought_monitoring,established,high,,Originated the control agenda.
+Goodfire,sparse_coding,reverse_engineering;pragmatic_interpretability;activation_engineering,new_entrant,high,,Interpretability company.
+Transluce,pragmatic_interpretability,other_interpretability;extracting_latent_knowledge;various_redteams;ai_explanations_of_ais,new_entrant,high,,Open interpretability and model-behaviour tooling.
+Tilde Research,sparse_coding,reverse_engineering;representation_structure_and_geometry,new_entrant,high,,Interpretability startup.
+EleutherAI,harm_reduction_for_open_weights,data_filtering;other_interpretability,established,medium,,Open-weights research org.
+Model Evaluation and Threat Research,autonomy_evals,capability_evals;agi_metrics,established,high,,METR. Autonomy and time-horizon evaluation.
+Gray Swan,various_redteams,capability_evals;safeguards_inference_time_auxiliaries,new_entrant,high,,Adversarial robustness and red-teaming products.
+Haize Labs,various_redteams,capability_evals,new_entrant,high,,Red-teaming and evaluation.
+White Circle,various_redteams,safeguards_inference_time_auxiliaries,new_entrant,medium,,Guardrails and moderation evaluation.
+Palisade Research,capability_evals,various_redteams;self_replication_evals,new_entrant,high,,Demonstrates offensive capabilities to inform policy.
+Apart Research,various_redteams,other_evals;other_interpretability,new_entrant,medium,,Distributed research sprints across several agendas.
+FAR AI,other_interpretability,various_redteams;control;ai_deception_evals;capability_evals;theory_for_aligning_multiple_ais,established,medium,,Research org with a broad technical portfolio plus field-building.
+Alignment Research Center,heuristic_explanations,asymptotic_guarantees;extracting_latent_knowledge,established,high,,ARC theory. Heuristic arguments and formal explanation.
+Machine Intelligence Research Institute,pol_public_narrative,agent_foundations;other_corrigibility;pol_frontier_regulation,established,high,,"Now substantially communications-focused, but the research identity remains agent foundations."
+Center on Long-Term Risk,theory_for_aligning_multiple_ais,tools_for_aligning_multiple_ais;aligning_to_context,established,high,,Multi-agent conflict and cooperative AI.
+LawZero,scientist_ai,guaranteed_safe_ai;asymptotic_guarantees,established,high,,Bengio's non-agentic Scientist AI programme.
+Atlas Computing,guaranteed_safe_ai,asymptotic_guarantees,new_entrant,high,,Safety-by-construction and formal specification tooling.
+Beneficial AI Foundation,agent_foundations,behavior_alignment_theory,new_entrant,low,,Thin public evidence; low confidence.
+AIXI Labs,the_learning_theoretic_agenda,agent_foundations,new_entrant,medium,,Name signals the learning-theoretic tradition.
+Principia,agent_foundations,natural_abstractions,new_entrant,low,,Thin public evidence.
+Neo Research,other_interpretability,reverse_engineering,new_entrant,low,,Thin public evidence.
+Timaeus,learning_dynamics_and_developmental_interpretability,sparse_coding,new_entrant,high,,Developmental interpretability and singular learning theory.
+Simplex,learning_dynamics_and_developmental_interpretability,representation_structure_and_geometry,new_entrant,medium,,Computational mechanics applied to model internals.
+Elicit,supervising_ais_improving_ais,ai_explanations_of_ais,established,medium,,Automating research workflows; adjacent to the make-AI-solve-it family.
+Andon Labs,autonomy_evals,capability_evals;various_redteams,new_entrant,medium,,Agentic evaluation in embodied and long-horizon settings.
+Aligned AI,capability_removal_unlearning,mild_optimisation,new_entrant,medium,,Concept extrapolation and goal generalisation.
+Conjecture,other_interpretability,pol_public_narrative,established,low,,Direction has shifted; low confidence.
+AE Studio,the_neglected_approaches_approach,other_interpretability,new_entrant,high,,Explicitly runs the neglected-approaches portfolio.
+Meridian Labs,other_interpretability,various_redteams,new_entrant,low,,Thin public evidence.
+Syntony,other_interpretability,safeguards_inference_time_auxiliaries,new_entrant,low,,Thin public evidence.
+Resolution,various_redteams,capability_evals,new_entrant,low,,Thin public evidence.
+Frame,other_evals,various_redteams,new_entrant,low,,Thin public evidence.
+Augur,other_evals,capability_evals,new_entrant,low,,Thin public evidence.
+0Labs,other_interpretability,,new_entrant,low,,Thin public evidence.
+Alice,pol_security_infosec,various_redteams;safeguards_inference_time_auxiliaries;wmd_evals_weapons_of_mass_destruction,new_entrant,low,,Role mix is dominated by information security.
+Irregular,pol_security_infosec,various_redteams;capability_evals,new_entrant,high,,Frontier security evaluation; formerly Pattern Labs.
+10a Labs,pol_security_infosec,various_redteams,new_entrant,medium,,"Trust, safety and threat intelligence."
+Intelligence Security Laboratories,pol_security_infosec,,new_entrant,medium,,Security-focused.
+Asymmetric Security,pol_security_infosec,,new_entrant,low,,Thin public evidence.
+SL5 Task Force,pol_security_infosec,pol_testing_evaluation;pol_state_capacity,new_entrant,high,,Named for the RSP security level; the entire remit is securing frontier weights.
+Trajectory Labs,pol_security_infosec,various_redteams,new_entrant,low,,Role mix dominated by security and engineering.
+Pattern Labs,pol_security_infosec,various_redteams,new_entrant,medium,,Security evaluation.
+"UK Government, AI Security Institute",capability_evals,autonomy_evals;wmd_evals_weapons_of_mass_destruction;pol_testing_evaluation;various_redteams;control;pol_security_infosec;ai_scheming_evals,established,high,,State evaluation capacity. Tagged technical because the published output is evaluations.
+"US Government, National Institute of Standards and Technology",pol_testing_evaluation,capability_evals,structurally_understaffed,high,,NIST/CAISI. Standards and measurement remit far exceeds headcount.
+"European Union, AI Office",pol_frontier_regulation,pol_testing_evaluation,structurally_understaffed,high,,GPAI chapter implementation across the whole EU market.
+"US Government, Congress",pol_state_capacity,pol_frontier_regulation,structurally_understaffed,high,,Congressional staff. Technical capacity is the binding shortage.
+"US Government, Senate",pol_state_capacity,pol_frontier_regulation,structurally_understaffed,high,,As above.
+Various US Federal Government Departments,pol_state_capacity,pol_industrial_rd,structurally_understaffed,high,,Aggregate listing.
+Sandia National Laboratories,pol_security_infosec,pol_industrial_rd,established,medium,,National lab.
+"Massachusetts Institute of Technology, Lincoln Laboratory",pol_security_infosec,pol_industrial_rd,established,medium,,FFRDC.
+RAND Corporation,pol_security_infosec,pol_liability_insurance;pol_compute_governance;pol_biosecurity_misuse;pol_international;pol_testing_evaluation;pol_incident_response,established,high,,The article's named example of an FFRDC doing technical and policy work for agencies.
+Center for a New American Security,pol_compute_governance,pol_international;pol_security_infosec,established,high,,National security think tank; export controls and competition.
+Center for Strategic and International Studies,pol_international,pol_compute_governance,established,high,,Foreign policy think tank.
+Council on Foreign Relations,pol_international,pol_compute_governance,established,high,,Foreign policy.
+German Marshall Fund,pol_international,pol_public_narrative,established,medium,,Transatlantic policy.
+Geneva Centre for Security Policy,pol_international,,established,medium,,International security.
+Asia Society Policy Institute,pol_international,,established,medium,,Regional policy.
+Hudson Institute,pol_compute_governance,pol_international,established,medium,,National security think tank.
+Carnegie Endowment for International Peace,pol_international,pol_frontier_regulation,established,high,,Named in the spec's reading list for SB 53 and RAISE coverage.
+Brookings Institution,pol_frontier_regulation,pol_public_narrative,established,high,,Named in the spec's reading list.
+GovAI,pol_state_capacity,pol_frontier_regulation;pol_international,established,high,,Governance research plus a fellowship talent pipeline.
+Institute for AI Policy and Strategy,pol_compute_governance,pol_testing_evaluation,established,high,,IAPS. Named in the spec's reading list for compute policy explainers.
+Centre for Long-Term Resilience,pol_incident_response,pol_frontier_regulation,established,high,,UK risk-management policy.
+SaferAI,pol_testing_evaluation,pol_frontier_regulation,new_entrant,high,,Risk-management standards and lab ratings.
+AI Verification and Evaluation Research Institute,pol_testing_evaluation,pol_international,new_entrant,medium,,Verification for agreements.
+Center for AI Safety,pol_public_narrative,various_redteams;pol_frontier_regulation;capability_evals;wmd_evals_weapons_of_mass_destruction,established,medium,,CAIS runs both a technical arm and an advocacy arm; the advocacy is the more visible.
+Center for AI Risk Management and Alignment,pol_incident_response,pol_testing_evaluation,new_entrant,medium,,CARMA. Risk management framing.
+Future of Life Institute,pol_public_narrative,pol_international;pol_frontier_regulation,established,high,,Advocacy and international coordination.
+Encode,pol_public_narrative,pol_frontier_regulation,new_entrant,high,,Youth advocacy; state and federal legislative work.
+PauseAI,pol_public_narrative,,structurally_understaffed,high,,Single-issue advocacy.
+The AI Policy Network,pol_public_narrative,pol_frontier_regulation,new_entrant,high,,Federal advocacy.
+New Movement Organization for AI Regulation,pol_public_narrative,pol_frontier_regulation,new_entrant,high,,Advocacy.
+Humans in Control,pol_public_narrative,pol_power_concentration,new_entrant,medium,,Advocacy.
+AI & Democracy Foundation,pol_power_concentration,pol_public_narrative,new_entrant,high,,Democratic safeguards.
+Windfall Trust,pol_power_concentration,pol_industrial_rd,new_entrant,high,,Distribution of gains from advanced AI.
+CivAI,pol_public_narrative,,new_entrant,high,,Demonstrations of AI capability for policymakers.
+AIGS Canada,pol_public_narrative,pol_state_capacity,new_entrant,medium,,National advocacy and governance.
+AI Safety Asia,pol_public_narrative,pol_international,new_entrant,medium,,Regional field-building.
+Federation of American Scientists,pol_state_capacity,pol_biosecurity_misuse,established,high,,Science policy and government talent placement.
+Horizon Institute for Public Service,pol_state_capacity,,established,high,,Places technical talent into US government roles.
+American Association for the Advancement of Science,pol_state_capacity,,established,high,,AAAS science and technology policy fellowships.
+TechCongress,pol_state_capacity,,established,high,,Places technologists in congressional offices.
+California Council on Science and Technology,pol_state_capacity,pol_frontier_regulation,established,medium,,State-level science advice.
+Committee for a Responsible Federal Budget,pol_industrial_rd,,established,low,,Fiscal policy org; AI relevance is indirect.
+Aspen Institute,pol_public_narrative,pol_frontier_regulation,established,medium,,Convening and policy.
+Center for Democracy and Technology,pol_frontier_regulation,pol_public_narrative,established,medium,,Civil liberties and tech policy.
+Future of Privacy Forum,pol_frontier_regulation,,established,low,,Privacy focus; AI relevance is partial.
+The British Academy,pol_industrial_rd,,established,low,,Research funder; AI relevance is partial.
+The Royal Society,pol_industrial_rd,pol_public_narrative,established,low,,Learned society.
+Advanced Research and Invention Agency,pol_industrial_rd,guaranteed_safe_ai,established,high,,ARIA funds the Safeguarded AI programme.
+Artificial Intelligence Underwriting Company,pol_liability_insurance,,new_entrant,high,,AI-specific insurance underwriting.
+Armilla,pol_liability_insurance,pol_testing_evaluation,new_entrant,high,,AI warranty and assurance.
+SecureBio,pol_biosecurity_misuse,wmd_evals_weapons_of_mass_destruction,established,high,,Biosecurity; nucleic acid synthesis screening.
+BioTrust,pol_biosecurity_misuse,,new_entrant,medium,,Biosecurity.
+Arc Institute,pol_biosecurity_misuse,,established,low,,Biology research institute; AI safety relevance is indirect.
+Epoch AI,agi_metrics,capability_evals;pol_compute_governance,established,high,,Measurement and forecasting of AI capability and compute trends.
+Forecasting Research Institute,agi_metrics,,established,medium,,Forecasting methodology.
+AI Futures Project,agi_metrics,pol_public_narrative,new_entrant,high,,Scenario forecasting; AI 2027.
+"Massachusetts Institute of Technology, FutureTech",agi_metrics,pol_industrial_rd,established,medium,,Technology forecasting.
+"Carnegie Mellon University, Software Engineering Institute",pol_security_infosec,various_redteams;pol_testing_evaluation;pol_incident_response,established,high,,FFRDC. CERT and AI security engineering.
+"University of California, Center for Human-Compatible Artificial Intelligence",assistance_games_assistive_agents,agent_foundations,established,high,,CHAI. Assistance games are Russell's programme.
+Shanghai Artificial Intelligence Laboratory,capability_evals,various_redteams,established,low,,Limited public safety-agenda evidence.
+Beijing Academy of AI,capability_evals,pol_international,established,low,,Limited public safety-agenda evidence.
+China AI Safety and Development Association,pol_international,pol_testing_evaluation,new_entrant,medium,,State-linked coordination body.
+Scale AI,capability_evals,data_quality_for_alignment,established,medium,,Evaluation and data services.
+Faculty,various_redteams,capability_evals,established,low,,Applied AI consultancy; safety relevance is partial.
+Alignerr,data_quality_for_alignment,,new_entrant,low,,Data labelling for alignment.
+Foresight Institute,agent_foundations,pol_power_concentration,established,medium,,Grants and convening across neglected approaches.
+MATS Research,meta_talent,,established,high,,"Field-building. Fellows work across every agenda, so a primary tag would be misleading — see the field-building rule in ingest-roles.ts."
+Constellation,meta_talent,,established,high,,Field-building / residency.
+Cambridge Boston Alignment Initiative,meta_talent,,established,high,,Field-building.
+BlueDot Impact,meta_talent,,established,high,,Field-building / courses.
+ERA,meta_talent,,established,high,,Fellowship.
+Kairos,meta_talent,,new_entrant,high,,Field-building.
+Arcadia Impact,meta_talent,,new_entrant,high,,Field-building.
+London AI Safety Research Labs,meta_talent,,new_entrant,high,,Field-building / research programme.
+AI Safety Quest,meta_infrastructure,,structurally_understaffed,high,,Field-building.
+AI Safety Awareness Project,meta_infrastructure,,structurally_understaffed,high,,Field-building.
+AISafety.com,meta_infrastructure,,structurally_understaffed,high,,Field-building / infrastructure.
+Apart Sprints,meta_talent,,new_entrant,high,,Field-building.
+"80,000 Hours",meta_talent,,established,high,,Career advice. Tagging its own roles to an agenda would be circular.
+Lightcone Infrastructure,meta_infrastructure,,established,high,,"Infrastructure (LessWrong, Lighthaven)."
+Centre for Effective Altruism,meta_infrastructure,,established,high,,Field-building.
+Coefficient Giving,meta_funding,,established,high,,Grantmaker (formerly Open Philanthropy).
+Founders Pledge,meta_funding,,established,high,,Grantmaker.
+Carnegie Corporation of New York,meta_funding,,established,high,,Grantmaker.
+OpenAI Foundation,meta_funding,,new_entrant,high,,Grantmaker.
+Collider,meta_infrastructure,,new_entrant,high,,Incubator.
+SASH,meta_talent,,new_entrant,high,,Field-building.
+Amodo Design,,,new_entrant,,,Design studio; not an AI safety research org.
+American Academy of Arts and Sciences,,,established,,,Learned society.
+"Cambridge University, Centre for Science and Policy",,,established,,,Science policy convening.
+Blue Origin,,,established,,,Not an AI safety org; appears via the career-development filter.
+Apple,,,established,,,Not an AI safety org; appears via the career-development filter.
+AI Alignment Network,meta_talent,,new_entrant,high,,Field-building (Japan).
+AI Diplomatic Engagement Network,pol_international,,new_entrant,low,,Thin public evidence.
+AIM Intelligence,various_redteams,,new_entrant,low,,Thin public evidence.
+ALLAI,pol_frontier_regulation,pol_public_narrative,established,medium,,EU policy advocacy.
+Astralis Foundation,meta_funding,,new_entrant,high,,Thin public evidence.
+General-Purpose AI Policy Lab,pol_frontier_regulation,pol_testing_evaluation,new_entrant,medium,,EU GPAI implementation.

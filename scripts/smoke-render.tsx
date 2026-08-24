@@ -8,15 +8,14 @@
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import { Routes, Route } from 'react-router-dom';
-import { Entry } from '../src/pages/Entry';
+import { Home } from '../src/pages/Home';
 import { Instrument } from '../src/pages/Instrument';
 import { Results } from '../src/pages/Results';
 import { Browse } from '../src/pages/Browse';
 import { Tables } from '../src/pages/Tables';
 import { AgendaDetail } from '../src/pages/AgendaDetail';
 import { AxisDetail } from '../src/pages/AxisDetail';
-import { Fellowships } from '../src/pages/Fellowships';
-import { agendas, levers, axes, questions } from '../src/lib/data';
+import { agendas, levers, metaAgendas, axes, questions } from '../src/lib/data';
 import { ABSTAIN, type Responses } from '../src/lib/scoring';
 
 // A response set that exercises the awkward paths: abstain, unsure, allocation, willingness.
@@ -47,13 +46,13 @@ function render(label: string, path: string, element: React.ReactElement) {
 }
 
 console.log('\nSMOKE RENDER');
-render('/ (entry)', '/', <Entry />);
-render('/instrument', '/instrument', <Instrument responses={responses} onChange={() => {}} onComplete={() => {}} />);
+render('/ (home)', '/', <Home />);
+render('/quiz', '/quiz', <Instrument responses={responses} onChange={() => {}} onComplete={() => {}} />);
 render('/results', '/results', <Results responses={responses} />);
-render('/browse', '/browse', <Browse />);
-render('/browse?agenda=control', '/browse?agenda=control', <Browse />);
-render('/tables', '/tables', <Tables />);
-render('/fellowships', '/fellowships', <Fellowships />);
+render('/roles', '/roles', <Browse />);
+render('/roles?agenda=control', '/roles?agenda=control', <Browse />);
+render('/agendas', '/agendas', <Tables />);
+
 
 console.log('\nEVERY AGENDA PAGE');
 let agendaFails = 0;
@@ -67,6 +66,17 @@ for (const a of agendas) {
   } catch (e) { agendaFails++; failures++; console.log(`  FAIL  ${a.id}: ${(e as Error).message}`); }
 }
 console.log(`  ${agendaFails ? 'FAIL' : 'PASS'}  ${agendas.length} technical agenda pages`);
+
+let metaFails = 0;
+for (const m of metaAgendas) {
+  try {
+    renderToString(
+      <StaticRouter location={`/agenda/${m.id}`}>
+        <Routes><Route path="/agenda/:id" element={<AgendaDetail />} /></Routes>
+      </StaticRouter>);
+  } catch (e) { metaFails++; failures++; console.log(`  FAIL  ${m.id}: ${(e as Error).message}`); }
+}
+console.log(`  ${metaFails ? 'FAIL' : 'PASS'}  ${metaAgendas.length} field-building pages`);
 
 let leverFails = 0;
 for (const l of levers) {

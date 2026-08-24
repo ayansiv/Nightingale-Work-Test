@@ -177,7 +177,7 @@
         "guaranteed_safe_ai",
         "asymptotic_guarantees"
       ],
-      "maturity_tier": "new_entrant",
+      "maturity_tier": "established",
       "coordinates": {
         "timelines": null,
         "takeoff": null,
@@ -247,7 +247,7 @@
       "id": "constellation",
       "name": "Constellation",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -510,7 +510,7 @@
       "id": "80-000-hours",
       "name": "80,000 Hours",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -771,7 +771,7 @@
       "id": "cambridge-boston-alignment-initiative",
       "name": "Cambridge Boston Alignment Initiative",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -881,7 +881,7 @@
       "id": "mats-research",
       "name": "MATS Research",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -956,7 +956,7 @@
       "id": "bluedot-impact",
       "name": "BlueDot Impact",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -1132,7 +1132,7 @@
       "id": "lightcone-infrastructure",
       "name": "Lightcone Infrastructure",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_infrastructure",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -1274,7 +1274,7 @@
       "id": "kairos",
       "name": "Kairos",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -1594,7 +1594,7 @@
       "id": "era",
       "name": "ERA",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -1665,7 +1665,7 @@
       "id": "openai-foundation",
       "name": "OpenAI Foundation",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_funding",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -2671,7 +2671,7 @@
       "id": "collider",
       "name": "Collider",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_infrastructure",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -2705,7 +2705,7 @@
       "id": "london-ai-safety-research-labs",
       "name": "London AI Safety Research Labs",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -2917,7 +2917,7 @@
       "id": "centre-for-effective-altruism",
       "name": "Centre for Effective Altruism",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_infrastructure",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -3093,7 +3093,7 @@
       "id": "coefficient-giving",
       "name": "Coefficient Giving",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_funding",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -3450,7 +3450,7 @@
       "id": "sash",
       "name": "SASH",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -3866,7 +3866,7 @@
       "id": "astralis-foundation",
       "name": "Astralis Foundation",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_funding",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -4684,7 +4684,7 @@
       "id": "arcadia-impact",
       "name": "Arcadia Impact",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -5196,7 +5196,7 @@
       "id": "ai-safety-quest",
       "name": "AI Safety Quest",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_infrastructure",
       "secondary_agenda_ids": [],
       "maturity_tier": "structurally_understaffed",
       "coordinates": {
@@ -5640,7 +5640,7 @@
       "id": "carnegie-corporation-of-new-york",
       "name": "Carnegie Corporation of New York",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_funding",
       "secondary_agenda_ids": [],
       "maturity_tier": "established",
       "coordinates": {
@@ -6121,7 +6121,7 @@
       "id": "ai-alignment-network",
       "name": "AI Alignment Network",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_talent",
       "secondary_agenda_ids": [],
       "maturity_tier": "new_entrant",
       "coordinates": {
@@ -6191,7 +6191,7 @@
       "id": "ai-safety-awareness-project",
       "name": "AI Safety Awareness Project",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_infrastructure",
       "secondary_agenda_ids": [],
       "maturity_tier": "structurally_understaffed",
       "coordinates": {
@@ -6225,7 +6225,7 @@
       "id": "aisafety-com",
       "name": "AISafety.com",
       "aliases": [],
-      "primary_agenda_id": null,
+      "primary_agenda_id": "meta_infrastructure",
       "secondary_agenda_ids": [],
       "maturity_tier": "structurally_understaffed",
       "coordinates": {

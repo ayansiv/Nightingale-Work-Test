@@ -22,19 +22,24 @@ const readJson = <T>(p: string): T => JSON.parse(read(p));
 
 const { agendas } = readJson<{ agendas: Agenda[] }>('data/derived/agendas.json');
 const levers = readJson<{ levers: { id: string; name: string }[] }>('data/seed/policy-levers.json').levers;
+const metaAgendas = readJson<{ agendas: { id: string; name: string }[] }>('data/seed/meta-agendas.json').agendas;
 const signalsCfg = readJson<{
   matching: { title_multiplier: number; min_score: number; min_margin: number };
   signals: Record<string, { phrases: string[]; weight: number; negative?: string[] }[]>;
   field_building_orgs: { orgs: string[] };
 }>('data/classification/signals.json');
 
-const validAgendaIds = new Set([...agendas.map((a) => a.id), ...levers.map((l) => l.id)]);
+const validAgendaIds = new Set([
+  ...agendas.map((a) => a.id),
+  ...levers.map((l) => l.id),
+  ...metaAgendas.map((m) => m.id),
+]);
 const fieldBuilding = new Set(signalsCfg.field_building_orgs.orgs.map((o) => o.toLowerCase()));
 
 // ---- org tags -------------------------------------------------------------------------------
 interface OrgTagRow {
   org: string; primary_agenda_id: string; secondary_agenda_ids: string;
-  maturity_tier: string; confidence: string; note: string;
+  maturity_tier: string; confidence: string; insider_note: string; note: string;
 }
 const orgTagRows: OrgTagRow[] = parse(
   read('data/classification/orgs.csv').split('\n').filter((l) => !l.startsWith('#')).join('\n'),
@@ -180,18 +185,27 @@ for (const v of vacancies) {
 
   const override = overrideMap.get(overrideKey(orgName, v['!Title']?.trim() ?? ''));
 
+  // "Open to any agenda" is now a claim about the ROLE, not about the employer. A cohort
+  // programme really does place you wherever your mentor works. An operations manager at the
+  // same organization does not — that is an ordinary job, and calling it agenda-neutral hid 71
+  // real jobs behind a non-answer while diluting the label for the ~10 where it is true.
+  const isCohortProgramme = ['Fellowship', 'Internship', 'Course'].includes(v['!Position']?.trim() ?? '');
+
   if (override) {
     overridesUsed.add(overrideKey(override.org, override.role_title));
     agendaId = override.agenda_id;
     tagSource = 'manual';
     rationale = `Manually corrected. ${override.why}`;
     stats.manual++;
-  } else if (fieldBuilding.has(orgName.toLowerCase())) {
+  } else if (fieldBuilding.has(orgName.toLowerCase()) && isCohortProgramme) {
     crossAgenda = true;
     stats.crossAgenda++;
+    // Still record the host's own category, so the role is browsable rather than orphaned.
+    agendaId = tag?.primary_agenda_id ?? null;
+    tagSource = tag?.primary_agenda_id ? 'inherited' : 'untagged';
     rationale =
-      'Field-building organization. Placement depends on the mentor or cohort rather than the ' +
-      'host, so this role is shown under every agenda rather than assigned to one.';
+      'A cohort programme: which agenda you end up working on depends on your mentor rather than ' +
+      'on the host organization, so this is shown under every agenda as well as under the host.';
   } else if (tag?.primary_agenda_id) {
     const candidates = [tag.primary_agenda_id, ...tag.secondaries];
 

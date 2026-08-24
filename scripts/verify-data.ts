@@ -262,15 +262,32 @@ console.log('\nUI CONTRACTS');
     return out;
   })(path.join(ROOT, 'src'));
 
-  const used = [...srcText.matchAll(/<Caveat\s+id="([^"]+)"/g)].map((m) => m[1]!);
-  const unknownIds = [...new Set(used)].filter((id) => !known.has(id));
-  check('every <Caveat id> in src/ exists in caveats.json', unknownIds.length === 0,
-    unknownIds.join(', '));
+  // The caveats used to render through a <Caveat id> component. They are now written into the
+  // prose of the surfaces they apply to, because rendering the same block on six pages trained
+  // readers to skip all of them. So this checks that the SUBSTANCE survived the rewrite: each
+  // caveat declares a phrase that must still appear somewhere in src/. If a rewrite drops the
+  // idea, this fails — which is the thing worth protecting, not the component.
+  const required: Record<string, string> = {
+    'job-board-coverage-bias': 'not a signal',
+    'lab-internal-funding': 'lab revenue',
+    'orgs-as-points': 'single point',
+    'researcher-citations-not-attributions': 'not a stated view',
+    'neglectedness-is-not-a-recommendation': 'because nobody has tried',
+    'policy-returns-may-increase': 'being ignored rather than being early',
+    'sensitivity': 'general rather than coy',
+    'tag-strength': 'From the organization',
+    'snapshot': 'Snapshot',
+    'coordinates-are-derived-not-endorsed': 'rather than being set to the middle',
+  };
+  const missingIdea = Object.entries(required)
+    .filter(([, phrase]) => !srcText.includes(phrase))
+    .map(([id]) => id);
+  check('every caveat\'s substance still appears in the UI', missingIdea.length === 0,
+    missingIdea.join(', '));
 
-  // Spec §18: "All seven caveats in §13 render in-product."
-  const unrendered = [...known].filter((id) => !used.includes(id));
-  check('every caveat in caveats.json is rendered somewhere', unrendered.length === 0,
-    unrendered.join(', '));
+  const undeclared = [...known].filter((id) => !(id in required));
+  check('every caveat in caveats.json has a phrase to check for', undeclared.length === 0,
+    undeclared.join(', '));
 
   // Spec §14: the government disclaimer variant flag defaults to 'a', and b ships empty.
   check('government disclaimer variant defaults to a',

@@ -10,6 +10,7 @@ import agendasData from '~data/derived/agendas.json';
 import orgsData from '~data/derived/orgs.json';
 import rolesData from '~data/derived/roles.json';
 import leversData from '~data/seed/policy-levers.json';
+import metaData from '~data/seed/meta-agendas.json';
 import readingsData from '~data/content/readings.json';
 import caveatsData from '~data/content/caveats.json';
 import peopleData from '~data/seed/people.json';
@@ -31,6 +32,8 @@ export const agendas = agendasData.agendas as unknown as any[];
 export const orgs = orgsData.orgs as unknown as any[];
 export const roles = rolesData.roles as unknown as any[];
 export const levers = leversData.levers as unknown as any[];
+/** Field-building categories. Domain 'meta' — deliberately NOT matched; see meta-agendas.json. */
+export const metaAgendas = metaData.agendas as unknown as any[];
 export const institutionTypes = leversData.institution_types as unknown as any[];
 export const readings = readingsData.axes as unknown as Record<string, Record<string, any>>;
 export const caveats = caveatsData.caveats as unknown as any[];
@@ -43,12 +46,13 @@ export const DATA_AS_OF = agendasData.generated_at as string;
 export const caveatById = new Map(caveats.map((c) => [c.id, c]));
 export const agendaById = new Map(agendas.map((a) => [a.id, a]));
 export const leverById = new Map(levers.map((l) => [l.id, l]));
+export const metaById = new Map(metaAgendas.map((m) => [m.id, m]));
 export const orgById = new Map(orgs.map((o) => [o.id, o]));
 
 /** Agendas and levers share the id namespace; the UI often needs whichever one an id points at. */
 export function lookupTargetName(id: string | null): string | null {
   if (!id) return null;
-  return agendaById.get(id)?.name ?? leverById.get(id)?.name ?? null;
+  return agendaById.get(id)?.name ?? leverById.get(id)?.name ?? metaById.get(id)?.name ?? null;
 }
 
 export function isPolicyId(id: string): boolean {

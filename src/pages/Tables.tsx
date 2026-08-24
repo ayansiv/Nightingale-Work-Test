@@ -1,46 +1,67 @@
 /**
- * Data tables (Build Spec §11.5). Two tables, technical and policy, visually separated with the
- * reason for separation stated. Sortable. Every cell sourced or flagged estimated.
+ * Agendas — what the field is working on, and how resourced each one is.
  *
- * The default sort is deliberate. Spec §9: "Where both exist, the ratio (safety FTEs ÷ attention
- * on the lever) is the more meaningful figure and should be the sorted default." On the technical
- * side the analogous quantity is share of field effort, which is the scale-invariant column —
- * see the FTE reconciliation note in scripts/ingest-agendas.ts for why the LEVEL is not
- * trustworthy but the SHARE is.
+ * The methodology used to sit on every cell as an expandable "how this was arrived at". With 74
+ * rows that is 74 copies of the same three sentences, which trains the reader to ignore all of
+ * them. It now appears ONCE, at the foot of the table it applies to. Per-cell provenance survives
+ * as the flag chip and the range, which are the parts that actually vary row to row.
+ *
+ * The two tables are close together on purpose — the previous version put a full screen of
+ * caveats between them, so nobody scrolled far enough to learn that a second table existed.
  */
 
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { agendas, levers, rolesByAgenda, orgsByAgenda, DATA_AS_OF } from '@/lib/data';
-import { Caveat, EstimateCell, Flag } from '@/components/Provenance';
+import { agendas, levers, metaAgendas, rolesByAgenda, orgsByAgenda } from '@/lib/data';
+import { Flag } from '@/components/Provenance';
 
 type SortKey = 'name' | 'fte' | 'share' | 'outputs' | 'postings' | 'orgs';
+
+const fmt = (n: number | null | undefined) =>
+  n === null || n === undefined ? null : Number.isInteger(n) ? String(n) : n.toFixed(1);
 
 export function Tables() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <header className="mb-8">
-        <h1 className="text-2xl font-semibold">How resourced is each of these?</h1>
-        <p className="text-xs text-ink-faint mt-1 tabular">Data as of {DATA_AS_OF}</p>
-        <p className="text-sm text-ink-muted mt-3 max-w-prose leading-relaxed">
-          Two tables, and they are not merged. On the technical side, thin resourcing suggests high
-          marginal returns under the usual diminishing-returns assumption. On the policy side that
-          inference can invert: coalitions, credibility and timing compound, so being alone on an
-          issue often means being ignored rather than being early. Putting both in one sorted list
-          would invite exactly the wrong reading.
+      <header className="mb-6">
+        <h1 className="text-2xl font-semibold">
+          What are the agendas within technical AI safety and AI governance?
+        </h1>
+        <p className="text-sm text-ink-muted mt-2 max-w-prose leading-relaxed">
+          {agendas.length} technical agendas and {levers.length} policy levers, with how much effort
+          is currently going into each. Click any row for its theory of change, the assumptions it
+          rests on, and the organizations and open roles attached to it.
         </p>
       </header>
 
       <TechnicalTable />
-      <div className="my-12 rule" />
       <PolicyTable />
+      <MetaTable />
     </div>
+  );
+}
+
+function SortHead({ k, label, title, sort, asc, onSort }: {
+  k: SortKey; label: string; title?: string; sort: SortKey; asc: boolean; onSort: (k: SortKey) => void;
+}) {
+  return (
+    <th scope="col" title={title}
+        className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2 first:pl-0">
+      <button onClick={() => onSort(k)} className="hover:text-ink inline-flex items-center gap-1">
+        {label}{sort === k && <span aria-hidden>{asc ? '↑' : '↓'}</span>}
+      </button>
+    </th>
   );
 }
 
 function TechnicalTable() {
   const [sort, setSort] = useState<SortKey>('share');
-  const [asc, setAsc] = useState(true);
+  const [asc, setAsc] = useState(false);
+
+  const onSort = (k: SortKey) => {
+    if (sort === k) setAsc(!asc);
+    else { setSort(k); setAsc(k === 'name'); }
+  };
 
   const rows = useMemo(() => {
     const withCounts = agendas.map((a) => ({
@@ -53,8 +74,7 @@ function TechnicalTable() {
       : sort === 'fte' ? (r.fte_2025.value ?? -1)
       : sort === 'share' ? (r.fte_share_of_field?.value ?? -1)
       : sort === 'outputs' ? r.outputs_count
-      : sort === 'postings' ? r._roles
-      : r._orgs;
+      : sort === 'postings' ? r._roles : r._orgs;
     return [...withCounts].sort((a, b) => {
       const ka = key(a), kb = key(b);
       const cmp = typeof ka === 'string' ? ka.localeCompare(kb as string) : (ka as number) - (kb as number);
@@ -62,68 +82,59 @@ function TechnicalTable() {
     });
   }, [sort, asc]);
 
-  const head = (k: SortKey, label: string, title?: string) => (
-    <th
-      scope="col"
-      title={title}
-      className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2 first:pl-0"
-    >
-      <button
-        onClick={() => { if (sort === k) setAsc(!asc); else { setSort(k); setAsc(k === 'name' || k === 'share'); } }}
-        className="hover:text-ink inline-flex items-center gap-1"
-      >
-        {label}
-        {sort === k && <span aria-hidden>{asc ? '↑' : '↓'}</span>}
-      </button>
-    </th>
-  );
-
   return (
-    <section>
-      <h2 className="text-lg font-medium mb-1">Technical agendas</h2>
-      <p className="text-sm text-ink-muted mb-4 max-w-prose">
-        {agendas.length} agendas from the Shallow Review of live agendas in alignment and safety,
-        2025. Sorted by share of field effort by default, because the two independent measurements
-        of field size disagree by roughly 3× on the level while broadly agreeing on the ordering —
-        so the share is trustworthy where the headcount is not.
-      </p>
+    <section className="mb-10">
+      <h2 className="text-lg font-medium mb-3">Technical agendas</h2>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-sm min-w-[840px]">
+        <table className="w-full text-sm min-w-[780px]">
           <thead className="border-b border-ink-faint/30">
             <tr>
-              {head('name', 'Agenda')}
+              <SortHead k="name" label="Agenda" sort={sort} asc={asc} onSort={onSort} />
               <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2">Target case</th>
-              {head('fte', 'FTE 2025', 'As published by Shallow Review — a range, shown with our midpoint.')}
-              {head('share', 'Share of field', 'Percent of summed field FTE. Scale-invariant, so it survives the disagreement about total field size.')}
-              {head('outputs', 'Outputs', 'Papers and posts the Shallow Review pipeline linked to this agenda.')}
-              {head('orgs', 'Orgs')}
-              {head('postings', 'Open roles', 'Reported separately and never summed into a composite — see the coverage caveat.')}
+              <SortHead k="fte" label="FTE 2025" title="As published by the Shallow Review — a range, shown with its midpoint." sort={sort} asc={asc} onSort={onSort} />
+              <SortHead k="share" label="Share of field" title="Percent of summed field effort. Robust to the disagreement about total field size." sort={sort} asc={asc} onSort={onSort} />
+              <SortHead k="outputs" label="Outputs" title="Papers and posts linked to this agenda in 2025." sort={sort} asc={asc} onSort={onSort} />
+              <SortHead k="orgs" label="Orgs" sort={sort} asc={asc} onSort={onSort} />
+              <SortHead k="postings" label="Open roles" sort={sort} asc={asc} onSort={onSort} />
             </tr>
           </thead>
           <tbody className="divide-y divide-ground-line">
             {rows.map((a) => (
               <tr key={a.id} className="align-top hover:bg-ground-sunk/60">
-                <td className="py-3 px-2 pl-0 max-w-[260px]">
+                <td className="py-2.5 px-2 pl-0 max-w-[260px]">
                   <Link to={`/agenda/${a.id}`} className="font-medium hover:text-user hover:underline">{a.name}</Link>
                   <p className="text-2xs text-ink-faint mt-0.5">{a.family}</p>
                 </td>
-                <td className="py-3 px-2">
+                <td className="py-2.5 px-2">
                   {a.target_case
                     ? <span className="chip-derived">{a.target_case}</span>
                     : <span className="chip-unknown">unstated</span>}
                 </td>
-                <td className="py-3 px-2 min-w-[150px]"><EstimateCell est={a.fte_2025} /></td>
-                <td className="py-3 px-2 min-w-[150px]">
-                  {a.fte_share_of_field
-                    ? <EstimateCell est={a.fte_share_of_field} unit="%" />
-                    : <span className="chip-unknown">no data</span>}
+                <td className="py-2.5 px-2 whitespace-nowrap">
+                  {a.fte_2025.value === null ? (
+                    <span className="text-ink-faint text-2xs">no data</span>
+                  ) : (
+                    <>
+                      <span className="tabular font-medium">{fmt(a.fte_2025.value)}</span>
+                      {a.fte_2025.low !== a.fte_2025.high && (
+                        <span className="tabular text-2xs text-ink-faint ml-1">
+                          ({fmt(a.fte_2025.low)}–{fmt(a.fte_2025.high)})
+                        </span>
+                      )}
+                    </>
+                  )}
                 </td>
-                <td className="py-3 px-2 tabular">{a.outputs_count || <span className="text-ink-faint">0</span>}</td>
-                <td className="py-3 px-2 tabular">{a._orgs || <span className="text-ink-faint">0</span>}</td>
-                <td className="py-3 px-2 tabular">
+                <td className="py-2.5 px-2 tabular whitespace-nowrap">
+                  {a.fte_share_of_field?.value != null
+                    ? <span>{a.fte_share_of_field.value}%</span>
+                    : <span className="text-ink-faint text-2xs">—</span>}
+                </td>
+                <td className="py-2.5 px-2 tabular">{a.outputs_count || <span className="text-ink-faint">0</span>}</td>
+                <td className="py-2.5 px-2 tabular">{a._orgs || <span className="text-ink-faint">0</span>}</td>
+                <td className="py-2.5 px-2 tabular">
                   {a._roles
-                    ? <Link to={`/browse?agenda=${a.id}`} className="underline hover:text-user">{a._roles}</Link>
+                    ? <Link to={`/roles?agenda=${a.id}`} className="underline hover:text-user">{a._roles}</Link>
                     : <span className="text-ink-faint">0</span>}
                 </td>
               </tr>
@@ -132,11 +143,29 @@ function TechnicalTable() {
         </table>
       </div>
 
-      <div className="mt-6">
-        <Caveat id="lab-internal-funding" />
-        <Caveat id="neglectedness-is-not-a-recommendation" />
-        <Caveat id="job-board-coverage-bias" compact />
-      </div>
+      <MethodNote>
+        <p>
+          <strong className="font-medium text-ink">FTE</strong> figures are the Shallow Review's own
+          ranges, shown with our midpoint. Two independent counts of this field disagree by roughly
+          3× on the total — summing these ranges gives 1,100–3,200 people, while a separate
+          organizational headcount study finds 620–645 — because they count different populations.
+          Neither has been rescaled. <strong className="font-medium text-ink">Share of field</strong> is
+          each agenda's fraction of the summed total, which is unaffected by that disagreement and is
+          the column to trust for comparisons. Sorted by it here.
+        </p>
+        <p>
+          Philanthropic funding is not shown because the source names funders without amounts, and
+          grant databases in any case miss safety work paid for out of lab revenue — so a low funding
+          figure would not mean under-resourced.
+        </p>
+        <p>
+          <strong className="font-medium text-ink">Open roles</strong> is reported separately and never
+          folded into any composite. The job board is explicit that its coverage is thinner in areas
+          it knows less well and outside the US and UK, and that role counts are not a signal of what
+          it thinks is important. A thin agenda may be thin because it is hard, because it is wrong,
+          or because nobody has tried; nothing here distinguishes those.
+        </p>
+      </MethodNote>
     </section>
   );
 }
@@ -152,34 +181,26 @@ function PolicyTable() {
     }));
     return [...withCounts].sort((a, b) =>
       sort === 'name' ? a.name.localeCompare(b.name)
-      : sort === 'orgs' ? b._orgs - a._orgs
-      : b._roles - a._roles);
+      : sort === 'orgs' ? b._orgs - a._orgs : b._roles - a._roles);
   }, [sort]);
 
   return (
-    <section>
-      <div className="border-l-4 border-ink pl-4 mb-4">
-        <h2 className="text-lg font-medium">Policy levers</h2>
-        <p className="text-sm text-ink-muted mt-1 max-w-prose">
-          A separate table on purpose. These twelve levers are seeded by hand from the 80,000 Hours
-          US AI policy landscape — there is no Shallow Review equivalent for policy, so every
-          coordinate here is <Flag flag="placeholder" /> rather than derived, and the funding column
-          measures something different from the one above.
-        </p>
-      </div>
+    <section className="mb-10 rule pt-6">
+      <h2 className="text-lg font-medium mb-1">Policy levers</h2>
+      <p className="text-sm text-ink-muted mb-3 max-w-prose">
+        Kept separate from the table above, because the inference inverts. On the technical side thin
+        resourcing suggests high marginal returns. Here, coalitions and timing compound — being alone
+        on an issue often means being ignored rather than being early.
+      </p>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-sm min-w-[760px]">
+        <table className="w-full text-sm min-w-[700px]">
           <thead className="border-b border-ink-faint/30">
             <tr>
               <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 pr-2">
                 <button onClick={() => setSort('name')} className="hover:text-ink">Lever</button>
               </th>
-              <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2">Primary institutions</th>
-              <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2"
-                  title="Government spend on a lever measures the size of the PROBLEM, not the size of the safety response. Never summed with philanthropic funding.">
-                Govt attention
-              </th>
+              <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2">Where the work is</th>
               <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2">
                 <button onClick={() => setSort('orgs')} className="hover:text-ink">Orgs</button>
               </th>
@@ -191,21 +212,15 @@ function PolicyTable() {
           <tbody className="divide-y divide-ground-line">
             {rows.map((l) => (
               <tr key={l.id} className="align-top hover:bg-ground-sunk/60">
-                <td className="py-3 pr-2 max-w-[280px]">
+                <td className="py-2.5 pr-2 max-w-[300px]">
                   <Link to={`/agenda/${l.id}`} className="font-medium hover:text-user hover:underline">{l.name}</Link>
                   <p className="text-2xs text-ink-muted mt-0.5 leading-snug">{l.one_sentence_summary}</p>
                 </td>
-                <td className="py-3 px-2 text-2xs text-ink-muted">{l.primary_institutions.join(', ')}</td>
-                <td className="py-3 px-2">
-                  <span className="chip-unknown">not collected</span>
-                  <p className="text-2xs text-ink-faint mt-1 max-w-[180px]">
-                    Measures the size of the problem, not the safety response.
-                  </p>
-                </td>
-                <td className="py-3 px-2 tabular">{l._orgs || <span className="text-ink-faint">0</span>}</td>
-                <td className="py-3 px-2 tabular">
+                <td className="py-2.5 px-2 text-2xs text-ink-muted">{l.primary_institutions.join(', ')}</td>
+                <td className="py-2.5 px-2 tabular">{l._orgs || <span className="text-ink-faint">0</span>}</td>
+                <td className="py-2.5 px-2 tabular">
                   {l._roles
-                    ? <Link to={`/browse?agenda=${l.id}`} className="underline hover:text-user">{l._roles}</Link>
+                    ? <Link to={`/roles?agenda=${l.id}`} className="underline hover:text-user">{l._roles}</Link>
                     : <span className="text-ink-faint">0</span>}
                 </td>
               </tr>
@@ -214,9 +229,78 @@ function PolicyTable() {
         </table>
       </div>
 
-      <div className="mt-6">
-        <Caveat id="policy-returns-may-increase" />
+      <MethodNote>
+        <p>
+          Every position on these is <Flag flag="placeholder" /> — assigned by hand rather than
+          derived, because there is no policy equivalent of the stated-assumptions field the technical
+          agendas come from. Each lever's page shows the reasoning behind its placement.
+        </p>
+        <p>
+          Government spending is deliberately absent. It measures the size of the problem, not the
+          size of the safety response, so it is not comparable with anything in the technical table
+          and must never be added to it.
+        </p>
+      </MethodNote>
+    </section>
+  );
+}
+
+function MetaTable() {
+  const rows = metaAgendas.map((m) => ({
+    ...m,
+    _orgs: orgsByAgenda.get(m.id)?.length ?? 0,
+    _roles: rolesByAgenda.get(m.id)?.length ?? 0,
+  }));
+
+  return (
+    <section className="rule pt-6">
+      <h2 className="text-lg font-medium mb-1">Field building</h2>
+      <p className="text-sm text-ink-muted mb-3 max-w-prose">
+        Work that serves every agenda rather than picking one. Not ranked against your answers —
+        running a fellowship programme doesn't commit you to a view about scheming, so scoring it
+        would be inventing a signal.
+      </p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm min-w-[600px]">
+          <thead className="border-b border-ink-faint/30">
+            <tr className="text-left text-2xs uppercase tracking-wider text-ink-faint">
+              <th scope="col" className="pb-2 pr-2 font-medium">Category</th>
+              <th scope="col" className="pb-2 px-2 font-medium">Orgs</th>
+              <th scope="col" className="pb-2 px-2 font-medium">Open roles</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-ground-line">
+            {rows.map((m) => (
+              <tr key={m.id} className="align-top hover:bg-ground-sunk/60">
+                <td className="py-2.5 pr-2 max-w-[400px]">
+                  <Link to={`/agenda/${m.id}`} className="font-medium hover:text-user hover:underline">{m.name}</Link>
+                  <p className="text-2xs text-ink-muted mt-0.5 leading-snug">{m.one_sentence_summary}</p>
+                </td>
+                <td className="py-2.5 px-2 tabular">{m._orgs || <span className="text-ink-faint">0</span>}</td>
+                <td className="py-2.5 px-2 tabular">
+                  {m._roles
+                    ? <Link to={`/roles?agenda=${m.id}`} className="underline hover:text-user">{m._roles}</Link>
+                    : <span className="text-ink-faint">0</span>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
+  );
+}
+
+/** One methodology note per table, at its foot. Not repeated per cell. */
+function MethodNote({ children }: { children: React.ReactNode }) {
+  return (
+    <details className="mt-3 text-xs">
+      <summary className="cursor-pointer text-ink-muted hover:text-ink select-none">
+        Where these numbers come from, and what they don't mean
+      </summary>
+      <div className="mt-2 pl-3 border-l-2 border-ground-line space-y-2 text-ink-muted leading-relaxed max-w-prose">
+        {children}
+      </div>
+    </details>
   );
 }

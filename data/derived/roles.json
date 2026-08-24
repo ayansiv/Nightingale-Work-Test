@@ -7,9 +7,9 @@
       "title": "AI Fellowship (Winter 2027)",
       "org_id": "era",
       "org_name": "ERA",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Research"
       ],
@@ -107,9 +107,9 @@
       "title": "Senior Designer",
       "org_id": "lightcone-infrastructure",
       "org_name": "Lightcone Infrastructure",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Other), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Other"
       ],
@@ -130,17 +130,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll create beautiful, intuitive websites and lead large-scale design projects end-to-end.\n* Develop designs with deep expertise in HTML, CSS and frontend coding.\n* Deliver world-class design work equivalent to flagship projects like AI 2027.\n* Manage projects from conception through completion with rigorous attention to craftsmanship.\n* Build products that prioritise beauty, intuitiveness and exceptional user experience.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "lightcone-infrastructure-generalist-core-team",
       "title": "Generalist, Core Team",
       "org_id": "lightcone-infrastructure",
       "org_name": "Lightcone Infrastructure",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Management, Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Management",
@@ -165,17 +164,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll work as a core team generalist handling diverse responsibilities across design, programming, operations, and strategic initiatives.\n* Adapt quickly to shifting priorities and team reconfigurations every few weeks based on organisational needs.\n* Develop versatility across multiple domains including backend work, event management, construction, legal matters, and fundraising.\n* Collaborate effectively with team members who serve rotating leadership roles across different projects.\n* Deliver work with meticulous attention to detail and exceptional commitment to quality.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "lightcone-infrastructure-campus-operations-co-lead",
       "title": "Campus Operations Co-Lead",
       "org_id": "lightcone-infrastructure",
       "org_name": "Lightcone Infrastructure",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -196,8 +194,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll manage operations at Lighthaven, a Berkeley campus hosting events, fellowships and conferences.\n* Ensure programmes run smoothly for clients by coordinating logistics, facilities and vendor management.\n* Develop pricing strategies and budgets for conferences and fellowships while optimising costs.\n* Address operational challenges across facilities, permits, software deployment and supply logistics.\n* Identify opportunities to develop new events and programmes for campus utilisation and revenue.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "machine-intelligence-research-institute-policy-advisor",
@@ -417,9 +414,9 @@
       "title": "Community and Events Associate",
       "org_id": "collider",
       "org_name": "Collider",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -441,17 +438,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll manage day-to-day office operations, coordinate events, and build community for a mission-driven organization.\n* Run office operations including front desk coverage, visitor check-in, vendor coordination, and space maintenance.\n* Coordinate and execute events with logistics, catering, AV setup, and real-time troubleshooting.\n* Implement member onboarding and connectivity initiatives while gathering community feedback.\n* Maintain community metrics and communications to foster an inclusive, welcoming culture.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "openai-foundation-program-officer-ai-model-safety",
       "title": "Program Officer, AI Model Safety",
       "org_id": "openai-foundation",
       "org_name": "OpenAI Foundation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy"
       ],
@@ -472,17 +468,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll run the Foundation's AI Model Safety program grantmaking across evaluations, standards, and foundational research.\n* Manage grant investigations from sourcing through board recommendations and deployment to grantees.\n* Proactively identify gaps and necessary organizations in AI safety, finding founders to launch new initiatives.\n* Work with the AI Resources team to route resources to grantees and support their success.\n* Develop program strategy with leadership and build relationships across the safety ecosystem.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "openai-foundation-program-director-formal-methods",
       "title": "Program Director, Formal Methods",
       "org_id": "openai-foundation",
       "org_name": "OpenAI Foundation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy, Management, Information security), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy",
         "Management",
@@ -508,17 +503,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll set the Foundation's formal methods R&D strategy for cyber resilience, coordinating across academia, industry, and government.\n* Build and execute a portfolio of grants and contracts funding exceptional research on verified defensive systems.\n* Launch rapid technical sprints and demonstrations on consequential systems with clear milestones for scaling or stopping work.\n* Coordinate the formal-methods ecosystem spanning researchers, companies, infrastructure operators, and government to drive deployment.\n* Lead a small team of technical experts and program builders executing the vision.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "openai-foundation-program-officer-ai-resources",
       "title": "Program Officer, AI Resources",
       "org_id": "openai-foundation",
       "org_name": "OpenAI Foundation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Strategy"
@@ -542,8 +536,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll conduct research and strategy work to secure and deploy AI resources across grantees for biosecurity, model safety, and cybersecurity initiatives.\n* Research the AI resources portfolio and market scenarios to inform allocation decisions.\n* Support grantmaking end-to-end from sourcing and diligence to resource deployment.\n* Identify and develop key projects and organisations needed in AI resilience.\n* Manage partnerships with OpenAI and compute providers, executing infrastructure deals and securing model access.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "carnegie-mellon-university-software-engineering-institute-senior-ai-red-team-engineer",
@@ -685,9 +678,9 @@
       "title": "MATS Program (Winter 2027)",
       "org_id": "mats-research",
       "org_name": "MATS Research",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Research"
       ],
@@ -754,9 +747,9 @@
       "title": "LASR Labs Programme (Winter 2027)",
       "org_id": "london-ai-safety-research-labs",
       "org_name": "London AI Safety Research Labs",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -780,17 +773,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this programme, you'll work in a team of three to four to develop an AI safety research project from proposal to publication over 13 weeks.\n* Evaluate potential research projects in Week 0 to develop research prioritization skills.\n* Design and run experiments, iterate on results, and write an AI safety research paper with a blog post.\n* Receive regular supervision from an experienced AI safety researcher and support from LASR staff.\n* Engage with leading researchers and organisations at the London Initiative for Safe AI.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "astralis-foundation-operations-manager",
       "title": "Operations Manager",
       "org_id": "astralis-foundation",
       "org_name": "Astralis Foundation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -811,8 +803,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support core operational functions for a rapidly growing AI safety foundation, including tech support, vendor management, office logistics, and finance processes.\n* Manage cross-entity coordination between Stiftelsen Astralis (Sweden) and Astralis Foundation Ltd (UK).\n* Support People Ops workstreams including recruitment, onboarding, and team development.\n* Coordinate event logistics for team retreats, board meetings, and donor convenings.\n* Proactively identify operational gaps and implement solutions to strengthen organizational effectiveness.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "center-for-strategic-and-international-studies-intern-critical-minerals-security-program",
@@ -1143,9 +1134,9 @@
       "title": "Business Operations Generalist",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Finance), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Finance"
@@ -1169,17 +1160,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support accounting, finance, compliance, and audit processes while building scalable operational systems.\n* Support day-to-day accounting and bookkeeping, manage accounts payable and receivable, and coordinate financial administration.\n* Prepare tax documentation including Form 990 and coordinate the annual nonprofit audit process.\n* Build and continuously improve operational processes to increase team capacity and reduce bottlenecks.\n* Serve as a bridge between business operations and the organization, synthesizing stakeholder input into action.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "constellation-it-coordinator-it-specialist",
       "title": "IT Coordinator / IT Specialist",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -1200,8 +1190,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll provide hands-on IT support and maintain shared workspace operations for over 200 weekly users.\n* Manage support tickets, troubleshoot hardware and software issues, and handle device setup and user account support.\n* Maintain IT inventory, administer Google Workspace, and support onboarding and offboarding logistics.\n* Manage physical security operations including access control, badge issuance, and visitor check-in.\n* Support events, coordinate office spaces, and document IT solutions to improve team knowledge.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "ai-verification-and-evaluation-research-institute-project-manager-pilot-audits",
@@ -2358,9 +2347,9 @@
       "title": "Corrigibility Research Fund",
       "org_id": "lightcone-infrastructure",
       "org_name": "Lightcone Infrastructure",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research"
       ],
@@ -2381,8 +2370,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "- Funds research on AI systems that advances understanding of AI corrigibility.\n- Typical grants will be around $5k–$35k.\n* Aims to fund work that impacts the AIs that actually get built, that does not, in expectation, notably accelerate AI capabilities, and that ideally engages with corrigibility's risks and downsides.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "uk-government-ai-security-institute-head-of-finance-and-business-services",
@@ -2459,9 +2447,9 @@
       "title": "Associate Program Officer, Transformative AI Fund",
       "org_id": "centre-for-effective-altruism",
       "org_name": "Centre for Effective Altruism",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy"
       ],
@@ -2482,8 +2470,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll evaluate grant applications for early-stage transformative AI projects and help shape the fund's systems.\n* Investigate grant opportunities by assessing theories of change, team strength, and expected impact.\n* Source high-quality applications through strategic insights, networks, and outreach to promising organisations.\n* Manage grantee relationships and represent the fund professionally to applicants and the AI safety community.\n* Improve grantmaking processes and develop tooling to enhance evaluation efficiency.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "us-government-national-institute-of-standards-and-technology-ai-standards-coordinator-interdisciplinary",
@@ -3050,9 +3037,9 @@
       "title": "Research Manager, AI",
       "org_id": "era",
       "org_name": "ERA",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Management"
@@ -3076,17 +3063,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll guide ERA:AI fellows to scope and direct impactful research across AI Safety and Governance.\n* Review fellowship applications and identify candidates with exceptional research ability and potential.\n* Take intellectual ownership of a portfolio of projects, providing substantive feedback on research direction and execution.\n* Help fellows develop theories of change and redirect blocked or poorly-scoped projects.\n* Build relationships with mentors, researchers and organisations across the AI safety community.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "era-research-manager-aixbio",
       "title": "Research Manager, AIxBio",
       "org_id": "era",
       "org_name": "ERA",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Management"
@@ -3110,8 +3096,7 @@
       "problem_area": "1. AI safety & policy,2. Biosecurity & pandemic preparedness",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support the AIxBio fellowship programme by guiding fellows in scoping projects and translating ambitious ideas into rigorous, decision-relevant work.\n* Review and evaluate fellowship applications to identify candidates with exceptional research ability and potential.\n* Take intellectual ownership of a portfolio of fellows and projects, providing substantive feedback on research design.\n* Help fellows develop credible theories of change and sharpen research questions to select appropriate methods.\n* Build relationships with mentors and researchers across biosecurity and AI safety communities to strengthen ERA's impact.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "uk-government-ai-security-institute-research-scientist-biological-models-chem-bio",
@@ -3180,9 +3165,9 @@
       "title": "Operations Associate",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -3203,17 +3188,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll manage day-to-day operations and logistics for MAIA and CBAI, enabling leaders to focus on core work.\n* Maintain organisational systems including CRM, budget tracking, and expense coordination.\n* Coordinate event and program logistics including meals, venues, transport, and materials.\n* Manage program scheduling by coordinating participant availability and developing meeting schedules.\n* Provide flexible operational support across CBAI's programs as the organisation evolves.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "cambridge-boston-alignment-initiative-office-manager",
       "title": "Office Manager",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -3234,8 +3218,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll oversee CBAI's three Harvard Square offices, managing facilities, operations, and space design to keep sites running smoothly.\n* Troubleshoot and resolve technical issues including WiFi, printers, and AV systems, coordinating with vendors and contractors.\n* Manage food, beverage, and supply ordering and stocking across all three locations.\n* Maintain budget records, track expenditures, and report variances to leadership.\n* Support staff onboarding and offboarding, managing workspaces, access, and logistics.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "federation-of-american-scientists-policy-entrepreneurship-fellowship-ai-safety",
@@ -3343,9 +3326,9 @@
       "title": "Head of SPAR",
       "org_id": "kairos",
       "org_name": "Kairos",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy, Management), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy",
         "Management"
@@ -3368,8 +3351,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll own and grow SPAR, the largest AI safety research fellowship with 400 mentees, 130 mentors, and thousands of applicants.\n* Push SPAR to be more ambitious by deciding on strategic expansions like mentor stipends, additional annual rounds, and enhanced research management.\n* Hire, onboard, and manage research managers to scale the team as the program expands.\n* Cultivate relationships with leading researchers to recruit and retain mentors from top AI safety organisations.\n* Improve SPAR's systems across applications, matching, check-ins, feedback, grants, and Demo Day.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "perplexity-member-of-technical-staff-secure-intelligence-institute",
@@ -3408,9 +3390,9 @@
       "title": "Grant, Transformative AI Fund",
       "org_id": "centre-for-effective-altruism",
       "org_name": "Centre for Effective Altruism",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Strategy",
         "Research"
@@ -3433,8 +3415,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "- Early-stage grants to individuals, new organizations, and existing organizations with new projects, addressing transformative AI, with a primary focus on reducing global catastrophic risks from advanced AI systems.\n- Supports individuals, new organizations, and existing organizations getting a new project off the ground, training for researchers or practitioners, and infrastructure, such as field-building.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "uk-government-ai-security-institute-technical-programme-manager-cyber-and-autonomous-systems",
@@ -3574,9 +3555,9 @@
       "title": "Neel Nanda Stream, MATS Program (Winter 2026)",
       "org_id": "mats-research",
       "org_name": "MATS Research",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Research"
       ],
@@ -3637,9 +3618,9 @@
       "title": "Workshop Lead",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -3661,8 +3642,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll own end-to-end planning and execution of Harvard-MIT AI safety workshops held 8 times yearly.\n* Curate and invite speakers from frontier AI safety organizations like Anthropic, Redwood Research, METR, and DeepMind.\n* Lead participant selection and design workshop programming including session formats and career development elements.\n* Source and execute specialized research workshops in partnership with Harvard, MIT, and Northeastern.\n* Run monthly Cambridge AI Safety networking events connecting the research community.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "center-for-strategic-and-international-studies-research-intern-korea-chair-fall-2026-",
@@ -4029,9 +4009,9 @@
       "title": "Career Development and Transition Funding",
       "org_id": "coefficient-giving",
       "org_name": "Coefficient Giving",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (unspecified), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [],
       "experience_level": [
         "Entry-level"
@@ -4048,8 +4028,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "\"This program aims to provide support – in the form of funding for graduate study, unpaid internships, independent study, career transition and exploration periods, and other activities relevant to building career capital – for individuals at any career stage who want to pursue careers that could help to reduce global catastrophic risks or otherwise improve the long-term future. We’re especially interested in supporting individuals who want to pursue careers that are in some way related to mitigating potential risks posed by future advances in artificial intelligence or global catastrophic biological risks [...]\"",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "openai-researcher-recursive-self-improvement-safety",
@@ -4451,9 +4430,9 @@
       "title": "AI Governance Taskforce (Autumn 2026)",
       "org_id": "arcadia-impact",
       "org_name": "Arcadia Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Policy"
@@ -4477,8 +4456,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll conduct frontier AI governance research in multidisciplinary teams of four to reduce catastrophic risks from advanced AI.\n* Work alongside a Research Team Leader and expert partner to develop and deliver policy-relevant research.\n* Produce academic papers, policy briefs, memos and articles for targeted audiences and policymakers.\n* Apply your existing expertise and experience from other disciplines to frontier AI governance research.\n* Contribute analytical reasoning and clear writing to frontier AI safety and governance projects.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "aim-intelligence-backend-engineer",
@@ -4806,9 +4784,9 @@
       "title": "Producer, Studio Team",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Other), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Other"
       ],
@@ -4834,17 +4812,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support 80,000 Hours's podcast hosts in creating episodes focused on transformative AI, from conception through release.\n* Conduct background research, generate interview questions, and structure conversations for informative and engaging episodes.\n* Review recorded interviews, suggest edits, and craft compelling episode titles, thumbnails, and promotional materials.\n* Monitor episode performance and iterate based on findings to optimise future content.\n* Track AI developments and identify authoritative guests on priority topics.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "80-000-hours-production-coordinator-associate-studio-team",
       "title": "Production Coordinator / Associate, Studio Team",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -4867,17 +4844,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll coordinate the podcast editing pipeline, assigning episodes, tracking capacity, and supporting technical recordings.\n* Maintain production systems and file management to keep operations running smoothly.\n* Review video edits against house standards and provide quality control.\n* Provide technical support for recordings, including pre-call setup, remote sessions, and in-person studio assistance.\n* Cover editing tasks when needed and gradually take on editor onboarding and contractor assessment.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "80-000-hours-special-projects-associate-analyst-studio-team",
       "title": "Special Projects Associate / Analyst, Studio Team",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy"
       ],
@@ -4902,8 +4878,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll drive forward special projects that expand the Studio Team's capacity and impact.\n* Own projects independently by scoping ambiguous problems, planning solutions, and executing with minimal oversight.\n* Manage diverse initiatives including episode impact assessments, guest triage, and Substack content production.\n* Evaluate episode success through audience feedback and metric tracking to inform content strategy.\n* Coordinate across team members and contractors while managing multiple workstreams simultaneously.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "alignment-research-center-chief-of-staff",
@@ -5847,9 +5822,9 @@
       "title": "Headhunting Associate / Specialist",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy"
       ],
@@ -5874,17 +5849,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll run searches to identify and suggest candidates for organizations working on AI safety and impact.\n* Conduct hiring manager calls to understand role requirements and gather feedback.\n* Use LLMs to generate and refine rubrics that assess candidate fit for specific roles.\n* Review and filter candidate leads from the database to identify top prospects.\n* Build relationships with hiring managers and improve search processes.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "80-000-hours-headhunting-product-specialist",
       "title": "Headhunting Product Specialist",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy, Software engineering), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy",
         "Software engineering"
@@ -5912,17 +5886,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll run searches to place candidates into impactful roles and improve the headhunting product through experimentation and data analysis.\n* Test different rubrics and models to enhance search quality based on hiring manager feedback.\n* Conduct user interviews with hiring managers and analyse search data to identify improvements and product features.\n* Own key areas of team work such as prioritising searches, leading experiments, or planning features.\n* Develop and implement product enhancements with large language models to scale impact.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "80-000-hours-talent-database-lead",
       "title": "Talent Database Lead",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy"
       ],
@@ -5946,8 +5919,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll expand the candidate database and improve data quality to match promising talent to impactful roles.\n* Identify coverage gaps in key candidate populations and build acquisition channels through campaigns and partnerships.\n* Develop data-sharing arrangements with fellowship programmes and training providers to access valuable talent networks.\n* Collect richer candidate signals about experience, strengths, and career interests beyond standard CV information.\n* Establish responsible data standards by defining clear frameworks for provenance, consent, and acceptable use.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "uk-government-ai-security-institute-expression-of-interest-cyber-and-autonomous-systems-team",
@@ -6318,9 +6290,9 @@
       "title": "Coordinator / Specialist, People Operations",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -6341,17 +6313,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll manage the day-to-day People Operations function, supporting onboarding, HRIS, benefits, compliance, and recruiting.\n* Execute end-to-end onboarding and offboarding to ensure smooth employee transitions.\n* Maintain accurate HRIS data and support employee benefits programs and policy compliance.\n* Track immigration timelines and liaise with counsel on visa documentation and employee communications.\n* Identify opportunities to streamline and systematize People Ops workflows as the organization scales.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "constellation-director-site-services",
       "title": "Director, Site Services",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Strategy, Management), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Strategy",
@@ -6376,8 +6347,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll oversee site services spanning IT, security, facilities, and catering to enable AI safety research.\n* Lead and develop four direct reports across operational domains, fostering coordination and integration.\n* Set strategic vision and roadmap for infrastructure; own budget allocation, planning, and performance targets.\n* Own enterprise risk management for cybersecurity, physical security, workplace safety, and compliance.\n* Establish KPIs and drive continuous improvement on system uptime, security posture, and user satisfaction.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "lawfare-institute-associate-editor",
@@ -6486,9 +6456,9 @@
       "title": "Visiting Fellowship",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Research"
       ],
@@ -6839,9 +6809,9 @@
       "title": "Recruiting Lead",
       "org_id": "mats-research",
       "org_name": "MATS Research",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -6863,17 +6833,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll design and manage a scalable hiring process to fill 40 positions annually for MATS.\n* Build process architecture including ATS systems, repeatable sourcing and screening workflows, and documentation.\n* Execute full-cycle recruitment for technical roles, from job descriptions and sourcing to interviews and assessments.\n* Establish hiring infrastructure with dashboards, metrics reporting, and systems for systematic, predictable hiring.\n* Deliver professional candidate experiences with prompt scheduling, timely feedback, and appropriate accommodations.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "mats-research-head-of-finance",
       "title": "Head of Finance",
       "org_id": "mats-research",
       "org_name": "MATS Research",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Finance), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Finance"
@@ -6896,8 +6865,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll build MATS's financial function, owning accounting, budgeting, grants, payments, procurement, and strategy as the org scales 2x annually.\n* Manage month-end and year-end closes, financial statements, and accounting across US and UK entities.\n* Build and maintain annual budgets, rolling forecasts, and unit economics models to inform strategy.\n* Oversee grants management, payroll, stipend disbursement, vendor payments, and procurement policies.\n* Develop financial strategy on runway planning, reserves, funding diversification, and risk mitigation.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "andon-labs-research-engineer-ai-safety-and-evals",
@@ -7033,9 +7001,9 @@
       "title": "Technical AI Safety Upskilling Resources",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Software engineering",
@@ -7062,8 +7030,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* Sometimes, our advising team speaks to people who have enthusiasm for technical AI safety and a related skill set but need concrete ideas for how to enter the field. This list was developed in consultation with our advisors to find the resources they commonly share.\n* List includes articles, newsletters, podcasts, courses, idea lists, advice, fellowships, and organisations.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "alice-genai-analyst",
@@ -7263,9 +7230,9 @@
       "title": "Volunteer, AI Safety Quest",
       "org_id": "ai-safety-quest",
       "org_name": "AI Safety Quest",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Outreach, Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Outreach",
         "Operations"
@@ -7288,8 +7255,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support AI Safety Quest's mission through volunteer contributions to the areas in which it most needs support.\n* Operations, automation and tooling: You will own the systems that make Quest run.\n* Volunteer operations lead: Own the human side of Quest, communicating with people who reach out to or volunteer with Quest.\n* Coaching: Have between 2 to 6 30-45 minute calls a week with advisees.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "epoch-ai-events-lead",
@@ -7326,9 +7292,9 @@
       "title": "Operations Manager",
       "org_id": "collider",
       "org_name": "Collider",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -7351,8 +7317,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll build and scale operational systems that keep the hub functioning with seamless member experience and efficient team operations.\n* Design and maintain internal tools, templates, and workflows for project management and vendor tracking.\n* Support program logistics including event coordination, payments, contracts, and travel arrangements for fellowships and workshops.\n* Manage accounts payable, expense tracking, budgets, and financial coordination.\n* Handle vendor relationships, onboarding/offboarding, compliance matters, and process improvement initiatives.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "horizon-institute-for-public-service-horizon-fellowship",
@@ -7452,9 +7417,9 @@
       "title": "Intern, Engineering (Spring 2027)",
       "org_id": "blue-origin",
       "org_name": "Blue Origin",
-      "agenda_id": null,
+      "agenda_id": "",
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Software engineering",
         "Engineering"
@@ -7493,9 +7458,9 @@
       "title": "Course, The Future of AI",
       "org_id": "bluedot-impact",
       "org_name": "BlueDot Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Other"
       ],
@@ -7688,9 +7653,9 @@
       "title": "Office Manager",
       "org_id": "mats-research",
       "org_name": "MATS Research",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -7711,17 +7676,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you will be the operational backbone of the office, in order to keep the London workspace running smoothly.\n* Manage office access, oversee WiFi setup, lead office improvement projects, and handle procurement of office supplies.\n* Support fellow onboarding and day-to-day administrative needs, coordinate logistics for arrivals, departures, and in-programme schedules.\n* Own the relationship with the co-working space provider, manage snack and drink deliveries, coordinate food deliveries and catering.\n* Own meeting room management.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "mats-research-executive-business-partner",
       "title": "Executive Business Partner",
       "org_id": "mats-research",
       "org_name": "MATS Research",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -7743,8 +7707,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you will be the operational backbone for three senior leaders at MATS.\n* Own end-to-end scheduling, including fielding and prioritising meeting requests from internal and external stakeholders, resolving conflicts, and ensuring executives' time is protected and well-allocated. \n* Proactively monitor executives' responsibilities, deadlines, and follow-up items.\n* Process and reconcile expenses on behalf of executives in a timely and accurate manner.\n* Arrange domestic and international travel.\n* Track the status of key projects requiring executive sign-off or input.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "far-ai-general-counsel",
@@ -8271,9 +8234,9 @@
       "title": "Research Manager",
       "org_id": "london-ai-safety-research-labs",
       "org_name": "London AI Safety Research Labs",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -8295,8 +8258,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll manage research teams and provide technical enablement to help participants deliver high-quality AI safety research.\n* Help teams set goals, track progress, and maintain accountability through one-on-one meetings and feedback sessions.\n* Provide hands-on technical support including code debugging, tooling advice, and guidance on compute resources.\n* Run technical workshops on using AI tools to enhance research and coding efficiency.\n* Support proposal evaluation, applicant assessment, recruitment, and programme delivery.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "frame-operations-lead",
@@ -9854,9 +9816,9 @@
       "title": "Verification Lead",
       "org_id": "sash",
       "org_name": "SASH",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Management, Information security, Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Management",
         "Information security",
@@ -9883,17 +9845,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll lead the AI verification team, building tools for this critical international collaboration.\n* Build and manage engineers while developing strong in-house verification capacity.\n* Develop algorithms and tools spanning ML engineering, cybersecurity analysis, and hardware verification.\n* Interface with policymakers and external experts to translate technical advances into policy impact.\n* Direct projects distinguishing GPU workloads through emerging secure verification mechanisms.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "sash-research-engineer-ai-verification",
       "title": "Research Engineer, AI Verification",
       "org_id": "sash",
       "org_name": "SASH",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Research",
         "Software engineering",
@@ -9919,8 +9880,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll build prototypes for AI verification tools and support technical communications for the global Verification team.\n* Develop algorithms to distinguish between AI inference and training workloads on GPUs.\n* Implement ML solutions including inference pipelines and interactive demos.\n* Analyse verification designs for cybersecurity vulnerabilities and implications.\n* Collaborate with international experts to advance trusted AI verification mechanisms.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "aixi-labs-fellowship",
@@ -10409,9 +10369,9 @@
       "title": "Program Assistant, International Program",
       "org_id": "carnegie-corporation-of-new-york",
       "org_name": "Carnegie Corporation of New York",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy, Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy",
         "Operations"
@@ -10435,8 +10395,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll provide programmatic support to the Senior Program Director for grantmaking and project management in international affairs.\n* Conduct background research on prospective grantees, assess proposals, and solicit expert reviews.\n* Negotiate with grantees, review budgets, and prepare staff evaluations for board consideration.\n* Correspond with grantees, draft program documents, organize meetings, and attend site visits.\n* Monitor active projects and maintain regular communication with grantees.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "apollo-research-finance-associate",
@@ -11258,7 +11217,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Engineering"
       ],
@@ -11280,8 +11239,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll design and develop electronic systems for diverse technical projects.\n* Perform schematic design, PCB layout, component selection, and component procurement.\n* Assemble and modify printed circuit boards using hand soldering techniques.\n* Test and debug circuits using oscilloscopes and logic analysers.\n* Collaborate across disciplines to balance functional requirements with design constraints.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "amodo-design-operations-engineer",
@@ -11290,7 +11248,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Operations",
         "Software engineering"
@@ -11314,8 +11272,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll collaborate with cross-functional teams to design hyper-optimised and AI-assisted systems that enhance manufacturing, testing, and engineering workflows.\n* Develop and optimise manufacturing and operations processes to improve R&D efficiency.\n* Apply GD&T expertise and engineering standards to support hardware development and quality.\n* Troubleshoot complex technical problems and implement solutions across systems.\n* Write software tools to automate and streamline engineering and manufacturing workflows.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "amodo-design-physicist-engineer-track",
@@ -11324,7 +11281,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Engineering"
@@ -11348,8 +11305,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll apply physics fundamentals to hardware engineering, developing practical skills in electronics, firmware, and mechanical systems.\n* Build hands-on experience in soldering, embedded coding, and electronics through varied technical projects.\n* Work on 2-8 month projects in small teams, balancing one main project with concurrent support on 1-2 others.\n* Develop specialisation naturally in your area of strength whilst building expertise across multiple engineering disciplines.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "anthropic-regional-research-economist-economic-research-london",
@@ -12596,9 +12552,9 @@
       "title": "Funding, Work That Builds Capacity to Address Risks From Transformative AI",
       "org_id": "coefficient-giving",
       "org_name": "Coefficient Giving",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_funding",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Outreach), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Outreach"
@@ -12621,8 +12577,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "- Funding for projects, including those helping new talent get into work focused on addressing risks from transformative AI, supporting existing talent, or contributing to the discourse about transformative AI. \n- Funding decisions are typically made in 8 weeks or less.\n- Apply for grants ranging from small individual amounts to multi-year organisational projects.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "concordia-ai-expression-of-interest",
@@ -13950,9 +13905,9 @@
       "title": "Volunteer",
       "org_id": "ai-alignment-network",
       "org_name": "AI Alignment Network",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Outreach), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Outreach"
@@ -13975,8 +13930,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "- ALIGN seeks volunteer staff to help grow the community and support ALIGN’s mission of creating a hopeful future for AI and humanity. \n- Plan and manage webinars, study sessions, and symposiums. \n- Support online and offline community activities. \n- Assist with social media management and newsletter creation. \n- Research and write reports on events, and assist with report writing.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "ai-safety-asia-project-manager-ai-governance-training",
@@ -14013,9 +13967,9 @@
       "title": "Volunteer",
       "org_id": "ai-safety-awareness-project",
       "org_name": "AI Safety Awareness Project",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -14036,8 +13990,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "'- Facilitate local workshops using provided materials to guide balanced discussions.\n- Adapt content for specific community needs (technical, economic, artistic).\n- Organise venues, advertising and logistics for local AI Safety Workshops.\n- Establish partnerships with schools, libraries and community groups.\n- Participate in workshops to build public awareness about AI risks and benefits.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "aigs-canada-volunteer",
@@ -14078,9 +14031,9 @@
       "title": "Volunteer Opportunities",
       "org_id": "aisafety-com",
       "org_name": "AISafety.com",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_infrastructure",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Operations",
         "Outreach",
@@ -14105,8 +14058,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "- Opportunities to volunteer with various AI safety projects.\n- Page includes active projects and project ideas.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "alignerr-ai-red-team-analyst",
@@ -14394,9 +14346,9 @@
       "title": "Facilitator",
       "org_id": "bluedot-impact",
       "org_name": "BlueDot Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Other), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Other"
       ],
@@ -14418,17 +14370,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll facilitate discussion-based learning to develop top talent to work on pressing global issues like AI safety and biosecurity.\n* Lead small-group discussions (6-10 participants) using Socratic methods to foster peer-to-peer learning.\n* Apply your domain expertise to challenge participants and push their thinking forward.\n* Provide 1:1 mentorship to help participants launch careers in AI safety or biosecurity.\n* Prepare for sessions by reviewing materials and designing activities that drive engagement.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "bluedot-impact-mentor",
       "title": "Mentor",
       "org_id": "bluedot-impact",
       "org_name": "BlueDot Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Management), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Management"
       ],
@@ -14450,17 +14401,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll mentor participants through AI safety project sprints, ensuring they complete and publish impactful work.\n* Lead weekly group check-ins to keep participants accountable and facilitate peer learning.\n* Guide participants on project selection, tools, goals, and networking opportunities in the AI safety landscape.\n* Coach through thoughtful questioning, helping participants identify core issues and develop solutions independently.\n* Support the publication of completed projects across blogs, Twitter, GitHub, and LinkedIn for maximum impact.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "bluedot-impact-frontier-ai-governance",
       "title": "Frontier AI Governance",
       "org_id": "bluedot-impact",
       "org_name": "BlueDot Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Policy"
       ],
@@ -14489,9 +14439,9 @@
       "title": "Technical AI Safety Project Sprint",
       "org_id": "bluedot-impact",
       "org_name": "BlueDot Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -14522,9 +14472,9 @@
       "title": "Program Lead, AIxBio",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Strategy, Operations, Management), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Strategy",
         "Operations",
@@ -14549,17 +14499,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll launch and lead the AIxBio Research Fellowship, managing program strategy, team leadership, and mentor relationships.\n* Design the fellowship end-to-end, from fellow selection criteria to mentor matching and cohort programming.\n* Manage the AIxBio Research Managers team with guidance, feedback, and support.\n* Lead mentor recruitment by identifying and onboarding leading biosecurity and AI researchers.\n* Develop evaluation frameworks to assess fellow and program outcomes, and strengthen CBAI's presence in the Cambridge biosecurity ecosystem.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "cambridge-boston-alignment-initiative-research-manager-ai-safety",
       "title": "Research Manager, AI Safety",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Operations",
         "Research",
@@ -14584,17 +14533,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support AI safety research fellows in executing their projects through feedback, coaching, and resource connection.\n* Conduct regular 1-1s with fellows, providing feedback on research progress and helping them overcome obstacles.\n* Connect fellows with resources, literature, and opportunities while liaising with mentors to define research objectives.\n* Support fellow selection, design curriculum, curate speaker events, and prepare weekly field briefs.\n* Help fellows strengthen their methodology, arguments, and research rigor throughout the fellowship.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "cambridge-boston-alignment-initiative-research-manager-aixbio",
       "title": "Research Manager, AIxBio",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Operations",
         "Research",
@@ -14619,17 +14567,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support fellows conducting AI x biosecurity research through feedback, mentoring, and program management.\n* Conduct regular 1-1s with fellows, providing feedback on progress, debugging designs, and supporting data analysis.\n* Connect fellows with resources, literature, and opportunities in AI x biosecurity.\n* Contribute to fellow selection through reviewing and interviewing candidates and designing program activities.\n* Maintain knowledge of AI and biosecurity developments and communicate with mentors to define research objectives.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "cambridge-boston-alignment-initiative-research-program-associate-ai-safety",
       "title": "Research Program Associate, AI Safety",
       "org_id": "cambridge-boston-alignment-initiative",
       "org_name": "Cambridge Boston Alignment Initiative",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -14650,8 +14597,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll design and improve program systems that enable AI safety fellows to conduct excellent research.\n* Develop program evaluation frameworks and implement structural improvements across fellowship cycles.\n* Design mentor onboarding and feedback mechanisms connecting fellows, mentors, and program leadership.\n* Identify outreach channels, own recruitment campaigns, and assess program effectiveness.\n* Design and support fellowship events and supplementary programming enriching the intellectual environment.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "carnegie-mellon-university-software-engineering-institute-associate-ai-security-researcher",
@@ -14857,9 +14803,9 @@
       "title": "General Expression of Interest",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -14881,17 +14827,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "- In this role, you'll be involved in roles that directly further Constellation’s mission. \n- Run and help design programs such as the Astra Fellowship and the Machine Learning Alignment Bootcamp. \n- Support various programs with responsibilities including IT management, CRM administration, and marketing operations. \n- Oversee corporate infrastructure, covering finance, legal, and HR. \n- Design and manage workspaces and facilities to support program operations.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "constellation-program-coordinator-user-experience",
       "title": "Program Coordinator, User Experience",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -14912,17 +14857,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll improve program effectiveness and user experience for an AI safety community by understanding member needs.\n* Conduct user interviews and gather feedback to identify patterns and recommend experience improvements.\n* Design and refine end-to-end member experiences, testing and iterating on new program ideas.\n* Partner with operations team to implement enhancements and solve emerging community needs.\n* Plan and execute events for researchers and policymakers, ensuring excellent attendee experiences.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "constellation-research-program-coordinator",
       "title": "Research Program Coordinator",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -14943,17 +14887,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll own the operations and systems that support research programs building the AI safety field's talent pipeline.\n* Maintain project plans, documentation, and team coordination systems to keep programs on track.\n* Design and improve workflows, team structures, and communication platforms across research programs and their networks.\n* Partner with research program managers on event programming, design, and logistics for technical workshops and educational sessions.\n* Track process bottlenecks and implement improvements to increase team effectiveness and program quality.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "constellation-operations-coordinator",
       "title": "Operations Coordinator",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -14974,17 +14917,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll provide administrative, office, and customer support to staff and researchers in a shared workspace.\n* Welcome visitors and program participants, register them in our systems, and conduct orientation tours.\n* Manage researcher support requests, troubleshoot office issues, and coordinate travel and lodging for guests.\n* Staff workshops and events, handling setup, takedown, and addressing emergent issues.\n* Support daily office operations by booking meeting spaces, ordering supplies, and maintaining accurate records.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "constellation-program-coordinator-analysis",
       "title": "Program Coordinator, Analysis",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Strategy"
@@ -15007,8 +14949,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll measure program effectiveness and enhance user experience through data analysis and community support.\n* Conduct user interviews and quantitative analysis to identify researcher needs and improvement opportunities.\n* Design and improve the user experience across onboarding, office utilization, and community environment.\n* Provide strategic problem-solving and respond to emerging community needs using triage frameworks.\n* Assist with event planning and execution while managing website and external communications.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "general-purpose-ai-policy-lab-project-officer-international-coordination",
@@ -15336,9 +15277,9 @@
       "title": "Generalist, Talent Operations",
       "org_id": "kairos",
       "org_name": "Kairos",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -15360,17 +15301,16 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll lead Kairos's hiring as they grow, then expand into talent operations and generalist work.\n* Run end-to-end hiring including sourcing, screening, interviews, and pipeline management.\n* Build scalable hiring infrastructure like job descriptions, trial tasks, rubrics, and tracking systems.\n* Support broader Kairos work including grant reviews, program support, and ecosystem relationship building.\n* Develop talent operations by matching alumni to roles and building shared talent databases.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "kairos-research-manager-spar",
       "title": "Research Manager, SPAR",
       "org_id": "kairos",
       "org_name": "Kairos",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -15392,8 +15332,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll support mentors and mentees in SPAR, our largest AI safety research fellowship.\n* Support mentors with regular check-ins, project scoping, and troubleshooting throughout the program.\n* Conduct 1:1 chats with mentees and address their questions across Slack and email.\n* Plan and deliver monthly events for mentors and mentees, including workshops and speaker sessions.\n* Co-run Demo Day and contribute to key program decisions on recruiting, matching, and feedback systems.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "lawzero-senior-ml-research-scientist",
@@ -16889,9 +16828,9 @@
       "title": "Expression of Interest, Contractor, Video Programme",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Other), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Other"
       ],
@@ -16913,8 +16852,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll help create compelling videos for 80,000 Hours' AI in Context YouTube channel focused on transformative AI topics.\n* Contribute to video production as an editor, scriptwriter, videographer, or producer on a contract basis.\n* Create content that informs and changes conversations about AI safety and risks.\n* Adapt quickly to the channel's established style while maintaining high-quality output.\n* Work flexibly with varying time commitments, including intensive periods around video launches.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "ai-democracy-foundation-various-opportunities",
@@ -17119,7 +17057,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security",
         "Engineering"
@@ -17143,8 +17081,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll develop hardware architectures for verifying and securing advanced AI systems.\n* Build networks with AI labs, policymakers, and governance researchers on hardware verification.\n* Scope projects with AI safety researchers, understanding technical challenges and creating engineering work plans.\n* Lead delivery of hardware systems, translating between AI security requirements and hardware implementation.\n* Grow the team by hiring and mentoring engineers as the workstream expands.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "apart-research-exceptional-talent-application",
@@ -17346,9 +17283,9 @@
       "title": "Head of Talent",
       "org_id": "bluedot-impact",
       "org_name": "BlueDot Impact",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -17369,8 +17306,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll lead talent acquisition to scale BlueDot's AI safety workforce by hiring 20 exceptional people over 12 months.\n* Build and execute targeted recruiting strategies to attract top talent in AI safety.\n* Screen and interview candidates to assess fit and identify exceptional hires.\n* Develop relationships with academic and professional networks to source talent.\n* Create integration processes to onboard new team members effectively.",
-      "highlighted": true,
-      "cross_agenda": true
+      "highlighted": true
     },
     {
       "id": "carnegie-mellon-university-software-engineering-institute-senior-software-engineer-ai-security",
@@ -17540,9 +17476,9 @@
       "title": "Expression of Interest, Operations",
       "org_id": "constellation",
       "org_name": "Constellation",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations"
       ],
@@ -17563,8 +17499,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll execute operational functions across Finance, HR, Programs, and Facilities enabling Constellation's AI safety mission.\n* Oversee critical operations serving over 200 weekly researchers at the Berkeley hub.\n* Enable colleagues to focus on safety research by managing essential operational tasks.\n* Apply entrepreneurial problem-solving to operational challenges across diverse domains.\n* Build the backbone infrastructure supporting the world's leading AI safety research network.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "eleutherai-researcher-interpretability",
@@ -18300,9 +18235,9 @@
       "title": "Head of Talent Operations",
       "org_id": "kairos",
       "org_name": "Kairos",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "Non-research role (Operations, Strategy), so it takes the organization's primary agenda. This inheritance is deliberate: without it the matcher would route only to research roles, contradicting the job boards' own framing that many roles need no technical background.",
       "skill_set": [
         "Operations",
         "Strategy"
@@ -18327,8 +18262,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll build Kairos's talent operations function combining internal recruiting, ecosystem headhunting, and grantmaking.\n* Own Kairos's hiring pipeline end-to-end as the organisation scales from 7 to 20 people.\n* Build relationships with AI safety organisations and place early-career talent into high-impact roles.\n* Onboard partner organisations to Talent Commons and maintain the data quality enabling cross-ecosystem sharing.\n* Set grantmaking strategy and make funding decisions for the Career Development and Transition Fund.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "lawzero-senior-ml-research-developer",
@@ -19190,9 +19124,9 @@
       "title": "Hellman and Simons Fellow, Science, Engineering, and Technology",
       "org_id": "american-academy-of-arts-and-sciences",
       "org_name": "American Academy of Arts and Sciences",
-      "agenda_id": null,
+      "agenda_id": "",
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Policy"
       ],
@@ -19225,7 +19159,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -19247,8 +19181,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll design and develop cutting-edge solutions and systems across various industries as part of a multidisciplinary team.\n* Write and deploy code using languages such as CPP, JS, TypeScript, and Python for client projects.\n* Apply programming best practices to deliver high-quality software solutions.\n* Contribute to both frontend and backend development for engineering consultancy projects.\n* Collaborate on innovative projects spanning quantum computing, biotech, heavy industry, and animal welfare.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "amodo-design-software-engineer",
@@ -19257,7 +19190,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -19278,8 +19211,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this role, you'll design and develop software solutions for cutting-edge engineering projects across quantum computing, biotech, and heavy industry.\n* Write and deploy production code using CPP, JavaScript, TypeScript, and Python.\n* Collaborate with multidisciplinary teams of 2-10 engineers on projects lasting 2-8 months.\n* Apply programming best practices to frontend and backend development.\n* Support multiple concurrent projects while focusing on high-impact deliverables.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "apple-research-engineer-ml-safety",
@@ -19288,7 +19220,7 @@
       "org_name": "Apple",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -19311,8 +19243,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Master's degree",
       "description": "* In this role, you'll lead the design and development of automated safety benchmarking for AI models at Apple.\n* Design scientifically-grounded evaluation frameworks to assess safety across media applications.\n* Develop automated pipelines to evaluate model outputs against safety policies at scale.\n* Create datasets representing realistic and adversarial use cases across multiple languages.\n* Translate findings into actionable model improvements through cross-functional collaboration.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "center-for-a-new-american-security-various-internships",
@@ -20284,7 +20215,7 @@
       "org_name": "Apple",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -20307,8 +20238,7 @@
       "problem_area": "D. Career development: Technical",
       "required_degree": "Doctoral degree",
       "description": "* In this role, you'll research and advance safety measures for generative AI models at Apple.\n* Develop red teaming methods for LLMs and diffusion models to identify vulnerabilities.\n* Create mitigations and safeguards to ensure secure deployment of LLMs in Apple products.\n* Build tools, metrics, and datasets for evaluating LLM safety throughout the deployment lifecycle.\n* Develop methods to interpret and explain language model failures for improved system transparency.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     },
     {
       "id": "aspen-institute-various-fellowships",
@@ -20347,9 +20277,9 @@
       "title": "Policy Fellowships Programme",
       "org_id": "cambridge-university-centre-for-science-and-policy",
       "org_name": "Cambridge University, Centre for Science and Policy",
-      "agenda_id": null,
+      "agenda_id": "",
       "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "tag_rationale": "A cohort programme: which agenda you end up working on depends on your mentor rather than on the host organization, so this is shown under every agenda as well as under the host.",
       "skill_set": [
         "Policy"
       ],
@@ -20953,9 +20883,9 @@
       "title": "Get Career Advising",
       "org_id": "80-000-hours",
       "org_name": "80,000 Hours",
-      "agenda_id": null,
-      "tag_source": "untagged",
-      "tag_rationale": "Field-building organization. Placement depends on the mentor or cohort rather than the host, so this role is shown under every agenda rather than assigned to one.",
+      "agenda_id": "meta_talent",
+      "tag_source": "inherited",
+      "tag_rationale": "No distinguishing signal in the title or description, so this takes the organization's primary agenda. A research role tagged by inheritance is a weaker claim than one tagged by content.",
       "skill_set": [
         "Operations",
         "Research",
@@ -20998,8 +20928,7 @@
       "problem_area": "1. AI safety & policy",
       "required_degree": "Undergraduate degree or less",
       "description": "* In this program, you will have a call with a member of the 80,000 hours advising team who will give you personalised advice. They'll help you:\n* Review your options: Advisors help you evaluate causes and high-impact career options.\n* Make introductions: Advisors can introduce you to experts and hiring managers in relevant fields.\n* Suggest next career steps: Advisors can provide guidance on practical next steps, such as suggesting promising job opportunities.",
-      "highlighted": false,
-      "cross_agenda": true
+      "highlighted": false
     }
   ]
 }

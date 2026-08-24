@@ -1,0 +1,51 @@
+{
+  "$comment": [
+    "Field-building work, as a third domain alongside technical and policy.",
+    "",
+    "WHY THIS EXISTS. The first cut tagged every role at a field-building organization as",
+    "'open to any agenda'. That produced 81 such roles — but only 10 were actually cohort",
+    "programmes where a mentor determines placement. The other 71 were ordinary jobs: an",
+    "operations manager at Constellation, a software engineer at Lightcone, a grants associate",
+    "at Coefficient Giving. Calling those 'open to any agenda' was wrong twice over: it hid real",
+    "jobs behind a non-answer, and it diluted the label so that the genuine fellowships stopped",
+    "standing out.",
+    "",
+    "So field-building gets its own categories, roles at those orgs inherit normally, and",
+    "'open to any agenda' is reserved for Fellowship / Internship / Course positions, where it",
+    "is a true statement about how placement works rather than an admission that we did not tag.",
+    "",
+    "DOMAIN 'meta' IS NOT MATCHED. The matcher handles technical and policy only. That is",
+    "deliberate: these categories are close to worldview-neutral — someone who wants to run a",
+    "fellowship programme is not thereby committed to a position on scheming — so ranking them",
+    "against an instrument result would be inventing a signal. They appear in browse and on the",
+    "agendas page, and they carry no coordinates."
+  ],
+  "domain": "meta",
+  "matched": false,
+  "agendas": [
+    {
+      "id": "meta_talent",
+      "name": "Talent pipelines and training",
+      "one_sentence_summary": "Find people who could do this work, and get them to the point where they can.",
+      "theory_of_change": "The field's binding constraint is often people rather than money → structured training, mentorship and placement convert interested outsiders into productive researchers and policy staff faster than they would convert on their own → the pipeline that fills every other agenda on this page.",
+      "why_it_is_not_matched": "Worldview-neutral by construction: the programmes place people across every agenda, so a position on the axes would misrepresent them.",
+      "example_bodies": ["MATS", "Constellation", "Cambridge Boston Alignment Initiative", "ERA", "BlueDot Impact", "LASR Labs", "Kairos", "80,000 Hours"]
+    },
+    {
+      "id": "meta_funding",
+      "name": "Grantmaking and funding infrastructure",
+      "one_sentence_summary": "Decide where the money goes, and build the machinery that moves it.",
+      "theory_of_change": "Most safety work is grant-funded and the funding is highly concentrated → the quality of grantmaking judgement is a large multiplier on the whole field → adding capacity and independent judgement here moves more than adding one more researcher.",
+      "why_it_is_not_matched": "A grantmaker's job is to fund across worldviews, not to hold one.",
+      "example_bodies": ["Coefficient Giving", "Founders Pledge", "OpenAI Foundation", "Carnegie Corporation of New York"]
+    },
+    {
+      "id": "meta_infrastructure",
+      "name": "Community, tooling and research infrastructure",
+      "one_sentence_summary": "Build and run the things the rest of the field depends on but nobody is individually paid to maintain.",
+      "theory_of_change": "Forums, venues, datasets, job boards and shared tooling are public goods with no natural owner → someone maintaining them well raises the productivity of everyone using them → chronically under-supplied relative to their leverage.",
+      "why_it_is_not_matched": "Infrastructure serves every agenda; positioning it on the axes would be a category error.",
+      "example_bodies": ["Lightcone Infrastructure", "Centre for Effective Altruism", "AISafety.com", "Collider", "SASH"]
+    }
+  ]
+}
