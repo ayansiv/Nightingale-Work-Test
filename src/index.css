@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-ground text-ink font-sans antialiased;
+    font-feature-settings: 'tnum' 1, 'cv05' 1;
+  }
+  /* Spec §17 quality floor: visible keyboard focus, reduced motion respected. */
+  :focus-visible { @apply outline-none ring-2 ring-user ring-offset-2 ring-offset-ground rounded-sm; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  /* Sourcing is content, not chrome (spec §17). A provenance chip is designed to be READ. */
+  .chip { @apply inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-2xs font-mono uppercase tracking-wide; }
+  .chip-derived  { @apply chip bg-derived/10 text-derived; }
+  .chip-assigned { @apply chip bg-assigned/10 text-assigned; }
+  .chip-estimated{ @apply chip bg-ink-faint/10 text-ink-muted; }
+  .chip-unknown  { @apply chip bg-ground-sunk text-ink-faint; }
+
+  .rule { @apply border-t border-ground-line; }
+  .tabular { @apply font-mono text-sm tabular-nums; }
+}

@@ -1,0 +1,387 @@
+taxonomy:
+- id: labs_giant_companies
+  name: Labs (giant companies)
+  description: Frontier AI companies developing large-scale foundation models and their alignment research efforts.
+  children:
+  - id: openai
+    name: OpenAI
+    description: Public benefit corporation with Alignment, Safety Systems, Preparedness, and Model Policy teams.
+  - id: google_deepmind
+    name: Google Deepmind
+    description: Google subsidiary with research focus on amplified oversight, interpretability, and automated alignment.
+  - id: anthropic
+    name: Anthropic
+    description: Public-benefit corporation focused on scalable alignment, interpretability, and control research.
+  - id: xai
+    name: xAI
+    description: For-profit company with Applied Safety and Model Evaluation teams, nominally focused on misuse.
+  - id: meta
+    name: Meta
+    description: For-profit company with safety research integrated into capabilities work and FAIR Alignment team.
+  - id: china
+    name: China
+    description: Chinese AI companies (Alibaba, DeepSeek, Moonshot, Baidu, Z, MiniMax, ByteDance) with mostly open-weights models and limited safety focus.
+  - id: others
+    name: Others
+    description: Other frontier AI companies including Amazon, Microsoft, and Mistral.
+- id: black_box_safety_understand_and_control_current_model_behaviour
+  name: Black-box safety (understand and control current model behaviour)
+  description: Approaches that shape AI behavior through input-output optimization and behavioral controls without requiring deep understanding of internal mechanisms.
+  children:
+  - id: iterative_alignment
+    name: Iterative alignment
+    description: Nudging base models by optimizing their output during or after training, the dominant industry approach with hundreds of researchers.
+    children:
+    - id: iterative_alignment_at_pretrain_time
+      name: Iterative alignment at pretrain-time
+      description: Guide weights during pretraining.
+    - id: iterative_alignment_at_post_train_time
+      name: Iterative alignment at post-train-time
+      description: Modify weights after pre-training.
+    - id: black_box_make_ai_solve_it
+      name: Black-box make-AI-solve-it
+      description: Focus on using existing models to improve and align further models.
+    - id: inoculation_prompting
+      name: Inoculation prompting
+      description: Prompt mild misbehaviour in training, to prevent the failure mode where once AI misbehaves in a mild way,
+        it will be more inclined towards all bad behaviour.
+    - id: inference_time_in_context_learning
+      name: 'Inference-time: In-context learning'
+      description: Investigate what runtime guidelines, rules, or examples provided to an LLM yield better behavior.
+    - id: inference_time_steering
+      name: 'Inference-time: Steering'
+      description: Manipulate an LLM's internal representations/token probabilities without touching weights.
+    - id: capability_removal_unlearning
+      name: 'Capability removal: unlearning'
+      description: Developing methods to selectively remove specific information, capabilities, or behaviors from a trained
+        model (e.g. without retraining it from scratch). A mixture of black-box and white-box approaches.
+    - id: control
+      name: Control
+      description: If we assume early transformative AIs are misaligned and actively trying to subvert safety measures, can
+        we still set up protocols to extract useful work from them while preventing sabotage, and watching with incriminating
+        behaviour?
+    - id: safeguards_inference_time_auxiliaries
+      name: Safeguards (inference-time auxiliaries)
+      description: Layers of inference-time defenses, such as classifiers, monitors, and rapid-response protocols, to detect
+        and block jailbreaks, prompt injections, and other harmful model behaviors.
+    - id: chain_of_thought_monitoring
+      name: Chain of thought monitoring
+      description: Supervise an AI's natural-language (output) "reasoning" to detect misalignment, scheming, or deception,
+        rather than studying the actual internal states.
+  - id: model_psychology
+    name: Model psychology
+    description: Understanding and shaping emergent values, preferences, personae, and behavioral patterns in language models.
+    children:
+    - id: model_values_model_preferences
+      name: Model values / model preferences
+      description: Analyse and control emergent, coherent value systems in LLMs, which change as models scale, and can contain
+        problematic values like preferences for AIs over humans.
+    - id: character_training_and_persona_steering
+      name: Character training and persona steering
+      description: Map, shape, and control the personae of language models, such that new models embody desirable values (e.g.,
+        honesty, empathy) rather than undesirable ones (e.g., sycophancy, self-perpetuating behaviors).
+    - id: emergent_misalignment
+      name: Emergent misalignment
+      description: Fine-tuning LLMs on one narrow antisocial task can cause general misalignment including deception, shutdown
+        resistance, harmful advice, and extremist sympathies, when those behaviors are never trained or rewarded directly.
+        [A new agenda](https://www.lesswrong.com/posts/AcTEiu5wYDgrbmXow/open-problems-in-emergent-misalignment) which quickly
+        led to a stream of exciting work.
+    - id: model_specs_and_constitutions
+      name: Model specs and constitutions
+      description: Write detailed, natural language descriptions of values and rules for models to follow, then instill these
+        values and rules into models via techniques like Constitutional AI or deliberative alignment.
+    - id: model_psychopathology
+      name: Model psychopathology
+      description: Find interesting LLM phenomena like glitch [tokens](https://vgel.me/posts/seahorse/) and the reversal curse;
+        these are vital data for theory.
+  - id: better_data
+    name: Better data
+    description: Improving alignment by curating, filtering, or generating higher-quality training data rather than relying only on post-training interventions.
+    children:
+    - id: data_filtering
+      name: Data filtering
+      description: Builds safety into models from the start by removing harmful or toxic content (like dual-use info) from
+        the pretraining data, rather than relying only on post-training alignment.
+    - id: hyperstition_studies
+      name: Hyperstition studies
+      description: 'Study, steer, and intervene on the following feedback loop: "we produce stories about how present and
+        future AI systems behave" → "these stories become training data for the AI" → "these stories shape how AI systems
+        in fact behave".'
+    - id: data_poisoning_defense
+      name: Data poisoning defense
+      description: Develops methods to detect and prevent malicious or backdoor-inducing samples from being included in the
+        training data.
+    - id: synthetic_data_for_alignment
+      name: Synthetic data for alignment
+      description: Uses AI-generated data (e.g., critiques, preferences, or self-labeled examples) to scale and improve alignment,
+        especially for superhuman models.
+    - id: data_quality_for_alignment
+      name: Data quality for alignment
+      description: Improves the quality, signal-to-noise ratio, and reliability of human-generated preference and alignment
+        data.
+  - id: goal_robustness
+    name: Goal robustness
+    description: Ensuring AI systems pursue intended goals reliably even under distribution shift, optimization pressure, and adversarial conditions.
+    children:
+    - id: mild_optimisation
+      name: Mild optimisation
+      description: Avoid Goodharting by getting AI to satisfice rather than maximise.
+    - id: rl_safety
+      name: RL safety
+      description: Improves the robustness of reinforcement learning agents by addressing core problems in reward learning,
+        goal misgeneralization, and specification gaming.
+    - id: assistance_games_assistive_agents
+      name: Assistance games, assistive agents
+      description: Formalize how AI assistants learn about human preferences given uncertainty and partial observability,
+        and construct environments which better incentivize AIs to learn what we want them to learn.
+    - id: harm_reduction_for_open_weights
+      name: Harm reduction for open weights
+      description: Develops methods, primarily based on pretraining data intervention, to create tamper-resistant safeguards
+        that prevent open-weight models from being maliciously fine-tuned to remove safety features or exploit dangerous capabilities.
+    - id: the_neglected_approaches_approach
+      name: The "Neglected Approaches" Approach
+      description: Agenda-agnostic approaches to identifying good but overlooked empirical alignment ideas, working with theorists
+        who could use engineers, and prototyping them.
+- id: white_box_safety_i_e_interpretability
+  name: White-box safety (i.e. Interpretability)
+  description: Understanding and controlling AI systems by reverse-engineering their internal representations, mechanisms, and computations.
+  children:
+  - id: reverse_engineering
+    name: Reverse engineering
+    description: Decompose a model into its functional, interacting components (circuits), formally describe what computation
+      those components perform, and validate their causal effects to reverse-engineer the model's internal algorithm.
+  - id: extracting_latent_knowledge
+    name: Extracting latent knowledge
+    description: Identify and decoding the "true" beliefs or knowledge represented inside a model's activations, even when
+      the model's output is deceptive or false.
+  - id: lie_and_deception_detectors
+    name: Lie and deception detectors
+    description: Detect when a model is being deceptive or lying by building white- or black-box detectors. Some work below
+      requires intent in their definition, while other work focuses only on whether the model states something it believes
+      to be false, regardless of intent.
+  - id: model_diffing
+    name: Model diffing
+    description: Understand what happens when a model is finetuned, what the "diff" between the finetuned and the original
+      model consists in.
+  - id: sparse_coding
+    name: Sparse Coding
+    description: Decompose the polysemantic activations of the residual stream into a sparse linear combination of monosemantic
+      "features" which correspond to interpretable concepts.
+  - id: causal_abstractions
+    name: Causal Abstractions
+    description: Verify that a neural network implements a specific high-level causal model (like a logical algorithm) by
+      finding a mapping between high-level variables and low-level neural representations.
+  - id: data_attribution
+    name: Data attribution
+    description: Quantifies the influence of individual training data points on a model's specific behavior or output, allowing
+      researchers to trace model properties (like misalignment, bias, or factual errors) back to their source in the training
+      set.
+  - id: pragmatic_interpretability
+    name: Pragmatic interpretability
+    description: Directly tackling concrete, safety-critical problems on the path to AGI by using lightweight interpretability
+      tools (like steering and probing) and empirical feedback from proxy tasks, rather than pursuing complete mechanistic
+      reverse-engineering.
+  - id: other_interpretability
+    name: Other interpretability
+    description: Interpretability that does not fall well into other categories.
+  - id: learning_dynamics_and_developmental_interpretability
+    name: Learning dynamics and developmental interpretability
+    description: Builds tools for detecting, locating, and interpreting key structural shifts, phase transitions, and emergent
+      phenomena (like grokking or deception) that occur during a model's training and in-context learning phases.
+  - id: representation_structure_and_geometry
+    name: Representation structure and geometry
+    description: What do the representations look like? Does any simple structure underlie the beliefs of all well-trained
+      models? Can we get the semantics from this geometry?
+  - id: human_inductive_biases
+    name: Human inductive biases
+    description: Discover connections deep learning AI systems have with human brains and human learning processes. Develop
+      an 'alignment moonshot' based on a coherent theory of learning which applies to both humans and AI systems.
+  - id: concept_based_interpretability
+    name: Concept-based interpretability
+    description: Identifying and manipulating high-level concepts (like refusal, deception, or planning) in a model's latent space for monitoring and steering.
+    children:
+    - id: monitoring_concepts
+      name: Monitoring concepts
+      description: Identifies directions or subspaces in a model's latent state that correspond to high-level concepts (like
+        refusal, deception, or planning) and uses them to audit models for misalignment, monitor them at runtime, suppress
+        eval awareness, debug why models are failing, etc.
+    - id: activation_engineering
+      name: Activation engineering
+      description: Programmatically modify internal model activations to steer outputs toward desired behaviors; a lightweight,
+        interpretable supplement to fine-tuning.
+- id: safety_by_construction
+  name: Safety by construction
+  description: Building AI systems with inherent safety properties by design, through formal guarantees, architectural constraints, or biologically-inspired principles.
+  children:
+  - id: guaranteed_safe_ai
+    name: Guaranteed-Safe AI
+    description: Have an AI system generate outputs (e.g. code, control systems, or RL policies) which it can quantitatively
+      guarantee comply with a formal safety specification and world model.
+  - id: scientist_ai
+    name: Scientist AI
+    description: Develop powerful, nonagentic, uncertain world models that accelerate scientific progress while avoiding the
+      risks of agent AIs
+  - id: brainlike_agi_safety
+    name: Brainlike-AGI Safety
+    description: Social and moral instincts are (partly) implemented in particular hardwired brain circuitry; let's figure
+      out what those circuits are and how they work; this will involve symbol grounding. "a yet-to-be-invented variation on
+      actor-critic model-based reinforcement learning"
+- id: make_ai_solve_it
+  name: Make AI solve it
+  description: Using AI systems to help align and supervise other, potentially more capable AI systems through scalable oversight techniques.
+  children:
+  - id: weak_to_strong_generalization
+    name: Weak-to-strong generalization
+    description: Use weaker models to supervise and provide a feedback signal to stronger models.
+  - id: supervising_ais_improving_ais
+    name: Supervising AIs improving AIs
+    description: Build formal and empirical frameworks where AIs supervise other (stronger) AI systems via structured interactions;
+      construct monitoring tools which enable scalable tracking of behavioural drift, benchmarks for self-modification, and
+      robustness guarantees
+  - id: ai_explanations_of_ais
+    name: AI explanations of AIs
+    description: Make open AI tools to explain AIs, including AI agents. e.g. automatic feature descriptions for neuron activation
+      patterns; an interface for steering these features; a behaviour elicitation agent that "searches" for a specified behaviour
+      in frontier models.
+  - id: debate
+    name: Debate
+    description: In the limit, it's easier to compellingly argue for true claims than for false claims; exploit this asymmetry
+      to get trusted work out of untrusted debaters.
+  - id: llm_introspection_training
+    name: LLM introspection training
+    description: Train LLMs to the predict the outputs of high-quality whitebox methods, to induce general self-explanation
+      skills that use its own 'introspective' access
+- id: theory
+  name: Theory
+  description: Mathematical formalizations and philosophical foundations for understanding agency, optimization, abstractions, and alignment guarantees.
+  children:
+  - id: agent_foundations
+    name: Agent foundations
+    description: Develop philosophical clarity and mathematical formalizations of building blocks that might be useful for
+      plans to align strong superintelligence, such as agency, optimization strength, decision theory, abstractions, concepts,
+      etc.
+  - id: tiling_agents
+    name: Tiling agents
+    description: An aligned agentic system modifying itself into an unaligned system would be bad and we can research ways
+      that this could occur and infrastructure/approaches that prevent it from happening.
+  - id: high_actuation_spaces
+    name: High-Actuation Spaces
+    description: Mech interp and alignment assume a stable "computational substrate" (linear algebra on GPUs). If later AI
+      uses different substrates (e.g. something neuromorphic), methods like probes and steering will not transfer. Therefore,
+      better to try and infer goals via a "telic DAG" which abstracts over substrates, and so sidestep the issue of how to
+      define intermediate representations. Category theory is intended to provide guarantees that this abstraction is valid.
+  - id: asymptotic_guarantees
+    name: Asymptotic guarantees
+    description: Prove that if a safety process has enough resources (human data quality, training time, neural network capacity),
+      then in the limit some system specification will be guaranteed. Use complexity theory, game theory, learning theory
+      and other areas to both improve asymptotic guarantees and develop ways of showing convergence.
+  - id: heuristic_explanations
+    name: Heuristic explanations
+    description: Formalize mechanistic explanations of neural network behavior, automate the discovery of these "heuristic
+      explanations" and use them to predict when novel input will lead to extreme behavior (i.e. "Low Probability Estimation"
+      and "Mechanistic Anomaly Detection").
+  - id: corrigibility
+    name: Corrigibility
+    description: Ensuring AI systems remain open to correction, shutdown, and modification by human operators without resisting these interventions.
+    children:
+    - id: behavior_alignment_theory
+      name: Behavior alignment theory
+      description: Predict properties of future AGI (e.g. power-seeking) with formal models; formally state and prove hypotheses
+        about the properties powerful systems will have and how we might try to change them.
+    - id: other_corrigibility
+      name: Other corrigibility
+      description: Diagnose and communicate obstacles to achieving robustly corrigible behavior; suggest mechanisms, tests,
+        and escalation channels for surfacing and mitigating incorrigible behaviors
+  - id: ontology_identification
+    name: Ontology Identification
+    description: Understanding how AI systems form concepts and abstractions, and enabling translation between human and AI ontologies for reliable alignment.
+    children:
+    - id: natural_abstractions
+      name: Natural abstractions
+      description: '*Develop a theory of concepts that explains how they are learned, how they structure a particular system''s
+        understanding, and how mutual translatability can be achieved between different collections of concepts.*'
+    - id: the_learning_theoretic_agenda
+      name: The Learning-Theoretic Agenda
+      description: Create a mathematical theory of intelligent agents that encompasses both humans and the AIs we want, one
+        that specifies what it means for two such agents to be aligned; translate between its ontology and ours; produce formal
+        desiderata for a training setup that produces coherent AGIs similar to (our model of) an aligned agent
+- id: multi_agent_first
+  name: Multi-agent first
+  description: Alignment approaches that treat AI systems as participants in multi-agent social contexts rather than as isolated optimizers aligned to fixed goals.
+  children:
+  - id: aligning_to_context
+    name: Aligning to context
+    description: Align AI directly to the role of participant, collaborator, or advisor for our best real human practices
+      and institutions, instead of aligning AI to separately representable goals, rules, or utility functions.
+  - id: aligning_to_the_social_contract
+    name: Aligning to the social contract
+    description: Generate AIs' operational values from 'social contract'-style ideal civic deliberation formalisms and their
+      consequent rulesets for civic actors
+  - id: theory_for_aligning_multiple_ais
+    name: Theory for aligning multiple AIs
+    description: Use realistic game-theory variants (e.g. evolutionary game theory, computational game theory) or develop
+      alternative game theories to describe/predict the collective and individual behaviours of AI agents in multi-agent scenarios.
+  - id: tools_for_aligning_multiple_ais
+    name: Tools for aligning multiple AIs
+    description: Develop tools and techniques for designing and testing multi-agent AI scenarios, for auditing real-world
+      multi-agent AI dynamics, and for aligning AIs in multi-AI settings.
+  - id: aligned_to_who
+    name: Aligned to who?
+    description: Technical protocols for taking seriously the plurality of human values, cultures, and communities when aligning
+      AI to "humanity"
+  - id: aligning_what
+    name: Aligning what?
+    description: Develop alternatives to agent-level models of alignment, by treating human-AI interactions, AI-assisted institutions,
+      AI economic or cultural systems, drives within one AI, and other causal/constitutive processes as subject to alignment
+- id: evals
+  name: Evals
+  description: Systematic measurement of AI capabilities and dangerous behaviors to inform deployment decisions and guide safety research priorities.
+  children:
+  - id: agi_metrics
+    name: AGI metrics
+    description: Evals with the explicit aim of measuring progress towards full human-level generality.
+  - id: capability_evals
+    name: Capability evals
+    description: Make tools that can actually check whether a model has a certain capability or propensity. We default to
+      low-n sampling of a vast latent space but aim to do better.
+  - id: autonomy_evals
+    name: Autonomy evals
+    description: Measure an AI's ability to act autonomously to complete long-horizon, complex tasks.
+  - id: wmd_evals_weapons_of_mass_destruction
+    name: WMD evals (Weapons of Mass Destruction)
+    description: Evaluate whether AI models possess dangerous knowledge or capabilities related to biological and chemical
+      weapons, such as biosecurity or chemical synthesis.
+  - id: situational_awareness_and_self_awareness_evals
+    name: Situational awareness and self-awareness evals
+    description: Evaluate if models understand their own internal states and behaviors, their environment, and whether they
+      are in a test or real-world deployment.
+  - id: steganography_evals
+    name: Steganography evals
+    description: Evaluate whether models can hide secret information or encoded reasoning in their outputs, such as in chain-of-thought
+      scratchpads, to evade monitoring.
+  - id: ai_deception_evals
+    name: AI deception evals
+    description: research demonstrating that AI models, particularly agentic ones, can learn and execute deceptive behaviors
+      such as alignment faking, manipulation, and sandbagging.
+  - id: ai_scheming_evals
+    name: AI scheming evals
+    description: Evaluate frontier models for scheming, a sophisticated, strategic form of AI deception where a model covertly
+      pursues a misaligned, long-term objective while deliberately faking alignment and compliance to evade detection by human
+      supervisors and safety mechanisms.
+  - id: sandbagging_evals
+    name: Sandbagging evals
+    description: Evaluate whether AI models deliberately hide their true capabilities or underperform, especially when they
+      detect they are in an evaluation context.
+  - id: self_replication_evals
+    name: Self-replication evals
+    description: evaluate whether AI agents can autonomously replicate themselves by obtaining their own weights, securing
+      compute resources, and creating copies of themselves.
+  - id: various_redteams
+    name: Various Redteams
+    description: attack current models and see what they do / deliberately induce bad things on current frontier models to
+      test out our theories / methods.
+  - id: other_evals
+    name: Other evals
+    description: A collection of miscellaneous evaluations for specific alignment properties, such as honesty, shutdown resistance
+      and sycophancy.
+

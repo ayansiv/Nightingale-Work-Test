@@ -1,0 +1,42 @@
+{
+  "$comment": "Spec §2. Adding or removing an axis must require no code change. `weight` is owner-supplied; the values below are PLACEHOLDER defaults — see OWNER-DATA.md item OD-01.",
+  "weight_provenance": "placeholder",
+  "axes": [
+    { "id": "timelines",           "label": "Timelines",                  "low_pole_label": "later",                      "high_pole_label": "sooner",                     "scope": "core",      "weight": 1.0,
+      "question": "When do systems capable of fully automating AI research arrive?" },
+    { "id": "takeoff",             "label": "Takeoff speed",              "low_pole_label": "gradual",                    "high_pole_label": "discontinuous",              "scope": "core",      "weight": 1.0,
+      "question": "Once capable systems arrive, how fast does capability compound?" },
+    { "id": "p_mis",               "label": "P(misalignment)",            "low_pole_label": "low",                        "high_pole_label": "high",                       "scope": "core",      "weight": 1.6,
+      "question": "Do systems trained with roughly current methods end up pursuing goals their developers did not intend?" },
+    { "id": "p_scheme",            "label": "P(scheming | misalignment)", "low_pole_label": "visible failure",            "high_pole_label": "strategic concealment",      "scope": "core",      "weight": 1.6,
+      "question": "Given misaligned goals, does a system conceal them?" },
+    { "id": "containment",         "label": "P(containable | scheming)",  "low_pole_label": "not containable",            "high_pole_label": "containable",                "scope": "core",      "weight": 1.6,
+      "question": "Given a scheming system at scale, can a well-resourced developer still catch and contain it?" },
+    { "id": "accident_deliberate", "label": "Harm origin",                "low_pole_label": "deliberate human use",       "high_pole_label": "unintended behavior",        "scope": "core",      "weight": 1.3,
+      "question": "Does the harm come from systems doing what nobody intended, or people doing exactly what they intended?" },
+    { "id": "domestic_intl",       "label": "Power risk locus",           "low_pole_label": "interstate competition",     "high_pole_label": "domestic concentration",     "scope": "core",      "weight": 1.1,
+      "question": "Is the dangerous concentration of power between states or inside one?" },
+    { "id": "constraint",          "label": "Binding constraint",         "low_pole_label": "political will",             "high_pole_label": "technical knowledge",        "scope": "core",      "weight": 1.3,
+      "question": "If AI goes badly, is it because we didn't know how, or because we knew and did it anyway?" },
+    { "id": "labs",                "label": "Working at frontier labs",   "low_pole_label": "net negative",               "high_pole_label": "net positive",               "scope": "core",      "weight": 1.2,
+      "question": "Does a safety researcher do more good inside a frontier lab or outside one?" },
+    { "id": "futures",             "label": "Scope of the goal",          "low_pole_label": "avoid catastrophe",          "high_pole_label": "steer toward good outcomes", "scope": "core",      "weight": 0.9,
+      "question": "Is avoiding catastrophe nearly sufficient, or does a good outcome need steering?" },
+    { "id": "patienthood",         "label": "AI moral patienthood",       "low_pole_label": "not action-relevant now",    "high_pole_label": "action-relevant now",        "scope": "core",      "weight": 0.7,
+      "question": "Should whether AI systems are moral patients shape how the field allocates effort now?" },
+
+    { "id": "internals",           "label": "Assurance method",           "low_pole_label": "behavioral testing",         "high_pole_label": "internal understanding",     "scope": "technical", "weight": 1.4,
+      "question": "Does assurance require understanding internal computation, or is behavioral testing enough?" },
+    { "id": "patch_rebuild",       "label": "Architecture",               "low_pole_label": "make current systems safe",  "high_pole_label": "design new ones",            "scope": "technical", "weight": 1.2,
+      "question": "Patch the architectures we have, or design ones that are safe by construction?" },
+    { "id": "automation",          "label": "Automating alignment",       "low_pole_label": "unlikely to work",           "high_pole_label": "likely to work",             "scope": "technical", "weight": 1.1,
+      "question": "Will AI systems do a large share of alignment research before it matters?" },
+
+    { "id": "inside_outside",      "label": "Policy venue",               "low_pole_label": "outside influence",          "high_pole_label": "inside government",          "scope": "policy",    "weight": 1.3,
+      "question": "Is a government position better than influencing from outside?" },
+    { "id": "restraint_capacity",  "label": "Policy lever",               "low_pole_label": "build state capacity",       "high_pole_label": "constrain companies",        "scope": "policy",    "weight": 1.3,
+      "question": "Should policy constrain what companies can do, or build the state's ability to evaluate?" },
+    { "id": "venue_access",        "label": "Partisan optionality",       "low_pole_label": "unwilling to foreclose",     "high_pole_label": "willing to foreclose",       "scope": "policy",    "weight": 0.8,
+      "question": "Would you take a role that durably associates you with one party?" }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "$comment": [
+    "Build Spec §12, transcribed. Structure is axis -> pole -> sources.",
+    "",
+    "The `frame` field on each pole is the owner's two-sentence framing (spec §12: 'Owner writes a",
+    "two-sentence frame per pole; the sources below carry the argument'). Those are EMPTY here and",
+    "render as a visible gap rather than being invented — see OWNER-DATA.md item OD-08.",
+    "",
+    "URLs are absent for most items: the spec supplies titles and publishers, not links. Resolving",
+    "them is mechanical but must be done by hand to avoid citing the wrong piece, so they are left",
+    "null and the UI renders the citation as text rather than a dead link.",
+    "",
+    "CURRICULUM BIAS WARNING (spec §12, ships in-product): the Redwood AI futurism reading list is",
+    "the backbone of several poles here, and its author states plainly that the selection reflects",
+    "her opinionated views, focuses on topics Redwood works on, and does not aim to be comprehensive.",
+    "Week 3 is entirely control; interpretability is nearly absent from the core; agent foundations",
+    "appears only in passing. The interp and agent-foundations sources below are deliberately drawn",
+    "from elsewhere to correct for this. The author also flags her governance recommendations as",
+    "significantly less confident, so the policy poles lean on 80k and emergingtechpolicy instead."
+  ],
+  "target_reading_minutes": [15, 30],
+  "axes": {
+    "timelines": {
+      "sooner": { "frame": "", "sources": [
+        { "title": "Three Types of Intelligence Explosion", "publisher": "Forethought" },
+        { "title": "AI Futures Model, December 2025 update", "publisher": "AI Futures Project" }
+      ]},
+      "later": { "frame": "", "sources": [
+        { "title": "The case for multi-decade AI timelines", "publisher": "Epoch AI" },
+        { "title": "Broad Timelines", "publisher": "LessWrong" },
+        { "title": "Can AI scaling continue through 2030?", "publisher": "Epoch AI" }
+      ]},
+      "measurement": { "frame": "", "sources": [
+        { "title": "Epoch Capabilities Index documentation", "publisher": "Epoch AI" },
+        { "title": "Clarifying limitations of time horizon", "publisher": "METR" }
+      ]}
+    },
+    "takeoff": {
+      "discontinuous": { "frame": "", "sources": [
+        { "title": "Will AI R&D Automation Cause a Software Intelligence Explosion?", "publisher": "Forethought" },
+        { "title": "Full automation of AI R&D probably yields a large speed up even without a software-only singularity", "publisher": "Redwood Research" }
+      ]},
+      "gradual": { "frame": "", "sources": [
+        { "title": "Do the returns to software R&D point towards a singularity?", "publisher": "Epoch AI" },
+        { "title": "AI as Normal Technology", "publisher": "Knight First Amendment Institute, Columbia" }
+      ]}
+    },
+    "p_mis": {
+      "high": { "frame": "", "sources": [
+        { "title": "Current AIs seem pretty misaligned to me", "publisher": "Redwood Research" },
+        { "title": "Alignment remains a hard, unsolved problem", "publisher": "LessWrong" },
+        { "title": "Will AI systems drift into misalignment?", "publisher": "Redwood Research" }
+      ]},
+      "low": { "frame": "", "sources": [
+        { "title": "Many arguments for AI x-risk are wrong", "publisher": "LessWrong" },
+        { "title": "How human-like do safe AI motivations need to be?", "publisher": "LessWrong" },
+        { "title": "The persona selection model", "publisher": "Anthropic" }
+      ]},
+      "frames": { "frame": "", "sources": [
+        { "title": "The behavioral selection model for predicting AI motivations", "publisher": "" },
+        { "title": "A Three-Layer Model of LLM Psychology", "publisher": "" }
+      ]}
+    },
+    "p_scheme": {
+      "high": { "frame": "", "sources": [
+        { "title": "Scheming AIs (summary or audio)", "publisher": "Joe Carlsmith" },
+        { "title": "Risk from fitness-seeking AIs", "publisher": "Redwood Research" },
+        { "title": "Alignment faking in large language models", "publisher": "Anthropic" },
+        { "title": "Sleeper Agents", "publisher": "Anthropic" }
+      ]},
+      "low": { "frame": "", "sources": [
+        { "title": "Many arguments for AI x-risk are wrong (counting-argument rebuttal section)", "publisher": "LessWrong" },
+        { "title": "Training-time schemers vs behavioral schemers", "publisher": "" }
+      ]}
+    },
+    "containment": {
+      "containable": { "frame": "", "sources": [
+        { "title": "The case for ensuring that powerful AIs are controlled", "publisher": "Redwood Research" },
+        { "title": "AI Catastrophes And Rogue Deployments", "publisher": "Redwood Research" },
+        { "title": "An overview of areas of control work", "publisher": "Redwood Research" },
+        { "title": "Catching AIs Red-Handed", "publisher": "Redwood Research" }
+      ]},
+      "not containable": { "frame": "", "sources": [
+        { "title": "The Case Against AI Control Research", "publisher": "LessWrong" },
+        { "title": "Without specific countermeasures, the easiest path to transformative AI likely leads to AI takeover", "publisher": "" },
+        { "title": "Behavioral red-teaming is unlikely to produce clear, strong evidence that models aren't scheming", "publisher": "" }
+      ]}
+    },
+    "accident_deliberate": {
+      "unintended": { "frame": "", "sources": [
+        { "title": "What failure looks like", "publisher": "Paul Christiano" },
+        { "title": "Another (outer) alignment failure story", "publisher": "Paul Christiano" }
+      ]},
+      "deliberate": { "frame": "", "sources": [
+        { "title": "AI-enabled coups", "publisher": "Forethought" },
+        { "title": "Dual-Use AI Capabilities and the Risk of Bioterrorism", "publisher": "GovAI" },
+        { "title": "Forecasting Biosecurity Risks from LLMs", "publisher": "Forecasting Research Institute" }
+      ]}
+    },
+    "domestic_intl": {
+      "domestic concentration": { "frame": "", "sources": [
+        { "title": "AI-enabled coups", "publisher": "Forethought" },
+        { "title": "How much should we worry about secretly loyal AIs?", "publisher": "" },
+        { "title": "CEO takeover scenario", "publisher": "AI Futures Project" },
+        { "title": "Checks, Balances, and Power Concentration", "publisher": "" }
+      ]},
+      "interstate": { "frame": "", "sources": [
+        { "title": "Situational Awareness, essays III–V", "publisher": "Leopold Aschenbrenner" },
+        { "title": "Superintelligence Strategy (MAIM)", "publisher": "" },
+        { "title": "Crucial considerations in ASI deterrence", "publisher": "" },
+        { "title": "How China Views AI Risks", "publisher": "Carnegie Endowment" },
+        { "title": "Why China isn't about to leap ahead of the West on compute", "publisher": "Epoch AI" }
+      ]}
+    },
+    "constraint": {
+      "technical": { "frame": "", "sources": [
+        { "title": "Shallow Review of live agendas in alignment and safety 2025", "publisher": "ARB Research", "url": "https://shallowreview.ai/" },
+        { "title": "Alignment remains a hard, unsolved problem", "publisher": "LessWrong" }
+      ]},
+      "political": { "frame": "", "sources": [
+        { "title": "Should Governments or Markets control AI? — Ball × Kokotajlo anti-debate", "publisher": "" },
+        { "title": "The US AI policy landscape: where to work to have the biggest impact", "publisher": "80,000 Hours", "url": "https://80000hours.org/articles/the-us-ai-policy-landscape-where-to-have-the-biggest-impact/" },
+        { "title": "Plans A, B, C, and D for misalignment risk", "publisher": "Redwood Research" }
+      ]}
+    },
+    "labs": {
+      "net positive": { "frame": "", "sources": [
+        { "title": "Ten people on the inside", "publisher": "Redwood Research" },
+        { "title": "Working at an AI lab (career review)", "publisher": "80,000 Hours" }
+      ]},
+      "net negative": { "frame": "", "sources": [
+        { "title": "Anthropic is Quietly Backpedalling on its Safety Commitments", "publisher": "LessWrong" },
+        { "title": "Can we trust Anthropic, or any AI company?", "publisher": "80,000 Hours (Karnofsky)" }
+      ]},
+      "reference": { "frame": "", "sources": [
+        { "title": "Responsible Scaling Policy", "publisher": "Anthropic" },
+        { "title": "Preparedness Framework v2", "publisher": "OpenAI" },
+        { "title": "Frontier Safety Framework v3", "publisher": "Google DeepMind" },
+        { "title": "Risk Management Framework", "publisher": "xAI" },
+        { "title": "Frontier AI Framework", "publisher": "Meta" }
+      ]}
+    },
+    "futures": {
+      "steer": { "frame": "", "sources": [
+        { "title": "Better Futures series, essays 1–5", "publisher": "Forethought" },
+        { "title": "Bootstrapping to Viatopia", "publisher": "Forethought" },
+        { "title": "Gradual Disempowerment", "publisher": "" },
+        { "title": "Moral public goods are a big deal for whether we get a good future", "publisher": "" }
+      ]},
+      "avoid-is-enough": { "frame": "", "sources": [
+        { "title": "Plans A, B, C, and D for misalignment risk", "publisher": "Redwood Research" }
+      ]}
+    },
+    "patienthood": {
+      "action-relevant": { "frame": "", "sources": [
+        { "title": "The stakes of AI moral status", "publisher": "Joe Carlsmith" },
+        { "title": "Taking AI Welfare Seriously", "publisher": "" },
+        { "title": "Key strategic considerations for taking action on AI welfare", "publisher": "Eleos AI" }
+      ]},
+      "not yet": { "frame": "", "sources": [
+        { "title": "Why model self-reports are insufficient — and why we studied them anyway", "publisher": "Eleos AI" },
+        { "title": "Insights from the Science of Consciousness", "publisher": "" }
+      ]}
+    },
+    "internals": {
+      "internal understanding": { "frame": "", "sources": [
+        { "title": "Neel Nanda on the mechanistic interpretability researcher mindset", "publisher": "LessWrong", "note": "The conviction that models are comprehensible because the algorithms most natural to express in the architecture are ones that make sense to humans." },
+        { "title": "Transformer Circuits", "publisher": "Anthropic" },
+        { "title": "Shallow Review, white-box agendas", "publisher": "ARB Research", "url": "https://shallowreview.ai/" }
+      ]},
+      "behavioral testing": { "frame": "", "sources": [
+        { "title": "Neel Nanda on the 80,000 Hours Podcast", "publisher": "80,000 Hours", "note": "The DeepMind interpretability lead arguing that the most ambitious vision of mech interp is probably dead, that he sees no path to deeply and reliably understanding what AIs are thinking, and that the realistic option is a Swiss-cheese model of layered imperfect safeguards — plus the pattern of celebrated interp results later shown weaker than claimed." },
+        { "title": "Against Almost Every Theory of Impact of Interpretability", "publisher": "AI Alignment Forum", "note": "Works through Nanda's own list of impact theories one by one." }
+      ]},
+      "_teaching_note": "Both poles here are argued by people INSIDE interpretability, one of them by the same person at different confidence levels. Far more persuasive to a newcomer than an outsider's critique. The UI should say so rather than presenting them as a neutral pair."
+    },
+    "patch_rebuild": {
+      "patch": { "frame": "", "sources": [
+        { "title": "Shallow Review: iterative alignment at pretrain and post-train time", "publisher": "ARB Research", "url": "https://shallowreview.ai/" },
+        { "title": "Shallow Review: model specs and constitutions cluster", "publisher": "ARB Research", "url": "https://shallowreview.ai/" },
+        { "title": "The importance of AI character", "publisher": "Forethought" }
+      ]},
+      "rebuild": { "frame": "", "sources": [
+        { "title": "Shallow Review: Guaranteed-Safe AI, Scientist AI, Brainlike-AGI Safety", "publisher": "ARB Research", "url": "https://shallowreview.ai/" },
+        { "title": "Agent foundations agenda page and its stated assumptions", "publisher": "ARB Research", "url": "https://shallowreview.ai/" },
+        { "title": "Agent foundations: not really math, not really science", "publisher": "Alex Altair", "note": "A critique from inside the tradition, linked from the agenda page itself." }
+      ]}
+    },
+    "automation": {
+      "likely to work": { "frame": "", "sources": [
+        { "title": "Shallow Review: make-AI-solve-it agendas (supervising AIs improving AIs, AI explanations of AIs, weak-to-strong generalization)", "publisher": "ARB Research", "url": "https://shallowreview.ai/" },
+        { "title": "AIs at the current capability level may be important for future safety work", "publisher": "Redwood Research" },
+        { "title": "How do we (more) safely defer to AIs?", "publisher": "" }
+      ]},
+      "unlikely to work": { "frame": "", "sources": [
+        { "title": "Automated alignment is harder than you think", "publisher": "arXiv 2605.06390", "note": "Names Carlsmith, Clymer and Leike as its foils, so it supplies both sides in one reference." }
+      ]}
+    },
+    "inside_outside": {
+      "inside": { "frame": "", "sources": [
+        { "title": "The US AI policy landscape, Part 2 (EOP, agencies, Congress, states)", "publisher": "80,000 Hours", "url": "https://80000hours.org/articles/the-us-ai-policy-landscape-where-to-have-the-biggest-impact/" },
+        { "title": "Institution guides", "publisher": "Emerging Technology Policy Careers", "url": "https://emergingtechpolicy.org/" }
+      ]},
+      "outside": { "frame": "", "sources": [
+        { "title": "The US AI policy landscape, think tanks and advocacy section", "publisher": "80,000 Hours", "url": "https://80000hours.org/articles/the-us-ai-policy-landscape-where-to-have-the-biggest-impact/", "note": "Includes its account of think tank influence via talent pipelines and narrative-shaping, and its caveat that distance from decision-makers makes think tank impact lumpy and hard to predict." }
+      ]}
+    },
+    "restraint_capacity": {
+      "constrain": { "frame": "", "sources": [
+        { "title": "Coverage of California SB 53 and the New York RAISE Act", "publisher": "Carnegie Endowment / Brookings" },
+        { "title": "Liability rules for AI", "publisher": "RAND Corporation" }
+      ]},
+      "build capacity": { "frame": "", "sources": [
+        { "title": "America's AI Action Plan", "publisher": "The White House" },
+        { "title": "AI Risk Management Framework", "publisher": "NIST" },
+        { "title": "Center for AI Standards and Innovation", "publisher": "CAISI" },
+        { "title": "Compute policy explainers", "publisher": "IAPS" }
+      ]}
+    },
+    "venue_access": {
+      "context": { "frame": "", "sources": [
+        { "title": "The US AI policy landscape, partisan affiliation section", "publisher": "80,000 Hours", "url": "https://80000hours.org/articles/the-us-ai-policy-landscape-where-to-have-the-biggest-impact/", "note": "Party alignment shapes when windows open and close; in Congress you almost always pick a party and switching is rare; civil servants are nonpartisan and stay through transitions while political appointees rotate out." },
+        { "title": "Partisan affiliation guide", "publisher": "Emerging Technology Policy Careers", "url": "https://emergingtechpolicy.org/" }
+      ]}
+    }
+  }
+}

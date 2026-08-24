@@ -1,0 +1,1461 @@
+{
+  "generated_at": "2026-08-24",
+  "what": "Research/policy roles at organizations that work on more than one agenda, where no signal phrase fired. Each currently carries the org primary agenda by inheritance, which is a weaker claim than a content-based tag. Resolve by adding a phrase to signals.json (if the pattern will recur) or a row to role-overrides.json (if it is a one-off).",
+  "count": 126,
+  "roles": [
+    {
+      "org": "Google DeepMind",
+      "title": "Research Engineer, AGI Safety and Alignment",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "debate",
+        "sparse_coding",
+        "capability_evals",
+        "agent_foundations",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "autonomy_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Hudson Institute",
+      "title": "Research Intern, Government Relations (Fall 2026)",
+      "assigned_by_inheritance": "pol_compute_governance",
+      "candidates": [
+        "pol_compute_governance",
+        "pol_international"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "SL5 Task Force",
+      "title": "Senior Director, National Security",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_testing_evaluation",
+        "pol_state_capacity"
+      ],
+      "note": "ambiguous between pol_security_infosec and pol_testing_evaluation"
+    },
+    {
+      "org": "The Royal Society",
+      "title": "Short Industry Fellowships",
+      "assigned_by_inheritance": "pol_industrial_rd",
+      "candidates": [
+        "pol_industrial_rd",
+        "pol_public_narrative"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "US Government, Congress",
+      "title": "List of Internship Opportunities, U.S. House of Representatives",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "US Government, Congress",
+      "title": "List of Staff Opportunities, U.S. House of Representatives",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "US Government, Senate",
+      "title": "List of Staff Opportunities, U.S. Senate",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "US Government, Senate",
+      "title": "List of Internship Opportunities, U.S. Senate",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Alice",
+      "title": "GenAI Biosecurity Expert",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams",
+        "safeguards_inference_time_auxiliaries",
+        "wmd_evals_weapons_of_mass_destruction"
+      ],
+      "note": "ambiguous between various_redteams and safeguards_inference_time_auxiliaries"
+    },
+    {
+      "org": "FAR AI",
+      "title": "Research Engineer",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "various_redteams",
+        "control",
+        "ai_deception_evals",
+        "capability_evals",
+        "theory_for_aligning_multiple_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "FAR AI",
+      "title": "Research Scientist",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "various_redteams",
+        "control",
+        "ai_deception_evals",
+        "capability_evals",
+        "theory_for_aligning_multiple_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "UK Government, AI Security Institute",
+      "title": "Research Scientist, Biological Models, Chem-Bio",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "autonomy_evals",
+        "wmd_evals_weapons_of_mass_destruction",
+        "pol_testing_evaluation",
+        "various_redteams",
+        "control",
+        "pol_security_infosec",
+        "ai_scheming_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "UK Government, AI Security Institute",
+      "title": "Research Scientist, Virologist, Chem-Bio",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "autonomy_evals",
+        "wmd_evals_weapons_of_mass_destruction",
+        "pol_testing_evaluation",
+        "various_redteams",
+        "control",
+        "pol_security_infosec",
+        "ai_scheming_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Federation of American Scientists",
+      "title": "Policy Entrepreneurship Fellowship, AI Safety",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_biosecurity_misuse"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Institute for AI Policy and Strategy",
+      "title": "Manager / Associate / Senior Associate, Special Projects",
+      "assigned_by_inheritance": "pol_compute_governance",
+      "candidates": [
+        "pol_compute_governance",
+        "pol_testing_evaluation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Transluce",
+      "title": "Governance and Policy Fellow",
+      "assigned_by_inheritance": "pragmatic_interpretability",
+      "candidates": [
+        "pragmatic_interpretability",
+        "other_interpretability",
+        "extracting_latent_knowledge",
+        "various_redteams",
+        "ai_explanations_of_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center on Long-Term Risk",
+      "title": "Research Affiliates Program",
+      "assigned_by_inheritance": "theory_for_aligning_multiple_ais",
+      "candidates": [
+        "theory_for_aligning_multiple_ais",
+        "tools_for_aligning_multiple_ais",
+        "aligning_to_context"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Model Evaluation and Threat Research",
+      "title": "Task Development Engineer",
+      "assigned_by_inheritance": "autonomy_evals",
+      "candidates": [
+        "autonomy_evals",
+        "capability_evals",
+        "agi_metrics"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Faculty",
+      "title": "Research Scientist",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for a New American Security",
+      "title": "Joseph S. Nye, Jr. National Security Internship and Mentoring Program",
+      "assigned_by_inheritance": "pol_compute_governance",
+      "candidates": [
+        "pol_compute_governance",
+        "pol_international",
+        "pol_security_infosec"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "OpenAI",
+      "title": "Researcher, Recursive Self-Improvement Safety",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "supervising_ais_improving_ais",
+        "capability_evals",
+        "weak_to_strong_generalization",
+        "chain_of_thought_monitoring",
+        "safeguards_inference_time_auxiliaries",
+        "various_redteams",
+        "pol_security_infosec",
+        "aligned_to_who",
+        "autonomy_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for Strategic and International Studies",
+      "title": "Intern, Center for the Industrial Base",
+      "assigned_by_inheritance": "pol_international",
+      "candidates": [
+        "pol_international",
+        "pol_compute_governance"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "California Council on Science and Technology",
+      "title": "Senior AI Fellow, California Governor's Office of Emergency Services",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Foresight Institute",
+      "title": "Request for Proposals, AI Safety Grant",
+      "assigned_by_inheritance": "agent_foundations",
+      "candidates": [
+        "agent_foundations",
+        "pol_power_concentration"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Foresight Institute",
+      "title": "Foresight Fellowship",
+      "assigned_by_inheritance": "agent_foundations",
+      "candidates": [
+        "agent_foundations",
+        "pol_power_concentration"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Sandia National Laboratories",
+      "title": "Jill Hruby Fellowship",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Sandia National Laboratories",
+      "title": "Truman Fellowship",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Carnegie Mellon University, Software Engineering Institute",
+      "title": "Senior AI Security Researcher",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams",
+        "pol_testing_evaluation",
+        "pol_incident_response"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Research Scientist, Takeoff Intel",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Augur",
+      "title": "Researcher",
+      "assigned_by_inheritance": "other_evals",
+      "candidates": [
+        "other_evals",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "The Royal Society",
+      "title": "Industry Fellowship",
+      "assigned_by_inheritance": "pol_industrial_rd",
+      "candidates": [
+        "pol_industrial_rd",
+        "pol_public_narrative"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "RAND Corporation",
+      "title": "Research Resident, AIxBio Threats and Mitigations",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_liability_insurance",
+        "pol_compute_governance",
+        "pol_biosecurity_misuse",
+        "pol_international",
+        "pol_testing_evaluation",
+        "pol_incident_response"
+      ],
+      "note": "ambiguous between pol_biosecurity_misuse and pol_incident_response"
+    },
+    {
+      "org": "Alice",
+      "title": "Tech Lead, GenAI Safety",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams",
+        "safeguards_inference_time_auxiliaries",
+        "wmd_evals_weapons_of_mass_destruction"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Windfall Trust",
+      "title": "Economist, Scenarios and Modelling",
+      "assigned_by_inheritance": "pol_power_concentration",
+      "candidates": [
+        "pol_power_concentration",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Windfall Trust",
+      "title": "Senior Economist, Windfall Research",
+      "assigned_by_inheritance": "pol_power_concentration",
+      "candidates": [
+        "pol_power_concentration",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "German Marshall Fund",
+      "title": "Trainee",
+      "assigned_by_inheritance": "pol_international",
+      "candidates": [
+        "pol_international",
+        "pol_public_narrative"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "German Marshall Fund",
+      "title": "Trainee, Indo-Pacific Program (Fall 2026)",
+      "assigned_by_inheritance": "pol_international",
+      "candidates": [
+        "pol_international",
+        "pol_public_narrative"
+      ],
+      "note": "ambiguous between pol_international and pol_public_narrative"
+    },
+    {
+      "org": "Andon Labs",
+      "title": "Research Engineer, AI Safety and Evals",
+      "assigned_by_inheritance": "autonomy_evals",
+      "candidates": [
+        "autonomy_evals",
+        "capability_evals",
+        "various_redteams"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Andon Labs",
+      "title": "Engineer, Robotics and Hardware",
+      "assigned_by_inheritance": "autonomy_evals",
+      "candidates": [
+        "autonomy_evals",
+        "capability_evals",
+        "various_redteams"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Faculty",
+      "title": "Senior Research Scientist, AI Safety Evaluations",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Alice",
+      "title": "GenAI Analyst",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams",
+        "safeguards_inference_time_auxiliaries",
+        "wmd_evals_weapons_of_mass_destruction"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Aspen Institute",
+      "title": "AI Civic Action Accelerator",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "OpenAI",
+      "title": "Frontier AI Risks Lead",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "supervising_ais_improving_ais",
+        "capability_evals",
+        "weak_to_strong_generalization",
+        "chain_of_thought_monitoring",
+        "safeguards_inference_time_auxiliaries",
+        "various_redteams",
+        "pol_security_infosec",
+        "aligned_to_who",
+        "autonomy_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for AI Safety",
+      "title": "Research Manager",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "various_redteams",
+        "pol_frontier_regulation",
+        "capability_evals",
+        "wmd_evals_weapons_of_mass_destruction"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Aspen Institute",
+      "title": "William Randolph Hearst Fellow",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Hudson Institute",
+      "title": "Internship, Center for Strategy and American Statecraft (Fall 2026)",
+      "assigned_by_inheritance": "pol_compute_governance",
+      "candidates": [
+        "pol_compute_governance",
+        "pol_international"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Hudson Institute",
+      "title": "Research Intern, South and Central Asia (Fall 2026)",
+      "assigned_by_inheritance": "pol_compute_governance",
+      "candidates": [
+        "pol_compute_governance",
+        "pol_international"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "SaferAI",
+      "title": "Research Scientist / Engineer",
+      "assigned_by_inheritance": "pol_testing_evaluation",
+      "candidates": [
+        "pol_testing_evaluation",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Syntony",
+      "title": "Engineering Fellow",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "safeguards_inference_time_auxiliaries"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Palisade Research",
+      "title": "Congressional Policy Lead",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams",
+        "self_replication_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Palisade Research",
+      "title": "Regulatory and Legal Policy Expert",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams",
+        "self_replication_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Palisade Research",
+      "title": "National Security Expert",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams",
+        "self_replication_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Palisade Research",
+      "title": "Policy Generalist",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams",
+        "self_replication_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Apollo Research",
+      "title": "AI Governance Researcher / Senior AI Governance Researcher",
+      "assigned_by_inheritance": "ai_scheming_evals",
+      "candidates": [
+        "ai_scheming_evals",
+        "ai_deception_evals",
+        "sandbagging_evals",
+        "chain_of_thought_monitoring"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "White Circle",
+      "title": "Research Scientist, AI Behaviours",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "safeguards_inference_time_auxiliaries"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Neo Research",
+      "title": "Research Engineer, Contract",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Beneficial AI Foundation",
+      "title": "Research Scientist, AI Safety",
+      "assigned_by_inheritance": "agent_foundations",
+      "candidates": [
+        "agent_foundations",
+        "behavior_alignment_theory"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "OpenAI",
+      "title": "Rosalind Biodefense Program",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "supervising_ais_improving_ais",
+        "capability_evals",
+        "weak_to_strong_generalization",
+        "chain_of_thought_monitoring",
+        "safeguards_inference_time_auxiliaries",
+        "various_redteams",
+        "pol_security_infosec",
+        "aligned_to_who",
+        "autonomy_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "AIXI Labs",
+      "title": "Machine Learning Research Scientist",
+      "assigned_by_inheritance": "the_learning_theoretic_agenda",
+      "candidates": [
+        "the_learning_theoretic_agenda",
+        "agent_foundations"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Resolution",
+      "title": "Research Scientist",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Resolution",
+      "title": "Research Engineer",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Carnegie Mellon University, Software Engineering Institute",
+      "title": "Assistant AI Security Researcher",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams",
+        "pol_testing_evaluation",
+        "pol_incident_response"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Principia",
+      "title": "Research Scientists",
+      "assigned_by_inheritance": "agent_foundations",
+      "candidates": [
+        "agent_foundations",
+        "natural_abstractions"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Principia",
+      "title": "Senior Research Scientists",
+      "assigned_by_inheritance": "agent_foundations",
+      "candidates": [
+        "agent_foundations",
+        "natural_abstractions"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Principia",
+      "title": "Research Engineer",
+      "assigned_by_inheritance": "agent_foundations",
+      "candidates": [
+        "agent_foundations",
+        "natural_abstractions"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, Lincoln Laboratory",
+      "title": "Co-op, AI Technology and Systems (Fall 2026)",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "The AI Policy Network",
+      "title": "Events Manager",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "LawZero",
+      "title": "Machine Learning Manager",
+      "assigned_by_inheritance": "scientist_ai",
+      "candidates": [
+        "scientist_ai",
+        "guaranteed_safe_ai",
+        "asymptotic_guarantees"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "AE Studio",
+      "title": "Alignment Scientist / Engineer",
+      "assigned_by_inheritance": "the_neglected_approaches_approach",
+      "candidates": [
+        "the_neglected_approaches_approach",
+        "other_interpretability"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Regional Research Economist, Economic Research, London",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Regional Research Economist, Economic Research, Singapore",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Technical Threat Investigator, Chemical, Biological, Radiological, Nuclear, and Explosives",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Research Manager, Interpretability",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Elicit",
+      "title": "Evaluators, Systematic Reviews",
+      "assigned_by_inheritance": "supervising_ais_improving_ais",
+      "candidates": [
+        "supervising_ais_improving_ais",
+        "ai_explanations_of_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Elicit",
+      "title": "ML Research Resident (Q1 2025)",
+      "assigned_by_inheritance": "supervising_ais_improving_ais",
+      "candidates": [
+        "supervising_ais_improving_ais",
+        "ai_explanations_of_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "OpenAI",
+      "title": "Researcher, Alignment",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "supervising_ais_improving_ais",
+        "capability_evals",
+        "weak_to_strong_generalization",
+        "chain_of_thought_monitoring",
+        "safeguards_inference_time_auxiliaries",
+        "various_redteams",
+        "pol_security_infosec",
+        "aligned_to_who",
+        "autonomy_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Research Engineer / Scientist, Alignment Science",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Anthropic",
+      "title": "Research Engineer, Interpretability",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "sparse_coding",
+        "control",
+        "model_specs_and_constitutions",
+        "ai_scheming_evals",
+        "character_training_and_persona_steering",
+        "safeguards_inference_time_auxiliaries",
+        "chain_of_thought_monitoring",
+        "various_redteams",
+        "model_values_model_preferences",
+        "pol_security_infosec",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center on Long-Term Risk",
+      "title": "General Application",
+      "assigned_by_inheritance": "theory_for_aligning_multiple_ais",
+      "candidates": [
+        "theory_for_aligning_multiple_ais",
+        "tools_for_aligning_multiple_ais",
+        "aligning_to_context"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center on Long-Term Risk",
+      "title": "Grantee",
+      "assigned_by_inheritance": "theory_for_aligning_multiple_ais",
+      "candidates": [
+        "theory_for_aligning_multiple_ais",
+        "tools_for_aligning_multiple_ais",
+        "aligning_to_context"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Elicit",
+      "title": "Senior Software Engineer",
+      "assigned_by_inheritance": "supervising_ais_improving_ais",
+      "candidates": [
+        "supervising_ais_improving_ais",
+        "ai_explanations_of_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "GovAI",
+      "title": "Expression of Interest",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_frontier_regulation",
+        "pol_international"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "OpenAI",
+      "title": "Researcher, Robustness and Safety Training, Safety Systems",
+      "assigned_by_inheritance": "iterative_alignment_at_post_train_time",
+      "candidates": [
+        "iterative_alignment_at_post_train_time",
+        "supervising_ais_improving_ais",
+        "capability_evals",
+        "weak_to_strong_generalization",
+        "chain_of_thought_monitoring",
+        "safeguards_inference_time_auxiliaries",
+        "various_redteams",
+        "pol_security_infosec",
+        "aligned_to_who",
+        "autonomy_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "University of California, Center for Human-Compatible Artificial Intelligence",
+      "title": "Research Fellow",
+      "assigned_by_inheritance": "assistance_games_assistive_agents",
+      "candidates": [
+        "assistance_games_assistive_agents",
+        "agent_foundations"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "University of California, Center for Human-Compatible Artificial Intelligence",
+      "title": "Research Collaborators",
+      "assigned_by_inheritance": "assistance_games_assistive_agents",
+      "candidates": [
+        "assistance_games_assistive_agents",
+        "agent_foundations"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Future of Life Institute",
+      "title": "General Applications",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_international",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Shanghai Artificial Intelligence Laboratory",
+      "title": "Young Scientist / Young Researcher, Large-Scale Model Attack and Defense",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "10a Labs",
+      "title": "Research Fellow",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Apollo Research",
+      "title": "Applied Researcher, Monitoring",
+      "assigned_by_inheritance": "ai_scheming_evals",
+      "candidates": [
+        "ai_scheming_evals",
+        "ai_deception_evals",
+        "sandbagging_evals",
+        "chain_of_thought_monitoring"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for AI Risk Management and Alignment",
+      "title": "Research Engineer, Novel AI Platforms for Multiscale Alignment",
+      "assigned_by_inheritance": "pol_incident_response",
+      "candidates": [
+        "pol_incident_response",
+        "pol_testing_evaluation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "General-Purpose AI Policy Lab",
+      "title": "Project Officer, International Coordination",
+      "assigned_by_inheritance": "pol_frontier_regulation",
+      "candidates": [
+        "pol_frontier_regulation",
+        "pol_testing_evaluation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Haize Labs",
+      "title": "Research Intern",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Irregular",
+      "title": "Research Engineer",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "LawZero",
+      "title": "Senior ML Research Scientist",
+      "assigned_by_inheritance": "scientist_ai",
+      "candidates": [
+        "scientist_ai",
+        "guaranteed_safe_ai",
+        "asymptotic_guarantees"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "LawZero",
+      "title": "Senior ML Research Scientist, Probabilistic Inference",
+      "assigned_by_inheritance": "scientist_ai",
+      "candidates": [
+        "scientist_ai",
+        "guaranteed_safe_ai",
+        "asymptotic_guarantees"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "LawZero",
+      "title": "Mathematical Scientist, AI Safety Research",
+      "assigned_by_inheritance": "scientist_ai",
+      "candidates": [
+        "scientist_ai",
+        "guaranteed_safe_ai",
+        "asymptotic_guarantees"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, FutureTech",
+      "title": "Postdoctoral Associate, AI Performance and Safety",
+      "assigned_by_inheritance": "agi_metrics",
+      "candidates": [
+        "agi_metrics",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, FutureTech",
+      "title": "Postdoctoral Associate",
+      "assigned_by_inheritance": "agi_metrics",
+      "candidates": [
+        "agi_metrics",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, FutureTech",
+      "title": "Technical Associate / Predoctoral Research Assistant",
+      "assigned_by_inheritance": "agi_metrics",
+      "candidates": [
+        "agi_metrics",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, FutureTech",
+      "title": "Research Assistant, AI in Science",
+      "assigned_by_inheritance": "agi_metrics",
+      "candidates": [
+        "agi_metrics",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, FutureTech",
+      "title": "Research Assistant, Economics of Technological Progress, Innovation, and Artificial Intelligence",
+      "assigned_by_inheritance": "agi_metrics",
+      "candidates": [
+        "agi_metrics",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Neo Research",
+      "title": "Research Scientist",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Neo Research",
+      "title": "Research Engineer",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "reverse_engineering"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Scale AI",
+      "title": "Research Scientist, Frontier Risk Evaluations",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "data_quality_for_alignment"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Scale AI",
+      "title": "Research Scientist, Safety Post-Training",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "data_quality_for_alignment"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Shanghai Artificial Intelligence Laboratory",
+      "title": "Algorithm Researcher, Frontier AI Risk",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Simplex",
+      "title": "Research Scientist",
+      "assigned_by_inheritance": "learning_dynamics_and_developmental_interpretability",
+      "candidates": [
+        "learning_dynamics_and_developmental_interpretability",
+        "representation_structure_and_geometry"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "The AI Policy Network",
+      "title": "Junior Associate",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "AI Futures Project",
+      "title": "Policy Researcher",
+      "assigned_by_inheritance": "agi_metrics",
+      "candidates": [
+        "agi_metrics",
+        "pol_public_narrative"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "AI Verification and Evaluation Research Institute",
+      "title": "Expressions of Interest, Policy and Engineering",
+      "assigned_by_inheritance": "pol_testing_evaluation",
+      "candidates": [
+        "pol_testing_evaluation",
+        "pol_international"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for AI Risk Management and Alignment",
+      "title": "Lead Researcher, AI Offense-Defense Dynamics",
+      "assigned_by_inheritance": "pol_incident_response",
+      "candidates": [
+        "pol_incident_response",
+        "pol_testing_evaluation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for AI Risk Management and Alignment",
+      "title": "Senior Economist, AI Geostrategic and Economic Mechanisms",
+      "assigned_by_inheritance": "pol_incident_response",
+      "candidates": [
+        "pol_incident_response",
+        "pol_testing_evaluation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "China AI Safety and Development Association",
+      "title": "Expression of Interest",
+      "assigned_by_inheritance": "pol_international",
+      "candidates": [
+        "pol_international",
+        "pol_testing_evaluation"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "EleutherAI",
+      "title": "Researcher, Interpretability",
+      "assigned_by_inheritance": "harm_reduction_for_open_weights",
+      "candidates": [
+        "harm_reduction_for_open_weights",
+        "data_filtering",
+        "other_interpretability"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "FAR AI",
+      "title": "Research Lead",
+      "assigned_by_inheritance": "other_interpretability",
+      "candidates": [
+        "other_interpretability",
+        "various_redteams",
+        "control",
+        "ai_deception_evals",
+        "capability_evals",
+        "theory_for_aligning_multiple_ais"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Federation of American Scientists",
+      "title": "Manager, AI Safety and Security Policy",
+      "assigned_by_inheritance": "pol_state_capacity",
+      "candidates": [
+        "pol_state_capacity",
+        "pol_biosecurity_misuse"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Haize Labs",
+      "title": "Research Engineer",
+      "assigned_by_inheritance": "various_redteams",
+      "candidates": [
+        "various_redteams",
+        "capability_evals"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "LawZero",
+      "title": "Senior ML Research Developer",
+      "assigned_by_inheritance": "scientist_ai",
+      "candidates": [
+        "scientist_ai",
+        "guaranteed_safe_ai",
+        "asymptotic_guarantees"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "LawZero",
+      "title": "Director, Evaluations",
+      "assigned_by_inheritance": "scientist_ai",
+      "candidates": [
+        "scientist_ai",
+        "guaranteed_safe_ai",
+        "asymptotic_guarantees"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "RAND Corporation",
+      "title": "Research Lead, AI Cyber Testing",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_liability_insurance",
+        "pol_compute_governance",
+        "pol_biosecurity_misuse",
+        "pol_international",
+        "pol_testing_evaluation",
+        "pol_incident_response"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Shanghai Artificial Intelligence Laboratory",
+      "title": "Artificial Intelligence Safety Standards Expert",
+      "assigned_by_inheritance": "capability_evals",
+      "candidates": [
+        "capability_evals",
+        "various_redteams"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "The AI Policy Network",
+      "title": "Director, Government Affairs",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_frontier_regulation"
+      ],
+      "note": "ambiguous between pol_public_narrative and pol_frontier_regulation"
+    },
+    {
+      "org": "Center for a New American Security",
+      "title": "Various Internships",
+      "assigned_by_inheritance": "pol_compute_governance",
+      "candidates": [
+        "pol_compute_governance",
+        "pol_international",
+        "pol_security_infosec"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Center for Democracy and Technology",
+      "title": "Externship (Fall 2026 and Spring 2027)",
+      "assigned_by_inheritance": "pol_frontier_regulation",
+      "candidates": [
+        "pol_frontier_regulation",
+        "pol_public_narrative"
+      ],
+      "note": "ambiguous between pol_frontier_regulation and pol_public_narrative"
+    },
+    {
+      "org": "Massachusetts Institute of Technology, Lincoln Laboratory",
+      "title": "Research Scientist, System Security Researcher",
+      "assigned_by_inheritance": "pol_security_infosec",
+      "candidates": [
+        "pol_security_infosec",
+        "pol_industrial_rd"
+      ],
+      "note": "no signal fired"
+    },
+    {
+      "org": "Aspen Institute",
+      "title": "Various Fellowships",
+      "assigned_by_inheritance": "pol_public_narrative",
+      "candidates": [
+        "pol_public_narrative",
+        "pol_frontier_regulation"
+      ],
+      "note": "no signal fired"
+    }
+  ]
+}

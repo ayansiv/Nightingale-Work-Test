@@ -1,0 +1,52 @@
+{
+  "$comment": [
+    "Additional Context: 'Loadings are unvalidated. You can't test them without users, but you can",
+    "score people whose views you know — a few well-documented researchers — and check whether the",
+    "axes land where you'd expect. Half an hour, and it catches sign errors and bad loadings before",
+    "anyone else sees them.'",
+    "",
+    "This file is that check, run by `npm run verify`. It caught two real defects on first run:",
+    "  1. Seven inverted patch_rebuild signs. The axis runs low='make current systems safe' to",
+    "     high='design new ones'; the family priors had been written as if it ran the other way,",
+    "     which placed Agent foundations at +0.10 (near-neutral on architecture) when it is the",
+    "     paradigm rebuild agenda.",
+    "  2. Debate deriving as internals-POSITIVE. Debate lists 'Superintelligence can fool human",
+    "     supervisors' among its assumptions — but it lists it as the problem debate ATTACKS, not",
+    "     as an argument that assurance requires interpretability. Fixed by making a family prior",
+    "     authoritative on the axis that defines the family.",
+    "",
+    "Expectations are SIGNS, not values. A sign is something we can be confident about from the",
+    "agenda's own description; a value is not. Adding a value expectation here would be overfitting",
+    "the derivation to our guesses, which is the failure mode this file exists to prevent."
+  ],
+  "agenda_sign_expectations": [
+    { "agenda": "Agent foundations", "expect": { "patch_rebuild": 1, "internals": 1 },
+      "why": "Substrate-independent theory aimed at architectures stable under self-reflection — the paradigm case of designing new systems rather than patching current ones." },
+    { "agenda": "Control", "expect": { "patch_rebuild": -1, "internals": -1, "p_scheme": 1 },
+      "why": "Assumes the model is adversarial and builds protocols around the systems that exist, without needing to understand them internally." },
+    { "agenda": "Guaranteed-Safe AI", "expect": { "patch_rebuild": 1 },
+      "why": "The name is the position: guarantees come from construction." },
+    { "agenda": "Sparse Coding", "expect": { "internals": 1 },
+      "why": "Interpretability method. If this is not internals-positive the axis is broken." },
+    { "agenda": "Pragmatic interpretability", "expect": { "internals": 1 },
+      "why": "As above." },
+    { "agenda": "Debate", "expect": { "internals": -1, "automation": 1 },
+      "why": "Scalable oversight using AI to check AI. Never opens the weights, so it is behavioural on the assurance question however 'cognitive' the source labels it." },
+    { "agenda": "Capability evals", "expect": { "internals": -1, "patch_rebuild": -1 },
+      "why": "Measures what deployed systems can do. Behavioural by construction, and about current systems." },
+    { "agenda": "Asymptotic guarantees", "expect": { "patch_rebuild": 1 },
+      "why": "Theory family aimed at systems not yet built." }
+  ],
+  "null_expectations": {
+    "$comment": "Axes no Shallow Review field speaks to must stay null on every technical agenda. If any of these acquires a value, something started imputing.",
+    "must_be_null_on_all_technical_agendas": ["inside_outside", "restraint_capacity", "venue_access", "patienthood"]
+  },
+  "scoring_invariants": [
+    { "id": "abstain-vs-unsure",
+      "why": "Spec §18. 'Unsure' is 0.0 and enters the mean; abstain removes the item. An axis whose items are all abstained is excluded, NOT imputed to zero." },
+    { "id": "joint-not-scored",
+      "why": "Spec §5. Joint takeover risk displays but must be verifiably absent from the scoring path, or the misalignment story is weighted four times." },
+    { "id": "symmetric-unknowns",
+      "why": "Spec §7. A target null on an axis drops that axis from its own distance calculation, exactly as a user abstention does." }
+  ]
+}

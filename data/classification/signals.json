@@ -1,0 +1,979 @@
+{
+  "$comment": [
+    "Build Spec §10 step 2: 'Research and policy roles are classified... constrained to that org's",
+    "agenda list plus none.'",
+    "",
+    "The spec calls for an Anthropic API call here. This build classifies without one, and the",
+    "substitution is deliberate rather than a downgrade: this is a SNAPSHOT product whose whole",
+    "argument is that sourcing is content (spec §17). An opaque model call produces a tag no reader",
+    "can check. This table produces a tag that names the phrase it matched, in the role's own words,",
+    "which is what the role card renders. It is also re-runnable, diffable in review, and free.",
+    "",
+    "What it costs: no semantic generalisation. A role described entirely in paraphrase that never",
+    "uses a listed phrase falls through to the org's primary agenda via inheritance. The measured",
+    "fall-through rate is reported by scripts/ingest-roles.ts and belongs in the caveats, not hidden.",
+    "",
+    "MATCHING RULES",
+    "  - Case-insensitive substring match on a normalised string.",
+    "  - Title matches score `title_multiplier` x the signal weight; description matches score 1x.",
+    "  - Only agendas in the org's own list (primary + secondaries) can win. A signal for an agenda",
+    "    the org does not work on is ignored — that is the §10 constraint, and it is what stops",
+    "    'security' at a biosecurity org from routing to model-weight infosec.",
+    "  - The winner must clear `min_score` AND beat the runner-up by `min_margin`. Otherwise the",
+    "    role falls through to inheritance, which is the honest outcome for an ambiguous title.",
+    "  - `negative` phrases veto a signal outright. These exist because short tokens are dangerous:",
+    "    'bio' matches 'biography', 'CoT' matches nothing useful, 'probe' matches 'probation'."
+  ],
+  "matching": {
+    "title_multiplier": 2.5,
+    "min_score": 2.0,
+    "min_margin": 0.5
+  },
+  "signals": {
+    "sparse_coding": [
+      {
+        "phrases": [
+          "sparse autoencoder",
+          "dictionary learning",
+          "sparse coding",
+          " sae ",
+          "saes"
+        ],
+        "weight": 3
+      }
+    ],
+    "reverse_engineering": [
+      {
+        "phrases": [
+          "reverse engineer",
+          "circuit analysis",
+          "circuits",
+          "mechanistic understanding",
+          "mechanistic interpretability"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "pragmatic_interpretability": [
+      {
+        "phrases": [
+          "interpretability",
+          "interpretable"
+        ],
+        "weight": 2
+      }
+    ],
+    "activation_engineering": [
+      {
+        "phrases": [
+          "activation steering",
+          "activation engineering",
+          "representation engineering",
+          "steering vector"
+        ],
+        "weight": 3
+      }
+    ],
+    "model_diffing": [
+      {
+        "phrases": [
+          "model diffing",
+          "model diff"
+        ],
+        "weight": 3
+      }
+    ],
+    "extracting_latent_knowledge": [
+      {
+        "phrases": [
+          "latent knowledge",
+          "eliciting latent",
+          "linear probe",
+          "probing classifier"
+        ],
+        "weight": 3
+      }
+    ],
+    "lie_and_deception_detectors": [
+      {
+        "phrases": [
+          "lie detect",
+          "deception detect",
+          "honesty probe"
+        ],
+        "weight": 3
+      }
+    ],
+    "learning_dynamics_and_developmental_interpretability": [
+      {
+        "phrases": [
+          "developmental interpretability",
+          "learning dynamics",
+          "singular learning theory",
+          "training dynamics"
+        ],
+        "weight": 3
+      }
+    ],
+    "representation_structure_and_geometry": [
+      {
+        "phrases": [
+          "representation geometry",
+          "representation structure",
+          "feature geometry"
+        ],
+        "weight": 3
+      }
+    ],
+    "control": [
+      {
+        "phrases": [
+          "ai control",
+          "control protocol",
+          "untrusted model",
+          "sabotage",
+          "control evaluation"
+        ],
+        "weight": 3
+      },
+      {
+        "phrases": [
+          "monitoring"
+        ],
+        "weight": 1,
+        "negative": [
+          "performance monitoring",
+          "infrastructure monitoring",
+          "media monitoring"
+        ]
+      }
+    ],
+    "chain_of_thought_monitoring": [
+      {
+        "phrases": [
+          "chain of thought",
+          "chain-of-thought",
+          "reasoning monitor",
+          "cot monitoring",
+          "reasoning faithfulness"
+        ],
+        "weight": 3
+      }
+    ],
+    "iterative_alignment_at_post_train_time": [
+      {
+        "phrases": [
+          "post-training",
+          "post training",
+          "rlhf",
+          "reward model",
+          "preference learning",
+          "fine-tuning",
+          "finetuning",
+          "alignment training"
+        ],
+        "weight": 2
+      }
+    ],
+    "iterative_alignment_at_pretrain_time": [
+      {
+        "phrases": [
+          "pretraining",
+          "pre-training",
+          "pretrain"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "model_specs_and_constitutions": [
+      {
+        "phrases": [
+          "model spec",
+          "constitutional ai",
+          "constitution",
+          "model policy",
+          "usage policy",
+          "content policy"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "character_training_and_persona_steering": [
+      {
+        "phrases": [
+          "character training",
+          "persona",
+          "model character"
+        ],
+        "weight": 3
+      }
+    ],
+    "model_values_model_preferences": [
+      {
+        "phrases": [
+          "model welfare",
+          "model values",
+          "ai welfare",
+          "moral status",
+          "model preferences"
+        ],
+        "weight": 3
+      }
+    ],
+    "rl_safety": [
+      {
+        "phrases": [
+          "reward hacking",
+          "specification gaming",
+          "reward misspecification",
+          "rl safety"
+        ],
+        "weight": 3
+      }
+    ],
+    "emergent_misalignment": [
+      {
+        "phrases": [
+          "emergent misalignment"
+        ],
+        "weight": 3
+      }
+    ],
+    "capability_removal_unlearning": [
+      {
+        "phrases": [
+          "unlearning",
+          "capability removal",
+          "machine unlearning"
+        ],
+        "weight": 3
+      }
+    ],
+    "data_filtering": [
+      {
+        "phrases": [
+          "data filtering",
+          "pretraining data curation",
+          "corpus filtering"
+        ],
+        "weight": 3
+      }
+    ],
+    "data_quality_for_alignment": [
+      {
+        "phrases": [
+          "data quality",
+          "annotation",
+          "human data",
+          "data labeling",
+          "data labelling"
+        ],
+        "weight": 2
+      }
+    ],
+    "synthetic_data_for_alignment": [
+      {
+        "phrases": [
+          "synthetic data"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "data_poisoning_defense": [
+      {
+        "phrases": [
+          "data poisoning",
+          "backdoor",
+          "sleeper agent"
+        ],
+        "weight": 3
+      }
+    ],
+    "safeguards_inference_time_auxiliaries": [
+      {
+        "phrases": [
+          "guardrail",
+          "safety classifier",
+          "content moderation",
+          "safeguards",
+          "input filter",
+          "output filter",
+          "jailbreak defense"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "detect model misbehavior",
+          "detect misuse",
+          "misuse detection",
+          "classifier",
+          "abuse detection"
+        ],
+        "weight": 2.5,
+        "negative": [
+          "linear probe",
+          "probing classifier"
+        ]
+      }
+    ],
+    "harm_reduction_for_open_weights": [
+      {
+        "phrases": [
+          "open weight",
+          "open-weight",
+          "open source model",
+          "open-source model"
+        ],
+        "weight": 3
+      }
+    ],
+    "assistance_games_assistive_agents": [
+      {
+        "phrases": [
+          "assistance game",
+          "human-compatible",
+          "cooperative inverse reinforcement",
+          "assistive agent"
+        ],
+        "weight": 3
+      }
+    ],
+    "mild_optimisation": [
+      {
+        "phrases": [
+          "mild optimization",
+          "mild optimisation",
+          "quantilizer",
+          "impact measure"
+        ],
+        "weight": 3
+      }
+    ],
+    "capability_evals": [
+      {
+        "phrases": [
+          "dangerous capability",
+          "capability evaluation",
+          "capability eval",
+          "benchmark"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "measure model capabilit",
+          "frontier capabilit",
+          "elicitation"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "autonomy_evals": [
+      {
+        "phrases": [
+          "autonomy eval",
+          "agentic evaluation",
+          "time horizon",
+          "long-horizon task",
+          "autonomous capability"
+        ],
+        "weight": 3
+      }
+    ],
+    "wmd_evals_weapons_of_mass_destruction": [
+      {
+        "phrases": [
+          "cbrn",
+          "weapons of mass destruction",
+          "bioweapon",
+          "chemical weapon",
+          "nuclear security",
+          "aixbio",
+          "ai x bio",
+          "chemical safety"
+        ],
+        "weight": 3
+      }
+    ],
+    "ai_scheming_evals": [
+      {
+        "phrases": [
+          "scheming",
+          "alignment faking",
+          "deceptive alignment"
+        ],
+        "weight": 3
+      }
+    ],
+    "ai_deception_evals": [
+      {
+        "phrases": [
+          "deception",
+          "deceptive behaviour",
+          "deceptive behavior"
+        ],
+        "weight": 2
+      }
+    ],
+    "sandbagging_evals": [
+      {
+        "phrases": [
+          "sandbagging",
+          "underelicitation",
+          "under-elicitation"
+        ],
+        "weight": 3
+      }
+    ],
+    "situational_awareness_and_self_awareness_evals": [
+      {
+        "phrases": [
+          "situational awareness",
+          "self-awareness",
+          "introspection"
+        ],
+        "weight": 3
+      }
+    ],
+    "steganography_evals": [
+      {
+        "phrases": [
+          "steganograph",
+          "encoded reasoning",
+          "hidden message"
+        ],
+        "weight": 3
+      }
+    ],
+    "self_replication_evals": [
+      {
+        "phrases": [
+          "self-replication",
+          "self replication",
+          "autonomous replication"
+        ],
+        "weight": 3
+      }
+    ],
+    "various_redteams": [
+      {
+        "phrases": [
+          "red team",
+          "red-team",
+          "redteam",
+          "adversarial robustness",
+          "jailbreak",
+          "attack surface",
+          "adversarial testing"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "adversarial evaluation",
+          "taxonomy audit",
+          "latent risk",
+          "stress test"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "agi_metrics": [
+      {
+        "phrases": [
+          "forecasting",
+          "trend analysis",
+          "compute trends",
+          "scaling trends",
+          "agi metric",
+          "capability trend"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "trend",
+          "projection",
+          "scenario",
+          "timeline"
+        ],
+        "weight": 2
+      }
+    ],
+    "agent_foundations": [
+      {
+        "phrases": [
+          "agent foundations",
+          "decision theory",
+          "formal agency",
+          "embedded agency",
+          "optimization theory"
+        ],
+        "weight": 3
+      }
+    ],
+    "other_corrigibility": [
+      {
+        "phrases": [
+          "corrigib",
+          "shutdown problem"
+        ],
+        "weight": 3
+      }
+    ],
+    "natural_abstractions": [
+      {
+        "phrases": [
+          "natural abstraction",
+          "abstraction theory"
+        ],
+        "weight": 3
+      }
+    ],
+    "the_learning_theoretic_agenda": [
+      {
+        "phrases": [
+          "learning theoretic",
+          "infra-bayesian",
+          "aixi"
+        ],
+        "weight": 3
+      }
+    ],
+    "heuristic_explanations": [
+      {
+        "phrases": [
+          "heuristic explanation",
+          "heuristic argument",
+          "formal explanation"
+        ],
+        "weight": 3
+      }
+    ],
+    "asymptotic_guarantees": [
+      {
+        "phrases": [
+          "asymptotic guarantee",
+          "worst-case guarantee",
+          "provable guarantee"
+        ],
+        "weight": 3
+      }
+    ],
+    "guaranteed_safe_ai": [
+      {
+        "phrases": [
+          "formal verification",
+          "formal method",
+          "guaranteed safe",
+          "safeguarded ai",
+          "proof assistant",
+          "theorem prov",
+          "world model verification"
+        ],
+        "weight": 3
+      }
+    ],
+    "scientist_ai": [
+      {
+        "phrases": [
+          "scientist ai",
+          "non-agentic",
+          "bayesian oracle"
+        ],
+        "weight": 3
+      }
+    ],
+    "brainlike_agi_safety": [
+      {
+        "phrases": [
+          "brain-like",
+          "brainlike",
+          "neuroscience-inspired",
+          "computational neuroscience"
+        ],
+        "weight": 3
+      }
+    ],
+    "debate": [
+      {
+        "phrases": [
+          "ai debate",
+          "scalable oversight",
+          "amplification",
+          "recursive reward"
+        ],
+        "weight": 3
+      }
+    ],
+    "weak_to_strong_generalization": [
+      {
+        "phrases": [
+          "weak-to-strong",
+          "weak to strong",
+          "easy-to-hard"
+        ],
+        "weight": 3
+      }
+    ],
+    "supervising_ais_improving_ais": [
+      {
+        "phrases": [
+          "automated alignment",
+          "automating alignment",
+          "ai for alignment research",
+          "automated research"
+        ],
+        "weight": 3
+      }
+    ],
+    "ai_explanations_of_ais": [
+      {
+        "phrases": [
+          "ai explanation",
+          "model-generated explanation",
+          "auto-interp"
+        ],
+        "weight": 3
+      }
+    ],
+    "theory_for_aligning_multiple_ais": [
+      {
+        "phrases": [
+          "multi-agent",
+          "multiagent",
+          "cooperative ai",
+          "bargaining",
+          "game theory",
+          "collusion"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "aligned_to_who": [
+      {
+        "phrases": [
+          "pluralistic alignment",
+          "collective alignment",
+          "democratic input",
+          "whose values"
+        ],
+        "weight": 3
+      }
+    ],
+    "aligning_to_the_social_contract": [
+      {
+        "phrases": [
+          "social contract",
+          "societal alignment"
+        ],
+        "weight": 3
+      }
+    ],
+    "pol_testing_evaluation": [
+      {
+        "phrases": [
+          "standards",
+          "assurance",
+          "audit",
+          "measurement science",
+          "conformity assessment",
+          "third-party evaluation",
+          "certification"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "risk management framework",
+          "trustworthy ai",
+          "ai rmf",
+          "guideline",
+          "evaluation methodolog",
+          "testing methodolog",
+          "technical governance"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "pol_frontier_regulation": [
+      {
+        "phrases": [
+          "regulation",
+          "legislation",
+          "legislative",
+          "rulemaking",
+          "compliance",
+          "ai act",
+          "transparency requirement",
+          "statutory",
+          "bill drafting"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "governance research",
+          "policy design",
+          "policy research",
+          "regulatory"
+        ],
+        "weight": 2
+      }
+    ],
+    "pol_compute_governance": [
+      {
+        "phrases": [
+          "export control",
+          "compute governance",
+          "semiconductor",
+          "chip",
+          "hardware-enabled",
+          "critical minerals",
+          "supply chain"
+        ],
+        "weight": 3
+      },
+      {
+        "phrases": [
+          "frontier workload",
+          "datacenter",
+          "data centre",
+          "compute forecast"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "pol_liability_insurance": [
+      {
+        "phrases": [
+          "liability",
+          "insurance",
+          "underwriting",
+          "warranty",
+          "actuarial",
+          "tort"
+        ],
+        "weight": 3
+      }
+    ],
+    "pol_state_capacity": [
+      {
+        "phrases": [
+          "congressional",
+          "civil service",
+          "staffer",
+          "detailee",
+          "talent pipeline",
+          "science and technology policy fellow",
+          "government placement",
+          "capacity building"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "fellows per cohort",
+          "fellowship program",
+          "talent development",
+          "placement",
+          "cohort"
+        ],
+        "weight": 2
+      }
+    ],
+    "pol_international": [
+      {
+        "phrases": [
+          "international",
+          "multilateral",
+          "diplomacy",
+          "diplomatic",
+          "foreign policy",
+          "geopolitic",
+          "great power",
+          "china",
+          "treaty",
+          "united nations"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "us-india",
+          "transatlantic",
+          "allied",
+          "export"
+        ],
+        "weight": 2
+      }
+    ],
+    "pol_security_infosec": [
+      {
+        "phrases": [
+          "information security",
+          "infosec",
+          "cybersecurity",
+          "cyber security",
+          "security engineer",
+          "threat intelligence",
+          "vulnerability",
+          "penetration test",
+          "security clearance",
+          "model weight security",
+          "offensive security"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "security standard",
+          "securing model weights",
+          "nation-state",
+          "datacenter security",
+          "security control",
+          "security level",
+          "trust and safety",
+          "threat model"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "pol_biosecurity_misuse": [
+      {
+        "phrases": [
+          "biosecurity",
+          "pandemic",
+          "biological",
+          "nucleic acid",
+          "pathogen",
+          "biodefense",
+          "bio-risk",
+          "biorisk"
+        ],
+        "weight": 3,
+        "negative": [
+          "biography"
+        ]
+      },
+      {
+        "phrases": [
+          "chemical information",
+          "chemical safety",
+          "cbrn"
+        ],
+        "weight": 3
+      }
+    ],
+    "pol_power_concentration": [
+      {
+        "phrases": [
+          "power concentration",
+          "concentration of power",
+          "democratic",
+          "civil liberties",
+          "checks and balances",
+          "authoritarian",
+          "coup"
+        ],
+        "weight": 3
+      }
+    ],
+    "pol_industrial_rd": [
+      {
+        "phrases": [
+          "industrial policy",
+          "r&d funding",
+          "research funding",
+          "grantmaking",
+          "grant program",
+          "nairr",
+          "public investment"
+        ],
+        "weight": 2.5
+      }
+    ],
+    "pol_incident_response": [
+      {
+        "phrases": [
+          "incident response",
+          "incident reporting",
+          "emergency preparedness",
+          "crisis management",
+          "contingency"
+        ],
+        "weight": 3
+      }
+    ],
+    "pol_public_narrative": [
+      {
+        "phrases": [
+          "advocacy",
+          "campaign",
+          "public awareness",
+          "communications",
+          "press",
+          "media relations",
+          "grassroots",
+          "public education",
+          "narrative"
+        ],
+        "weight": 2.5
+      },
+      {
+        "phrases": [
+          "brief policymakers",
+          "engage with policymakers",
+          "policy engagement",
+          "government relations",
+          "congressional outreach",
+          "op-ed",
+          "commentary"
+        ],
+        "weight": 2.5
+      }
+    ]
+  },
+  "field_building_orgs": {
+    "$comment": [
+      "Orgs whose roles must NOT inherit an agenda, because the org does not have one. A MATS or",
+      "Constellation fellow works on whichever agenda their mentor works on; tagging the cohort to",
+      "a single agenda would be a fabrication, and tagging it to none would bury the single most",
+      "useful entry point in the dataset.",
+      "",
+      "These roles get agenda_id: null AND cross_agenda: true, so browse can surface them under",
+      "every agenda with the label 'open to any agenda — placement depends on your mentor'."
+    ],
+    "orgs": [
+      "MATS Research",
+      "Constellation",
+      "Cambridge Boston Alignment Initiative",
+      "BlueDot Impact",
+      "ERA",
+      "Kairos",
+      "Arcadia Impact",
+      "London AI Safety Research Labs",
+      "AI Safety Quest",
+      "AI Safety Awareness Project",
+      "AISafety.com",
+      "Apart Sprints",
+      "80,000 Hours",
+      "Lightcone Infrastructure",
+      "Centre for Effective Altruism",
+      "Coefficient Giving",
+      "Founders Pledge",
+      "Carnegie Corporation of New York",
+      "OpenAI Foundation",
+      "Collider",
+      "SASH",
+      "AI Alignment Network",
+      "Astralis Foundation",
+      "Amodo Design",
+      "American Academy of Arts and Sciences",
+      "Cambridge University, Centre for Science and Policy",
+      "Blue Origin",
+      "Apple"
+    ]
+  }
+}

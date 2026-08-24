@@ -1,0 +1,162 @@
+{
+  "$comment": [
+    "Build Spec §6: 'Policy levers have no equivalent source. Owner assigns, flagged as assigned.'",
+    "So every coordinate in this file carries kind:'assigned' and a `why`. None of it is derived,",
+    "and the product must render that distinction — a derived coordinate links to the agenda's own",
+    "stated assumption; an assigned one links only to us.",
+    "",
+    "Lever set seeded from the 80,000 Hours US AI policy landscape (its enumerated policy tools:",
+    "testing and evaluation, industrial policy, R&D funding, regulations, export controls,",
+    "liability rules, insurance mechanisms, international agreements, compute governance, safety",
+    "evaluations) plus the institution-type taxonomy in the same article.",
+    "",
+    "PLACEHOLDER STATUS: these twelve levers and their coordinates are our best reading, not the",
+    "owner's judgement. See OWNER-DATA.md item OD-07. The build does not block on it: the app runs",
+    "end to end on these and swaps them out when the owner's file lands.",
+    "",
+    "Note on funding_government_usd (spec §9): government spend on a lever measures the size of the",
+    "PROBLEM, not the size of the safety response. It is a separate column, separately labelled, and",
+    "must never be summed with philanthropic funding into a composite."
+  ],
+  "assigned_by": "build, pending owner review",
+  "institution_types": [
+    { "id": "eop", "name": "Executive Office of the President", "inside_outside": 1.0,
+      "note": "OSTP, NSC, OMB. ~10% political appointees; the rest career staff. Short-lived positions, high leverage, strong exit options.",
+      "partisan_exposure": "high for appointees, low for career staff" },
+    { "id": "agency", "name": "Federal departments and agencies", "inside_outside": 0.8,
+      "note": "Implements through spending, R&D funding, export controls, technical standards and rule-writing. Formally nonpartisan civil service; slow, opaque hiring; clearances are durable career capital.",
+      "partisan_exposure": "low" },
+    { "id": "congress", "name": "Congress", "inside_outside": 0.7,
+      "note": "Holds the formal levers — budget, binding law, oversight. Staffers almost always work for one party, and that affiliation constrains later moves.",
+      "partisan_exposure": "high" },
+    { "id": "state", "name": "State governments", "inside_outside": 0.6,
+      "note": "Faster, fewer veto points, precedent-setting (the 'California effect'). More accessible entry, quicker responsibility.",
+      "partisan_exposure": "medium" },
+    { "id": "thinktank", "name": "Think tanks and advocacy", "inside_outside": -0.8,
+      "note": "Generate and communicate ideas, and act as talent pipelines into government. The article's own caveat: distance from decision-makers makes impact lumpy and hard to predict.",
+      "partisan_exposure": "varies from nonpartisan to explicitly ideological" }
+  ],
+  "levers": [
+    {
+      "id": "pol_testing_evaluation",
+      "name": "Testing, evaluation and standards",
+      "one_sentence_summary": "Build the state's ability to measure what frontier systems can do, and make those measurements count.",
+      "theory_of_change": "Credible third-party measurement → shared factual basis for regulation → rules that bind on capability rather than on vibes → earlier warning before a dangerous capability is deployed.",
+      "primary_institutions": ["agency", "eop"],
+      "coordinates": { "restraint_capacity": -0.8, "inside_outside": 0.7, "constraint": 0.4, "containment": 0.5, "venue_access": -0.4 },
+      "why": "Capacity-building rather than restraint by definition — it gives the state an instrument, it does not tell companies what they may do. Sits inside government because the measurement only counts if the measurer has standing. Nonpartisan enough that a career civil servant can hold it across administrations.",
+      "example_bodies": ["NIST", "CAISI", "UK AI Security Institute", "EU AI Office"]
+    },
+    {
+      "id": "pol_frontier_regulation",
+      "name": "Frontier model regulation and transparency mandates",
+      "one_sentence_summary": "Require frontier developers to disclose, to test before deploying, and to face consequences for not doing so.",
+      "theory_of_change": "Binding disclosure and pre-deployment obligations → internal safety work stops being discretionary → a floor under the race that does not depend on any one company's goodwill.",
+      "primary_institutions": ["state", "congress"],
+      "coordinates": { "restraint_capacity": 0.9, "inside_outside": 0.4, "labs": -0.4, "constraint": -0.6, "venue_access": 0.3 },
+      "why": "The paradigm restraint lever. Presumes the binding constraint is will rather than knowledge — we largely know what we would want disclosed. Implies a low view of voluntary lab commitments, or the mandate would be redundant.",
+      "example_bodies": ["California SB 53", "New York RAISE Act", "EU AI Act GPAI chapter"]
+    },
+    {
+      "id": "pol_compute_governance",
+      "name": "Compute governance and export controls",
+      "one_sentence_summary": "Use the physical chokepoint — chips and datacentres — as the place where policy can actually bite.",
+      "theory_of_change": "Compute is countable, excludable and concentrated → tracking and controlling it is the one enforcement mechanism that does not require inspecting model internals → leverage over who gets to train frontier systems at all.",
+      "primary_institutions": ["agency", "eop"],
+      "coordinates": { "restraint_capacity": 0.5, "inside_outside": 0.8, "domestic_intl": -0.7, "timelines": 0.3, "venue_access": -0.3 },
+      "why": "Strongly interstate: export controls are an instrument of competition between states, and the lever only makes sense if you think that competition is where the risk sits. Requires being inside — the data and the authority are both government-held.",
+      "example_bodies": ["Bureau of Industry and Security", "NSC", "IAPS compute policy work"]
+    },
+    {
+      "id": "pol_liability_insurance",
+      "name": "Liability rules and insurance",
+      "one_sentence_summary": "Make developers internalise the cost of harm, and let insurers price the risk they will not disclose.",
+      "theory_of_change": "Clear liability → priced risk → an underwriting market that demands evidence of safety practices → private enforcement that scales without a regulator inspecting every model.",
+      "primary_institutions": ["congress", "state"],
+      "coordinates": { "restraint_capacity": 0.6, "inside_outside": 0.1, "constraint": -0.5, "accident_deliberate": 0.2, "venue_access": 0.0 },
+      "why": "Constrains companies, but indirectly — through price rather than prohibition, so it sits short of the frontier-regulation pole. Venue-neutral: liability has constituencies in both parties, which is unusual among these levers and is the reason it survives changes of administration.",
+      "example_bodies": ["RAND liability work", "state tort reform", "specialty insurers"]
+    },
+    {
+      "id": "pol_state_capacity",
+      "name": "State technical capacity and talent",
+      "one_sentence_summary": "Get people who actually understand the systems into the rooms where decisions are made.",
+      "theory_of_change": "Technically literate staff inside government → definitions that survive contact with how models work → provisions that are enforceable → fewer rules that are either toothless or unworkable.",
+      "primary_institutions": ["agency", "congress", "eop"],
+      "coordinates": { "restraint_capacity": -0.9, "inside_outside": 0.9, "constraint": 0.5, "venue_access": -0.6 },
+      "why": "The purest capacity lever, and the one the government disclaimer in spec §14 is written about. Deliberately low on venue_access: this is the lever that stays available to someone unwilling to foreclose partisan options, because technical competence in the room is a public good any administration benefits from.",
+      "example_bodies": ["AAAS fellowships", "TechCongress", "Horizon fellowship", "agency hiring authorities"]
+    },
+    {
+      "id": "pol_international",
+      "name": "International agreements and diplomacy",
+      "one_sentence_summary": "Coordinate between states so that unilateral restraint is not simply unilateral disadvantage.",
+      "theory_of_change": "Shared standards and verification between the states that matter → restraint that does not hand the lead to whoever defects → a path out of the race that does not require anyone to trust anyone.",
+      "primary_institutions": ["eop", "agency"],
+      "coordinates": { "restraint_capacity": 0.2, "inside_outside": 0.6, "domestic_intl": -0.9, "constraint": -0.7, "venue_access": -0.4 },
+      "why": "The most interstate lever there is, and it presumes coordination rather than knowledge is what is missing. Low venue_access because diplomatic careers are built on continuity across administrations.",
+      "example_bodies": ["State Department", "AI Safety Institute network", "OECD", "UN advisory bodies"]
+    },
+    {
+      "id": "pol_security_infosec",
+      "name": "Model weight security and infosec standards",
+      "one_sentence_summary": "Stop the weights from walking out of the building.",
+      "theory_of_change": "Security requirements proportionate to capability → frontier weights are not trivially stealable by state actors → the safety properties a developer builds in survive contact with the world.",
+      "primary_institutions": ["agency", "eop"],
+      "coordinates": { "restraint_capacity": -0.3, "inside_outside": 0.5, "containment": 0.4, "domestic_intl": -0.5, "accident_deliberate": -0.4, "venue_access": -0.7 },
+      "why": "Mostly capacity — standards and clearances rather than prohibitions. Strongly deliberate-harm: the threat model is theft and misuse by an actor who knows exactly what they want. The least partisan lever in the set, which is why the job board shows a large infosec bloc.",
+      "example_bodies": ["RAND securing weights work", "NSA/CISA", "SL5 Task Force", "lab security teams"]
+    },
+    {
+      "id": "pol_biosecurity_misuse",
+      "name": "Misuse prevention: bio and cyber",
+      "one_sentence_summary": "Keep uplift for weapons of mass destruction out of generally available systems.",
+      "theory_of_change": "Screening obligations, capability thresholds and enforced safeguards at the point of synthesis and deployment → the marginal actor who could not build a weapon before still cannot.",
+      "primary_institutions": ["agency", "congress"],
+      "coordinates": { "restraint_capacity": 0.4, "inside_outside": 0.5, "accident_deliberate": -0.9, "domestic_intl": 0.1, "venue_access": -0.5 },
+      "why": "The clearest deliberate-harm lever in the set: nothing here is about a system pursuing goals nobody intended. Bipartisan in practice, so it stays open to someone unwilling to foreclose venues.",
+      "example_bodies": ["SecureBio", "nucleic acid synthesis screening rules", "CISA", "NTI bio"]
+    },
+    {
+      "id": "pol_power_concentration",
+      "name": "Checks on power concentration",
+      "one_sentence_summary": "Keep advanced AI from becoming the instrument by which a small group stops needing anyone's consent.",
+      "theory_of_change": "Structural safeguards — on military and intelligence deployment, on chains of command, on who can direct systems at scale → no single actor acquires durable, unaccountable capability → the ordinary mechanisms of correction keep working.",
+      "primary_institutions": ["congress", "eop", "thinktank"],
+      "coordinates": { "restraint_capacity": 0.5, "inside_outside": 0.2, "domestic_intl": 0.9, "accident_deliberate": -0.7, "futures": 0.6, "venue_access": 0.4 },
+      "why": "The domestic-concentration pole in lever form. Scores high on futures because the goal is not survival but retained influence over what happens next. Higher venue_access than its neighbours: this work is hard to do without taking positions that read as partisan.",
+      "example_bodies": ["Checks, Balances and Power Concentration work", "congressional oversight committees", "AI-enabled coups research"]
+    },
+    {
+      "id": "pol_industrial_rd",
+      "name": "Industrial policy and public R&D",
+      "one_sentence_summary": "Spend public money to shape which capabilities exist and who has them.",
+      "theory_of_change": "Public compute, public datasets and directed research funding → safety-relevant research is not solely dependent on the labs → the state has an independent basis for judgement.",
+      "primary_institutions": ["congress", "agency", "eop"],
+      "coordinates": { "restraint_capacity": -0.7, "inside_outside": 0.6, "constraint": 0.3, "labs": -0.2, "venue_access": -0.2 },
+      "why": "Capacity, not restraint. Weakly lab-negative because the point is reducing dependence on lab-internal work for the field's evidence base.",
+      "example_bodies": ["NAIRR", "NSF", "DOE labs", "America's AI Action Plan"]
+    },
+    {
+      "id": "pol_incident_response",
+      "name": "Incident reporting and emergency preparedness",
+      "one_sentence_summary": "Build the machinery to notice a serious failure and respond to it before the next one.",
+      "theory_of_change": "Mandatory reporting and a standing response capability → failures become visible and comparable → policy adjusts on evidence rather than on the news cycle, and the state can act inside the window that matters.",
+      "primary_institutions": ["agency", "eop"],
+      "coordinates": { "restraint_capacity": -0.2, "inside_outside": 0.7, "containment": 0.6, "constraint": 0.2, "venue_access": -0.6 },
+      "why": "Presumes containment is feasible — the whole lever is premised on catching something and acting in time. Mixed on restraint: reporting mandates constrain, response capability builds.",
+      "example_bodies": ["CISA", "agency incident regimes", "AI Safety Institute network"]
+    },
+    {
+      "id": "pol_public_narrative",
+      "name": "Public understanding and advocacy",
+      "one_sentence_summary": "Change what the public and the press believe is at stake, so that the political window opens at all.",
+      "theory_of_change": "Sustained, accurate public argument → salience → political demand → the levers above become passable rather than theoretically available.",
+      "primary_institutions": ["thinktank"],
+      "coordinates": { "restraint_capacity": 0.4, "inside_outside": -0.9, "constraint": -0.8, "venue_access": 0.5 },
+      "why": "The outside pole in its purest form, and it only makes sense if you think political will rather than technical knowledge is what is missing. High venue_access: advocacy that avoids ever taking a side tends not to move anything.",
+      "example_bodies": ["Encode", "PauseAI", "The AI Policy Network", "advocacy arms of think tanks"],
+      "caveat": "Spec §13.6 applies most sharply here: returns to advocacy may increase rather than diminish. Being alone on an issue can mean being ignored rather than high-leverage."
+    }
+  ]
+}

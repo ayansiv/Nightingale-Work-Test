@@ -1,0 +1,46 @@
+{
+  "$comment": [
+    "Build Spec §10 step 4: 'Manual corrections are straight edits.' This file holds corrections to",
+    "the rule table's OUTPUT, so they survive a re-run and are visible in review rather than being",
+    "silently applied to derived JSON.",
+    "",
+    "A correction here is an admission that the rule table got something wrong. That is fine and",
+    "expected — but if the same KIND of correction shows up three times, fix the signal table",
+    "instead, or the overrides file becomes the classifier.",
+    "",
+    "Matching is on exact (org, role_title). If the source retitles a role the override stops",
+    "matching, and ingest-roles.ts prints a warning rather than failing silently."
+  ],
+  "overrides": [
+    {
+      "org": "GovAI",
+      "role_title": "Research Manager, Talent Development Team",
+      "agenda_id": "pol_state_capacity",
+      "why": "The role manages fellowship cohorts and career placement. That is talent-pipeline work, which is the state-capacity lever, not the governance research GovAI's primary tag points at."
+    },
+    {
+      "org": "Hudson Institute",
+      "role_title": "Research Internship, Fellow Bill Drexel (Fall 2026)",
+      "agenda_id": "pol_international",
+      "why": "Description is US-India relations, AI competition and American technology strategy — interstate competition, not compute governance."
+    },
+    {
+      "org": "Google DeepMind",
+      "role_title": "Research Scientist, Safety Oversight",
+      "agenda_id": "safeguards_inference_time_auxiliaries",
+      "why": "Builds classifiers and pipelines to detect model misbehaviour and misuse in production. That is inference-time safeguards, not the post-training work the org's primary tag points at."
+    },
+    {
+      "org": "Alice",
+      "role_title": "GenAI Chemical Safety Expert",
+      "agenda_id": "wmd_evals_weapons_of_mass_destruction",
+      "why": "Chemical-information safeguards and adversarial audit. The WMD evals agenda is a closer fit than the org's infosec primary."
+    },
+    {
+      "org": "Machine Intelligence Research Institute",
+      "role_title": "Policy Advisor",
+      "agenda_id": "pol_public_narrative",
+      "why": "Briefs government offices on MIRI's governance research. MIRI's policy work is persuasion and narrative rather than drafting, and it is emphatically not agent foundations."
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+  "$comment": "Spec §3. Loadings are unvalidated (Additional Context flags this explicitly). Sign errors are caught by scripts/verify-data.ts, which scores the calibration fixtures in data/config/calibration.json. Reverse-scored items (q3, q7, q17, q19, q27, q29, q30) are deliberately interleaved to catch acquiescence bias — do not cluster them. q29 and q30 were added after measurement showed that skipping Q23 alone changed the top-ranked policy lever, because restraint_capacity and inside_outside each rested on a single item while carrying the highest policy weight (1.3) and being the only policy axes every lever has a value on. NOTE: adding or removing a question changes the permalink encoding — bump PERMALINK VERSION in src/lib/permalink.ts when you do.",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Capability trajectory",
+      "blurb": "How fast, and how far."
+    },
+    {
+      "id": "B",
+      "title": "The misalignment chain",
+      "blurb": "Three separate links. People who agree on the first often split on the third, and that split routes to entirely different work."
+    },
+    {
+      "id": "C",
+      "title": "Risk composition",
+      "blurb": "Where the harm comes from."
+    },
+    {
+      "id": "D",
+      "title": "Where leverage lies",
+      "blurb": "What is actually binding, and who is best placed to relieve it."
+    },
+    {
+      "id": "E",
+      "title": "Technical approach",
+      "blurb": "Only scored against technical targets."
+    },
+    {
+      "id": "F",
+      "title": "Policy approach",
+      "blurb": "Only scored against policy targets."
+    },
+    {
+      "id": "G",
+      "title": "Scope of the goal",
+      "blurb": ""
+    }
+  ],
+  "prune_order": [
+    "q13",
+    "q3",
+    "q21",
+    "q16"
+  ],
+  "short_form": [
+    "q1",
+    "q2",
+    "q4",
+    "q6",
+    "q8",
+    "q10",
+    "q14",
+    "q15",
+    "q18",
+    "q23"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "order": 1,
+      "section": "A",
+      "response_type": "credence",
+      "text": "How likely is it that AI systems capable of fully automating AI research arrive before 2032?",
+      "loadings": {
+        "timelines": 0.8
+      }
+    },
+    {
+      "id": "q2",
+      "order": 2,
+      "section": "A",
+      "response_type": "credence",
+      "text": "If such systems arrive, how likely is a software-only intelligence explosion — large capability gains without a corresponding hardware buildout?",
+      "loadings": {
+        "takeoff": 0.9
+      }
+    },
+    {
+      "id": "q3",
+      "order": 3,
+      "section": "A",
+      "response_type": "agreement",
+      "text": "Scaling and algorithmic progress will hit hard limits that push transformative capability past 2040.",
+      "loadings": {
+        "timelines": -0.7,
+        "takeoff": -0.3
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q4",
+      "order": 4,
+      "section": "B",
+      "response_type": "agreement",
+      "text": "Systems trained with roughly current methods end up pursuing goals meaningfully different from what their developers intended.",
+      "loadings": {
+        "p_mis": 0.9
+      }
+    },
+    {
+      "id": "q5",
+      "order": 5,
+      "section": "B",
+      "response_type": "agreement",
+      "text": "Current models already show real misalignment rather than ordinary capability failure.",
+      "loadings": {
+        "p_mis": 0.6
+      }
+    },
+    {
+      "id": "q6",
+      "order": 6,
+      "section": "B",
+      "response_type": "credence",
+      "text": "Given misaligned goals, how likely is it that systems will conceal them and behave well under training and evaluation?",
+      "loadings": {
+        "p_scheme": 0.9
+      }
+    },
+    {
+      "id": "q7",
+      "order": 7,
+      "section": "B",
+      "response_type": "agreement",
+      "text": "Misaligned systems will mostly fail visibly rather than strategically.",
+      "loadings": {
+        "p_scheme": -0.7
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q8",
+      "order": 8,
+      "section": "B",
+      "response_type": "agreement",
+      "text": "Given a scheming system deployed at scale, a well-resourced developer could still catch and contain it before catastrophe.",
+      "loadings": {
+        "containment": 0.9
+      }
+    },
+    {
+      "id": "q9",
+      "order": 9,
+      "section": "B",
+      "response_type": "agreement",
+      "text": "Safety measures that assume the model is adversarial can work without solving alignment.",
+      "loadings": {
+        "containment": 0.7,
+        "constraint": 0.2
+      }
+    },
+    {
+      "id": "q10",
+      "order": 10,
+      "section": "C",
+      "response_type": "allocation",
+      "text": "Allocate 100 points between two sources of harm.",
+      "allocation_poles": {
+        "low": "People using AI systems for exactly what they intended",
+        "high": "AI systems doing what nobody intended"
+      },
+      "loadings": {
+        "accident_deliberate": 1.0
+      }
+    },
+    {
+      "id": "q11",
+      "order": 11,
+      "section": "C",
+      "response_type": "agreement",
+      "text": "Seizure of durable power by a small group is a likelier catastrophe path than loss of control.",
+      "loadings": {
+        "accident_deliberate": -0.5,
+        "domestic_intl": 0.7
+      }
+    },
+    {
+      "id": "q12",
+      "order": 12,
+      "section": "C",
+      "response_type": "agreement",
+      "text": "Competition between states is the primary driver of unsafe development.",
+      "loadings": {
+        "domestic_intl": -0.8
+      }
+    },
+    {
+      "id": "q13",
+      "order": 13,
+      "section": "C",
+      "response_type": "agreement",
+      "text": "Biological or cyber misuse by non-state actors is a top-three risk.",
+      "loadings": {
+        "accident_deliberate": -0.6
+      }
+    },
+    {
+      "id": "q14",
+      "order": 14,
+      "section": "D",
+      "response_type": "agreement",
+      "text": "If AI goes badly, it's more because we didn't know how to build it safely than because we knew and did it anyway.",
+      "loadings": {
+        "constraint": 0.9
+      }
+    },
+    {
+      "id": "q15",
+      "order": 15,
+      "section": "D",
+      "response_type": "agreement",
+      "text": "A talented safety researcher does more good inside a frontier lab than outside one.",
+      "loadings": {
+        "labs": 0.9
+      }
+    },
+    {
+      "id": "q16",
+      "order": 16,
+      "section": "D",
+      "response_type": "agreement",
+      "text": "Labs' published safety commitments meaningfully constrain their behavior.",
+      "loadings": {
+        "labs": 0.5
+      }
+    },
+    {
+      "id": "q17",
+      "order": 17,
+      "section": "D",
+      "response_type": "agreement",
+      "text": "Working at a lab mainly confers legitimacy on the lab.",
+      "loadings": {
+        "labs": -0.7
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q18",
+      "order": 18,
+      "section": "E",
+      "response_type": "agreement",
+      "text": "Safety requires understanding internal computation, not only testing behavior.",
+      "loadings": {
+        "internals": 0.9
+      }
+    },
+    {
+      "id": "q19",
+      "order": 19,
+      "section": "E",
+      "response_type": "agreement",
+      "text": "Behavioral evaluation can in principle provide sufficient assurance.",
+      "loadings": {
+        "internals": -0.7
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q20",
+      "order": 20,
+      "section": "E",
+      "response_type": "agreement",
+      "text": "Effort belongs on making current architectures safe rather than designing new ones.",
+      "loadings": {
+        "patch_rebuild": 0.8
+      }
+    },
+    {
+      "id": "q21",
+      "order": 21,
+      "section": "E",
+      "response_type": "agreement",
+      "text": "Formal guarantees are worth pursuing at large cost to practicality.",
+      "loadings": {
+        "patch_rebuild": -0.6
+      }
+    },
+    {
+      "id": "q22",
+      "order": 22,
+      "section": "E",
+      "response_type": "credence",
+      "text": "How likely is it that AI systems will do a large share of alignment research themselves before it matters?",
+      "loadings": {
+        "automation": 0.9
+      }
+    },
+    {
+      "id": "q23",
+      "order": 23,
+      "section": "F",
+      "response_type": "agreement",
+      "text": "Policy should constrain what companies can do rather than build state evaluation capacity.",
+      "loadings": {
+        "restraint_capacity": 0.9
+      }
+    },
+    {
+      "id": "q24",
+      "order": 24,
+      "section": "F",
+      "response_type": "agreement",
+      "text": "Holding a government position beats influencing from outside.",
+      "loadings": {
+        "inside_outside": 0.9
+      }
+    },
+    {
+      "id": "q29",
+      "order": 25,
+      "section": "F",
+      "response_type": "agreement",
+      "text": "The most valuable thing government can add is the independent ability to evaluate frontier systems — not new restrictions on what companies may build.",
+      "loadings": {
+        "restraint_capacity": -0.7
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q25",
+      "order": 26,
+      "section": "F",
+      "response_type": "willingness",
+      "text": "Would you take a role that publicly and durably associates you with one political party?",
+      "loadings": {
+        "venue_access": 0.9
+      }
+    },
+    {
+      "id": "q30",
+      "order": 27,
+      "section": "F",
+      "response_type": "agreement",
+      "text": "The AI policy ideas that ended up mattering were developed outside government and carried in, rather than originated by people holding office.",
+      "loadings": {
+        "inside_outside": -0.7
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q26",
+      "order": 28,
+      "section": "F",
+      "response_type": "willingness",
+      "text": "Would you work in an administration whose stated AI priorities differ substantially from yours?",
+      "loadings": {
+        "venue_access": 0.6
+      }
+    },
+    {
+      "id": "q27",
+      "order": 29,
+      "section": "G",
+      "response_type": "agreement",
+      "text": "Avoiding catastrophe is nearly sufficient — a good long-run outcome follows fairly naturally from there.",
+      "loadings": {
+        "futures": -0.8
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "q28",
+      "order": 30,
+      "section": "G",
+      "response_type": "agreement",
+      "text": "Whether AI systems are moral patients should shape how the field allocates effort now.",
+      "loadings": {
+        "patienthood": 0.9
+      }
+    }
+  ],
+  "consistency_pairs": [
+    {
+      "axis": "internals",
+      "a": "q18",
+      "b": "q19",
+      "threshold": 1.0,
+      "topic": "internals_vs_behavior"
+    },
+    {
+      "axis": "labs",
+      "a": "q15",
+      "b": "q17",
+      "threshold": 1.0,
+      "topic": "labs_inside_vs_legitimacy"
+    },
+    {
+      "axis": "timelines",
+      "a": "q1",
+      "b": "q3",
+      "threshold": 1.0,
+      "topic": "timelines_short_vs_walls"
+    },
+    {
+      "axis": "p_scheme",
+      "a": "q6",
+      "b": "q7",
+      "threshold": 1.0,
+      "topic": "scheming_vs_visible_failure"
+    },
+    {
+      "axis": "patch_rebuild",
+      "a": "q20",
+      "b": "q21",
+      "threshold": 1.0,
+      "topic": "patch_vs_formal_guarantees"
+    },
+    {
+      "axis": "restraint_capacity",
+      "a": "q23",
+      "b": "q29",
+      "threshold": 1.0,
+      "topic": "constrain_vs_capacity"
+    },
+    {
+      "axis": "inside_outside",
+      "a": "q24",
+      "b": "q30",
+      "threshold": 1.0,
+      "topic": "inside_vs_outside_origin"
+    }
+  ]
+}

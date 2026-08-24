@@ -1,0 +1,54 @@
+{
+  "$comment": "Spec §4. Every response type normalizes to [-1,1] at ingest, before aggregation. Numeric ranges are pinned per Additional Context: 'Show the numbers in the interface, not just the words.'",
+  "scales": {
+    "credence": {
+      "label": "How likely?",
+      "show_numeric_range": true,
+      "options": [
+        { "value": -1.0,  "label": "Very unlikely", "range": "under 10%" },
+        { "value": -0.5,  "label": "Unlikely",      "range": "10–30%" },
+        { "value":  0.0,  "label": "Roughly even",  "range": "30–60%" },
+        { "value":  0.5,  "label": "Likely",        "range": "60–85%" },
+        { "value":  1.0,  "label": "Very likely",   "range": "over 85%" }
+      ]
+    },
+    "agreement": {
+      "label": "Do you agree?",
+      "show_numeric_range": false,
+      "midpoint_note": "\"Unsure\" is a considered midpoint and enters the average. Abstain is a separate control that removes the item from scoring entirely.",
+      "options": [
+        { "value": -1.0, "label": "Strongly disagree" },
+        { "value": -0.5, "label": "Disagree" },
+        { "value":  0.0, "label": "Unsure" },
+        { "value":  0.5, "label": "Agree" },
+        { "value":  1.0, "label": "Strongly agree" }
+      ]
+    },
+    "willingness": {
+      "label": "Would you?",
+      "show_numeric_range": false,
+      "midpoint_note": "No midpoint — these are decisions, not credences.",
+      "options": [
+        { "value": -1.0,  "label": "No" },
+        { "value": -0.33, "label": "Probably not" },
+        { "value":  0.33, "label": "Probably" },
+        { "value":  1.0,  "label": "Yes" }
+      ]
+    },
+    "allocation": {
+      "label": "Allocate 100 points",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 50,
+      "map": "linear",
+      "note": "0 maps to -1 (low pole), 100 maps to +1 (high pole)."
+    }
+  },
+  "abstain": {
+    "id": "abstain",
+    "label": "Skip this one",
+    "help": "Removes the item from scoring. Different from \"Unsure\", which is an answer.",
+    "encoded_as": "_"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "$comment": [
+    "Build Spec §13: 'Load-bearing, not footnotes.' Each caveat declares WHERE it must render.",
+    "scripts/verify-data.ts does not check placement — that is a UI test — but every id here must",
+    "appear somewhere in src/, and the Caveat component fails loudly on an unknown id rather than",
+    "rendering nothing.",
+    "",
+    "Spec §14 disclaimers ship verbatim. disclaimer_government_b is deliberately empty."
+  ],
+  "caveats": [
+    {
+      "id": "job-board-coverage-bias",
+      "title": "Job-board coverage is biased, and posting counts are not importance",
+      "surfaces": ["tables", "browse", "results"],
+      "body": "80,000 Hours states its listings are underrepresented in areas where it has less expertise, at organizations it hasn't heard of, at large organizations with too many roles to review, and for roles outside the US and UK where it can't vet non-English vacancies. It also says plainly that role counts are not a signal of how important it considers an area. Postings are therefore reported here as a separate quantity and are never summed into a composite score.",
+      "severity": "high"
+    },
+    {
+      "id": "lab-internal-funding",
+      "title": "Low philanthropic funding does not mean under-resourced",
+      "surfaces": ["tables", "agenda"],
+      "body": "Grant databases miss safety spending funded off lab revenue, which is a large and growing share of the total. Every agenda therefore carries a lab_coverage field. An agenda that looks starved of philanthropic money may be one of the best-funded areas in the field.",
+      "severity": "high"
+    },
+    {
+      "id": "orgs-as-points",
+      "title": "Organizations are shown as single positions",
+      "surfaces": ["results", "browse", "org"],
+      "body": "Organizations are shown as single positions based on revealed evidence: what they work on and what they publish. Some organizations pursue several agendas, and a single point compresses that. Treat placement as a first approximation.",
+      "severity": "high",
+      "verbatim_from_spec": true
+    },
+    {
+      "id": "researcher-citations-not-attributions",
+      "title": "Researcher positions are citations, not attributions",
+      "surfaces": ["results", "person"],
+      "body": "Every placement of a named person links the specific piece it came from and the date that piece was published. The label is \"as expressed in X, dated Y\", never \"believes\". People move substantially, and a position from 2023 may not be a position now. If you think your placement is wrong, there is a correction link on every profile.",
+      "severity": "high"
+    },
+    {
+      "id": "neglectedness-is-not-a-recommendation",
+      "title": "Neglectedness is not a recommendation",
+      "surfaces": ["tables", "results", "agenda"],
+      "body": "Thin resourcing implies high marginal returns only under diminishing returns and comparable tractability. An agenda may be thin because it is hard, because it is wrong, or because nobody has tried. This product does not distinguish those cases, and it is not ranking organizations or agendas by quality.",
+      "severity": "high"
+    },
+    {
+      "id": "policy-returns-may-increase",
+      "title": "Policy returns may increase rather than diminish",
+      "surfaces": ["tables-policy"],
+      "body": "Coalitions, credibility and timing compound. Being alone on an issue can mean being ignored rather than high-leverage — which is the opposite of the inference the technical table invites. This is a large part of why the two tables are not merged.",
+      "severity": "high"
+    },
+    {
+      "id": "sensitivity",
+      "title": "Some theories of change are not stated here",
+      "surfaces": ["agenda", "entry"],
+      "body": "See the general disclaimer. Tier-3 items are listed as omitted rather than described in general terms.",
+      "severity": "medium"
+    },
+    {
+      "id": "tag-strength",
+      "title": "A role's agenda tag is one of three different claims",
+      "surfaces": ["browse", "role"],
+      "body": "A tag marked \"from role content\" means a phrase in the role's own description named this agenda. A tag marked \"from the organization\" means only that the role sits at an organization whose primary work is this agenda — which is the intended behaviour for operations, recruiting, finance and legal roles, but is a materially weaker claim. A tag marked \"open to any agenda\" means the role is a fellowship or residency where placement depends on a mentor. These are shown differently everywhere they appear.",
+      "severity": "high"
+    },
+    {
+      "id": "snapshot",
+      "title": "This is a snapshot",
+      "surfaces": ["entry", "tables", "browse", "results"],
+      "body": "Data was pulled once and committed. Nothing here refreshes. Individual cells carry their own estimation flags, but the whole dataset carries a single date, shown at the top of every data surface.",
+      "severity": "medium"
+    },
+    {
+      "id": "coordinates-are-derived-not-endorsed",
+      "title": "Agenda coordinates come from what proponents said, not from what we think",
+      "surfaces": ["results", "agenda"],
+      "body": "Each technical agenda's position is composed from fields its own proponents published in the Shallow Review: the family it belongs to, the case it targets, its broad approach, and the orthodox problems it says it rests on. Every coordinate shows which of those produced it. Where nothing in the source speaks to an axis, the coordinate is blank and that axis simply drops out of the comparison — it is not set to the middle.",
+      "severity": "medium"
+    }
+  ],
+  "disclaimers": {
+    "disclaimer_general": {
+      "verbatim_from_spec": true,
+      "text": "Some roles' theories of change can't be stated publicly. In a few cases this is because the reasons a role matters differ from an institution's stated priorities; in others, because describing the mechanism would compromise the people relying on it. Where we've had to be general, we've been general rather than coy — we'd rather say less than write something that reads as coded. Roles missing from this page are not less important, and a handful are among the most important."
+    },
+    "disclaimer_government_a": {
+      "verbatim_from_spec": true,
+      "text": "Impact in government roles comes from placement and timing rather than volume of output. The value is having someone with real technical understanding present when a decision is made: drafting the definition, catching the provision that won't survive contact with how models actually work, knowing which capability claims are load-bearing. This is largely independent of any administration's stated priorities — technical competence in the room is a public good that any administration benefits from, and supplying it is straightforwardly public service. The scarce input isn't conviction, it's competence paired with willingness to serve."
+    },
+    "disclaimer_government_b": {
+      "text": "",
+      "note": "Spec §14: placeholder for the sharper variant, if owner's superiors choose it. Left empty deliberately."
+    }
+  },
+  "config": {
+    "government_disclaimer_variant": "a",
+    "$comment": "Spec §14: the config flag defaults to 'a'."
+  }
+}
