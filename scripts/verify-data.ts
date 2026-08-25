@@ -455,6 +455,15 @@ console.log('\nUI CONTRACTS');
   check('every caveat in caveats.json has a phrase to check for', undeclared.length === 0,
     undeclared.join(', '));
 
+  // The app was renamed once and index.html kept the old <title> for a release, which is only
+  // visible in a browser tab — nothing else surfaces it. Tie the two together.
+  const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const appName = (fs.readFileSync(path.join(ROOT, 'src/App.tsx'), 'utf8')
+    .match(/tracking-tight">([^<]+)<\/span>/) ?? [])[1]?.trim();
+  check('the page <title> matches the wordmark in the header',
+    !!appName && indexHtml.includes(`<title>${appName}`),
+    `wordmark "${appName}" not found at the start of the <title>`);
+
   // Spec §14: the government disclaimer variant flag defaults to 'a', and b ships empty.
   check('government disclaimer variant defaults to a',
     caveatsFile.disclaimers.disclaimer_government_a.text.length > 0
