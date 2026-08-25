@@ -18,6 +18,9 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const steps = [
   { name: 'agendas  (Shallow Review 2025 -> 74 technical agendas, coordinates derived)', script: 'ingest-agendas.ts' },
   { name: 'roles    (80k board -> roles, orgs, review queue; postings back onto agendas)', script: 'ingest-roles.ts' },
+  // Skips cleanly and writes an empty file when the sheet is not present, so the app builds
+  // either way. Phase 5 is strictly additive.
+  { name: 'culture  (org culture intake -> org-culture.json, if the sheet is present)', script: 'ingest-culture.ts' },
 ];
 
 for (const [i, step] of steps.entries()) {

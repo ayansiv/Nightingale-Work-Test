@@ -96,11 +96,13 @@ export function Home() {
               const axis = axes.find((a) => a.id === id);
               if (!axis) return null;
               const poles = readings[id] ?? {};
-              const poleKeys = Object.keys(poles).filter((k) => !k.startsWith('_'));
-              // Alternate which side leads across the whole page, so neither pole is
-              // systematically encountered first.
-              const lead = (gi + ai) % 2 === 0 ? poleKeys : [...poleKeys].reverse();
-              const teaching = poles._teaching_note as string | undefined;
+              // Order by the group's DECLARED pole, so the reading list sits under the end of the
+              // bar it argues for. These used to be ordered by position in the object, which put
+              // 16 of 17 axes on the wrong side — "steer toward good outcomes" appeared under
+              // "avoid catastrophe", and the inside-government reading under "outside influence".
+              const lead = Object.keys(poles)
+                .filter((k) => !k.startsWith('_'))
+                .sort((a, b) => (poles[a].pole === 'low' ? -1 : 1) - (poles[b].pole === 'low' ? -1 : 1));
 
               return (
                 <article key={id}>
@@ -113,11 +115,11 @@ export function Home() {
 
                   {/* The bipolar bar: named poles at the ends, the spectrum between them. */}
                   <div className="flex items-stretch gap-2 mb-3">
-                    <span className="text-2xs font-medium text-ink w-[22%] shrink-0 text-right self-center leading-tight">
+                    <span className="text-2xs font-medium text-ink w-[26%] shrink-0 text-right self-center leading-tight">
                       {axis.low_pole_label}
                     </span>
                     <div className="flex-1 h-2 rounded-full bg-gradient-to-r from-derived/40 via-ground-line to-house/40 self-center" />
-                    <span className="text-2xs font-medium text-ink w-[22%] shrink-0 self-center leading-tight">
+                    <span className="text-2xs font-medium text-ink w-[26%] shrink-0 self-center leading-tight">
                       {axis.high_pole_label}
                     </span>
                   </div>
@@ -126,7 +128,7 @@ export function Home() {
                     {lead.map((pole) => (
                       <div key={pole} className="border-l-2 border-ground-line pl-3">
                         <h4 className="text-2xs font-mono uppercase tracking-wider text-ink-faint mb-1.5">
-                          {pole}
+                          {poles[pole].pole_label ?? pole}
                         </h4>
                         <ul className="space-y-1">
                           {poles[pole].sources.map((s: any) => (
@@ -146,11 +148,6 @@ export function Home() {
                     ))}
                   </div>
 
-                  {teaching && (
-                    <p className="text-xs text-ink-muted mt-2 border-l-2 border-user/40 pl-3 max-w-prose">
-                      {teaching}
-                    </p>
-                  )}
                 </article>
               );
             })}

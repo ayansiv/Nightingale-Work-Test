@@ -18,7 +18,12 @@ export function AxisDetail() {
     return <div className="max-w-3xl mx-auto px-4 py-12"><p>No axis with id <code>{id}</code>.</p></div>;
   }
 
-  const poleKeys = poles ? Object.keys(poles).filter((k) => !k.startsWith('_')) : [];
+  // Low pole left, high pole right — same order as everywhere else, driven by the declared
+  // `pole` field rather than by position in the object.
+  const poleKeys = poles
+    ? Object.keys(poles).filter((k) => !k.startsWith('_'))
+        .sort((a, b) => (poles[a].pole === 'low' ? -1 : 1) - (poles[b].pole === 'low' ? -1 : 1))
+    : [];
 
   // Agendas sitting at each end — the axis page should show what the position implies for work.
   const placed = agendas
@@ -45,7 +50,9 @@ export function AxisDetail() {
         <div className="grid md:grid-cols-2 gap-6">
           {poleKeys.map((pole) => (
             <div key={pole} id={pole} className="scroll-mt-20">
-              <h3 className="font-medium mb-2 pb-1 border-b border-ground-line">{pole}</h3>
+              <h3 className="font-medium mb-2 pb-1 border-b border-ground-line">
+                {poles![pole].pole_label ?? pole}
+              </h3>
               {poles![pole].frame ? (
                 <p className="text-sm text-ink-muted mb-3 leading-relaxed">{poles![pole].frame}</p>
               ) : (

@@ -1,0 +1,141 @@
+{
+  "$comment": [
+    "Ten questions, one per culture axis plus a reversed check on c_direction.",
+    "",
+    "Single-item axes are ACCEPTABLE here, unlike in the belief instrument. Self-report on working",
+    "style is direct — someone knows whether they want to be in an office — where belief elicitation",
+    "needs several items to denoise. c_direction keeps two items as the acquiescence check.",
+    "",
+    "The skip control matters MORE here than in the belief quiz, not less. A newcomer who has never",
+    "held a research job genuinely does not know whether they want mentorship or autonomy. 'It",
+    "depends' is a real answer that enters the average; 'I have never worked anywhere so I cannot",
+    "say' is a skip and must drop the item. The skip is labelled in those words rather than",
+    "generically, because this is the population the product exists for and the failure mode is a",
+    "newcomer inventing preferences to finish the form."
+  ],
+  "response_scale": "preference",
+  "questions": [
+    {
+      "id": "c1",
+      "order": 1,
+      "response_type": "preference",
+      "text": "I'd rather be handed a well-defined problem than choose what to work on.",
+      "loadings": {
+        "c_direction": 0.9
+      }
+    },
+    {
+      "id": "c2",
+      "order": 2,
+      "response_type": "preference",
+      "text": "I get restless when someone else sets the direction of my work.",
+      "loadings": {
+        "c_direction": -0.7
+      },
+      "reverse_scored": true
+    },
+    {
+      "id": "c3",
+      "order": 3,
+      "response_type": "preference",
+      "text": "I do my best work alone or in a pair rather than as part of a large project team.",
+      "loadings": {
+        "c_team_shape": -0.9
+      }
+    },
+    {
+      "id": "c4",
+      "order": 4,
+      "response_type": "preference",
+      "text": "I'd rather ship something rough this month than something careful next year.",
+      "loadings": {
+        "c_pace": -0.9
+      }
+    },
+    {
+      "id": "c5",
+      "order": 5,
+      "response_type": "preference",
+      "text": "It matters to me that my work is public and citable.",
+      "loadings": {
+        "c_visibility": -0.9
+      }
+    },
+    {
+      "id": "c6",
+      "order": 6,
+      "response_type": "preference",
+      "text": "I want substantial mentorship rather than to be left to run.",
+      "loadings": {
+        "c_seniority": -0.9
+      }
+    },
+    {
+      "id": "c7",
+      "order": 7,
+      "response_type": "preference",
+      "text": "I'd rather join a place with a clear institutional position I share than one where colleagues disagree openly.",
+      "loadings": {
+        "c_house_view": -0.9
+      }
+    },
+    {
+      "id": "c8",
+      "order": 8,
+      "response_type": "preference",
+      "text": "I'd be more comfortable somewhere informal than somewhere professional and institutional.",
+      "loadings": {
+        "c_register": -0.9
+      }
+    },
+    {
+      "id": "c9",
+      "order": 9,
+      "response_type": "preference",
+      "text": "I want to work in person with colleagues most days.",
+      "loadings": {
+        "c_presence": -0.9
+      }
+    },
+    {
+      "id": "c10",
+      "order": 10,
+      "response_type": "preference",
+      "text": "I want colleagues who are part of this community socially, not only professionally.",
+      "loadings": {
+        "c_community": -0.9
+      }
+    }
+  ],
+  "scale": {
+    "id": "preference",
+    "label": "How much does this sound like you?",
+    "midpoint_note": "\"It depends\" is an answer and enters the average. \"I don't know yet\" removes the question — they are different, and the difference matters most for people who have not worked in the field before.",
+    "options": [
+      {
+        "value": -1.0,
+        "label": "Not like me at all"
+      },
+      {
+        "value": -0.5,
+        "label": "Not much like me"
+      },
+      {
+        "value": 0.0,
+        "label": "It depends"
+      },
+      {
+        "value": 0.5,
+        "label": "Somewhat like me"
+      },
+      {
+        "value": 1.0,
+        "label": "Very like me"
+      }
+    ],
+    "abstain": {
+      "label": "I don't know yet",
+      "help": "Removes this question from your profile. Pick it if you have not worked somewhere that would tell you — that is a real answer, and guessing would be worse."
+    }
+  }
+}

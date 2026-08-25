@@ -8,7 +8,7 @@
  *   - MUST distinguish abstained from unsure
  *   - a permalinked result reproduces EXACTLY (acceptance criterion)
  *
- * Format: `v<n>.<chars>` where each question contributes exactly one character, in config order.
+ * Format: `v<n>.<belief chars>[~<culture chars>]`, one character per question in config order.
  * One char per question means the string is stable in length, diffable by eye, and a change to
  * one answer changes exactly one character — which makes bugs in this file visible rather than
  * mysterious.
@@ -42,6 +42,8 @@ const DISCRETE: Record<string, number[]> = {
   agreement: [-1, -0.5, 0, 0.5, 1],
   willingness: [-1, -0.33, 0.33, 1],
   spectrum: [-1, -0.5, 0, 0.5, 1],
+  // Culture items use the same five levels under a different label.
+  preference: [-1, -0.5, 0, 0.5, 1],
 };
 const LEVEL_CHARS = 'abcde';
 
@@ -72,17 +74,62 @@ function decodeOne(q: Question, ch: string): Response {
   return levels[idx];
 }
 
-export function encode(responses: Responses, questions: Question[]): string {
+/**
+ * Culture answers ride in an OPTIONAL SECOND SEGMENT behind a delimiter:
+ *
+ *     v3.<belief chars>~<culture chars>
+ *
+ * Appending rather than widening the body is deliberate. A link shared before the culture
+ * instrument existed has no `~`, decodes exactly as it always did, and simply means "no culture
+ * answers". Folding culture into one 40-character body would have invalidated every link already
+ * shared, for a feature most of those readers never used.
+ */
+const CULTURE_DELIM = '~';
+
+export function encode(
+  responses: Responses,
+  questions: Question[],
+  culture?: { responses: Responses; questions: Question[] },
+): string {
   const ordered = [...questions].sort((a, b) => a.order - b.order);
-  return `${VERSION}.${ordered.map((q) => encodeOne(q, responses[q.id])).join('')}`;
+  const body = ordered.map((q) => encodeOne(q, responses[q.id])).join('');
+
+  if (!culture) return `${VERSION}.${body}`;
+
+  const cOrdered = [...culture.questions].sort((a, b) => a.order - b.order);
+  const cBody = cOrdered.map((q) => encodeOne(q, culture.responses[q.id])).join('');
+  // Omit an all-unanswered culture segment rather than appending a run of dots.
+  if (cBody.split('').every((ch) => ch === UNANSWERED_CHAR)) return `${VERSION}.${body}`;
+  return `${VERSION}.${body}${CULTURE_DELIM}${cBody}`;
+}
+
+/** Decode the culture segment, if the link carries one. Absent segment -> empty, not an error. */
+export function decodeCulture(code: string, cultureQuestions: Question[]): Responses {
+  const out: Responses = {};
+  if (!code || !code.includes(CULTURE_DELIM)) return out;
+
+  const cBody = code.split(CULTURE_DELIM)[1];
+  if (!cBody) return out;
+
+  const ordered = [...cultureQuestions].sort((a, b) => a.order - b.order);
+  if (cBody.length !== ordered.length) return out;
+
+  ordered.forEach((q, i) => {
+    const r = decodeOne(q, cBody[i]);
+    if (r !== undefined) out[q.id] = r;
+  });
+  return out;
 }
 
 export function decode(code: string, questions: Question[]): Responses {
   const out: Responses = {};
   if (!code) return out;
 
-  const [version, body] = code.split('.', 2);
-  if (version !== VERSION || !body) return out;
+  const [version, rest] = code.split('.', 2);
+  if (version !== VERSION || !rest) return out;
+
+  // Strip any culture segment; this function decodes the belief answers only.
+  const body = rest.split(CULTURE_DELIM)[0];
 
   const ordered = [...questions].sort((a, b) => a.order - b.order);
   // A body of the wrong length cannot be aligned to these questions. Refuse rather than guess.

@@ -4,6 +4,8 @@
     "",
     "The `frame` field on each pole is the owner's two-sentence framing (spec §12: 'Owner writes a two-sentence frame per pole; the sources below carry the argument'). Those are EMPTY and render as a visible gap rather than being invented — see OWNER-DATA.md item OD-08.",
     "",
+    "Each group carries an explicit `pole` ('low' or 'high') naming which end of its axis it argues for, plus the axis's own `pole_label`. This is load-bearing: the groups were previously identified by position in the object, which put 16 of 17 axes' reading lists on the WRONG SIDE of the bipolar bar the page draws above them. Position is not a mapping. Adding a group without a `pole` fails verify.",
+    "",
     "Sources were broadened away from the Shallow Review in a later pass. It is one curator's selection and several poles rested on it alone; canonical arXiv, Alignment Forum and Distill work now carries the argument on both sides of every axis. The Shallow Review is kept where it is the best pointer to a cluster of work rather than to a single result.",
     "",
     "Every pole is a POLE. Earlier revisions carried extra buckets — 'frames', 'measurement', 'reference', 'context' — which rendered as an unlabelled third column on an axis that has two sides. Each axis now has exactly two groups, and verify asserts it."
@@ -25,7 +27,9 @@
             "title": "AI Futures Model, December 2025 update",
             "publisher": "AI Futures Project"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "sooner"
       },
       "later": {
         "frame": "",
@@ -42,7 +46,9 @@
             "title": "Can AI scaling continue through 2030?",
             "publisher": "Epoch AI"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "later"
       }
     },
     "takeoff": {
@@ -62,7 +68,9 @@
             "publisher": "Yudkowsky, MIRI",
             "url": "https://intelligence.org/files/IEM.pdf"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "discontinuous"
       },
       "gradual": {
         "frame": "",
@@ -80,7 +88,9 @@
             "publisher": "Paul Christiano",
             "url": "https://sideways-view.com/2018/02/24/takeoff-speeds/"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "gradual"
       }
     },
     "p_mis": {
@@ -109,7 +119,9 @@
             "publisher": "Ngo, Chan and Mindermann, arXiv",
             "url": "https://arxiv.org/abs/2209.00626"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "high"
       },
       "low": {
         "frame": "",
@@ -131,7 +143,9 @@
             "publisher": "Narayanan and Kapoor, Knight First Amendment Institute",
             "url": "https://knightcolumbia.org/content/ai-as-normal-technology"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "low"
       }
     },
     "p_scheme": {
@@ -157,7 +171,9 @@
             "publisher": "Hubinger et al., arXiv",
             "url": "https://arxiv.org/abs/2401.05566"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "strategic concealment"
       },
       "low": {
         "frame": "",
@@ -170,7 +186,9 @@
             "title": "Training-time schemers vs behavioral schemers",
             "publisher": ""
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "visible failure"
       }
     },
     "containment": {
@@ -198,7 +216,9 @@
             "publisher": "Greenblatt et al., arXiv",
             "url": "https://arxiv.org/abs/2312.06942"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "containable"
       },
       "not containable": {
         "frame": "",
@@ -215,7 +235,9 @@
             "title": "Behavioral red-teaming is unlikely to produce clear, strong evidence that models aren't scheming",
             "publisher": ""
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "not containable"
       }
     },
     "accident_deliberate": {
@@ -242,7 +264,9 @@
             "publisher": "Hubinger et al., arXiv",
             "url": "https://arxiv.org/abs/1906.01820"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "unintended behavior"
       },
       "deliberate human use": {
         "frame": "",
@@ -266,7 +290,9 @@
             "title": "Dual-Use AI Capabilities and the Risk of Bioterrorism",
             "publisher": "GovAI"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "deliberate human use"
       }
     },
     "domestic_intl": {
@@ -289,7 +315,9 @@
             "title": "Checks, Balances, and Power Concentration",
             "publisher": ""
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "domestic concentration"
       },
       "interstate": {
         "frame": "",
@@ -315,7 +343,9 @@
             "title": "Why China isn't about to leap ahead of the West on compute",
             "publisher": "Epoch AI"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "interstate competition"
       }
     },
     "constraint": {
@@ -336,7 +366,9 @@
             "publisher": "Hendrycks et al., arXiv",
             "url": "https://arxiv.org/abs/2109.13916"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "technical knowledge"
       },
       "political": {
         "frame": "",
@@ -359,7 +391,9 @@
             "publisher": "Trager et al., arXiv",
             "url": "https://arxiv.org/abs/2307.04699"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "political will"
       }
     },
     "labs": {
@@ -374,7 +408,9 @@
             "title": "Working at an AI lab (career review)",
             "publisher": "80,000 Hours"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "net positive"
       },
       "net negative": {
         "frame": "",
@@ -387,7 +423,9 @@
             "title": "Can we trust Anthropic, or any AI company?",
             "publisher": "80,000 Hours (Karnofsky)"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "net negative"
       }
     },
     "futures": {
@@ -411,7 +449,9 @@
             "title": "Moral public goods are a big deal for whether we get a good future",
             "publisher": ""
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "steer toward good outcomes"
       },
       "avoid-is-enough": {
         "frame": "",
@@ -424,7 +464,9 @@
             "title": "The Precipice: existential risk and the future of humanity",
             "publisher": "Toby Ord"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "avoid catastrophe"
       }
     },
     "patienthood": {
@@ -444,7 +486,9 @@
             "title": "Key strategic considerations for taking action on AI welfare",
             "publisher": "Eleos AI"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "action-relevant now"
       },
       "not yet": {
         "frame": "",
@@ -462,7 +506,9 @@
             "publisher": "Butlin, Long et al., arXiv",
             "url": "https://arxiv.org/abs/2308.08708"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "not action-relevant now"
       }
     },
     "internals": {
@@ -498,7 +544,9 @@
             "publisher": "Anthropic",
             "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "internal understanding"
       },
       "behavioral testing": {
         "frame": "",
@@ -518,7 +566,9 @@
             "publisher": "arXiv",
             "url": "https://arxiv.org/abs/2312.03656"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "behavioral testing"
       }
     },
     "patch_rebuild": {
@@ -544,7 +594,9 @@
             "publisher": "Ouyang et al., arXiv",
             "url": "https://arxiv.org/abs/2203.02155"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "make current systems safe"
       },
       "rebuild": {
         "frame": "",
@@ -574,7 +626,9 @@
             "publisher": "Demski and Garrabrant, arXiv",
             "url": "https://arxiv.org/abs/1902.09469"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "design new ones"
       }
     },
     "automation": {
@@ -599,7 +653,9 @@
             "publisher": "Burns et al., arXiv",
             "url": "https://arxiv.org/abs/2312.09390"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "likely to work"
       },
       "unlikely to work": {
         "frame": "",
@@ -614,7 +670,9 @@
             "publisher": "Bowman et al., arXiv",
             "url": "https://arxiv.org/abs/2211.03540"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "unlikely to work"
       }
     },
     "inside_outside": {
@@ -631,7 +689,9 @@
             "publisher": "Emerging Technology Policy Careers",
             "url": "https://emergingtechpolicy.org/"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "inside government"
       },
       "outside": {
         "frame": "",
@@ -647,7 +707,9 @@
             "publisher": "emergingtechpolicy.org",
             "url": "https://emergingtechpolicy.org/"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "outside influence"
       }
     },
     "restraint_capacity": {
@@ -662,7 +724,9 @@
             "title": "Liability rules for AI",
             "publisher": "RAND Corporation"
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "constrain companies"
       },
       "build capacity": {
         "frame": "",
@@ -684,7 +748,9 @@
             "title": "Compute policy explainers",
             "publisher": "IAPS"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "build state capacity"
       }
     },
     "venue_access": {
@@ -703,7 +769,9 @@
             "url": "https://80000hours.org/career-reviews/ai-policy-us-government/",
             "note": "On congressional staff roles, where party affiliation is effectively a prerequisite."
           }
-        ]
+        ],
+        "pole": "high",
+        "pole_label": "willing to foreclose"
       },
       "unwilling to foreclose": {
         "frame": "",
@@ -719,7 +787,9 @@
             "publisher": "Emerging Technology Policy Careers",
             "url": "https://emergingtechpolicy.org/"
           }
-        ]
+        ],
+        "pole": "low",
+        "pole_label": "unwilling to foreclose"
       }
     }
   }

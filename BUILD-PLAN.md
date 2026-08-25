@@ -155,8 +155,91 @@ and per-column freshness to replace the single "data as of" line.
 | Person detail pages | An empty person page is worse than no page; ships with 4.4 |
 | Accounts, stored responses | Spec non-goal. Permalink is the distribution mechanism |
 | Scheduled refresh | Spec scope: snapshot. Scripts kept clean so 4.8 is cheap |
-| Org coordinates | Spec §7 wants revealed-evidence positions. Which agenda an org works on is a *different* judgement from where it sits on 17 axes, and only the first is done. All org coordinates are null and drop out of matching |
+| Belief coordinates for orgs | **Policy, not a gap — see Phase 5.0.** Beliefs belong to agendas and to individuals; culture belongs to organizations. The earlier entry here described this as unfinished work; it is not. Where an org's belief position is genuinely needed (the house-view cross-term) its primary agenda's coordinates stand in, which is the honest claim. `npm run verify` asserts no org carries a non-null belief coordinate, so a later pass cannot "fix" it by populating them |
 | Secondary x-y results view | Spec §11.3 wants it toggleable. The primary bar view is the load-bearing one; the plane is a convenience and can wait |
+
+---
+
+## Phase 5 — Culture layer
+
+The product now matches **two different things against two different targets**:
+
+| what the user has | matched against | produces |
+|---|---|---|
+| **Beliefs** about AI risk — 17 axes, 30 questions | agendas and policy levers | which work is worth doing |
+| **Working style** — 9 axes, 10 questions | organizations | where you would do it well |
+
+Not an addition to the existing quiz. A second instrument in a second axis space, composed
+sequentially with the first.
+
+### ✅ Chunk 5.1 — Everything that does not need the data
+Built ahead of Sydney's sheet, so its arrival is a file drop plus `npm run ingest`.
+
+- `data/config/culture-axes.json` — 9 axes, `c_`-prefixed, separate namespace. Stability is **not**
+  a tenth axis; it is already `maturity_tier` on `orgs.csv` and scoring it too would double-count it.
+- `data/config/culture-questions.json` — 10 questions, `c_direction` doubled as the acquiescence
+  check. Single-item axes are fine here: self-report on working style is direct where belief
+  elicitation needs several items to denoise.
+- `src/lib/culture.ts` — the scoring path. Aggregation, coverage and abstain handling are **reused**
+  from `scoring.ts` (`computeAxes` is generic over an axis list) rather than copied, so both spaces
+  get the same guarantees from one implementation. The *data* stays strictly separate, and verify
+  asserts no leakage in either direction.
+- Permalink extended, **not replaced**: culture rides in an optional second segment behind `~`, so a
+  link shared before this existed still decodes and simply means "no culture answers".
+
+### ✅ Chunk 5.2 — Parser contract
+`scripts/ingest-culture.ts`, written against a file that does not exist yet and skipping cleanly
+when it is absent. Four rules, all failing loudly rather than quietly:
+
+- **Blank is null, never zero.** A `?? 0` here would turn "we don't know" into "exactly neutral"
+  and nothing in the UI would look wrong.
+- **Fail closed on a header mismatch**, with the diff. Two people will edit this file, and a shifted
+  column would put every org's pace score onto visibility.
+- **Unmatched rows go to `culture-join-review.json`**, never silently dropped. The feed already
+  writes "Model Evaluation and Threat Research" where a person writes "METR".
+- **An undated assessment does not ship**, same rule as researcher placements.
+
+### ○ Chunk 5.3 — Composition, wired into the UI
+The library is done and tested; what remains is the surface.
+
+```
+beliefs  -> ranked agendas (unchanged)
+agendas  -> roles (unchanged)
+culture  -> reranks ORGS within the already-matched role set
+```
+
+Culture never adds a role, never removes one, never reorders agendas — a joint metric would let a
+good culture fit pull someone toward an agenda they think is doomed.
+
+The one legitimate cross-term is the house view: joining a place with a strong shared position is a
+worse fit if you disagree with it, and much less of an issue somewhere colleagues disagree openly.
+`kappa` is in config, and the penalty renders as a named reason rather than an unexplained rank drop.
+
+`tensionWarning()` exists and is untested against real data: when the top-ranked agenda is pursued
+only by orgs the user fits badly, say so. Burying that inside a rank is the main way this feature
+could mislead someone.
+
+### ○ Chunk 5.4 — Culture instrument UI
+Offered **after** the belief results as optional refinement — never before. A careers tool that
+opens by asking about your working style has changed what it is for. Everything works without it.
+
+`AxisPlot` is reused for the culture axes in a visually distinct section. Belief and culture axes
+must **not** share a strip: adjacency would imply a commensurability that does not exist.
+
+### ○ Chunk 5.5 — Copy that changes when culture data lands
+The untagged long tail (118 orgs, 121 roles) currently says it "cannot be matched". With culture
+data it becomes matchable on culture but not on beliefs, and the copy should say that instead.
+
+Cross-agenda orgs — MATS, Constellation, BlueDot, ERA — have no primary agenda, so the cross-term is
+undefined and the penalty is zero. They stay fully culture-matchable, which is the right result: a
+MATS placement is exactly the case where "who thrives here" is the decision-relevant question.
+
+### Not in scope for Phase 5
+Culture coordinates for agendas (agendas are not workplaces). A joint belief-plus-culture metric.
+Inferring culture from role descriptions — tempting since the classifier already parses them, and
+wrong, because a posting describes the role an org wants to fill, not how it works. Belief
+coordinates for orgs (policy). Blocking on completeness: ship as soon as any rows land; orgs without
+culture data rank on beliefs alone and say so.
 
 ---
 

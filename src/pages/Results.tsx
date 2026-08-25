@@ -232,7 +232,9 @@ function ConsistencySection({ flags }: { flags: ReturnType<typeof consistencyFla
                 {poles.map((pole, i) => (
                   <span key={pole}>
                     {i > 0 && ' · '}
-                    <Link to={`/axis/${f.axis}#${pole}`} className="underline hover:text-user">{pole}</Link>
+                    <Link to={`/axis/${f.axis}#${pole}`} className="underline hover:text-user">
+                      {(readings[f.axis]?.[pole] as any)?.pole_label ?? pole}
+                    </Link>
                   </span>
                 ))}
               </p>

@@ -1,0 +1,47 @@
+{
+  "$comment": [
+    "Phase 5. A SECOND axis space, composed sequentially with the belief axes — not added to them.",
+    "",
+    "  beliefs (17 axes)  ->  which agendas and policy levers are worth your time",
+    "  culture (9 axes)   ->  where you would do that work well",
+    "",
+    "Ids are prefixed `c_` and must never collide with a belief axis id. verify asserts that the two",
+    "spaces do not leak into each other in either direction.",
+    "",
+    "POLICY, NOT A GAP: organizations do not get belief coordinates. Not now, not later. Beliefs",
+    "belong to agendas and to individuals; culture belongs to organizations. Where an org's belief",
+    "position is genuinely needed — only the house-view cross-term in the ranking — its primary",
+    "agenda's coordinates stand in, which is the honest claim: an org's belief position is inherited",
+    "from the work it does. verify asserts no org carries a non-null belief coordinate, so a later",
+    "pass cannot 'fix' this by populating them.",
+    "",
+    "Stability is deliberately NOT a tenth axis. It is already on orgs.csv as `maturity_tier`, and",
+    "duplicating it as a scored dimension would double-count it in the distance metric."
+  ],
+  "namespace": "culture",
+  "axes": [
+    { "id": "c_direction",  "label": "Direction",        "low_pole_label": "sets own agenda",            "high_pole_label": "works within a defined plan", "weight": 1.0 },
+    { "id": "c_team_shape", "label": "Team shape",       "low_pole_label": "solo or small-team depth",   "high_pole_label": "large collaborative projects", "weight": 1.0 },
+    { "id": "c_pace",       "label": "Pace",             "low_pole_label": "fast iteration, ships often", "high_pole_label": "long-horizon, careful", "weight": 1.0 },
+    { "id": "c_visibility", "label": "Visibility",       "low_pole_label": "public writing and publishing", "high_pole_label": "internal-only work", "weight": 1.0 },
+    { "id": "c_seniority",  "label": "Support level",    "low_pole_label": "mentorship-heavy, junior-friendly", "high_pole_label": "expects senior independence", "weight": 1.2 },
+    { "id": "c_house_view", "label": "House view",       "low_pole_label": "strong shared position",     "high_pole_label": "researchers disagree publicly", "weight": 1.0 },
+    { "id": "c_register",   "label": "Register",         "low_pole_label": "informal, community-inflected", "high_pole_label": "institutional, professional", "weight": 0.8 },
+    { "id": "c_presence",   "label": "Presence",         "low_pole_label": "concentrated in-person",     "high_pole_label": "distributed, remote-friendly", "weight": 1.1 },
+    { "id": "c_community",  "label": "Social overlap",   "low_pole_label": "EA/rationalist-dense",       "high_pole_label": "mainstream professional", "weight": 0.8 }
+  ],
+  "composition": {
+    "$comment": [
+      "Sequential composition. Beliefs decide WHAT; culture reranks WHERE, within the role set the",
+      "beliefs already produced. Culture never adds a role, never removes one, and never reorders",
+      "agendas — a joint metric would let strong culture fit pull someone toward an agenda they",
+      "think is doomed, which is backwards.",
+      "",
+      "The one legitimate cross-term is `kappa`. Joining an org with a strong shared position is a",
+      "worse fit if you disagree with that position; at a pluralistic org the same distance matters",
+      "much less. The penalty is displayed as a named reason, never as an unexplained rank drop."
+    ],
+    "kappa": 0.25,
+    "belief_proxy": "primary_agenda_coordinates"
+  }
+}

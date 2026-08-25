@@ -13,7 +13,11 @@ import {
   ABSTAIN, computeAxes, consistencyFlags, jointTakeoverRisk, match, matchTarget,
   type Axis, type Question, type Responses, type Target,
 } from '../src/lib/scoring.js';
-import { encode, decode, roundTrips } from '../src/lib/permalink.js';
+import { encode, decode, decodeCulture, roundTrips } from '../src/lib/permalink.js';
+import {
+  computeCultureAxes, rankByCulture,
+  type CultureAxis, type CultureOrg,
+} from '../src/lib/culture.js';
 import type { Agenda } from './lib/types.js';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -274,6 +278,135 @@ console.log('\nDATA PROVENANCE (spec §18: every coordinate shows a source or an
   const noMethod = agendas.filter((a) => !a.fte_2025.method);
   check('every FTE estimate carries a method string', noMethod.length === 0,
     noMethod.slice(0, 3).map((a) => a.name).join(', '));
+}
+
+// ---------------------------------------------------------------------------------------------
+console.log('\nREADINGS');
+{
+  const readings = readJson<{ axes: Record<string, Record<string, any>> }>('data/content/readings.json').axes;
+  const axById = new Map(axes.map((a) => [a.id, a]));
+
+  const missingAxis = Object.keys(readings).filter((id) => !axById.has(id));
+  check('every reading list names a real axis', missingAxis.length === 0, missingAxis.join(', '));
+
+  const noReadings = axes.filter((a) => !readings[a.id]).map((a) => a.id);
+  check('every axis has a reading list', noReadings.length === 0, noReadings.join(', '));
+
+  // Position in the object is NOT a mapping. Ordering the reading groups by it put 16 of 17
+  // axes' lists under the WRONG end of the bipolar bar — "steer toward good outcomes" sat under
+  // "avoid catastrophe", and the inside-government reading under "outside influence". The pole is
+  // now declared per group and asserted here.
+  const problems: string[] = [];
+  for (const [axid, groups] of Object.entries(readings)) {
+    const keys = Object.keys(groups).filter((k) => !k.startsWith('$') && !k.startsWith('_'));
+    if (keys.length !== 2) { problems.push(`${axid} has ${keys.length} groups, not 2`); continue; }
+    const poles = keys.map((k) => groups[k].pole);
+    if (poles.some((p) => p !== 'low' && p !== 'high')) { problems.push(`${axid}: a group has no pole`); continue; }
+    if (poles[0] === poles[1]) { problems.push(`${axid}: both groups claim the same pole`); continue; }
+    const ax = axById.get(axid)!;
+    for (const k of keys) {
+      const want = groups[k].pole === 'low' ? ax.low_pole_label : ax.high_pole_label;
+      if (groups[k].pole_label !== want) {
+        problems.push(`${axid}.${k}: label "${groups[k].pole_label}" != axis "${want}"`);
+      }
+      if ((groups[k].sources ?? []).length < 2) problems.push(`${axid}.${k}: fewer than 2 sources`);
+    }
+  }
+  check('each axis has two correctly-labelled poles with sources on both',
+    problems.length === 0, problems.slice(0, 4).join(' | '));
+}
+
+// ---------------------------------------------------------------------------------------------
+console.log('\nCULTURE LAYER (phase 5)');
+{
+  const cAxes = readJson<{ axes: CultureAxis[]; composition: { kappa: number } }>('data/config/culture-axes.json');
+  const cQ = readJson<{ questions: Question[]; scale: any }>('data/config/culture-questions.json');
+  const orgs = readJson<{ orgs: any[] }>('data/derived/orgs.json').orgs;
+
+  // The two axis spaces must not leak into one another, in either direction.
+  const beliefIds = new Set(axes.map((a) => a.id));
+  const cultureIds = new Set(cAxes.axes.map((a) => a.id));
+  const collide = [...cultureIds].filter((id) => beliefIds.has(id));
+  check('no culture axis id collides with a belief axis id', collide.length === 0, collide.join(', '));
+  check('every culture axis id is prefixed c_',
+    cAxes.axes.every((a) => a.id.startsWith('c_')),
+    cAxes.axes.filter((a) => !a.id.startsWith('c_')).map((a) => a.id).join(', '));
+
+  const strayInCulture = cQ.questions.flatMap((q) =>
+    Object.keys(q.loadings).filter((k) => !cultureIds.has(k)).map((k) => `${q.id}->${k}`));
+  check('no culture question loads onto a belief axis', strayInCulture.length === 0, strayInCulture.join(', '));
+
+  const strayInBelief = questions.flatMap((q) =>
+    Object.keys(q.loadings).filter((k) => cultureIds.has(k)).map((k) => `${q.id}->${k}`));
+  check('no belief question loads onto a culture axis', strayInBelief.length === 0, strayInBelief.join(', '));
+
+  const uncovered = cAxes.axes.filter((a) =>
+    !cQ.questions.some((q) => (q.loadings[a.id] ?? 0) !== 0)).map((a) => a.id);
+  check('every culture axis has at least one question', uncovered.length === 0, uncovered.join(', '));
+
+  // POLICY, not an omission: orgs never carry belief coordinates. Beliefs belong to agendas and to
+  // individuals; culture belongs to orgs. Asserted so a later pass cannot "fix" this by filling them.
+  const withBelief = orgs.filter((o) =>
+    Object.entries(o.coordinates ?? {}).some(([k, v]) => beliefIds.has(k) && v !== null));
+  check('no organization carries a non-null belief coordinate (policy, see culture-axes.json)',
+    withBelief.length === 0, withBelief.slice(0, 3).map((o) => o.name).join(', '));
+
+  // Culture skip vs "it depends", mirroring the belief abstain-vs-unsure assertion.
+  const cAxesForScoring = cAxes.axes as any as CultureAxis[];
+  const skipped = computeCultureAxes({ c9: ABSTAIN }, cQ.questions, cAxesForScoring);
+  const depends = computeCultureAxes({ c9: 0 }, cQ.questions, cAxesForScoring);
+  check('a culture skip removes the axis entirely', !('c_presence' in skipped));
+  check('a culture "it depends" keeps the axis at 0', depends['c_presence']?.value === 0,
+    JSON.stringify(depends['c_presence']));
+
+  // A blank culture cell must drop the axis, never centre it.
+  const fixtureOrg: CultureOrg = {
+    id: 'fixture', name: 'Fixture', primary_agenda_id: null, maturity_tier: 'unknown', postings_count: 0,
+    culture: {
+      assessor: 'test', assessed_on: '2026-01-01', confidence: 'Low',
+      coordinates: Object.fromEntries(cAxes.axes.map((a, i) => [a.id, i === 0 ? 0.5 : null])),
+    },
+  };
+  const user = computeCultureAxes(
+    Object.fromEntries(cQ.questions.map((q) => [q.id, 0.5])), cQ.questions, cAxesForScoring);
+  const ranked = rankByCulture(user, [fixtureOrg], cAxesForScoring, () => null, cAxes.composition.kappa);
+  check('an org with blank culture cells has those axes excluded, not centred',
+    ranked.length === 1 && ranked[0].axesUsed === 1 && ranked[0].axesDropped === cAxes.axes.length - 1,
+    JSON.stringify({ used: ranked[0]?.axesUsed, dropped: ranked[0]?.axesDropped }));
+
+  // A cross-agenda org has no primary agenda, so the house-view cross-term is undefined and must
+  // contribute nothing — while the org stays fully culture-matchable.
+  check('an org with no primary agenda takes no belief penalty but still ranks',
+    ranked[0].beliefPenalty === 0 && ranked[0].cultureFit > 0,
+    JSON.stringify({ penalty: ranked[0]?.beliefPenalty, fit: ranked[0]?.cultureFit }));
+}
+
+// ---------------------------------------------------------------------------------------------
+console.log('\nPERMALINK, CULTURE SEGMENT');
+{
+  const cQ = readJson<{ questions: Question[] }>('data/config/culture-questions.json').questions;
+
+  const belief: Responses = Object.fromEntries(
+    questions.map((q) => [q.id, q.response_type === 'willingness' ? 0.33 : 0.5]));
+  const beliefOnly = encode(belief, questions);
+
+  // A link shared before the culture instrument existed must still work and simply mean
+  // "no culture answers" — which is why culture rides in an appended segment rather than a
+  // widened body.
+  check('a belief-only link still decodes after the culture segment exists',
+    Object.keys(decode(beliefOnly, questions)).length === questions.length);
+  check('a belief-only link yields no culture answers',
+    Object.keys(decodeCulture(beliefOnly, cQ)).length === 0);
+
+  const cultureResponses: Responses = Object.fromEntries(cQ.map((q) => [q.id, 0.5]));
+  cultureResponses['c6'] = ABSTAIN;
+  const both = encode(belief, questions, { responses: cultureResponses, questions: cQ });
+  check('a combined link still decodes the belief half unchanged',
+    JSON.stringify(Object.keys(decode(both, questions)).sort())
+      === JSON.stringify(Object.keys(decode(beliefOnly, questions)).sort()));
+  check('a combined link round-trips the culture half, preserving skip',
+    decodeCulture(both, cQ)['c6'] === ABSTAIN && decodeCulture(both, cQ)['c1'] === 0.5);
+  console.log(`  NOTE  belief-only ${beliefOnly.length} chars, with culture ${both.length}`);
 }
 
 // ---------------------------------------------------------------------------------------------
