@@ -2,13 +2,13 @@
   "$comment": [
     "Build Spec §12, extended. Structure is axis -> pole -> sources.",
     "",
-    "The `frame` field on each pole is the owner's two-sentence framing (spec §12: 'Owner writes a two-sentence frame per pole; the sources below carry the argument'). Those are EMPTY and render as a visible gap rather than being invented — see OWNER-DATA.md item OD-08.",
+    "The `frame` field on each pole is the owner's two-sentence framing (spec §12: 'Owner writes a two-sentence frame per pole; the sources below carry the argument'). Those are EMPTY and render as a visible gap rather than being invented, see OWNER-DATA.md item OD-08.",
     "",
     "Each group carries an explicit `pole` ('low' or 'high') naming which end of its axis it argues for, plus the axis's own `pole_label`. This is load-bearing: the groups were previously identified by position in the object, which put 16 of 17 axes' reading lists on the WRONG SIDE of the bipolar bar the page draws above them. Position is not a mapping. Adding a group without a `pole` fails verify.",
     "",
     "Sources were broadened away from the Shallow Review in a later pass. It is one curator's selection and several poles rested on it alone; canonical arXiv, Alignment Forum and Distill work now carries the argument on both sides of every axis. The Shallow Review is kept where it is the best pointer to a cluster of work rather than to a single result.",
     "",
-    "Every pole is a POLE. Earlier revisions carried extra buckets — 'frames', 'measurement', 'reference', 'context' — which rendered as an unlabelled third column on an axis that has two sides. Each axis now has exactly two groups, and verify asserts it."
+    "Every pole is a POLE. Earlier revisions carried extra buckets, 'frames', 'measurement', 'reference', 'context', which rendered as an unlabelled third column on an axis that has two sides. Each axis now has exactly two groups, and verify asserts it."
   ],
   "target_reading_minutes": [
     15,
@@ -374,7 +374,7 @@
         "frame": "",
         "sources": [
           {
-            "title": "Should Governments or Markets control AI? — Ball × Kokotajlo anti-debate",
+            "title": "Should Governments or Markets control AI?, Ball × Kokotajlo anti-debate",
             "publisher": ""
           },
           {
@@ -494,7 +494,7 @@
         "frame": "",
         "sources": [
           {
-            "title": "Why model self-reports are insufficient — and why we studied them anyway",
+            "title": "Why model self-reports are insufficient, and why we studied them anyway",
             "publisher": "Eleos AI"
           },
           {
@@ -554,7 +554,7 @@
           {
             "title": "Neel Nanda on the 80,000 Hours Podcast",
             "publisher": "80,000 Hours",
-            "note": "The DeepMind interpretability lead arguing that the most ambitious vision of mech interp is probably dead, that he sees no path to deeply and reliably understanding what AIs are thinking, and that the realistic option is a Swiss-cheese model of layered imperfect safeguards — plus the pattern of celebrated interp results later shown weaker than claimed."
+            "note": "The DeepMind interpretability lead arguing that the most ambitious vision of mech interp is probably dead, that he sees no path to deeply and reliably understanding what AIs are thinking, and that the realistic option is a Swiss-cheese model of layered imperfect safeguards, plus the pattern of celebrated interp results later shown weaker than claimed."
           },
           {
             "title": "Against Almost Every Theory of Impact of Interpretability",

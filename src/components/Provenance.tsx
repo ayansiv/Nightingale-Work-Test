@@ -1,14 +1,14 @@
 /**
  * Provenance chips.
  *
- * This file used to also hold Caveat, EstimateCell and CoordinateSource — components that wrapped
+ * This file used to also hold Caveat, EstimateCell and CoordinateSource, components that wrapped
  * the same paragraph of methodology and rendered it on every surface, every row and every
  * coordinate. That is what trained readers to skip all of it. The prose now lives once per page,
  * written for the page it is on, and what survives here is the part that genuinely varies per
  * item: how strong a claim this particular number or tag is.
  */
 
-/** Where a figure came from. Colour is never the only channel — the word is always there. */
+/** Where a figure came from. Colour is never the only channel, the word is always there. */
 export function Flag({ flag }: { flag: string }) {
   const cls =
     flag === 'sourced' ? 'chip-derived'
@@ -35,7 +35,7 @@ export function TagStrength({ source }: { source: string }) {
     },
     inherited: {
       label: 'from the organization', cls: 'chip-estimated',
-      title: 'This role sits at an organization whose primary work is this agenda — a weaker claim than a content-based tag.',
+      title: 'This role sits at an organization whose primary work is this agenda, a weaker claim than a content-based tag.',
     },
     untagged: {
       label: 'not tagged', cls: 'chip-unknown',

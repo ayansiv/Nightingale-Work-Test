@@ -1,5 +1,5 @@
 /**
- * Data access. Everything is static JSON committed to the repo (snapshot MVP — no database,
+ * Data access. Everything is static JSON committed to the repo (snapshot MVP, no database,
  * no server-side state), so this is import-and-shape rather than fetch-and-cache.
  */
 
@@ -30,7 +30,7 @@ export const agendas = agendasData.agendas as unknown as any[];
 export const orgs = orgsData.orgs as unknown as any[];
 export const roles = rolesData.roles as unknown as any[];
 export const levers = leversData.levers as unknown as any[];
-/** Field-building categories. Domain 'meta' — deliberately NOT matched; see meta-agendas.json. */
+/** Field-building categories. Domain 'meta', deliberately NOT matched; see meta-agendas.json. */
 export const metaAgendas = metaData.agendas as unknown as any[];
 export const institutionTypes = leversData.institution_types as unknown as any[];
 export const readings = readingsData.axes as unknown as Record<string, Record<string, any>>;

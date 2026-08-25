@@ -17,7 +17,7 @@ import {
 import { AxisPlot } from '@/components/AxisPlot';
 
 const fmt = (n: number | null | undefined) =>
-  n === null || n === undefined ? '—' : Number.isInteger(n) ? String(n) : n.toFixed(1);
+  n === null || n === undefined ? ', ' : Number.isInteger(n) ? String(n) : n.toFixed(1);
 
 export function AgendaDetail() {
   const { id = '' } = useParams();
@@ -84,7 +84,7 @@ export function AgendaDetail() {
               return (
                 <li key={i} className="text-sm">
                   <strong className="font-medium">{inst.name}</strong>
-                  <span className="text-ink-muted"> — {inst.note}</span>
+                  <span className="text-ink-muted">, {inst.note}</span>
                   <span className="block text-2xs text-ink-faint mt-0.5">
                     Partisan exposure: {inst.partisan_exposure}
                   </span>
@@ -153,12 +153,12 @@ export function AgendaDetail() {
             <div>
               <dt className="text-xs text-ink-muted mb-0.5">Share of field effort</dt>
               <dd className="tabular font-medium">
-                {agenda!.fte_share_of_field?.value != null ? `${agenda!.fte_share_of_field.value}%` : '—'}
+                {agenda!.fte_share_of_field?.value != null ? `${agenda!.fte_share_of_field.value}%` : ', '}
               </dd>
             </div>
             <div>
               <dt className="text-xs text-ink-muted mb-0.5">Outputs in 2025</dt>
-              <dd className="tabular font-medium">{agenda!.outputs_count || '—'}</dd>
+              <dd className="tabular font-medium">{agenda!.outputs_count || ', '}</dd>
             </div>
           </dl>
           {agenda!.funded_by && (
@@ -207,7 +207,7 @@ export function AgendaDetail() {
             {named.map((p: any) => p.name).join(' · ')}
           </p>
           <p className="text-2xs text-ink-faint mt-2 max-w-prose">
-            People the Shallow Review lists against this agenda. Roster entries, not positions —
+            People the Shallow Review lists against this agenda. Roster entries, not positions ,
             a name against an agenda is not a stated view, so none of them is plotted above.
           </p>
         </section>
@@ -273,15 +273,15 @@ export function AgendaDetail() {
               <p>
                 The theory of change, assumptions, FTE range and funders come from the Shallow Review of
                 live agendas in alignment and safety, 2025. Positions on the axes are composed from
-                those same published fields — the family, the target case, the broad approach, and the
-                assumptions — and each one shows which produced it. Where the source says nothing about
+                those same published fields, the family, the target case, the broad approach, and the
+                assumptions, and each one shows which produced it. Where the source says nothing about
                 an axis the value is blank and that axis drops out of comparisons rather than being set
                 to the middle.
               </p>
               <p>
                 FTE is the source's own range with our midpoint. A separate organizational headcount
                 study puts the whole technical field at 620–645 people, while summing these ranges gives
-                1,100–3,200 — they count different populations, and neither has been rescaled. Share of
+                1,100–3,200, they count different populations, and neither has been rescaled. Share of
                 field effort is unaffected by that disagreement and is the safer comparison.
               </p>
               <p>
@@ -292,8 +292,8 @@ export function AgendaDetail() {
           ) : kind === 'policy' ? (
             <p>
               Levers and institution types are seeded from the 80,000 Hours US AI policy landscape.
-              Positions on the axes are assigned by hand rather than derived — there is no policy
-              equivalent of the stated-assumptions field the technical agendas come from — so treat them
+              Positions on the axes are assigned by hand rather than derived, there is no policy
+              equivalent of the stated-assumptions field the technical agendas come from, so treat them
               as our reading rather than as anyone's stated view. Government spending is not shown: it
               measures the size of the problem, not the size of the safety response.
             </p>

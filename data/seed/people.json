@@ -7,10 +7,10 @@
     "rather than by convention:",
     "  1. CITE PER COORDINATE, not per person. Every placement links the specific piece it came from.",
     "  2. DATE EVERY POSITION. People move substantially.",
-    "  3. LABEL AS “as expressed in X, dated Y” — never “believes”.",
+    "  3. LABEL AS “as expressed in X, dated Y”, never “believes”.",
     "",
-    "Consequence: NO PERSON SHIPS WITH A COORDINATE YET. The roster below is real and sourced —",
-    "these are the names Shallow Review 2025 lists against each agenda — but a name against an",
+    "Consequence: NO PERSON SHIPS WITH A COORDINATE YET. The roster below is real and sourced, ",
+    "these are the names Shallow Review 2025 lists against each agenda, but a name against an",
     "agenda is not a position on an axis, and inventing one would be exactly the failure mode rule 3",
     "exists to prevent. Coordinates are all null and the UI renders these as roster entries, not as",
     "points on the plot, until placements land with citation and date.",
@@ -13223,7 +13223,7 @@
         "axes": [
           "internals"
         ],
-        "why": "The spec’s own teaching artifact: the same person argues both poles of the internals axis at different confidence levels, which is more persuasive to a newcomer than any outsider critique. Needs TWO dated placements, not one — the LessWrong research-mindset piece and the 80,000 Hours interview.",
+        "why": "The spec’s own teaching artifact: the same person argues both poles of the internals axis at different confidence levels, which is more persuasive to a newcomer than any outsider critique. Needs TWO dated placements, not one, the LessWrong research-mindset piece and the 80,000 Hours interview.",
         "sources": [
           "Neel Nanda on the mechanistic interpretability researcher mindset (LessWrong)",
           "Neel Nanda on the 80,000 Hours Podcast"
@@ -13280,7 +13280,7 @@
         "sources": []
       }
     ],
-    "rule": "A person without a dated citation for an axis gets NO value on that axis — same handling as an org, same handling as a user abstention. Do not impute, do not centre."
+    "rule": "A person without a dated citation for an axis gets NO value on that axis, same handling as an org, same handling as a user abstention. Do not impute, do not centre."
   },
   "correction_path": {
     "$comment": "Spec §7: “Ship a visible correction path for anyone who thinks their placement is wrong.”",

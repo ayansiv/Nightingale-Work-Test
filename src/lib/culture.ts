@@ -12,7 +12,7 @@
  * think is doomed, which is exactly backwards for a careers tool.
  *
  * The aggregation, coverage counting and abstain handling are REUSED from scoring.ts rather than
- * copied — `computeAxes` is generic over an axis list, so both spaces get the same guarantees
+ * copied, `computeAxes` is generic over an axis list, so both spaces get the same guarantees
  * (abstain drops the item not the axis; an axis with nothing answered is absent, not zero) from
  * one implementation. What is kept strictly separate is the DATA: no belief axis id ever appears
  * in a culture score and vice versa, which verify asserts in both directions.
@@ -27,7 +27,7 @@ export interface CultureAxis extends Omit<Axis, 'scope' | 'question'> {
   weight: number;
 }
 
-/** An org's culture placement. A weaker kind of claim than an agenda coordinate — see `source`. */
+/** An org's culture placement. A weaker kind of claim than an agenda coordinate, see `source`. */
 export interface CulturePlacement {
   /** axis id -> value in [-1,1], or null. Null is first-class: it drops the axis. */
   coordinates: Record<string, number | null>;
@@ -77,11 +77,11 @@ export interface CultureFit {
 /**
  * Rerank organizations by culture fit.
  *
- * `orgBeliefDistance` is supplied by the caller — it is the user's belief distance from the org's
+ * `orgBeliefDistance` is supplied by the caller, it is the user's belief distance from the org's
  * PRIMARY AGENDA, because orgs carry no belief coordinates of their own (policy, see
  * culture-axes.json). Pass 0 where the org has no primary agenda: cross-agenda orgs like MATS and
  * Constellation have a deliberately open agenda, so the cross-term is undefined rather than zero-
- * by-accident, and they stay fully culture-matchable. That is the right result — a MATS placement
+ * by-accident, and they stay fully culture-matchable. That is the right result, a MATS placement
  * is exactly the case where "who thrives here" is the decision-relevant question.
  */
 export function rankByCulture(
@@ -117,7 +117,7 @@ export function rankByCulture(
       frictions.push({ axis: axis.id, label: axis.label, userValue: u.value, orgValue: t, distance: d });
     }
 
-    if (den === 0) continue; // nothing in common — no match, rather than a zero-scoring one
+    if (den === 0) continue; // nothing in common, no match, rather than a zero-scoring one
 
     const cultureFit = 1 - num / den;
 
@@ -169,7 +169,7 @@ export function tensionWarning(
   return (
     `Worth knowing: ${topAgendaName} came out top on your beliefs, but none of the organizations ` +
     `working on it look like a comfortable fit for how you want to work. That is a real tension, ` +
-    `not a scoring artefact — the work you think matters most and the places doing it may not be ` +
+    `not a scoring artefact, the work you think matters most and the places doing it may not be ` +
     `the same answer.`
   );
 }

@@ -110,7 +110,7 @@ export interface Role {
   org_name: string;
   agenda_id: string | null;
   tag_source: 'classified' | 'inherited' | 'manual' | 'untagged';
-  /** Why this role landed on this agenda. Shown on the role card — no opaque tags. */
+  /** Why this role landed on this agenda. Shown on the role card, no opaque tags. */
   tag_rationale: string;
   skill_set: string[];
   experience_level: string[];

@@ -20,7 +20,7 @@
  *   "exactly neutral" and nothing in the UI would look wrong.
  *
  *   FAIL CLOSED ON A HEADER MISMATCH. Two people will edit this file. If the columns are not what
- *   we expect, abort with the diff rather than positional-mapping into the wrong axes — a silently
+ *   we expect, abort with the diff rather than positional-mapping into the wrong axes, a silently
  *   shifted column would put every org's "pace" score into "visibility".
  *
  *   UNMATCHED ROWS GO TO A REVIEW FILE, never silently dropped. The 80k feed already contains
@@ -75,7 +75,7 @@ async function main() {
   const abs = path.join(ROOT, INTAKE);
   if (!fs.existsSync(abs)) {
     // Not an error. The rest of the app is designed to work without this file.
-    console.log(`culture: ${INTAKE} not present — skipping.`);
+    console.log(`culture: ${INTAKE} not present, skipping.`);
     console.log('         Orgs will rank on beliefs alone and the culture instrument stays hidden.');
     fs.mkdirSync(path.join(ROOT, 'data/derived'), { recursive: true });
     fs.writeFileSync(path.join(ROOT, 'data/derived/org-culture.json'),
@@ -84,7 +84,7 @@ async function main() {
   }
 
   // Imported lazily, and through a variable specifier, so `xlsx` is only needed once the sheet
-  // actually exists — the repo typechecks and builds without it installed.
+  // actually exists, the repo typechecks and builds without it installed.
   const spec = 'xlsx';
   const XLSX: any = await import(/* @vite-ignore */ spec).catch(() =>
     fail('org-culture-intake.xlsx is present but the `xlsx` package is not installed. Run: npm i -D xlsx'));
@@ -106,7 +106,7 @@ async function main() {
       `"${SHEET_SCORING}" header does not match.\n` +
       `  missing : ${missing.join(', ') || '(none)'}\n` +
       `  extra   : ${extra.join(', ') || '(none)'}\n` +
-      `  Refusing to map positionally — a shifted column would put every org's score on the wrong axis.`,
+      `  Refusing to map positionally, a shifted column would put every org's score on the wrong axis.`,
     );
   }
   const col = (name: string) => header.indexOf(name);
@@ -136,7 +136,7 @@ async function main() {
       const isBlank = cell === undefined || cell === null || String(cell).trim() === '';
       const n = isBlank ? null : Number(cell);
       if (!isBlank && (Number.isNaN(n!) || n! < -1 || n! > 1)) {
-        fail(`${name}: "${axis.label}" is "${cell}" — expected a number between -1 and 1, or blank.`);
+        fail(`${name}: "${axis.label}" is "${cell}", expected a number between -1 and 1, or blank.`);
       }
       coordinates[axis.id] = isBlank ? null : n;
     }
@@ -180,7 +180,7 @@ async function main() {
   fs.writeFileSync(path.join(ROOT, 'data/derived/culture-join-review.json'), JSON.stringify({
     generated_at: new Date().toISOString().slice(0, 10),
     what: 'Rows that did not join cleanly between the culture sheet and the job-board feed. '
-        + 'Name drift is expected — the feed writes "Model Evaluation and Threat Research" where a '
+        + 'Name drift is expected, the feed writes "Model Evaluation and Threat Research" where a '
         + 'person writes "METR". Resolve by editing the sheet to the feed spelling, or by adding an '
         + 'alias to orgs.csv.',
     in_sheet_not_in_feed: unmatchedInSheet.map((r) => r.name),
@@ -188,7 +188,7 @@ async function main() {
     undated_and_therefore_dropped: undated,
   }, null, 2));
 
-  const pct = (n: number, d: number) => (d ? `${((n / d) * 100).toFixed(0)}%` : '—');
+  const pct = (n: number, d: number) => (d ? `${((n / d) * 100).toFixed(0)}%` : ', ');
   console.log(`culture rows read     : ${rows.length + undated.length}`);
   console.log(`  joined to the feed  : ${matched.length} (${pct(matched.length, orgs.length)} of ${orgs.length} orgs)`);
   console.log(`  in sheet, not feed  : ${unmatchedInSheet.length}`);

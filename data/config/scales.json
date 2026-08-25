@@ -62,7 +62,7 @@
     "willingness": {
       "label": "Would you?",
       "show_numeric_range": false,
-      "midpoint_note": "No midpoint — these are decisions, not credences.",
+      "midpoint_note": "Spec §4 originally gave this scale no midpoint, on the grounds that these are decisions rather than credences. Added on owner instruction: someone who has not faced the choice does not have a lean to report, and forcing one produces a worse number than recording the uncertainty. Skip remains distinct and still removes the item entirely.",
       "options": [
         {
           "value": -1.0,
@@ -71,6 +71,10 @@
         {
           "value": -0.33,
           "label": "Probably not"
+        },
+        {
+          "value": 0.0,
+          "label": "Unsure"
         },
         {
           "value": 0.33,

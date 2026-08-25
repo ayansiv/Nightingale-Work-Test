@@ -5,7 +5,7 @@
     "silently applied to derived JSON.",
     "",
     "A correction here is an admission that the rule table got something wrong. That is fine and",
-    "expected — but if the same KIND of correction shows up three times, fix the signal table",
+    "expected, but if the same KIND of correction shows up three times, fix the signal table",
     "instead, or the overrides file becomes the classifier.",
     "",
     "Matching is on exact (org, role_title). If the source retitles a role the override stops",
@@ -22,7 +22,7 @@
       "org": "Hudson Institute",
       "role_title": "Research Internship, Fellow Bill Drexel (Fall 2026)",
       "agenda_id": "pol_international",
-      "why": "Description is US-India relations, AI competition and American technology strategy — interstate competition, not compute governance."
+      "why": "Description is US-India relations, AI competition and American technology strategy, interstate competition, not compute governance."
     },
     {
       "org": "Google DeepMind",

@@ -17,7 +17,7 @@
     "  - Case-insensitive substring match on a normalised string.",
     "  - Title matches score `title_multiplier` x the signal weight; description matches score 1x.",
     "  - Only agendas in the org's own list (primary + secondaries) can win. A signal for an agenda",
-    "    the org does not work on is ignored — that is the §10 constraint, and it is what stops",
+    "    the org does not work on is ignored, that is the §10 constraint, and it is what stops",
     "    'security' at a biosecurity org from routing to model-weight infosec.",
     "  - The winner must clear `min_score` AND beat the runner-up by `min_margin`. Otherwise the",
     "    role falls through to inheritance, which is the honest outcome for an ambiguous title.",
@@ -943,7 +943,7 @@
       "useful entry point in the dataset.",
       "",
       "These roles get agenda_id: null AND cross_agenda: true, so browse can surface them under",
-      "every agenda with the label 'open to any agenda — placement depends on your mentor'."
+      "every agenda with the label 'open to any agenda, placement depends on your mentor'."
     ],
     "orgs": [
       "MATS Research",

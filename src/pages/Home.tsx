@@ -1,12 +1,12 @@
 /**
- * Home — what the axes are, shown rather than described.
+ * Home, what the axes are, shown rather than described.
  *
  * Structural debt to 12axes: the landing page's job is to make the axes legible BEFORE anyone
  * answers anything. Bipolar bars, grouped into a few named families, each pole named in the
  * field's own vocabulary with the argument for it linked. Someone should be able to read this
  * page, never take the quiz, and still have got something.
  *
- * Every reading in data/content/readings.json is reachable from here — that was the point of
+ * Every reading in data/content/readings.json is reachable from here, that was the point of
  * transcribing the spec §12 list, and burying two thirds of it behind "+N more" wasted it.
  */
 
@@ -24,7 +24,7 @@ const GROUPS: { id: string; title: string; blurb: string; axisIds: string[] }[] 
     id: 'chain',
     title: 'The misalignment chain',
     blurb:
-      'Three separate links. Agreeing on the first tells you almost nothing about the third — and the third is what decides whether control work or alignment work is the better use of a career.',
+      'Three separate links. Agreeing on the first tells you almost nothing about the third, and the third is what decides whether control work or alignment work is the better use of a career.',
     axisIds: ['p_mis', 'p_scheme', 'containment'],
   },
   {
@@ -98,7 +98,7 @@ export function Home() {
               const poles = readings[id] ?? {};
               // Order by the group's DECLARED pole, so the reading list sits under the end of the
               // bar it argues for. These used to be ordered by position in the object, which put
-              // 16 of 17 axes on the wrong side — "steer toward good outcomes" appeared under
+              // 16 of 17 axes on the wrong side, "steer toward good outcomes" appeared under
               // "avoid catastrophe", and the inside-government reading under "outside influence".
               const lead = Object.keys(poles)
                 .filter((k) => !k.startsWith('_'))
@@ -140,7 +140,7 @@ export function Home() {
                               ) : (
                                 <span className="text-ink-muted">{s.title}</span>
                               )}
-                              {s.publisher && <span className="text-ink-faint"> — {s.publisher}</span>}
+                              {s.publisher && <span className="text-ink-faint">, {s.publisher}</span>}
                             </li>
                           ))}
                         </ul>
@@ -163,7 +163,7 @@ export function Home() {
                className="font-medium underline hover:text-user">
               80,000 Hours AI careers advisor
             </a>
-            <span className="text-ink-muted"> — free one-to-one advising and an AI-assisted version.
+            <span className="text-ink-muted">, free one-to-one advising and an AI-assisted version.
               This page tells you which agenda; they help with the rest of the decision.</span>
           </li>
           <li>
@@ -171,7 +171,7 @@ export function Home() {
                className="font-medium underline hover:text-user">
               Shallow Review of live agendas in alignment and safety, 2025
             </a>
-            <span className="text-ink-muted"> — the source for every technical agenda here, including the
+            <span className="text-ink-muted">, the source for every technical agenda here, including the
               assumptions each one says it rests on.</span>
           </li>
           <li>
@@ -179,21 +179,21 @@ export function Home() {
                target="_blank" rel="noreferrer" className="font-medium underline hover:text-user">
               The US AI policy landscape
             </a>
-            <span className="text-ink-muted"> — the source for the policy levers and institution types.</span>
+            <span className="text-ink-muted">, the source for the policy levers and institution types.</span>
           </li>
           <li>
             <a href="https://80000hours.org/job-board/" target="_blank" rel="noreferrer"
                className="font-medium underline hover:text-user">
               80,000 Hours job board
             </a>
-            <span className="text-ink-muted"> — where the roles come from. Apply there, not here.</span>
+            <span className="text-ink-muted">, where the roles come from. Apply there, not here.</span>
           </li>
           <li>
             <a href="https://emergingtechpolicy.org/" target="_blank" rel="noreferrer"
                className="font-medium underline hover:text-user">
               Emerging Technology Policy Careers
             </a>
-            <span className="text-ink-muted"> — fellowships and institution guides for US policy paths.</span>
+            <span className="text-ink-muted">, fellowships and institution guides for US policy paths.</span>
           </li>
         </ul>
       </section>
@@ -205,7 +205,7 @@ export function Home() {
           </summary>
           <div className="mt-3 space-y-3 text-ink-muted leading-relaxed max-w-prose">
             <p>
-              Each technical agenda's position is composed from what its own proponents published —
+              Each technical agenda's position is composed from what its own proponents published ,
               the family it belongs to, the case it targets, and the problems it says it rests on.
               Every coordinate on an agenda page shows which of those produced it. Where the source
               says nothing about an axis, the value is blank and that axis drops out of the
@@ -219,7 +219,7 @@ export function Home() {
             <p>
               A thin agenda is not thereby a good bet. It may be thin because it is hard, because it
               is wrong, or because nobody has tried, and nothing here distinguishes those. Role
-              counts are not importance either — the job board is explicit that its coverage is
+              counts are not importance either, the job board is explicit that its coverage is
               uneven and that counts are not a signal of what it thinks matters.
             </p>
             <p>

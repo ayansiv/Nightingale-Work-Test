@@ -1,5 +1,5 @@
 /**
- * `npm run ingest` — rebuilds everything in data/derived/ from data/raw/ plus the committed
+ * `npm run ingest`, rebuilds everything in data/derived/ from data/raw/ plus the committed
  * classification tables.
  *
  * Snapshot ingest (Build Spec: data is pulled once, reviewed, and committed). Kept idempotent and
@@ -37,5 +37,5 @@ for (const [i, step] of steps.entries()) {
 }
 
 console.log(`\n${'='.repeat(78)}`);
-console.log('ingest complete. Run `npm run verify` before committing — it checks the acceptance');
+console.log('ingest complete. Run `npm run verify` before committing, it checks the acceptance');
 console.log('criteria that silently stop holding, and the coordinate-derivation calibration.');

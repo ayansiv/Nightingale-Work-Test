@@ -1,5 +1,5 @@
 /**
- * Axis page — the reading list for one axis, both poles (Build Spec §12).
+ * Axis page, the reading list for one axis, both poles (Build Spec §12).
  *
  * LessWrong wiki-tag pattern: this is a reusable topic page reached from the entry reading, from
  * a consistency flag, and from any pole label on the plot. It is the place a concept lives, not a
@@ -18,14 +18,14 @@ export function AxisDetail() {
     return <div className="max-w-3xl mx-auto px-4 py-12"><p>No axis with id <code>{id}</code>.</p></div>;
   }
 
-  // Low pole left, high pole right — same order as everywhere else, driven by the declared
+  // Low pole left, high pole right, same order as everywhere else, driven by the declared
   // `pole` field rather than by position in the object.
   const poleKeys = poles
     ? Object.keys(poles).filter((k) => !k.startsWith('_'))
         .sort((a, b) => (poles[a].pole === 'low' ? -1 : 1) - (poles[b].pole === 'low' ? -1 : 1))
     : [];
 
-  // Agendas sitting at each end — the axis page should show what the position implies for work.
+  // Agendas sitting at each end, the axis page should show what the position implies for work.
   const placed = agendas
     .filter((a) => a.coordinates[id] !== null && a.coordinates[id] !== undefined)
     .sort((a, b) => (b.coordinates[id] as number) - (a.coordinates[id] as number));
@@ -39,7 +39,7 @@ export function AxisDetail() {
         <h1 className="text-2xl font-semibold tracking-tight">{axis.label}</h1>
         <p className="text-lg text-ink-muted mt-2 max-w-prose">{axis.question}</p>
         <p className="text-sm font-mono text-ink-faint mt-3">
-          {axis.low_pole_label} ←————→ {axis.high_pole_label}
+          {axis.low_pole_label} ←→ {axis.high_pole_label}
         </p>
       </header>
 
@@ -68,7 +68,7 @@ export function AxisDetail() {
                     ) : (
                       <span>{s.title}</span>
                     )}
-                    {s.publisher && <span className="text-ink-faint"> — {s.publisher}</span>}
+                    {s.publisher && <span className="text-ink-faint">, {s.publisher}</span>}
                     {s.note && <p className="text-2xs text-ink-muted mt-0.5">{s.note}</p>}
                   </li>
                 ))}

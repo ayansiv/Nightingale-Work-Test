@@ -1,7 +1,7 @@
 {
   "$comment": [
     "Build Spec §13: 'Load-bearing, not footnotes.' Each caveat declares WHERE it must render.",
-    "scripts/verify-data.ts does not check placement — that is a UI test — but every id here must",
+    "scripts/verify-data.ts does not check placement, that is a UI test, but every id here must",
     "appear somewhere in src/, and the Caveat component fails loudly on an unknown id rather than",
     "rendering nothing.",
     "",
@@ -69,7 +69,7 @@
       "surfaces": [
         "tables-policy"
       ],
-      "body": "Coalitions, credibility and timing compound. Being alone on an issue can mean being ignored rather than high-leverage — which is the opposite of the inference the technical table invites. This is a large part of why the two tables are not merged.",
+      "body": "Coalitions, credibility and timing compound. Being alone on an issue can mean being ignored rather than high-leverage, which is the opposite of the inference the technical table invites. This is a large part of why the two tables are not merged.",
       "severity": "high"
     },
     {
@@ -89,7 +89,7 @@
         "browse",
         "role"
       ],
-      "body": "A tag marked \"from role content\" means a phrase in the role's own description named this agenda. A tag marked \"from the organization\" means only that the role sits at an organization whose primary work is this agenda — which is the intended behaviour for operations, recruiting, finance and legal roles, but is a materially weaker claim. A tag marked \"open to any agenda\" means the role is a fellowship or residency where placement depends on a mentor. These are shown differently everywhere they appear.",
+      "body": "A tag marked \"from role content\" means a phrase in the role's own description named this agenda. A tag marked \"from the organization\" means only that the role sits at an organization whose primary work is this agenda, which is the intended behaviour for operations, recruiting, finance and legal roles, but is a materially weaker claim. A tag marked \"open to any agenda\" means the role is a fellowship or residency where placement depends on a mentor. These are shown differently everywhere they appear.",
       "severity": "high"
     },
     {
@@ -99,18 +99,18 @@
         "results",
         "agenda"
       ],
-      "body": "Each technical agenda's position is composed from fields its own proponents published in the Shallow Review: the family it belongs to, the case it targets, its broad approach, and the orthodox problems it says it rests on. Every coordinate shows which of those produced it. Where nothing in the source speaks to an axis, the coordinate is blank and that axis simply drops out of the comparison — it is not set to the middle.",
+      "body": "Each technical agenda's position is composed from fields its own proponents published in the Shallow Review: the family it belongs to, the case it targets, its broad approach, and the orthodox problems it says it rests on. Every coordinate shows which of those produced it. Where nothing in the source speaks to an axis, the coordinate is blank and that axis simply drops out of the comparison, it is not set to the middle.",
       "severity": "medium"
     }
   ],
   "disclaimers": {
     "disclaimer_general": {
       "verbatim_from_spec": true,
-      "text": "Some roles' theories of change can't be stated publicly. In a few cases this is because the reasons a role matters differ from an institution's stated priorities; in others, because describing the mechanism would compromise the people relying on it. Where we've had to be general, we've been general rather than coy — we'd rather say less than write something that reads as coded. Roles missing from this page are not less important, and a handful are among the most important."
+      "text": "Some roles' theories of change can't be stated publicly. In a few cases this is because the reasons a role matters differ from an institution's stated priorities; in others, because describing the mechanism would compromise the people relying on it. Where we've had to be general, we've been general rather than coy, we'd rather say less than write something that reads as coded. Roles missing from this page are not less important, and a handful are among the most important."
     },
     "disclaimer_government_a": {
       "verbatim_from_spec": true,
-      "text": "Impact in government roles comes from placement and timing rather than volume of output. The value is having someone with real technical understanding present when a decision is made: drafting the definition, catching the provision that won't survive contact with how models actually work, knowing which capability claims are load-bearing. This is largely independent of any administration's stated priorities — technical competence in the room is a public good that any administration benefits from, and supplying it is straightforwardly public service. The scarce input isn't conviction, it's competence paired with willingness to serve."
+      "text": "Impact in government roles comes from placement and timing rather than volume of output. The value is having someone with real technical understanding present when a decision is made: drafting the definition, catching the provision that won't survive contact with how models actually work, knowing which capability claims are load-bearing. This is largely independent of any administration's stated priorities, technical competence in the room is a public good that any administration benefits from, and supplying it is straightforwardly public service. The scarce input isn't conviction, it's competence paired with willingness to serve."
     },
     "disclaimer_government_b": {
       "text": "",

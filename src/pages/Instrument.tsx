@@ -4,7 +4,7 @@
  * Two things this screen must not get wrong.
  *
  * 1. "Unsure" and "Skip" are different. Unsure is an answer of 0.0 that enters the average; Skip
- *    removes the item. They get visibly different affordances — Unsure sits in the row of options
+ *    removes the item. They get visibly different affordances, Unsure sits in the row of options
  *    because it is one, Skip sits outside it because it is not.
  *
  * 2. Question numbers must be POSITIONS, not ids. q29 and q30 were added later and are
@@ -153,7 +153,7 @@ export function Instrument({ responses, onChange, onComplete }: Props) {
                             : 'border-ground-line text-ink-faint hover:text-ink-muted'
                         }`}
                       >
-                        {isSkipped ? 'Skipped — click to undo' : 'Skip this one'}
+                        {isSkipped ? 'Skipped, click to undo' : 'Skip this one'}
                       </button>
                     </div>
                   </fieldset>
@@ -180,7 +180,7 @@ export function Instrument({ responses, onChange, onComplete }: Props) {
 
 /**
  * A 5-point spectrum between two named poles. Replaced a 0-100 slider, which invited false
- * precision — nobody's view about misuse versus loss of control is accurate to one point in a
+ * precision, nobody's view about misuse versus loss of control is accurate to one point in a
  * hundred, and the slider's default position also silently read as an answer.
  */
 function SpectrumInput({ q, value, onChange }: { q: any; value: number | null; onChange: (v: number) => void }) {
@@ -198,7 +198,7 @@ function SpectrumInput({ q, value, onChange }: { q: any; value: number | null; o
             type="button"
             onClick={() => onChange(opt.value)}
             aria-pressed={value === opt.value}
-            aria-label={`${opt.label} — ${
+            aria-label={`${opt.label}, ${
               opt.value < 0 ? q.spectrum_poles.low : opt.value > 0 ? q.spectrum_poles.high : 'between the two'
             }`}
             className={`flex-1 py-2 rounded border text-sm tabular ${

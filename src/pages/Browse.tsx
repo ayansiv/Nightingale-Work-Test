@@ -1,7 +1,7 @@
 /**
  * Roles.
  *
- * Absorbs what used to be a separate Fellowships tab — it was always a filter over this same
+ * Absorbs what used to be a separate Fellowships tab, it was always a filter over this same
  * array (`position = Fellowship`), so a whole tab for it duplicated navigation for no data.
  *
  * Two things the first version got wrong and this one fixes:
@@ -32,7 +32,7 @@ const expRank = (s: string) => {
 const FILTER_KEYS = ['agenda', 'type', 'exp', 'loc', 'position', 'maturity', 'view'] as const;
 
 /**
- * The board writes locations as "City.Country" — "London.UK", and just ".UK" when only the
+ * The board writes locations as "City.Country", "London.UK", and just ".UK" when only the
  * country is known. Rendered raw, the leading dot reads as a typo.
  */
 const prettyLocation = (s: string) =>
@@ -186,7 +186,7 @@ export function Browse() {
                 <strong className="font-medium text-ink">From role content</strong> means a phrase in the
                 role's own description named this agenda.{' '}
                 <strong className="font-medium text-ink">From the organization</strong> means only that the
-                role sits somewhere whose main work is this agenda — right for operations, recruiting and
+                role sits somewhere whose main work is this agenda, right for operations, recruiting and
                 legal roles, but a weaker claim.{' '}
                 <strong className="font-medium text-ink">Open to any agenda</strong> is reserved for cohort
                 programmes, where your mentor decides what you end up working on.
@@ -245,7 +245,7 @@ function RoleRow({ role }: { role: any }) {
 
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1.5">
         {role.cross_agenda && (
-          <span className="chip-estimated" title="A cohort programme — your mentor decides which agenda you work on.">
+          <span className="chip-estimated" title="A cohort programme, your mentor decides which agenda you work on.">
             open to any agenda
           </span>
         )}

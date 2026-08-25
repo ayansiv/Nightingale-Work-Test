@@ -10,7 +10,7 @@
  *
  * Format: `v<n>.<belief chars>[~<culture chars>]`, one character per question in config order.
  * One char per question means the string is stable in length, diffable by eye, and a change to
- * one answer changes exactly one character — which makes bugs in this file visible rather than
+ * one answer changes exactly one character, which makes bugs in this file visible rather than
  * mysterious.
  *
  *   _   abstained   (removed from scoring)
@@ -24,15 +24,16 @@
 import { ABSTAIN, type Response, type Responses, type Question } from './scoring.js';
 
 /**
- * Bump this whenever the question SET changes — adding, removing or reordering an item shifts
+ * Bump this whenever the question SET changes, adding, removing or reordering an item shifts
  * every character after the change point, so an old link would decode into the wrong answers
- * rather than failing. v1 -> v2 when q29 and q30 were added; v2 -> v3 when q10 and q14 became spectrum items.
+ * rather than failing. v1 -> v2 when q29 and q30 were added; v2 -> v3 when q10 and q14 became spectrum items;
+ * v3 -> v4 when the willingness scale gained a midpoint, shifting every level index above it.
  *
  * `decode` also refuses a body whose length does not match the current question count, so a
  * forgotten bump fails safe instead of silently misreading. Belt and braces, because the failure
  * mode here is invisible: a misaligned link still produces a plausible-looking result page.
  */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const ABSTAIN_CHAR = '_';
 const UNANSWERED_CHAR = '.';
 
@@ -40,7 +41,7 @@ const UNANSWERED_CHAR = '.';
 const DISCRETE: Record<string, number[]> = {
   credence: [-1, -0.5, 0, 0.5, 1],
   agreement: [-1, -0.5, 0, 0.5, 1],
-  willingness: [-1, -0.33, 0.33, 1],
+  willingness: [-1, -0.33, 0, 0.33, 1],
   spectrum: [-1, -0.5, 0, 0.5, 1],
   // Culture items use the same five levels under a different label.
   preference: [-1, -0.5, 0, 0.5, 1],
@@ -138,7 +139,7 @@ export function decode(code: string, questions: Question[]): Responses {
     const ch = body[i];
     if (ch === undefined) return;
     const r = decodeOne(q, ch);
-    // Store the key even when the value is ABSTAIN — that is the whole point. Only genuinely
+    // Store the key even when the value is ABSTAIN, that is the whole point. Only genuinely
     // unanswered questions are left absent.
     if (r !== undefined) out[q.id] = r;
   });

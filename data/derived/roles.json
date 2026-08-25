@@ -231,7 +231,7 @@
       "org_name": "Tarbell Center for AI Journalism",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Outreach"
       ],
@@ -607,7 +607,7 @@
       "org_name": "Intel",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Information security"
@@ -639,7 +639,7 @@
       "org_name": "US Government, Cybersecurity and Infrastructure Security Agency",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security",
         "Policy"
@@ -833,7 +833,7 @@
       "org_name": "Electric Sheep",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -863,7 +863,7 @@
       "org_name": "Global Public Policy Institute",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -960,7 +960,7 @@
       "org_name": "Hudson Institute",
       "agenda_id": "pol_international",
       "tag_source": "manual",
-      "tag_rationale": "Manually corrected. Description is US-India relations, AI competition and American technology strategy — interstate competition, not compute governance.",
+      "tag_rationale": "Manually corrected. Description is US-India relations, AI competition and American technology strategy, interstate competition, not compute governance.",
       "skill_set": [
         "Research",
         "Policy"
@@ -1058,7 +1058,7 @@
       "org_name": "University of Copenhagen, Department of Computer Science",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -1088,7 +1088,7 @@
       "org_name": "Various US Universities",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Research"
@@ -1384,7 +1384,7 @@
       "org_name": "MiniMax",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Information security"
@@ -1417,7 +1417,7 @@
       "org_name": "Peace Research Institute Frankfurt",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -1449,7 +1449,7 @@
       "org_name": "Technical University of Darmstadt, Science and Technology for Peace and Security",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Information security"
@@ -1482,7 +1482,7 @@
       "org_name": "United Nations, Office for Disarmament Affairs",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -2512,7 +2512,7 @@
       "org_name": "Control AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Outreach"
@@ -2574,7 +2574,7 @@
       "org_name": "Lucid Computing",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Information security",
@@ -2937,7 +2937,7 @@
       "org_name": "Institute for Security and Technology",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -2969,7 +2969,7 @@
       "org_name": "US Government, Office of Management and Budget",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -3253,7 +3253,7 @@
       "org_name": "Harvard University, Law School",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy",
@@ -3319,7 +3319,7 @@
       "org_name": "Perplexity",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Information security"
@@ -3454,7 +3454,7 @@
       "org_name": "Omidyar Network",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other"
       ],
@@ -3673,7 +3673,7 @@
       "org_name": "Realm Labs",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -4025,7 +4025,7 @@
       "org_name": "Schmidt Sciences",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Strategy"
@@ -4057,7 +4057,7 @@
       "org_name": "University of Sheffield, School of Computer Science",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -4089,7 +4089,7 @@
       "org_name": "University of York, Department of Computer Science",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -4182,7 +4182,7 @@
       "org_name": "Dynamo AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Information security"
@@ -4249,7 +4249,7 @@
       "org_name": "Microsoft",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security"
       ],
@@ -4569,7 +4569,7 @@
       "org_name": "Institute for Progress",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Strategy",
@@ -4603,7 +4603,7 @@
       "org_name": "Robert Wood Johnson Foundation",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -4700,7 +4700,7 @@
       "org_name": "US Government, Pacific Northwest National Laboratory",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -4956,7 +4956,7 @@
       "org_name": "Neolithic",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -5375,7 +5375,7 @@
       "org_name": "University of Chicago, Harris School of Public Policy Studies",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -5440,7 +5440,7 @@
       "org_name": "ML4Good",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Outreach"
       ],
@@ -6050,7 +6050,7 @@
       "org_name": "European Union, European Commission",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -6080,7 +6080,7 @@
       "org_name": "Good Impressions Media",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Outreach"
       ],
@@ -6271,7 +6271,7 @@
       "org_name": "Lawfare Institute",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other",
         "Outreach"
@@ -6494,7 +6494,7 @@
       "org_name": "Future Matters",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Policy"
@@ -7078,7 +7078,7 @@
       "org_name": "Hewlett Foundation",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy"
       ],
@@ -7263,7 +7263,7 @@
       "org_name": "Paradigm 3",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -7746,7 +7746,7 @@
       "org_name": "The Alliance for Secure AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -8069,7 +8069,7 @@
       "org_name": "National Committee on US-China Relations",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -8742,7 +8742,7 @@
       "org_name": "Semafor",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other"
       ],
@@ -8867,7 +8867,7 @@
       "org_name": "Swiss AI Initiative",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Research"
@@ -9095,7 +9095,7 @@
       "org_name": "Halcyon Futures",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy"
       ],
@@ -9598,7 +9598,7 @@
       "org_name": "Cohere",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering",
@@ -10023,7 +10023,7 @@
       "org_name": "Fathom",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Management"
@@ -10619,7 +10619,7 @@
       "org_name": "Cogent",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering",
@@ -10685,7 +10685,7 @@
       "org_name": "Massachusetts Institute of Technology, Computer Science and Artificial Intelligence Laboratory",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Strategy",
@@ -11080,7 +11080,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Engineering"
       ],
@@ -11111,7 +11111,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Operations",
         "Software engineering"
@@ -11144,7 +11144,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Engineering"
@@ -11305,7 +11305,7 @@
       "org_name": "Evitable",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Outreach"
       ],
@@ -11368,7 +11368,7 @@
       "org_name": "University of Virginia",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Operations"
       ],
@@ -12434,7 +12434,7 @@
       "org_name": "Concordia AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy",
@@ -12597,7 +12597,7 @@
       "org_name": "Georgetown University, Center for Security and Emerging Technology",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Management"
@@ -13321,7 +13321,7 @@
       "org_name": "Tsinghua University, Schwarzman College",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -13351,7 +13351,7 @@
       "org_name": "US Government, White House Office of Science and Technology Policy",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Research"
@@ -13383,7 +13383,7 @@
       "org_name": "European Laboratory for Learning and Intelligent Systems",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -13450,7 +13450,7 @@
       "org_name": "King's College London, Department of Informatics",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -13516,7 +13516,7 @@
       "org_name": "University of California, Berkeley, Department of Electrical Engineering and Computer Sciences",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -14944,7 +14944,7 @@
       "org_name": "Hortus AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other"
       ],
@@ -15006,7 +15006,7 @@
       "org_name": "Information-Technology Promotion Agency",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Operations",
         "Policy",
@@ -15298,7 +15298,7 @@
       "org_name": "Lila Sciences",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Software engineering"
@@ -15547,7 +15547,7 @@
       "org_name": "Meridian",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Outreach"
       ],
@@ -15640,7 +15640,7 @@
       "org_name": "Outcapped",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Operations"
       ],
@@ -15670,7 +15670,7 @@
       "org_name": "Patronus AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -15830,7 +15830,7 @@
       "org_name": "Sage",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -16060,7 +16060,7 @@
       "org_name": "Survival and Flourishing",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -16152,7 +16152,7 @@
       "org_name": "The Midas Project",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Outreach",
@@ -16342,7 +16342,7 @@
       "org_name": "University of Chicago, Existential Risk Laboratory",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security"
       ],
@@ -16372,7 +16372,7 @@
       "org_name": "University of Connecticut, Reducing Information Ecosystem Threats Lab",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -16402,7 +16402,7 @@
       "org_name": "University of Stuttgart",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -16434,7 +16434,7 @@
       "org_name": "University of Texas at Austin, Department of Computer Science",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -16464,7 +16464,7 @@
       "org_name": "Various Potential PhD Supervisors",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -16588,7 +16588,7 @@
       "org_name": "Zurich AI Safety",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Outreach"
@@ -16879,7 +16879,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security",
         "Engineering"
@@ -17357,7 +17357,7 @@
       "org_name": "European Network For AI Safety",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy"
       ],
@@ -18183,7 +18183,7 @@
       "org_name": "Lens Academy",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Management",
@@ -18249,7 +18249,7 @@
       "org_name": "Menlo Ventures",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy"
       ],
@@ -18371,7 +18371,7 @@
       "org_name": "Partnership for Research into Sentient Machines",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Finance"
@@ -18404,7 +18404,7 @@
       "org_name": "Pulitzer Center",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other"
       ],
@@ -18633,7 +18633,7 @@
       "org_name": "The Deep View",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other"
       ],
@@ -18730,7 +18730,7 @@
       "org_name": "Tsinghua University, College of AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Other"
@@ -18898,7 +18898,7 @@
       "org_name": "US Government, Department of Energy",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Research"
@@ -18963,7 +18963,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -18994,7 +18994,7 @@
       "org_name": "Amodo Design",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -19024,7 +19024,7 @@
       "org_name": "Apple",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -19122,7 +19122,7 @@
       "org_name": "Deep Science Ventures",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Strategy",
         "Research"
@@ -19278,7 +19278,7 @@
       "org_name": "Gensyn",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -19340,7 +19340,7 @@
       "org_name": "Henry Luce Foundation",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -19370,7 +19370,7 @@
       "org_name": "HiddenLayer",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Operations"
@@ -19402,7 +19402,7 @@
       "org_name": "Institute of Peace and Conflict Studies",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Research"
@@ -19434,7 +19434,7 @@
       "org_name": "July AI",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security",
         "Other"
@@ -19499,7 +19499,7 @@
       "org_name": "MITRE",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering",
@@ -19533,7 +19533,7 @@
       "org_name": "National Bureau of Economic Research",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -19565,7 +19565,7 @@
       "org_name": "Openchip",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Information security"
@@ -19597,7 +19597,7 @@
       "org_name": "Partnership for Public Service",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Research",
@@ -19631,7 +19631,7 @@
       "org_name": "SandboxAQ",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Research"
@@ -19666,7 +19666,7 @@
       "org_name": "Singapore Institute of International Affairs",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -19696,7 +19696,7 @@
       "org_name": "Slow Boring",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Other",
         "Policy"
@@ -19728,7 +19728,7 @@
       "org_name": "SolarPower Europe",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Outreach"
@@ -19761,7 +19761,7 @@
       "org_name": "Tesla",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Information security"
@@ -19793,7 +19793,7 @@
       "org_name": "UK Government, GCHQ",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security"
       ],
@@ -19823,7 +19823,7 @@
       "org_name": "University of Chicago, Development Innovation Lab",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -19853,7 +19853,7 @@
       "org_name": "University of Texas at Austin, Center for Pandemic Decision Science",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -19883,7 +19883,7 @@
       "org_name": "US-China Business Council",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Operations"
@@ -19975,7 +19975,7 @@
       "org_name": "Yale University, Tobin Center for Economic Policy",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -20007,7 +20007,7 @@
       "org_name": "Apple",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -20101,7 +20101,7 @@
       "org_name": "Cornell University, Digital Life Initiative",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -20133,7 +20133,7 @@
       "org_name": "fp21",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -20224,7 +20224,7 @@
       "org_name": "George Mason University, Mercatus Center",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -20254,7 +20254,7 @@
       "org_name": "Leverhulme Trust",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research"
       ],
@@ -20284,7 +20284,7 @@
       "org_name": "Magic",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Information security",
         "Software engineering"
@@ -20317,7 +20317,7 @@
       "org_name": "Theorem",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Software engineering"
@@ -20349,7 +20349,7 @@
       "org_name": "Thirdlaw",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering"
       ],
@@ -20379,7 +20379,7 @@
       "org_name": "UK Government, 10 Downing Street",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -20412,7 +20412,7 @@
       "org_name": "US Government, Centers for Disease Control and Prevention",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -20444,7 +20444,7 @@
       "org_name": "US Government, Defense Advanced Research Projects Agency",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Research",
         "Policy"
@@ -20474,7 +20474,7 @@
       "org_name": "US Government, Executive Office of the President",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Policy"
@@ -20507,7 +20507,7 @@
       "org_name": "Various Fellowship Providers",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -20537,7 +20537,7 @@
       "org_name": "Various Tech Companies / Research Institutes",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Software engineering",
         "Research"
@@ -20570,7 +20570,7 @@
       "org_name": "Various US Federal Government Departments (AI related)",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy"
       ],
@@ -20601,7 +20601,7 @@
       "org_name": "Various Venture-backed Startups",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Operations",
         "Research",
@@ -20638,7 +20638,7 @@
       "org_name": "Yale University, Yale Law School",
       "agenda_id": null,
       "tag_source": "untagged",
-      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear in browse but cannot be matched until the org tag lands.",
+      "tag_rationale": "Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear in browse but cannot be matched until the org tag lands.",
       "skill_set": [
         "Policy",
         "Legal",

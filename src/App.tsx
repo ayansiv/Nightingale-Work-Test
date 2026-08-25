@@ -17,7 +17,7 @@ import type { Responses } from './lib/scoring';
 /**
  * No accounts, no server-side state. Responses live in component state and in the URL.
  * sessionStorage keeps them across an in-tab navigation so someone can read an axis page
- * mid-quiz and come back — session rather than local, since no individual responses are stored.
+ * mid-quiz and come back, session rather than local, since no individual responses are stored.
  */
 const STORAGE_KEY = 'coherence-responses-v3';
 
@@ -33,7 +33,7 @@ export function App() {
  * Every navigation lands at the top of the page.
  *
  * Without this the browser keeps the previous scroll offset, so finishing the quiz and pressing
- * "see results" drops you into the middle of the results page — which reads as a broken link
+ * "see results" drops you into the middle of the results page, which reads as a broken link
  * rather than as scroll restoration.
  *
  * useLayoutEffect, not useEffect: it runs before paint, so there is no visible jump.
@@ -74,7 +74,7 @@ function Shell() {
           <Route path="/quiz" element={<QuizRoute responses={responses} onChange={persist} />} />
           <Route path="/results" element={<ResultsRoute responses={responses} setResponses={setResponses} />} />
           {/* Path-form permalink. A query string inside a URL fragment survives most tools but
-              not all of them — chat clients and terminals sometimes truncate at the "?". A path
+              not all of them, chat clients and terminals sometimes truncate at the "?". A path
               segment always survives, so this is the form we hand out. */}
           <Route path="/results/:code" element={<ResultsRoute responses={responses} setResponses={setResponses} />} />
           <Route path="/roles" element={<Browse />} />
@@ -120,7 +120,7 @@ function ResultsRoute({ responses, setResponses }: {
         <h1 className="text-xl font-medium mb-2">That link didn't open</h1>
         <p className="text-ink-muted mb-4">
           The code in it isn't one this version can read. Shared results stop working when the
-          question set changes — the link is refused rather than decoded into the wrong answers.
+          question set changes, the link is refused rather than decoded into the wrong answers.
         </p>
         <NavLink to="/quiz" className="px-4 py-2 rounded bg-ink text-ground inline-block">
           Take the quiz

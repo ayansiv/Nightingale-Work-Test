@@ -5,7 +5,7 @@
  *
  *   1. ABSTAIN IS NOT UNSURE. "Unsure" is a considered midpoint of 0.0 that enters the mean.
  *      Abstain removes the item from scoring entirely. An axis leaves the metric only when
- *      EVERY item loading on it is abstained — not when one is.
+ *      EVERY item loading on it is abstained, not when one is.
  *
  *   2. UNKNOWN IS SYMMETRIC. A target with null on an axis drops that axis from its own distance
  *      calculation, exactly as a user abstention does. Never impute, never centre.
@@ -57,7 +57,7 @@ export type AxisScores = Record<AxisId, AxisScore>;
 /**
  * axis_k = Σ (L_qk · r_q) / Σ |L_qk|   over ANSWERED q where L_qk ≠ 0
  *
- * An axis with zero answered contributing items is ABSENT from the returned map — not present
+ * An axis with zero answered contributing items is ABSENT from the returned map, not present
  * with value 0. That distinction is the whole point; a caller that does `scores[axis] ?? 0`
  * has reintroduced the bug this design exists to prevent.
  */
@@ -145,7 +145,7 @@ export interface ConsistencyFlag {
  * exists only because questions outnumber axes.
  *
  * The comparison is on LOADING-ADJUSTED values, not raw responses. q18 (+0.9) and q19 (−0.7) are
- * consistent when someone strongly agrees with one and strongly disagrees with the other — that
+ * consistent when someone strongly agrees with one and strongly disagrees with the other, that
  * is the same position stated twice. Comparing raw responses would flag the consistent case and
  * miss the inconsistent one.
  */
@@ -206,7 +206,7 @@ export interface AxisContribution {
 export interface MatchResult {
   target: Target;
   score: number;
-  /** Axes that entered the calculation — both sides had a value. */
+  /** Axes that entered the calculation, both sides had a value. */
   axesUsed: number;
   /** Axes in scope that were dropped because one side had nothing. */
   axesDropped: number;
@@ -282,7 +282,7 @@ export function matchTarget(
   };
 }
 
-/** Returns two ranked lists. Never merged — spec §5. */
+/** Returns two ranked lists. Never merged, spec §5. */
 export function match(
   userScores: AxisScores,
   targets: Target[],

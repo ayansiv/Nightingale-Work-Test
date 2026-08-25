@@ -1,9 +1,9 @@
 /**
- * `npm run verify` — checks the Build Spec §18 acceptance criteria that can be checked without a
+ * `npm run verify`, checks the Build Spec §18 acceptance criteria that can be checked without a
  * browser, plus the calibration fixtures from data/config/calibration.json.
  *
  * This exists because several of the spec's criteria are the kind that silently stop holding.
- * "An axis with all contributing items abstained is excluded entirely — not imputed to zero" is
+ * "An axis with all contributing items abstained is excluded entirely, not imputed to zero" is
  * one `?? 0` away from being false, and nothing about the UI would look wrong.
  */
 
@@ -173,7 +173,7 @@ console.log('\nMATCHING (spec §18)');
 console.log('\nPERMALINK (spec §18)');
 {
   // Use a value that is VALID for each scale. Willingness has no 0.5 level, and the encoder
-  // correctly snaps an invalid value to the nearest one — feeding it 0.5 tests the snap, not the
+  // correctly snaps an invalid value to the nearest one, feeding it 0.5 tests the snap, not the
   // round trip.
   const valid = (q: Question): number =>
     q.response_type === 'willingness' ? 0.33 : 0.5;
@@ -293,7 +293,7 @@ console.log('\nREADINGS');
   check('every axis has a reading list', noReadings.length === 0, noReadings.join(', '));
 
   // Position in the object is NOT a mapping. Ordering the reading groups by it put 16 of 17
-  // axes' lists under the WRONG end of the bipolar bar — "steer toward good outcomes" sat under
+  // axes' lists under the WRONG end of the bipolar bar, "steer toward good outcomes" sat under
   // "avoid catastrophe", and the inside-government reading under "outside influence". The pole is
   // now declared per group and asserted here.
   const problems: string[] = [];
@@ -375,7 +375,7 @@ console.log('\nCULTURE LAYER (phase 5)');
     JSON.stringify({ used: ranked[0]?.axesUsed, dropped: ranked[0]?.axesDropped }));
 
   // A cross-agenda org has no primary agenda, so the house-view cross-term is undefined and must
-  // contribute nothing — while the org stays fully culture-matchable.
+  // contribute nothing, while the org stays fully culture-matchable.
   check('an org with no primary agenda takes no belief penalty but still ranks',
     ranked[0].beliefPenalty === 0 && ranked[0].cultureFit > 0,
     JSON.stringify({ penalty: ranked[0]?.beliefPenalty, fit: ranked[0]?.cultureFit }));
@@ -391,7 +391,7 @@ console.log('\nPERMALINK, CULTURE SEGMENT');
   const beliefOnly = encode(belief, questions);
 
   // A link shared before the culture instrument existed must still work and simply mean
-  // "no culture answers" — which is why culture rides in an appended segment rather than a
+  // "no culture answers", which is why culture rides in an appended segment rather than a
   // widened body.
   check('a belief-only link still decodes after the culture segment exists',
     Object.keys(decode(beliefOnly, questions)).length === questions.length);
@@ -412,7 +412,7 @@ console.log('\nPERMALINK, CULTURE SEGMENT');
 // ---------------------------------------------------------------------------------------------
 console.log('\nUI CONTRACTS');
 {
-  // <Caveat> throws on an unknown id by design — a caveat that silently vanishes is worse than
+  // <Caveat> throws on an unknown id by design, a caveat that silently vanishes is worse than
   // one never written. That makes every id in src/ a hard dependency worth checking here rather
   // than discovering as a white screen.
   const caveatsFile = readJson<{ caveats: { id: string; surfaces: string[] }[]; disclaimers: any }>(
@@ -433,7 +433,7 @@ console.log('\nUI CONTRACTS');
   // prose of the surfaces they apply to, because rendering the same block on six pages trained
   // readers to skip all of them. So this checks that the SUBSTANCE survived the rewrite: each
   // caveat declares a phrase that must still appear somewhere in src/. If a rewrite drops the
-  // idea, this fails — which is the thing worth protecting, not the component.
+  // idea, this fails, which is the thing worth protecting, not the component.
   const required: Record<string, string> = {
     'job-board-coverage-bias': 'not a signal',
     'lab-internal-funding': 'lab revenue',
@@ -456,7 +456,7 @@ console.log('\nUI CONTRACTS');
     undeclared.join(', '));
 
   // The app was renamed once and index.html kept the old <title> for a release, which is only
-  // visible in a browser tab — nothing else surfaces it. Tie the two together.
+  // visible in a browser tab, nothing else surfaces it. Tie the two together.
   const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const appName = (fs.readFileSync(path.join(ROOT, 'src/App.tsx'), 'utf8')
     .match(/tracking-tight">([^<]+)<\/span>/) ?? [])[1]?.trim();

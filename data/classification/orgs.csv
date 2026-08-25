@@ -18,17 +18,17 @@
 #             low    = inferred from thin evidence; treat as a prompt for owner review
 #
 # Coverage note: the top 100 orgs by posting count carry 76% of AI-relevant roles. The long tail
-# is deliberately left untagged rather than guessed — see the untagged handling in ingest-roles.ts.
+# is deliberately left untagged rather than guessed, see the untagged handling in ingest-roles.ts.
 #
 # insider_note: what someone already in the field knows about this organization that is not on
-#   its website — how selective it really is, what the work is actually like, who it suits, what
+#   its website, how selective it really is, what the work is actually like, who it suits, what
 #   a listing understates. This is the column that makes the difference between a newcomer and
 #   someone with context, and it is DELIBERATELY EMPTY.
 #
 #   We are not filling it. Guessing at non-public facts about named organizations would be
 #   fabrication dressed as insider knowledge, and it is exactly the kind of claim a reader would
 #   have no way to check. It has to come from someone who actually knows. See OWNER-DATA OD-13.
-#   Empty renders as nothing at all — no placeholder, no empty section.
+#   Empty renders as nothing at all, no placeholder, no empty section.
 org,primary_agenda_id,secondary_agenda_ids,maturity_tier,confidence,insider_note,note
 Anthropic,iterative_alignment_at_post_train_time,sparse_coding;control;model_specs_and_constitutions;ai_scheming_evals;character_training_and_persona_steering;safeguards_inference_time_auxiliaries;chain_of_thought_monitoring;various_redteams;model_values_model_preferences;pol_security_infosec;reverse_engineering,established,high,,"Frontier lab. Runs several agendas at once; single primary is a compression, per the spec §7 caveat on orgs as points."
 OpenAI,iterative_alignment_at_post_train_time,supervising_ais_improving_ais;capability_evals;weak_to_strong_generalization;chain_of_thought_monitoring;safeguards_inference_time_auxiliaries;various_redteams;pol_security_infosec;aligned_to_who;autonomy_evals,established,high,,"Frontier lab. Alignment, Safety Systems, Preparedness and Model Policy teams."
@@ -144,7 +144,7 @@ Scale AI,capability_evals,data_quality_for_alignment,established,medium,,Evaluat
 Faculty,various_redteams,capability_evals,established,low,,Applied AI consultancy; safety relevance is partial.
 Alignerr,data_quality_for_alignment,,new_entrant,low,,Data labelling for alignment.
 Foresight Institute,agent_foundations,pol_power_concentration,established,medium,,Grants and convening across neglected approaches.
-MATS Research,meta_talent,,established,high,,"Field-building. Fellows work across every agenda, so a primary tag would be misleading — see the field-building rule in ingest-roles.ts."
+MATS Research,meta_talent,,established,high,,"Field-building. Fellows work across every agenda, so a primary tag would be misleading, see the field-building rule in ingest-roles.ts."
 Constellation,meta_talent,,established,high,,Field-building / residency.
 Cambridge Boston Alignment Initiative,meta_talent,,established,high,,Field-building.
 BlueDot Impact,meta_talent,,established,high,,Field-building / courses.

@@ -82,7 +82,7 @@ export function Results({ responses }: { responses: Responses }) {
       {/* ---- why ---- */}
       <section className="mb-10 rule pt-6">
         <div className="flex items-baseline justify-between gap-4 mb-1 flex-wrap">
-          <h2 className="text-lg font-medium">Why — your position on each axis</h2>
+          <h2 className="text-lg font-medium">Why, your position on each axis</h2>
           {compared.length > 0 && (
             <button onClick={() => setCompareIds([])}
                     className="text-xs underline text-ink-muted hover:text-user">
@@ -109,7 +109,7 @@ export function Results({ responses }: { responses: Responses }) {
           <div key={scope} className="mb-6">
             <h3 className="text-2xs font-mono uppercase tracking-wider text-ink-faint mb-1">
               {scope} axes
-              {scope !== 'core' && <span className="normal-case tracking-normal"> — {scope} targets only</span>}
+              {scope !== 'core' && <span className="normal-case tracking-normal">, {scope} targets only</span>}
             </h3>
             <div className="divide-y divide-ground-line">
               {axes.filter((a) => a.scope === scope).map((a) =>
@@ -161,7 +161,7 @@ function SharePanel({ responses }: { responses: Responses }) {
     const code = encode(responses, questions);
     const base = typeof window === 'undefined'
       ? '' : `${window.location.origin}${window.location.pathname}`;
-    // Path form, not ?r= — a query string inside a fragment gets truncated by some chat clients
+    // Path form, not ?r=, a query string inside a fragment gets truncated by some chat clients
     // and terminals. A path segment survives everywhere.
     return `${base}#/results/${code}`;
   }, [responses]);
@@ -198,7 +198,7 @@ function SharePanel({ responses }: { responses: Responses }) {
         </button>
       </div>
       <p className="text-2xs text-ink-faint mt-2 max-w-prose">
-        Your answers are encoded in the link itself — nothing is stored anywhere. Skipped and
+        Your answers are encoded in the link itself, nothing is stored anywhere. Skipped and
         unsure stay distinct, so a shared result reproduces exactly.
       </p>
     </section>
@@ -212,7 +212,7 @@ function ConsistencySection({ flags }: { flags: ReturnType<typeof consistencyFla
         {flags.length === 1 ? 'One place' : `${flags.length} places`} where you said two things that pull against each other
       </h2>
       <p className="text-xs text-ink-muted mb-3 max-w-prose">
-        Not an error — both are averaged into your position. But the disagreement is where the
+        Not an error, both are averaged into your position. But the disagreement is where the
         interesting reading is.
       </p>
       <ul className="space-y-3">
@@ -262,7 +262,7 @@ function RankedList({ title, results, compareIds, onCompare, palette }: {
       <div>
         <h3 className="font-medium mb-2">{title}</h3>
         <p className="text-sm text-ink-muted">
-          Nothing to rank — you have no axis in common with any target here yet.
+          Nothing to rank, you have no axis in common with any target here yet.
         </p>
       </div>
     );
@@ -303,7 +303,7 @@ function RankedList({ title, results, compareIds, onCompare, palette }: {
                   </span>
                 </div>
 
-                {/* score bar — length relative to the top match, so the drop-off is visible */}
+                {/* score bar, length relative to the top match, so the drop-off is visible */}
                 <div className="h-1 bg-ground-sunk rounded-full overflow-hidden mt-1 mb-1">
                   <div className="h-full rounded-full"
                        style={{

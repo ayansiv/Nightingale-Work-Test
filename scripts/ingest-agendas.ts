@@ -67,7 +67,7 @@ const TARGET_CASE_MAP: Record<string, Agenda['target_case']> = {
 };
 
 /**
- * Lab rows are organizations, not agendas — the source files them under a "Labs (giant
+ * Lab rows are organizations, not agendas, the source files them under a "Labs (giant
  * companies)" section for editorial reasons. They become orgs downstream, not agendas, or the
  * data table would list Anthropic as a research agenda alongside sparse autoencoders.
  */

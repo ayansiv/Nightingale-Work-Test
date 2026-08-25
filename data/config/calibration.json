@@ -1,7 +1,7 @@
 {
   "$comment": [
     "Additional Context: 'Loadings are unvalidated. You can't test them without users, but you can",
-    "score people whose views you know — a few well-documented researchers — and check whether the",
+    "score people whose views you know, a few well-documented researchers, and check whether the",
     "axes land where you'd expect. Half an hour, and it catches sign errors and bad loadings before",
     "anyone else sees them.'",
     "",
@@ -11,7 +11,7 @@
     "     which placed Agent foundations at +0.10 (near-neutral on architecture) when it is the",
     "     paradigm rebuild agenda.",
     "  2. Debate deriving as internals-POSITIVE. Debate lists 'Superintelligence can fool human",
-    "     supervisors' among its assumptions — but it lists it as the problem debate ATTACKS, not",
+    "     supervisors' among its assumptions, but it lists it as the problem debate ATTACKS, not",
     "     as an argument that assurance requires interpretability. Fixed by making a family prior",
     "     authoritative on the axis that defines the family.",
     "",
@@ -26,7 +26,7 @@
         "patch_rebuild": 1,
         "internals": 1
       },
-      "why": "Substrate-independent theory aimed at architectures stable under self-reflection — the paradigm case of designing new systems rather than patching current ones."
+      "why": "Substrate-independent theory aimed at architectures stable under self-reflection, the paradigm case of designing new systems rather than patching current ones."
     },
     {
       "agenda": "Control",
@@ -108,14 +108,14 @@
   "respondent_expectations": {
     "$comment": [
       "Agenda sign expectations check the DERIVATION. They cannot catch a question whose loading is",
-      "inverted, because the question never enters that path — which is exactly how q20 and q21 shipped",
+      "inverted, because the question never enters that path, which is exactly how q20 and q21 shipped",
       "with their patch_rebuild loadings backwards, routing anyone who wanted formal guarantees away",
       "from Guaranteed-Safe AI.",
       "",
       "So: score a synthetic respondent with an obvious position and assert the agenda they should",
       "obviously match. This closes the loop from question text all the way to ranked output.",
       "",
-      "Expectations are about FAMILIES, not named agendas. The Theory family alone holds nine agendas that a formalist would be happy with, so asserting one particular name would fail for reasons that have nothing to do with correctness — the same overfitting the agenda fixtures avoid by asserting signs rather than values."
+      "Expectations are about FAMILIES, not named agendas. The Theory family alone holds nine agendas that a formalist would be happy with, so asserting one particular name would fail for reasons that have nothing to do with correctness, the same overfitting the agenda fixtures avoid by asserting signs rather than values."
     ],
     "cases": [
       {
@@ -138,7 +138,7 @@
       },
       {
         "id": "empiricist",
-        "why": "Wants to patch the models that exist, rejects formal guarantees, thinks behavioural testing can be sufficient. The mirror image of the formalist — if both pass, the patch_rebuild axis is wired the right way round.",
+        "why": "Wants to patch the models that exist, rejects formal guarantees, thinks behavioural testing can be sufficient. The mirror image of the formalist, if both pass, the patch_rebuild axis is wired the right way round.",
         "responses": {
           "q20": 1,
           "q21": -1,
@@ -155,7 +155,7 @@
       },
       {
         "id": "controller",
-        "why": "High on scheming, thinks a human-level schemer is containable but a superhuman one is not, works on the models we have. Should reach the control agenda by name — it is the only agenda built on exactly that combination.",
+        "why": "High on scheming, thinks a human-level schemer is containable but a superhuman one is not, works on the models we have. Should reach the control agenda by name, it is the only agenda built on exactly that combination.",
         "responses": {
           "q4": 1,
           "q6": 1,

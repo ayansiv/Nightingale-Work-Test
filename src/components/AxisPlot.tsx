@@ -3,7 +3,7 @@
  * on the same independent scales, "where the distance between them is the whole argument of the
  * product. Spend the visual boldness there."
  *
- * Horizontal bars, one per axis — NOT an x-y plane by default. The axes are independent and a 2D
+ * Horizontal bars, one per axis, NOT an x-y plane by default. The axes are independent and a 2D
  * projection loses that (spec §11.3). The x-y view is a separate, explicitly-labelled toggle.
  *
  * Coverage is drawn, not written: an axis resting on one answered item gets a visibly wider
@@ -60,7 +60,7 @@ export function AxisPlot({ axis, user, overlays = [], showQuestion = false, onPo
       <div className="relative">
         {/* the scale */}
         <div className="relative h-8 rounded bg-ground-sunk border border-ground-line">
-          {/* midpoint tick — labelled, so a marker sitting here is not confused with "no data" */}
+          {/* midpoint tick, labelled, so a marker sitting here is not confused with "no data" */}
           <div className="absolute inset-y-0 left-1/2 w-px bg-ground-line" aria-hidden />
 
           {/* coverage band behind the user marker */}
@@ -105,7 +105,7 @@ export function AxisPlot({ axis, user, overlays = [], showQuestion = false, onPo
           )}
         </div>
 
-        {/* poles double as reading-list entry points — LessWrong wiki-tag pattern: the label is a
+        {/* poles double as reading-list entry points, LessWrong wiki-tag pattern: the label is a
             navigational object, not decoration */}
         <div className="flex justify-between mt-1 text-2xs">
           <button
@@ -128,7 +128,7 @@ export function AxisPlot({ axis, user, overlays = [], showQuestion = false, onPo
   );
 }
 
-/** An axis the user has no value on. Rendered explicitly — never silently omitted, never centred. */
+/** An axis the user has no value on. Rendered explicitly, never silently omitted, never centred. */
 export function AxisPlotEmpty({ axis, reason }: { axis: Props['axis']; reason: string }) {
   return (
     <div className="py-3 opacity-60">

@@ -1,12 +1,12 @@
 /**
- * Agendas — what the field is working on, and how resourced each one is.
+ * Agendas, what the field is working on, and how resourced each one is.
  *
  * The methodology used to sit on every cell as an expandable "how this was arrived at". With 74
  * rows that is 74 copies of the same three sentences, which trains the reader to ignore all of
  * them. It now appears ONCE, at the foot of the table it applies to. Per-cell provenance survives
  * as the flag chip and the range, which are the parts that actually vary row to row.
  *
- * The two tables are close together on purpose — the previous version put a full screen of
+ * The two tables are close together on purpose, the previous version put a full screen of
  * caveats between them, so nobody scrolled far enough to learn that a second table existed.
  */
 
@@ -96,7 +96,7 @@ function TechnicalTable() {
             <tr>
               <SortHead k="name" label="Agenda" sort={sort} asc={asc} onSort={onSort} />
               <th scope="col" className="text-left font-medium text-2xs uppercase tracking-wider text-ink-faint pb-2 px-2">Target case</th>
-              <SortHead k="fte" label="FTE 2025" title="As published by the Shallow Review — a range, shown with its midpoint." sort={sort} asc={asc} onSort={onSort} />
+              <SortHead k="fte" label="FTE 2025" title="As published by the Shallow Review, a range, shown with its midpoint." sort={sort} asc={asc} onSort={onSort} />
               <SortHead k="share" label="Share of field" title="Percent of summed field effort. Robust to the disagreement about total field size." sort={sort} asc={asc} onSort={onSort} />
               <SortHead k="outputs" label="Outputs" title="Papers and posts linked to this agenda in 2025." sort={sort} asc={asc} onSort={onSort} />
               <SortHead k="orgs" label="Orgs" sort={sort} asc={asc} onSort={onSort} />
@@ -132,7 +132,7 @@ function TechnicalTable() {
                 <td className="py-2.5 px-2 tabular whitespace-nowrap">
                   {a.fte_share_of_field?.value != null
                     ? <span>{a.fte_share_of_field.value}%</span>
-                    : <span className="text-ink-faint text-2xs">—</span>}
+                    : <span className="text-ink-faint text-2xs">, </span>}
                 </td>
                 <td className="py-2.5 px-2 tabular">{a.outputs_count || <span className="text-ink-faint">0</span>}</td>
                 <td className="py-2.5 px-2 tabular">{a._orgs || <span className="text-ink-faint">0</span>}</td>
@@ -151,15 +151,15 @@ function TechnicalTable() {
         <p>
           <strong className="font-medium text-ink">FTE</strong> figures are the Shallow Review's own
           ranges, shown with our midpoint. Two independent counts of this field disagree by roughly
-          3× on the total — summing these ranges gives 1,100–3,200 people, while a separate
-          organizational headcount study finds 620–645 — because they count different populations.
+          3× on the total, summing these ranges gives 1,100–3,200 people, while a separate
+          organizational headcount study finds 620–645, because they count different populations.
           Neither has been rescaled. <strong className="font-medium text-ink">Share of field</strong> is
           each agenda's fraction of the summed total, which is unaffected by that disagreement and is
           the column to trust for comparisons. Sorted by it here.
         </p>
         <p>
           Philanthropic funding is not shown because the source names funders without amounts, and
-          grant databases in any case miss safety work paid for out of lab revenue — so a low funding
+          grant databases in any case miss safety work paid for out of lab revenue, so a low funding
           figure would not mean under-resourced.
         </p>
         <p>
@@ -193,7 +193,7 @@ function PolicyTable() {
       <h2 className="text-lg font-medium mb-1">Policy levers</h2>
       <p className="text-sm text-ink-muted mb-3 max-w-prose">
         Kept separate from the table above, because the inference inverts. On the technical side thin
-        resourcing suggests high marginal returns. Here, coalitions and timing compound — being alone
+        resourcing suggests high marginal returns. Here, coalitions and timing compound, being alone
         on an issue often means being ignored rather than being early.
       </p>
 
@@ -235,7 +235,7 @@ function PolicyTable() {
 
       <MethodNote>
         <p>
-          Every position on these is <Flag flag="placeholder" /> — assigned by hand rather than
+          Every position on these is <Flag flag="placeholder" />, assigned by hand rather than
           derived, because there is no policy equivalent of the stated-assumptions field the technical
           agendas come from. Each lever's page shows the reasoning behind its placement.
         </p>
@@ -260,7 +260,7 @@ function MetaTable() {
     <section id="field-building" className="rule pt-6 scroll-mt-4">
       <h2 className="text-lg font-medium mb-1">Field building</h2>
       <p className="text-sm text-ink-muted mb-3 max-w-prose">
-        Work that serves every agenda rather than picking one. Not ranked against your answers —
+        Work that serves every agenda rather than picking one. Not ranked against your answers ,
         running a fellowship programme doesn't commit you to a view about scheming, so scoring it
         would be inventing a signal.
       </p>

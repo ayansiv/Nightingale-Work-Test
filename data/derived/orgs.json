@@ -904,7 +904,7 @@
         "venue_access": null
       },
       "coordinate_sources": {},
-      "description": "Field-building. Fellows work across every agenda, so a primary tag would be misleading — see the field-building rule in ingest-roles.ts.",
+      "description": "Field-building. Fellows work across every agenda, so a primary tag would be misleading, see the field-building rule in ingest-roles.ts.",
       "homepage": "https://www.matsprogram.org/",
       "vacancies_page": "https://www.matsprogram.org/jobs/#job-descriptions",
       "logo": "https://80000hours.org/wp-content/uploads/2023/10/MATS.jpeg",

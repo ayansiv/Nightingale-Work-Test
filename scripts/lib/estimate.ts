@@ -78,8 +78,8 @@ export function parseFteRange(raw: string, sourceLabel: string): Estimate {
  * annual growth in the number of technical AI safety organizations, on a base of 645 FTEs
  * across 70 orgs. We apply the FTE figure, not the org figure.
  *
- * This is deliberately a FLAT rate applied to every agenda. We know that is wrong in detail —
- * interpretability and evals are visibly growing faster than agent foundations — but we have no
+ * This is deliberately a FLAT rate applied to every agenda. We know that is wrong in detail ,
+ * interpretability and evals are visibly growing faster than agent foundations, but we have no
  * per-agenda growth series, and inventing differential rates would dress up a guess as a
  * finding. A flat rate is wrong in a way the reader can see and correct; a hand-tuned per-agenda
  * rate is wrong in a way they cannot. Owner overrides land in data/classification/fte-overrides.csv.
@@ -103,7 +103,7 @@ export function projectFte(fte2025: Estimate): Estimate {
     method:
       `2025 baseline grown at ${(FIELD_FTE_GROWTH_RATE * 100).toFixed(0)}%, the field-wide annual FTE ` +
       'growth rate measured in AI Safety Field Growth Analysis 2025. Applied flat across all agendas ' +
-      'because no per-agenda growth series exists — the rank order of this column is more trustworthy ' +
+      'because no per-agenda growth series exists, the rank order of this column is more trustworthy ' +
       'than any individual cell.',
     source: 'AI Safety Field Growth Analysis 2025',
   };
@@ -113,6 +113,6 @@ export function placeholder(what: string, ownerItem: string): Estimate {
   return {
     value: null,
     flag: 'placeholder',
-    method: `${what} Awaiting owner input — see OWNER-DATA.md item ${ownerItem}. The app runs with this null; it renders as "not yet collected", never as zero.`,
+    method: `${what} Awaiting owner input, see OWNER-DATA.md item ${ownerItem}. The app runs with this null; it renders as "not yet collected", never as zero.`,
   };
 }

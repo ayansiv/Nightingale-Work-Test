@@ -2,7 +2,7 @@
   "$comment": [
     "Build Spec §6: 'Policy levers have no equivalent source. Owner assigns, flagged as assigned.'",
     "So every coordinate in this file carries kind:'assigned' and a `why`. None of it is derived,",
-    "and the product must render that distinction — a derived coordinate links to the agenda's own",
+    "and the product must render that distinction, a derived coordinate links to the agenda's own",
     "stated assumption; an assigned one links only to us.",
     "",
     "Lever set seeded from the 80,000 Hours US AI policy landscape (its enumerated policy tools:",
@@ -27,7 +27,7 @@
       "note": "Implements through spending, R&D funding, export controls, technical standards and rule-writing. Formally nonpartisan civil service; slow, opaque hiring; clearances are durable career capital.",
       "partisan_exposure": "low" },
     { "id": "congress", "name": "Congress", "inside_outside": 0.7,
-      "note": "Holds the formal levers — budget, binding law, oversight. Staffers almost always work for one party, and that affiliation constrains later moves.",
+      "note": "Holds the formal levers, budget, binding law, oversight. Staffers almost always work for one party, and that affiliation constrains later moves.",
       "partisan_exposure": "high" },
     { "id": "state", "name": "State governments", "inside_outside": 0.6,
       "note": "Faster, fewer veto points, precedent-setting (the 'California effect'). More accessible entry, quicker responsibility.",
@@ -44,7 +44,7 @@
       "theory_of_change": "Credible third-party measurement → shared factual basis for regulation → rules that bind on capability rather than on vibes → earlier warning before a dangerous capability is deployed.",
       "primary_institutions": ["agency", "eop"],
       "coordinates": { "restraint_capacity": -0.8, "inside_outside": 0.7, "constraint": 0.4, "containment": 0.5, "venue_access": -0.4 },
-      "why": "Capacity-building rather than restraint by definition — it gives the state an instrument, it does not tell companies what they may do. Sits inside government because the measurement only counts if the measurer has standing. Nonpartisan enough that a career civil servant can hold it across administrations.",
+      "why": "Capacity-building rather than restraint by definition, it gives the state an instrument, it does not tell companies what they may do. Sits inside government because the measurement only counts if the measurer has standing. Nonpartisan enough that a career civil servant can hold it across administrations.",
       "example_bodies": ["NIST", "CAISI", "UK AI Security Institute", "EU AI Office"]
     },
     {
@@ -54,17 +54,17 @@
       "theory_of_change": "Binding disclosure and pre-deployment obligations → internal safety work stops being discretionary → a floor under the race that does not depend on any one company's goodwill.",
       "primary_institutions": ["state", "congress"],
       "coordinates": { "restraint_capacity": 0.9, "inside_outside": 0.4, "labs": -0.4, "constraint": -0.6, "venue_access": 0.3 },
-      "why": "The paradigm restraint lever. Presumes the binding constraint is will rather than knowledge — we largely know what we would want disclosed. Implies a low view of voluntary lab commitments, or the mandate would be redundant.",
+      "why": "The paradigm restraint lever. Presumes the binding constraint is will rather than knowledge, we largely know what we would want disclosed. Implies a low view of voluntary lab commitments, or the mandate would be redundant.",
       "example_bodies": ["California SB 53", "New York RAISE Act", "EU AI Act GPAI chapter"]
     },
     {
       "id": "pol_compute_governance",
       "name": "Compute governance and export controls",
-      "one_sentence_summary": "Use the physical chokepoint — chips and datacentres — as the place where policy can actually bite.",
+      "one_sentence_summary": "Use the physical chokepoint, chips and datacentres, as the place where policy can actually bite.",
       "theory_of_change": "Compute is countable, excludable and concentrated → tracking and controlling it is the one enforcement mechanism that does not require inspecting model internals → leverage over who gets to train frontier systems at all.",
       "primary_institutions": ["agency", "eop"],
       "coordinates": { "restraint_capacity": 0.5, "inside_outside": 0.8, "domestic_intl": -0.7, "timelines": 0.3, "venue_access": -0.3 },
-      "why": "Strongly interstate: export controls are an instrument of competition between states, and the lever only makes sense if you think that competition is where the risk sits. Requires being inside — the data and the authority are both government-held.",
+      "why": "Strongly interstate: export controls are an instrument of competition between states, and the lever only makes sense if you think that competition is where the risk sits. Requires being inside, the data and the authority are both government-held.",
       "example_bodies": ["Bureau of Industry and Security", "NSC", "IAPS compute policy work"]
     },
     {
@@ -74,7 +74,7 @@
       "theory_of_change": "Clear liability → priced risk → an underwriting market that demands evidence of safety practices → private enforcement that scales without a regulator inspecting every model.",
       "primary_institutions": ["congress", "state"],
       "coordinates": { "restraint_capacity": 0.6, "inside_outside": 0.1, "constraint": -0.5, "accident_deliberate": 0.2, "venue_access": 0.0 },
-      "why": "Constrains companies, but indirectly — through price rather than prohibition, so it sits short of the frontier-regulation pole. Venue-neutral: liability has constituencies in both parties, which is unusual among these levers and is the reason it survives changes of administration.",
+      "why": "Constrains companies, but indirectly, through price rather than prohibition, so it sits short of the frontier-regulation pole. Venue-neutral: liability has constituencies in both parties, which is unusual among these levers and is the reason it survives changes of administration.",
       "example_bodies": ["RAND liability work", "state tort reform", "specialty insurers"]
     },
     {
@@ -104,7 +104,7 @@
       "theory_of_change": "Security requirements proportionate to capability → frontier weights are not trivially stealable by state actors → the safety properties a developer builds in survive contact with the world.",
       "primary_institutions": ["agency", "eop"],
       "coordinates": { "restraint_capacity": -0.3, "inside_outside": 0.5, "containment": 0.4, "domestic_intl": -0.5, "accident_deliberate": -0.4, "venue_access": -0.7 },
-      "why": "Mostly capacity — standards and clearances rather than prohibitions. Strongly deliberate-harm: the threat model is theft and misuse by an actor who knows exactly what they want. The least partisan lever in the set, which is why the job board shows a large infosec bloc.",
+      "why": "Mostly capacity, standards and clearances rather than prohibitions. Strongly deliberate-harm: the threat model is theft and misuse by an actor who knows exactly what they want. The least partisan lever in the set, which is why the job board shows a large infosec bloc.",
       "example_bodies": ["RAND securing weights work", "NSA/CISA", "SL5 Task Force", "lab security teams"]
     },
     {
@@ -121,7 +121,7 @@
       "id": "pol_power_concentration",
       "name": "Checks on power concentration",
       "one_sentence_summary": "Keep advanced AI from becoming the instrument by which a small group stops needing anyone's consent.",
-      "theory_of_change": "Structural safeguards — on military and intelligence deployment, on chains of command, on who can direct systems at scale → no single actor acquires durable, unaccountable capability → the ordinary mechanisms of correction keep working.",
+      "theory_of_change": "Structural safeguards, on military and intelligence deployment, on chains of command, on who can direct systems at scale → no single actor acquires durable, unaccountable capability → the ordinary mechanisms of correction keep working.",
       "primary_institutions": ["congress", "eop", "thinktank"],
       "coordinates": { "restraint_capacity": 0.5, "inside_outside": 0.2, "domestic_intl": 0.9, "accident_deliberate": -0.7, "futures": 0.6, "venue_access": 0.4 },
       "why": "The domestic-concentration pole in lever form. Scores high on futures because the goal is not survival but retained influence over what happens next. Higher venue_access than its neighbours: this work is hard to do without taking positions that read as partisan.",
@@ -144,7 +144,7 @@
       "theory_of_change": "Mandatory reporting and a standing response capability → failures become visible and comparable → policy adjusts on evidence rather than on the news cycle, and the state can act inside the window that matters.",
       "primary_institutions": ["agency", "eop"],
       "coordinates": { "restraint_capacity": -0.2, "inside_outside": 0.7, "containment": 0.6, "constraint": 0.2, "venue_access": -0.6 },
-      "why": "Presumes containment is feasible — the whole lever is premised on catching something and acting in time. Mixed on restraint: reporting mandates constrain, response capability builds.",
+      "why": "Presumes containment is feasible, the whole lever is premised on catching something and acting in time. Mixed on restraint: reporting mandates constrain, response capability builds.",
       "example_bodies": ["CISA", "agency incident regimes", "AI Safety Institute network"]
     },
     {

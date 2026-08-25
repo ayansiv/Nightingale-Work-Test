@@ -1,5 +1,5 @@
 {
-  "$comment": "Spec §2. Adding or removing an axis must require no code change. `weight` is owner-supplied; the values below are PLACEHOLDER defaults — see OWNER-DATA.md item OD-01.",
+  "$comment": "Spec §2. Adding or removing an axis must require no code change. `weight` is owner-supplied; the values below are PLACEHOLDER defaults, see OWNER-DATA.md item OD-01.",
   "weight_provenance": "placeholder",
   "axes": [
     { "id": "timelines",           "label": "Timelines",                  "low_pole_label": "later",                      "high_pole_label": "sooner",                     "scope": "core",      "weight": 1.0,

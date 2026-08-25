@@ -1,6 +1,6 @@
 {
   "$comment": [
-    "Phase 5. A SECOND axis space, composed sequentially with the belief axes — not added to them.",
+    "Phase 5. A SECOND axis space, composed sequentially with the belief axes, not added to them.",
     "",
     "  beliefs (17 axes)  ->  which agendas and policy levers are worth your time",
     "  culture (9 axes)   ->  where you would do that work well",
@@ -10,7 +10,7 @@
     "",
     "POLICY, NOT A GAP: organizations do not get belief coordinates. Not now, not later. Beliefs",
     "belong to agendas and to individuals; culture belongs to organizations. Where an org's belief",
-    "position is genuinely needed — only the house-view cross-term in the ranking — its primary",
+    "position is genuinely needed, only the house-view cross-term in the ranking, its primary",
     "agenda's coordinates stand in, which is the honest claim: an org's belief position is inherited",
     "from the work it does. verify asserts no org carries a non-null belief coordinate, so a later",
     "pass cannot 'fix' this by populating them.",
@@ -34,7 +34,7 @@
     "$comment": [
       "Sequential composition. Beliefs decide WHAT; culture reranks WHERE, within the role set the",
       "beliefs already produced. Culture never adds a role, never removes one, and never reorders",
-      "agendas — a joint metric would let strong culture fit pull someone toward an agenda they",
+      "agendas, a joint metric would let strong culture fit pull someone toward an agenda they",
       "think is doomed, which is backwards.",
       "",
       "The one legitimate cross-term is `kappa`. Joining an org with a strong shared position is a",

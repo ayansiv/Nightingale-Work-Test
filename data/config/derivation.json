@@ -3,7 +3,7 @@
     "Spec §6: 'Agenda coordinates are derived, not invented.' This file IS the derivation.",
     "",
     "The ingest spike (see docs/INGEST-SPIKE.md) found that the Shallow Review 2025 pipeline",
-    "publishes a machine-readable `orthodox_problems` field on 59/79 agendas — this is the",
+    "publishes a machine-readable `orthodox_problems` field on 59/79 agendas, this is the",
     "'stated assumptions' field §6 depends on, and it draws from a CLOSED VOCABULARY of only",
     "12 canonical problems (Yudkowsky's AGI Ruin list). That collapses the §6 workload from",
     "62 agendas x 17 axes = 1054 hand judgements down to 12 problems x 17 axes, plus 8 family",
@@ -14,7 +14,7 @@
     "Precedence when composing an agenda coordinate (see scripts/lib/derive.ts):",
     "  family prior  ->  target_case  ->  broad_approach  ->  orthodox_problems (strongest)",
     "Contributions are combined as a weighted mean, then clamped to [-1, 1]. An axis that",
-    "receives NO contribution stays null. Null is a first-class value (spec §7) — never impute."
+    "receives NO contribution stays null. Null is a first-class value (spec §7), never impute."
   ],
 
   "orthodox_problems": {
@@ -26,7 +26,7 @@
     },
     "Corrigibility is anti-natural": {
       "loadings": { "containment": -0.6, "patch_rebuild": 0.5, "p_mis": 0.4 },
-      "why": "If shutdown-acceptance cuts against the grain of competent optimization, it cannot be bolted onto a system after the fact — which is an argument both against containment and for redesign."
+      "why": "If shutdown-acceptance cuts against the grain of competent optimization, it cannot be bolted onto a system after the fact, which is an argument both against containment and for redesign."
     },
     "Goals misgeneralize out of distribution": {
       "loadings": { "p_mis": 0.7, "internals": 0.3, "p_scheme": -0.1 },
@@ -38,7 +38,7 @@
     },
     "Superintelligence can fool human supervisors": {
       "loadings": { "internals": 0.6, "p_scheme": 0.6, "containment": -0.4 },
-      "why": "This is the direct argument that behavioural testing is not assurance — the strongest single derivation available for the internals axis."
+      "why": "This is the direct argument that behavioural testing is not assurance, the strongest single derivation available for the internals axis."
     },
     "Superintelligence can hack software supervisors": {
       "loadings": { "automation": -0.5, "containment": -0.5, "p_scheme": 0.3 },
@@ -50,7 +50,7 @@
     },
     "Humanlike minds/goals are not necessarily safe": {
       "loadings": { "p_mis": 0.4, "patch_rebuild": 0.3 },
-      "why": "Undercuts the 'train it to be a decent person' family of approaches — human-likeness is not a safety property."
+      "why": "Undercuts the 'train it to be a decent person' family of approaches, human-likeness is not a safety property."
     },
     "Humans cannot be first-class parties to a superintelligent value handshake": {
       "loadings": { "futures": 0.5, "domestic_intl": 0.2 },
@@ -62,7 +62,7 @@
     },
     "Fair, sane pivotal processes": {
       "loadings": { "constraint": -0.5, "futures": 0.3, "domestic_intl": -0.2 },
-      "why": "Shorthand in the source for 'fair, sane pivotal processes are unavailable' — a claim that the coordination route is closed, so will rather than knowledge is binding."
+      "why": "Shorthand in the source for 'fair, sane pivotal processes are unavailable', a claim that the coordination route is closed, so will rather than knowledge is binding."
     },
     "Pivotal processes require dangerous capabilities": {
       "loadings": { "takeoff": 0.4, "accident_deliberate": -0.3 },
@@ -71,12 +71,12 @@
   },
 
   "families": {
-    "$comment": "Spec §6: 'Score at the family level first, let agendas inherit, then override only where an agenda is atypical.' Keys are the `section` values in the Shallow Review agendas export — all 8 are present and exhaustive.",
+    "$comment": "Spec §6: 'Score at the family level first, let agendas inherit, then override only where an agenda is atypical.' Keys are the `section` values in the Shallow Review agendas export, all 8 are present and exhaustive.",
 
     "Black-box safety (understand and control current model behaviour)": {
       "authoritative": ["internals"],
       "loadings": { "internals": -0.6, "patch_rebuild": -0.7, "labs": 0.3, "timelines": 0.3 },
-      "why": "Defined by the source as shaping behaviour through input-output optimization 'without requiring deep understanding of internal mechanisms' — the low pole of internals by definition, and a commitment to working on the systems that exist."
+      "why": "Defined by the source as shaping behaviour through input-output optimization 'without requiring deep understanding of internal mechanisms', the low pole of internals by definition, and a commitment to working on the systems that exist."
     },
     "White-box safety (i.e. Interpretability)": {
       "authoritative": ["internals"],
@@ -106,7 +106,7 @@
     "Multi-agent first": {
       "authoritative": [],
       "loadings": { "accident_deliberate": -0.3, "domestic_intl": 0.2, "futures": 0.4 },
-      "why": "Locates risk in interaction between many actors and systems rather than in a single system's goals — closer to structural and power-distribution failure than to a lone misgeneralizing agent."
+      "why": "Locates risk in interaction between many actors and systems rather than in a single system's goals, closer to structural and power-distribution failure than to a lone misgeneralizing agent."
     },
     "Labs (giant companies)": {
       "authoritative": ["labs"],
@@ -120,16 +120,16 @@
     "worst-case":   { "loadings": { "p_mis": 0.5, "p_scheme": 0.5, "containment": -0.3 }, "why": "Designed to hold up against a system that is misaligned and actively adversarial." },
     "pessimistic":  { "loadings": { "p_mis": 0.3, "p_scheme": 0.2 }, "why": "Assumes things go badly but not adversarially." },
     "average":      { "loadings": { "p_mis": -0.2, "p_scheme": -0.2, "containment": 0.2 }, "why": "Targets the modal world, which presumes failures are the ordinary kind and are catchable." },
-    "mixed":        { "loadings": {}, "why": "No signal — the source declines to commit." },
-    "varies":       { "loadings": {}, "why": "No signal — the source declines to commit." }
+    "mixed":        { "loadings": {}, "why": "No signal, the source declines to commit." },
+    "varies":       { "loadings": {}, "why": "No signal, the source declines to commit." }
   },
 
   "broad_approach": {
-    "$comment": "Maps `broad_approach_text`. Values in the source are compound ('engineering / cognitive'), so the parser splits on '/' and averages the matched components. 'behavioural' and 'behavioral' both occur — normalize spelling before lookup.",
+    "$comment": "Maps `broad_approach_text`. Values in the source are compound ('engineering / cognitive'), so the parser splits on '/' and averages the matched components. 'behavioural' and 'behavioral' both occur, normalize spelling before lookup.",
     "behavioral":       { "loadings": { "internals": -0.3 }, "why": "Studies input-output behaviour. Weak pull: the source's behaviourist/cognitivist split is about whether the agenda models the system as having internal cognition, which is upstream of, but not the same as, our internals axis (does ASSURANCE require opening the model up). Treated as a proxy, not a reading." },
-    "behaviorist science": { "loadings": { "internals": -0.3 }, "why": "See `behavioral` — same proxy, same discount." },
+    "behaviorist science": { "loadings": { "internals": -0.3 }, "why": "See `behavioral`, same proxy, same discount." },
     "cognitive":        { "loadings": { "internals": 0.3 }, "why": "Treats the system as having internal cognition worth modelling. Weak pull, for the reason given under `behavioral`: the source labels Debate 'cognitive' though debate never opens the weights, so this field over-reads if taken at full strength." },
-    "cognitivist science": { "loadings": { "internals": 0.3 }, "why": "See `cognitive` — same proxy, same discount." },
+    "cognitivist science": { "loadings": { "internals": 0.3 }, "why": "See `cognitive`, same proxy, same discount." },
     "engineering":      { "loadings": { "patch_rebuild": -0.2 }, "why": "Builds artefacts rather than characterizing them; weakly favours working with what exists." },
     "maths / philosophy": { "loadings": { "patch_rebuild": 0.5, "timelines": -0.2 }, "why": "Foundational work aimed at systems not yet built." },
     "varies":           { "loadings": {}, "why": "No signal." }
@@ -137,7 +137,7 @@
 
   "composition": {
     "weights": { "family": 1.0, "family_authoritative": 4.0, "target_case": 1.2, "broad_approach": 1.0, "orthodox_problem": 1.5 },
-    "$comment_weights": "Orthodox problems outweigh family priors because they are what the agenda's own proponents wrote down, which is the whole point of §6. target_case slightly outweighs family because it is stated per-agenda rather than inherited. EXCEPTION: on a family's `authoritative` axes the family prior carries `family_authoritative` weight instead. Calibration found the reason — an agenda that lists 'Superintelligence can fool human supervisors' is often naming the problem its method ATTACKS, not asserting that assurance therefore requires interpretability. Debate cites it and is squarely behavioural. Without this exception the derivation flipped Debate to internals-positive. The family prior still only outweighs, never overrides: magnitude stays responsive to the assumptions.",
+    "$comment_weights": "Orthodox problems outweigh family priors because they are what the agenda's own proponents wrote down, which is the whole point of §6. target_case slightly outweighs family because it is stated per-agenda rather than inherited. EXCEPTION: on a family's `authoritative` axes the family prior carries `family_authoritative` weight instead. Calibration found the reason, an agenda that lists 'Superintelligence can fool human supervisors' is often naming the problem its method ATTACKS, not asserting that assurance therefore requires interpretability. Debate cites it and is squarely behavioural. Without this exception the derivation flipped Debate to internals-positive. The family prior still only outweighs, never overrides: magnitude stays responsive to the assumptions.",
     "clamp": [-1, 1],
     "min_contributions_for_value": 1,
     "$comment_null": "An axis with zero contributions stays null and drops out of that agenda's distance calculation, symmetrically with a user abstention (spec §7)."
@@ -146,6 +146,6 @@
   "not_derivable": {
     "$comment": "Axes no Shallow Review field speaks to. These stay null on every technical agenda unless the owner assigns them, and the UI must show them as unknown rather than centred. This list is the single largest driver of OWNER-DATA item OD-03.",
     "axes": ["patienthood", "inside_outside", "restraint_capacity", "venue_access"],
-    "note": "The three policy axes being null on technical agendas is CORRECT — domain gating (spec §5) means technical targets are never scored on them. `patienthood` is the real gap: it is a core-scope axis, so it enters every match, and nothing in the source speaks to it."
+    "note": "The three policy axes being null on technical agendas is CORRECT, domain gating (spec §5) means technical targets are never scored on them. `patienthood` is the real gap: it is a core-scope axis, so it enters every match, and nothing in the source speaks to it."
   }
 }

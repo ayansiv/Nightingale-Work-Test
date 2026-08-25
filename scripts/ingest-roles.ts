@@ -143,7 +143,7 @@ const splitList = (s: string) => (s ?? '').split(',').map((x) => x.trim()).filte
  * 80k's location field is a comma-separated list whose entries may THEMSELVES contain commas,
  * quoted: '"Washington, DC metro area.USA",London.UK'.
  *
- * Splitting on every comma shredded those into halves — "Washington" and "DC metro area.USA"
+ * Splitting on every comma shredded those into halves, "Washington" and "DC metro area.USA"
  * became separate places, as did "New York" and "NY.USA", which is why the filter listed each
  * city twice. Split only on commas outside quotes.
  */
@@ -179,7 +179,7 @@ const stats = {
   manual: 0,
   // The metric that actually matters. Falling through at a single-agenda org is harmless: the
   // org's primary IS the only possible answer, so inheritance loses nothing. Falling through at
-  // a multi-agenda org is a real loss of information — that is where the tag gets weaker.
+  // a multi-agenda org is a real loss of information, that is where the tag gets weaker.
   fellThroughSingleCandidate: 0, fellThroughMultiCandidate: 0,
   inheritedSingleCandidate: 0, inheritedMultiCandidate: 0,
 };
@@ -204,7 +204,7 @@ for (const v of vacancies) {
 
   // "Open to any agenda" is now a claim about the ROLE, not about the employer. A cohort
   // programme really does place you wherever your mentor works. An operations manager at the
-  // same organization does not — that is an ordinary job, and calling it agenda-neutral hid 71
+  // same organization does not, that is an ordinary job, and calling it agenda-neutral hid 71
   // real jobs behind a non-answer while diluting the label for the ~10 where it is true.
   const isCohortProgramme = ['Fellowship', 'Internship', 'Course'].includes(v['!Position']?.trim() ?? '');
 
@@ -271,7 +271,7 @@ for (const v of vacancies) {
   } else {
     stats.untagged++;
     rationale =
-      'Organization not yet tagged to an agenda. Left untagged rather than guessed — it will appear ' +
+      'Organization not yet tagged to an agenda. Left untagged rather than guessed, it will appear ' +
       'in browse but cannot be matched until the org tag lands.';
   }
 
@@ -314,7 +314,7 @@ for (const r of roles) {
     primary_agenda_id: tag?.primary_agenda_id || null,
     secondary_agenda_ids: tag?.secondaries ?? [],
     maturity_tier: (tag?.maturity_tier as Org['maturity_tier']) || 'unknown',
-    // Spec §7: orgs get positions from revealed evidence. We do not have those yet — an org's
+    // Spec §7: orgs get positions from revealed evidence. We do not have those yet, an org's
     // position is a separate judgement from which agenda it works on. Null, not centred.
     coordinates: Object.fromEntries(
       readJson<{ axes: { id: string }[] }>('data/config/axes.json').axes.map((a) => [a.id, null]),
@@ -330,7 +330,7 @@ for (const r of roles) {
 }
 const orgs = [...orgById.values()].sort((a, b) => b.postings_count - a.postings_count);
 
-// postings_count back onto agendas — reported separately, NEVER summed into a composite (§13.1)
+// postings_count back onto agendas, reported separately, NEVER summed into a composite (§13.1)
 const postingsByAgenda = new Map<string, number>();
 for (const r of roles) if (r.agenda_id) {
   postingsByAgenda.set(r.agenda_id, (postingsByAgenda.get(r.agenda_id) ?? 0) + 1);
@@ -360,7 +360,7 @@ console.log(`classifier attempts : ${stats.classifyAttempted} research/policy ro
 console.log(`  -> resolved       : ${stats.classified} (${pct(stats.classified, stats.classifyAttempted)})`);
 console.log(`  -> fell through   : ${stats.classifyFellThrough} (${pct(stats.classifyFellThrough, stats.classifyAttempted)}), of which ${stats.ambiguous} ambiguous`);
 console.log('');
-console.log('TAG STRENGTH — these are three different claims and the UI must not merge them:');
+console.log('TAG STRENGTH, these are three different claims and the UI must not merge them:');
 console.log(`  strong  (role content)      : ${stats.classified + stats.manual}  "this role is about X", from a phrase in its own text`);
 console.log(`  by design (org proxy)       : ${stats.inherited - stats.fellThroughSingleCandidate - stats.fellThroughMultiCandidate}  "this role is at an org whose primary work is X"`);
 console.log(`                                 spec §10.3 mandates this for non-research roles, and it is load-bearing`);
@@ -370,7 +370,7 @@ console.log(`  untagged                   : ${stats.untagged}  org not yet tagge
 console.log(`  cross-agenda               : ${stats.crossAgenda}  field-building; shown under every agenda by design`);
 console.log('');
 console.log(`The review queue is ${pct(stats.fellThroughMultiCandidate, stats.aiRelevant)} of AI roles. That is the honest cost of`);
-console.log('classifying by rule table instead of by model, and it is a finite, enumerable list —');
+console.log('classifying by rule table instead of by model, and it is a finite, enumerable list, ');
 console.log('written to data/derived/review-queue.json for the owner to work through.');
 
 fs.writeFileSync(path.join(ROOT, 'data/derived/review-queue.json'), JSON.stringify({
