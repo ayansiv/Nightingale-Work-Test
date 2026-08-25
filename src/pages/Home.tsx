@@ -67,8 +67,7 @@ export function Home() {
           What you believe about AI risk implies what you should work on
         </h1>
         <p className="text-lg text-ink-muted leading-relaxed max-w-prose">
-          Your worldview informs which problems are worth your time. Below is every axis the field
-          disagrees about, both ends, with the argument for each side linked.
+          Your worldview informs which problems are worth your time.
         </p>
 
         <div className="flex flex-wrap gap-3 mt-6">

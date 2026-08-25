@@ -310,6 +310,12 @@ console.log('\nREADINGS');
         problems.push(`${axid}.${k}: label "${groups[k].pole_label}" != axis "${want}"`);
       }
       if ((groups[k].sources ?? []).length < 2) problems.push(`${axid}.${k}: fewer than 2 sources`);
+      // Every reading on the home page is a link. A source with no URL renders as dead text,
+      // which is the one thing a reading list must not do. The UI keeps a text fallback so a
+      // missing URL degrades rather than crashes, and this makes sure that path is never taken.
+      for (const src of groups[k].sources ?? []) {
+        if (!src.url) problems.push(`${axid}.${k}: "${String(src.title).slice(0, 40)}" has no url`);
+      }
     }
   }
   check('each axis has two correctly-labelled poles with sources on both',
