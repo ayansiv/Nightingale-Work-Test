@@ -20,33 +20,156 @@
     "the derivation to our guesses, which is the failure mode this file exists to prevent."
   ],
   "agenda_sign_expectations": [
-    { "agenda": "Agent foundations", "expect": { "patch_rebuild": 1, "internals": 1 },
-      "why": "Substrate-independent theory aimed at architectures stable under self-reflection — the paradigm case of designing new systems rather than patching current ones." },
-    { "agenda": "Control", "expect": { "patch_rebuild": -1, "internals": -1, "p_scheme": 1 },
-      "why": "Assumes the model is adversarial and builds protocols around the systems that exist, without needing to understand them internally." },
-    { "agenda": "Guaranteed-Safe AI", "expect": { "patch_rebuild": 1 },
-      "why": "The name is the position: guarantees come from construction." },
-    { "agenda": "Sparse Coding", "expect": { "internals": 1 },
-      "why": "Interpretability method. If this is not internals-positive the axis is broken." },
-    { "agenda": "Pragmatic interpretability", "expect": { "internals": 1 },
-      "why": "As above." },
-    { "agenda": "Debate", "expect": { "internals": -1, "automation": 1 },
-      "why": "Scalable oversight using AI to check AI. Never opens the weights, so it is behavioural on the assurance question however 'cognitive' the source labels it." },
-    { "agenda": "Capability evals", "expect": { "internals": -1, "patch_rebuild": -1 },
-      "why": "Measures what deployed systems can do. Behavioural by construction, and about current systems." },
-    { "agenda": "Asymptotic guarantees", "expect": { "patch_rebuild": 1 },
-      "why": "Theory family aimed at systems not yet built." }
+    {
+      "agenda": "Agent foundations",
+      "expect": {
+        "patch_rebuild": 1,
+        "internals": 1
+      },
+      "why": "Substrate-independent theory aimed at architectures stable under self-reflection — the paradigm case of designing new systems rather than patching current ones."
+    },
+    {
+      "agenda": "Control",
+      "expect": {
+        "patch_rebuild": -1,
+        "internals": -1,
+        "p_scheme": 1
+      },
+      "why": "Assumes the model is adversarial and builds protocols around the systems that exist, without needing to understand them internally."
+    },
+    {
+      "agenda": "Guaranteed-Safe AI",
+      "expect": {
+        "patch_rebuild": 1
+      },
+      "why": "The name is the position: guarantees come from construction."
+    },
+    {
+      "agenda": "Sparse Coding",
+      "expect": {
+        "internals": 1
+      },
+      "why": "Interpretability method. If this is not internals-positive the axis is broken."
+    },
+    {
+      "agenda": "Pragmatic interpretability",
+      "expect": {
+        "internals": 1
+      },
+      "why": "As above."
+    },
+    {
+      "agenda": "Debate",
+      "expect": {
+        "internals": -1,
+        "automation": 1
+      },
+      "why": "Scalable oversight using AI to check AI. Never opens the weights, so it is behavioural on the assurance question however 'cognitive' the source labels it."
+    },
+    {
+      "agenda": "Capability evals",
+      "expect": {
+        "internals": -1,
+        "patch_rebuild": -1
+      },
+      "why": "Measures what deployed systems can do. Behavioural by construction, and about current systems."
+    },
+    {
+      "agenda": "Asymptotic guarantees",
+      "expect": {
+        "patch_rebuild": 1
+      },
+      "why": "Theory family aimed at systems not yet built."
+    }
   ],
   "null_expectations": {
     "$comment": "Axes no Shallow Review field speaks to must stay null on every technical agenda. If any of these acquires a value, something started imputing.",
-    "must_be_null_on_all_technical_agendas": ["inside_outside", "restraint_capacity", "venue_access", "patienthood"]
+    "must_be_null_on_all_technical_agendas": [
+      "inside_outside",
+      "restraint_capacity",
+      "venue_access",
+      "patienthood"
+    ]
   },
   "scoring_invariants": [
-    { "id": "abstain-vs-unsure",
-      "why": "Spec §18. 'Unsure' is 0.0 and enters the mean; abstain removes the item. An axis whose items are all abstained is excluded, NOT imputed to zero." },
-    { "id": "joint-not-scored",
-      "why": "Spec §5. Joint takeover risk displays but must be verifiably absent from the scoring path, or the misalignment story is weighted four times." },
-    { "id": "symmetric-unknowns",
-      "why": "Spec §7. A target null on an axis drops that axis from its own distance calculation, exactly as a user abstention does." }
-  ]
+    {
+      "id": "abstain-vs-unsure",
+      "why": "Spec §18. 'Unsure' is 0.0 and enters the mean; abstain removes the item. An axis whose items are all abstained is excluded, NOT imputed to zero."
+    },
+    {
+      "id": "joint-not-scored",
+      "why": "Spec §5. Joint takeover risk displays but must be verifiably absent from the scoring path, or the misalignment story is weighted four times."
+    },
+    {
+      "id": "symmetric-unknowns",
+      "why": "Spec §7. A target null on an axis drops that axis from its own distance calculation, exactly as a user abstention does."
+    }
+  ],
+  "respondent_expectations": {
+    "$comment": [
+      "Agenda sign expectations check the DERIVATION. They cannot catch a question whose loading is",
+      "inverted, because the question never enters that path — which is exactly how q20 and q21 shipped",
+      "with their patch_rebuild loadings backwards, routing anyone who wanted formal guarantees away",
+      "from Guaranteed-Safe AI.",
+      "",
+      "So: score a synthetic respondent with an obvious position and assert the agenda they should",
+      "obviously match. This closes the loop from question text all the way to ranked output.",
+      "",
+      "Expectations are about FAMILIES, not named agendas. The Theory family alone holds nine agendas that a formalist would be happy with, so asserting one particular name would fail for reasons that have nothing to do with correctness — the same overfitting the agenda fixtures avoid by asserting signs rather than values."
+    ],
+    "cases": [
+      {
+        "id": "formalist",
+        "why": "Wants provable guarantees, thinks current architectures are the wrong object of study, doubts automation. Should route to foundational and by-construction work, not to behavioural work.",
+        "responses": {
+          "q20": -1,
+          "q21": 1,
+          "q22": -1,
+          "q18": 0.5
+        },
+        "expect_top_10_families": {
+          "Theory": 4,
+          "Safety by construction": 1
+        },
+        "expect_no_family_in_top_10": [
+          "Black-box safety (understand and control current model behaviour)",
+          "Evals"
+        ]
+      },
+      {
+        "id": "empiricist",
+        "why": "Wants to patch the models that exist, rejects formal guarantees, thinks behavioural testing can be sufficient. The mirror image of the formalist — if both pass, the patch_rebuild axis is wired the right way round.",
+        "responses": {
+          "q20": 1,
+          "q21": -1,
+          "q18": -1,
+          "q19": 1
+        },
+        "expect_top_10_families": {
+          "Black-box safety (understand and control current model behaviour)": 6
+        },
+        "expect_no_family_in_top_10": [
+          "Theory",
+          "Safety by construction"
+        ]
+      },
+      {
+        "id": "controller",
+        "why": "High on scheming, thinks a human-level schemer is containable but a superhuman one is not, works on the models we have. Should reach the control agenda by name — it is the only agenda built on exactly that combination.",
+        "responses": {
+          "q4": 1,
+          "q6": 1,
+          "q7": -1,
+          "q8": 1,
+          "q9": -0.5,
+          "q18": -1,
+          "q19": 1,
+          "q20": 1
+        },
+        "expect_top_10": [
+          "Control"
+        ]
+      }
+    ]
+  }
 }

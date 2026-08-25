@@ -28,10 +28,14 @@ export function Tables() {
           What are the agendas within technical AI safety and AI governance?
         </h1>
         <p className="text-sm text-ink-muted mt-2 max-w-prose leading-relaxed">
-          {agendas.length} technical agendas and {levers.length} policy levers, with how much effort
-          is currently going into each. Click any row for its theory of change, the assumptions it
-          rests on, and the organizations and open roles attached to it.
+          Click any row for its theory of change, the assumptions it rests on, and the organizations
+          and open roles attached to it.
         </p>
+        <nav className="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-sm">
+          <a href="#technical" className="underline text-ink-muted hover:text-user">Technical agendas</a>
+          <a href="#policy" className="underline text-ink-muted hover:text-user">Policy levers</a>
+          <a href="#field-building" className="underline text-ink-muted hover:text-user">Field building</a>
+        </nav>
       </header>
 
       <TechnicalTable />
@@ -83,7 +87,7 @@ function TechnicalTable() {
   }, [sort, asc]);
 
   return (
-    <section className="mb-10">
+    <section id="technical" className="mb-10 scroll-mt-4">
       <h2 className="text-lg font-medium mb-3">Technical agendas</h2>
 
       <div className="overflow-x-auto">
@@ -185,7 +189,7 @@ function PolicyTable() {
   }, [sort]);
 
   return (
-    <section className="mb-10 rule pt-6">
+    <section id="policy" className="mb-10 rule pt-6 scroll-mt-4">
       <h2 className="text-lg font-medium mb-1">Policy levers</h2>
       <p className="text-sm text-ink-muted mb-3 max-w-prose">
         Kept separate from the table above, because the inference inverts. On the technical side thin
@@ -253,7 +257,7 @@ function MetaTable() {
   }));
 
   return (
-    <section className="rule pt-6">
+    <section id="field-building" className="rule pt-6 scroll-mt-4">
       <h2 className="text-lg font-medium mb-1">Field building</h2>
       <p className="text-sm text-ink-muted mb-3 max-w-prose">
         Work that serves every agenda rather than picking one. Not ranked against your answers —

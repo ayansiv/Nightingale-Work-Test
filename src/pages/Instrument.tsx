@@ -45,34 +45,15 @@ export function Instrument({ responses, onChange, onComplete }: Props) {
             policy levers that follow from your answers, plus the organizations and open roles
             attached to each.
           </p>
-          <p>
-            Three things worth knowing before you start:
-          </p>
           <ul className="space-y-1.5 list-disc list-outside ml-5 marker:text-ink-faint">
-            <li>
-              <strong className="font-medium text-ink">You can leave anything blank.</strong> Skipping
-              a question removes it from scoring rather than counting as a middle answer. An axis
-              only drops out when every question feeding it is blank.
-            </li>
-            <li>
-              <strong className="font-medium text-ink">"Unsure" is an answer.</strong> It's a
-              considered middle position and it counts. That's what makes it different from skipping.
-            </li>
-            <li>
-              <strong className="font-medium text-ink">Nothing is stored.</strong> No account, no
-              server. Your answers exist in this tab and in the link you can copy at the end.
-            </li>
+            <li>“Unsure” is scored as a middle position while skipping removes the question from the scoring.</li>
           </ul>
           <p className="text-sm">
-            Takes about ten minutes. If that's too long, there's a{' '}
-            <button
-              type="button"
-              onClick={() => setUseShortForm(true)}
-              className="underline hover:text-user"
-            >
+            There are {questions.length} questions. If that's too long, there's a{' '}
+            <button type="button" onClick={() => setUseShortForm(true)} className="underline hover:text-user">
               {shortForm.length}-question short form
             </button>{' '}
-            covering the axes that do the most routing.
+            that covers most of the content.
           </p>
         </div>
 
@@ -87,13 +68,24 @@ export function Instrument({ responses, onChange, onComplete }: Props) {
               {skipped > 0 && ` · ${skipped} skipped`}
             </p>
           </div>
-          <button
-            type="button"
-            onClick={() => setUseShortForm(!useShortForm)}
-            className="text-xs text-ink-muted hover:text-user underline"
-          >
-            {useShortForm ? `Switch to all ${questions.length} questions` : `Switch to the short form`}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setUseShortForm(!useShortForm)}
+              className="text-xs text-ink-muted hover:text-user underline"
+            >
+              {useShortForm ? `All ${questions.length} questions` : 'Short form'}
+            </button>
+            {answered > 0 && (
+              <button
+                type="button"
+                onClick={() => { if (confirm('Clear every answer and start again?')) onChange({}); }}
+                className="text-xs text-ink-faint hover:text-user underline"
+              >
+                Reset answers
+              </button>
+            )}
+          </div>
         </div>
       </header>
 
@@ -123,9 +115,9 @@ export function Instrument({ responses, onChange, onComplete }: Props) {
                     </legend>
                     <p className="text-[0.95rem] leading-relaxed mb-3 max-w-prose">{q.text}</p>
 
-                    {q.response_type === 'allocation' ? (
-                      <AllocationInput q={q} value={typeof r === 'number' ? r : null}
-                                       onChange={(v) => set(q.id, v)} />
+                    {q.response_type === 'spectrum' ? (
+                      <SpectrumInput q={q} value={typeof r === 'number' ? r : null}
+                                     onChange={(v) => set(q.id, v)} />
                     ) : (
                       <div className="flex flex-wrap gap-1.5">
                         {scales[q.response_type].options.map((opt: any) => (
@@ -186,28 +178,39 @@ export function Instrument({ responses, onChange, onComplete }: Props) {
   );
 }
 
-function AllocationInput({ q, value, onChange }: { q: any; value: number | null; onChange: (v: number) => void }) {
-  const cfg = scales.allocation;
-  const pct = value === null ? cfg.default : Math.round(((value + 1) / 2) * 100);
-
+/**
+ * A 5-point spectrum between two named poles. Replaced a 0-100 slider, which invited false
+ * precision — nobody's view about misuse versus loss of control is accurate to one point in a
+ * hundred, and the slider's default position also silently read as an answer.
+ */
+function SpectrumInput({ q, value, onChange }: { q: any; value: number | null; onChange: (v: number) => void }) {
+  const opts = scales.spectrum.options as { value: number; label: string }[];
   return (
     <div>
-      <div className="flex justify-between text-xs text-ink-muted mb-2 gap-4">
-        <span className="max-w-[45%]">{q.allocation_poles.low}</span>
-        <span className="max-w-[45%] text-right">{q.allocation_poles.high}</span>
+      <div className="flex justify-between text-xs text-ink-muted mb-1.5 gap-4">
+        <span className="max-w-[45%]">{q.spectrum_poles.low}</span>
+        <span className="max-w-[45%] text-right">{q.spectrum_poles.high}</span>
       </div>
-      <input
-        type="range" min={cfg.min} max={cfg.max} step={cfg.step} value={pct}
-        onChange={(e) => onChange((Number(e.target.value) / 100) * 2 - 1)}
-        className="w-full accent-user" aria-label={q.text}
-      />
-      <div className="flex justify-between tabular text-sm mt-1">
-        <span className={value === null ? 'text-ink-faint' : 'text-ink'}>{100 - pct}</span>
-        <span className={value === null ? 'text-ink-faint' : 'text-ink'}>{pct}</span>
+      <div className="flex gap-1.5">
+        {opts.map((opt) => (
+          <button
+            key={opt.label}
+            type="button"
+            onClick={() => onChange(opt.value)}
+            aria-pressed={value === opt.value}
+            aria-label={`${opt.label} — ${
+              opt.value < 0 ? q.spectrum_poles.low : opt.value > 0 ? q.spectrum_poles.high : 'between the two'
+            }`}
+            className={`flex-1 py-2 rounded border text-sm tabular ${
+              value === opt.value
+                ? 'border-user bg-user/5 text-ink font-medium'
+                : 'border-ground-line text-ink-muted hover:border-ink-faint'
+            }`}
+          >
+            {opt.label}
+          </button>
+        ))}
       </div>
-      {value === null && (
-        <p className="text-2xs text-ink-faint mt-1">Move the slider to answer.</p>
-      )}
     </div>
   );
 }

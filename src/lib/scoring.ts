@@ -29,11 +29,12 @@ export interface Question {
   id: string;
   order: number;
   section: string;
-  response_type: 'credence' | 'agreement' | 'willingness' | 'allocation';
+  response_type: 'credence' | 'agreement' | 'willingness' | 'spectrum';
   text: string;
   loadings: Record<AxisId, number>;
   reverse_scored?: boolean;
-  allocation_poles?: { low: string; high: string };
+  /** For `spectrum` items: the named ends of the 5-point scale. */
+  spectrum_poles?: { low: string; high: string };
 }
 
 /** ABSTAIN is a distinct value, not a null and not a zero. */

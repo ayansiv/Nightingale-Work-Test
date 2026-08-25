@@ -14,12 +14,12 @@ as "not collected", never as zero, and a null axis drops out of matching rather 
 
 | | count |
 |---|---|
-| Items requiring owner input | 12 |
+| Items requiring owner input | 13 |
 | Blocking the build | 0 |
 | Shipped with a defensible estimate | 5 |
 | Shipped with a structural placeholder | 4 |
 | Shipped as an explicit, enumerated gap | 3 |
-| Resolved since first draft | 2 (OD-09 in part, OD-11 requirement B) |
+| Resolved since first draft | 3 (OD-09 in part, OD-10 in part, OD-11 requirement B) |
 
 Every item loads from a file. `npm run verify` passes today with all of them in their current state.
 
@@ -175,15 +175,24 @@ Maturity tiers: 73 established, 64 new entrant, **9 structurally understaffed**.
 a claim, not a size: it means the remit is visibly larger than the headcount can serve. We applied it
 to NIST/CAISI, the EU AI Office, congressional offices, and single-issue advocacy orgs.
 
-**One judgement worth confirming.** 28 organizations are deliberately left untagged because they do
-not have an agenda — MATS, Constellation, BlueDot, ERA, grantmakers, 80,000 Hours itself. Tagging a
-MATS cohort to one agenda would be a fabrication; tagging it to none would bury the single most
-useful entry point in the dataset. So their **81 roles** carry `cross_agenda: true` and surface under
-every agenda labelled *"open to any agenda — placement depends on your mentor."*
+**Resolved since the first draft.** Field-building organizations used to be untagged, and every role
+at them carried `cross_agenda: true` — 81 roles labelled *"open to any agenda"*. Only **10** of those
+were actually cohort programmes. The rest were ordinary jobs: an operations manager at Constellation,
+an engineer at Lightcone, a grants associate at Coefficient Giving. The label hid 71 real jobs behind
+a non-answer and diluted itself for the cases where it was true.
 
-**Coverage honesty:** 109 of 248 organizations on the board are tagged, covering 76% of AI-relevant
-roles. The untagged 139 are a long tail of one- and two-role organizations. Their **113 roles** show
-in browse but cannot be matched, and say so.
+Field building is now a third domain (`data/seed/meta-agendas.json`) with three categories — talent
+pipelines, grantmaking, and community/infrastructure. Those roles inherit normally; *"open to any
+agenda"* is reserved for Fellowship, Internship and Course positions. It carries **no coordinates and
+is not ranked** against quiz answers: running a fellowship programme does not commit you to a view
+about scheming, so scoring it would be inventing a signal.
+
+**Also fixed by hand:** LawZero was `new_entrant`, which reads as small-and-unproven for a
+well-resourced institute with a senior team. Now `established`.
+
+**Coverage honesty:** **130 of 248** organizations on the board are tagged. The untagged 118 are a
+long tail of one- and two-role organizations — only two have more than two openings (Amodo Design,
+Apple). Their **121 roles** show in browse but cannot be matched, and say so.
 
 ---
 
@@ -277,6 +286,23 @@ immediately:
    stated assumptions and it will recur. Fixed by making a family prior authoritative on the axis
    that defines the family, so an assumption can move a magnitude but not flip a defining sign.
 
+### A third defect, found later: two inverted question loadings
+
+The agenda fixtures check the *derivation*. They cannot catch a question whose loading is
+backwards, because the question never enters that path — so **q20 and q21 shipped with their
+`patch_rebuild` loadings inverted** against the axis, which runs low = *make current systems safe*
+to high = *design new ones*. Both came straight from spec §3 and were transcribed without
+checking.
+
+Live effect: anyone who agreed that formal guarantees are worth pursuing was routed **away** from
+Guaranteed-Safe AI and toward the behavioural agendas — the exact opposite of what they asked for.
+
+Fixed, and the gap that let it through is closed: `calibration.json` now carries **respondent
+fixtures** that score a synthetic answer set and assert what it should rank. They check families
+rather than named agendas, because the Theory family alone holds nine agendas a formalist would be
+happy with. A formalist must reach Theory and Safety-by-construction and must not reach Black-box
+safety; the empiricist is the mirror image. If either loading flips again, both fail.
+
 ### The single-item axis problem, measured
 
 Spec §5 calls smooth degradation *"the main benefit of having more questions than axes"* — but the
@@ -305,7 +331,7 @@ One skipped question changed the top-ranked policy lever. Worse, **the score wen
 
 Added **q29** and **q30**, one reverse-scored item each for `restraint_capacity` and
 `inside_outside`, interleaved into section F rather than clustered (spec §3's acquiescence-bias
-rule). The instrument is now **30 questions**. Re-measured:
+rule). The quiz is now **30 questions**. Re-measured:
 
 ```
 all 30 answered  -> Misuse prevention   83.7   rc 2/2  io 2/2
@@ -353,13 +379,12 @@ The honest accounting, and the reason the review queue exists:
 | tag strength | roles | what the tag actually claims |
 |---|---|---|
 | **strong** — from role content | 102 | a phrase in the role's own description named this agenda |
-| **by design** — from the organization | 209 | the role sits at an org whose primary work is this agenda |
+| **by design** — from the organization | 420 | the role sits at an org whose primary work is this agenda |
 | **review queue** | **126** | research/policy role at a **multi-agenda** org where no phrase fired |
-| single-candidate fall-through | 15 | harmless: the org's primary was the only possible answer |
-| untagged org | 113 | see OD-04 |
-| cross-agenda | 81 | field-building; shown under every agenda by design |
+| untagged org | 121 | see OD-04 |
+| cross-agenda | **10** | genuine cohort programmes only, down from 81 |
 
-The 209 "by design" rows are not a failure — spec §10.3 mandates inheritance for operations,
+The 420 "by design" rows are not a failure — spec §10.3 mandates inheritance for operations,
 recruiting, finance and legal roles and calls it load-bearing. But it is a **materially weaker claim**
 than a content tag, and the UI renders the three differently everywhere they appear rather than
 flattening them into one badge.
@@ -414,22 +439,54 @@ No action unless the owner's superiors choose the sharper variant, in which case
 flag. `npm run verify` asserts the default is `a` and that `b` is empty, so a half-finished switch
 fails loudly.
 
+## OD-13 — What people in the field know that a listing does not say ⚠️ **empty by design**
+
+**Feeds:** an `insider_note` line on every organization, on the Roles tab and on agenda pages.
+**File:** `data/classification/orgs.csv`, column `insider_note`. **Status:** column added, **all 146
+rows empty**.
+
+This is the difference between someone who has been around the field for two years and someone
+reading the job board for the first time: how selective a programme really is, what the work is
+actually like day to day, which listing understates the role, who a place suits and who it does
+not. None of it is on any website, and it is the single highest-value thing a reader could get
+here that they cannot get from the 80,000 Hours board directly.
+
+**We did not fill it, and will not.** Every other estimate in this document is defensible from a
+public source — that is what makes the flags meaningful. Guessing at non-public facts about named
+organizations would produce claims a reader has no way to check, attached to real institutions'
+names, with the authority of everything around them. It is the one column where being wrong is
+worse than being empty.
+
+It renders as nothing at all when blank — no placeholder, no empty section — so partial coverage
+looks like partial coverage rather than like a broken feature.
+
+**Suggested shape**, one or two sentences, concrete:
+- *"Takes ~4% of applicants; the bottleneck is research taste, not credentials."*
+- *"The listing says 'operations' but it is closer to chief of staff."*
+- *"Strong fit if you want breadth early; weak if you want to go deep on one agenda."*
+
+**Where to start:** the 30 or so organizations with the most open roles, and the field-building
+programmes — those are where a newcomer's model is furthest from reality and where the advice
+changes their behaviour most.
+
 ---
 
 ## Recommended order
 
 Ordered by value per hour, not by importance:
 
-1. **OD-03, six researchers × 2–3 axes** — an afternoon, and it activates a distinctive feature that is currently inert.
-2. **OD-05, `lab_coverage` only** — four values × 74 rows, and it defuses the worst misreading of the funding column.
-3. **OD-11, sensitivity tiers on the 12 policy levers** — twelve judgements, not 74. The technical
+1. **OD-13, insider notes on the top ~30 organizations** — the highest-value thing here that a reader
+   cannot get from the job board directly, and the only column we deliberately left blank.
+2. **OD-03, six researchers × 2–3 axes** — an afternoon, and it activates a distinctive feature that is currently inert.
+3. **OD-05, `lab_coverage` only** — four values × 74 rows, and it defuses the worst misreading of the funding column.
+4. **OD-11, sensitivity tiers on the 12 policy levers** — twelve judgements, not 74. The technical
    agendas quote already-published text; the levers were written here.
-4. **OD-08, 34 framing sentences** — the entry surface is the first thing a blank-slate user meets.
-5. **OD-02 decision** — not data collection, a call: ship the discrepancy or resolve it.
-6. **OD-04, the 26 low-confidence org rows** — triaged, not exhaustive.
-7. **OD-09 decision** — how to present a match score when axes drop out. The two policy axes are
+5. **OD-08, 34 framing sentences** — the entry surface is the first thing a blank-slate user meets.
+6. **OD-02 decision** — not data collection, a call: ship the discrepancy or resolve it.
+7. **OD-04, the 26 low-confidence org rows** — triaged, not exhaustive.
+8. **OD-09 decision** — how to present a match score when axes drop out. The two policy axes are
    already hardened; this is the presentation question, not the data one.
-8. **OD-10, the 126-row queue** — mechanical, parallelisable, and the app is usable throughout.
+9. **OD-10, the 126-row queue** — mechanical, parallelisable, and the app is usable throughout.
 
-Nothing above blocks anything below it, and the app runs end to end today with all twelve in their
-current state.
+Nothing above blocks anything below it, and the app runs end to end today with all thirteen in
+their current state.

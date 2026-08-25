@@ -67,13 +67,8 @@ export function Home() {
           What you believe about AI risk implies what you should work on
         </h1>
         <p className="text-lg text-ink-muted leading-relaxed max-w-prose">
-          Seventeen questions the field genuinely disagrees about. Where you land on them points at
-          different research agendas and different policy levers — often at completely different
-          ones, from positions that sound close.
-        </p>
-        <p className="text-lg text-ink-muted leading-relaxed max-w-prose mt-3">
-          Below is every axis, both ends, with the best argument for each side linked. Read first,
-          then take the quiz.
+          Your worldview informs which problems are worth your time. Below is every axis the field
+          disagrees about, both ends, with the argument for each side linked.
         </p>
 
         <div className="flex flex-wrap gap-3 mt-6">
@@ -109,11 +104,10 @@ export function Home() {
 
               return (
                 <article key={id}>
-                  <div className="flex items-baseline justify-between gap-3 mb-1.5">
+                  <div className="mb-1.5">
                     <h3 className="font-medium">
                       <Link to={`/axis/${id}`} className="hover:text-user hover:underline">{axis.label}</Link>
                     </h3>
-                    <span className="text-2xs font-mono text-ink-faint">weight {axis.weight.toFixed(1)}</span>
                   </div>
                   <p className="text-sm text-ink-muted mb-2 max-w-prose">{axis.question}</p>
 

@@ -21,8 +21,7 @@ import { ABSTAIN, type Responses } from '../src/lib/scoring';
 // A response set that exercises the awkward paths: abstain, unsure, allocation, willingness.
 const responses: Responses = {};
 for (const q of questions) {
-  responses[q.id] = q.response_type === 'allocation' ? 0.2
-    : q.response_type === 'willingness' ? 0.33 : 0.5;
+  responses[q.id] = q.response_type === 'willingness' ? 0.33 : 0.5;
 }
 responses['q18'] = ABSTAIN;
 responses['q19'] = ABSTAIN;   // removes the internals axis entirely

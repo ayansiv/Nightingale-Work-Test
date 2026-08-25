@@ -139,9 +139,26 @@ const vacancies: Vacancy[] = parse(read('data/raw/80k-vacancies.csv'), {
 
 const splitList = (s: string) => (s ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 
-/** 80k's location field is quoted oddly: '"Washington, DC metro area.USA",London.UK'. */
-const splitLocations = (s: string) =>
-  (s ?? '').replace(/"/g, '').split(',').map((x) => x.trim()).filter(Boolean);
+/**
+ * 80k's location field is a comma-separated list whose entries may THEMSELVES contain commas,
+ * quoted: '"Washington, DC metro area.USA",London.UK'.
+ *
+ * Splitting on every comma shredded those into halves — "Washington" and "DC metro area.USA"
+ * became separate places, as did "New York" and "NY.USA", which is why the filter listed each
+ * city twice. Split only on commas outside quotes.
+ */
+const splitLocations = (raw: string): string[] => {
+  const out: string[] = [];
+  let cur = '';
+  let inQuotes = false;
+  for (const ch of raw ?? '') {
+    if (ch === '"') { inQuotes = !inQuotes; continue; }
+    if (ch === ',' && !inQuotes) { out.push(cur); cur = ''; continue; }
+    cur += ch;
+  }
+  out.push(cur);
+  return out.map((x) => x.trim()).filter(Boolean);
+};
 
 const CLASSIFY_ROLE_TYPES = new Set(['Research', 'Policy']);
 const AI_PROBLEM_PREFIXES = ['1.', 'D.', '6.'];

@@ -19,7 +19,6 @@ export function AxisDetail() {
   }
 
   const poleKeys = poles ? Object.keys(poles).filter((k) => !k.startsWith('_')) : [];
-  const teachingNote = poles?._teaching_note as string | undefined;
 
   // Agendas sitting at each end — the axis page should show what the position implies for work.
   const placed = agendas
@@ -30,7 +29,7 @@ export function AxisDetail() {
     <article className="max-w-4xl mx-auto px-4 py-8">
       <header className="mb-8">
         <p className="text-2xs font-mono uppercase tracking-wider text-ink-faint mb-1">
-          {axis.scope} axis · weight {axis.weight.toFixed(1)}
+          {axis.scope} axis
         </p>
         <h1 className="text-2xl font-semibold tracking-tight">{axis.label}</h1>
         <p className="text-lg text-ink-muted mt-2 max-w-prose">{axis.question}</p>
@@ -38,12 +37,6 @@ export function AxisDetail() {
           {axis.low_pole_label} ←————→ {axis.high_pole_label}
         </p>
       </header>
-
-      {teachingNote && (
-        <aside className="mb-8 border-l-2 border-user/40 pl-4 py-1">
-          <p className="text-sm text-ink-muted leading-relaxed max-w-prose">{teachingNote}</p>
-        </aside>
-      )}
 
       <section className="mb-10">
         <h2 className="text-sm font-medium uppercase tracking-wider text-ink-faint mb-3">

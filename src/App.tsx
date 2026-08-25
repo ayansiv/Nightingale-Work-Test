@@ -19,7 +19,7 @@ import type { Responses } from './lib/scoring';
  * sessionStorage keeps them across an in-tab navigation so someone can read an axis page
  * mid-quiz and come back — session rather than local, since no individual responses are stored.
  */
-const STORAGE_KEY = 'worldview-responses-v2';
+const STORAGE_KEY = 'coherence-responses-v3';
 
 export function App() {
   return (
@@ -68,7 +68,7 @@ function Shell() {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <Header />
-      <div className="flex-1">
+      <div className="flex-1 lg:pr-40">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<QuizRoute responses={responses} onChange={persist} />} />
@@ -90,7 +90,6 @@ function Shell() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
-      <Footer />
     </div>
   );
 }
@@ -153,39 +152,73 @@ const NAV = [
   { to: '/roles', label: 'Roles' },
 ];
 
+/**
+ * Wordmark left, navigation as a vertical rail on the right.
+ *
+ * A horizontal strip of five tabs is the default everything has, and it wastes the one piece of
+ * chrome that is on every screen. The rail is fixed on desktop so the current section stays
+ * visible while reading a long page, and collapses to a horizontal strip on small screens where
+ * a fixed rail would eat the width the tables need.
+ */
 function Header() {
   return (
-    <header className="border-b border-ground-line sticky top-0 bg-ground/95 backdrop-blur z-10">
-      <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-        <NavLink to="/" className="font-medium tracking-tight shrink-0">Worldview Layer</NavLink>
-        <nav className="flex items-center gap-0.5 overflow-x-auto">
-          {NAV.map((n) => (
-            <NavLink
-              key={n.to}
-              to={n.to}
-              end={n.end}
-              className={({ isActive }) =>
-                `px-2.5 py-1.5 text-sm rounded whitespace-nowrap ${
-                  isActive ? 'text-ink font-medium bg-ground-sunk' : 'text-ink-muted hover:text-ink'
-                }`
-              }
-            >
-              {n.label}
-            </NavLink>
-          ))}
-        </nav>
-      </div>
-    </header>
-  );
-}
+    <>
+      <header className="sticky top-0 z-20 bg-ground/95 backdrop-blur border-b border-ground-line lg:border-0 lg:bg-transparent lg:backdrop-blur-0 lg:static">
+        <div className="px-5 h-14 flex items-center lg:h-auto lg:pt-7">
+          <NavLink to="/" className="group inline-flex items-baseline gap-2">
+            <span className="text-lg font-semibold tracking-tight">Coherence</span>
+            <span className="hidden lg:inline text-2xs text-ink-faint group-hover:text-ink-muted">
+              AI safety careers
+            </span>
+          </NavLink>
+        </div>
+      </header>
 
-function Footer() {
-  return (
-    <footer className="border-t border-ground-line mt-16">
-      <div className="max-w-6xl mx-auto px-4 py-5 text-2xs text-ink-faint flex flex-wrap gap-x-4 gap-y-1">
-        <span>Agendas from the Shallow Review 2025 · roles from the 80,000 Hours job board</span>
-        <span className="tabular">Snapshot, August 2026</span>
-      </div>
-    </footer>
+      {/* desktop rail */}
+      <nav className="hidden lg:flex fixed right-0 top-0 h-screen w-40 flex-col justify-center gap-1 pr-6 z-10">
+        {NAV.map((n) => (
+          <NavLink
+            key={n.to}
+            to={n.to}
+            end={n.end}
+            className={({ isActive }) =>
+              `group flex items-center justify-end gap-2.5 py-1.5 text-sm ${
+                isActive ? 'text-ink font-medium' : 'text-ink-faint hover:text-ink'
+              }`
+            }
+          >
+            {({ isActive }: { isActive: boolean }) => (
+              <>
+                <span>{n.label}</span>
+                <span
+                  className={`h-px transition-all ${
+                    isActive ? 'w-6 bg-ink' : 'w-2.5 bg-ground-line group-hover:w-4 group-hover:bg-ink-faint'
+                  }`}
+                  aria-hidden
+                />
+              </>
+            )}
+          </NavLink>
+        ))}
+      </nav>
+
+      {/* small screens: the rail would eat the width the tables need */}
+      <nav className="lg:hidden flex items-center gap-0.5 overflow-x-auto px-4 pb-2 border-b border-ground-line sticky top-14 bg-ground/95 backdrop-blur z-10">
+        {NAV.map((n) => (
+          <NavLink
+            key={n.to}
+            to={n.to}
+            end={n.end}
+            className={({ isActive }) =>
+              `px-2.5 py-1.5 text-sm rounded whitespace-nowrap ${
+                isActive ? 'text-ink font-medium bg-ground-sunk' : 'text-ink-muted hover:text-ink'
+              }`
+            }
+          >
+            {n.label}
+          </NavLink>
+        ))}
+      </nav>
+    </>
   );
 }

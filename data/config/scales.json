@@ -5,11 +5,31 @@
       "label": "How likely?",
       "show_numeric_range": true,
       "options": [
-        { "value": -1.0,  "label": "Very unlikely", "range": "under 10%" },
-        { "value": -0.5,  "label": "Unlikely",      "range": "10–30%" },
-        { "value":  0.0,  "label": "Roughly even",  "range": "30–60%" },
-        { "value":  0.5,  "label": "Likely",        "range": "60–85%" },
-        { "value":  1.0,  "label": "Very likely",   "range": "over 85%" }
+        {
+          "value": -1.0,
+          "label": "Very unlikely",
+          "range": "under 10%"
+        },
+        {
+          "value": -0.5,
+          "label": "Unlikely",
+          "range": "10–30%"
+        },
+        {
+          "value": 0.0,
+          "label": "Roughly even",
+          "range": "30–60%"
+        },
+        {
+          "value": 0.5,
+          "label": "Likely",
+          "range": "60–85%"
+        },
+        {
+          "value": 1.0,
+          "label": "Very likely",
+          "range": "over 85%"
+        }
       ]
     },
     "agreement": {
@@ -17,11 +37,26 @@
       "show_numeric_range": false,
       "midpoint_note": "\"Unsure\" is a considered midpoint and enters the average. Abstain is a separate control that removes the item from scoring entirely.",
       "options": [
-        { "value": -1.0, "label": "Strongly disagree" },
-        { "value": -0.5, "label": "Disagree" },
-        { "value":  0.0, "label": "Unsure" },
-        { "value":  0.5, "label": "Agree" },
-        { "value":  1.0, "label": "Strongly agree" }
+        {
+          "value": -1.0,
+          "label": "Strongly disagree"
+        },
+        {
+          "value": -0.5,
+          "label": "Disagree"
+        },
+        {
+          "value": 0.0,
+          "label": "Unsure"
+        },
+        {
+          "value": 0.5,
+          "label": "Agree"
+        },
+        {
+          "value": 1.0,
+          "label": "Strongly agree"
+        }
       ]
     },
     "willingness": {
@@ -29,20 +64,50 @@
       "show_numeric_range": false,
       "midpoint_note": "No midpoint — these are decisions, not credences.",
       "options": [
-        { "value": -1.0,  "label": "No" },
-        { "value": -0.33, "label": "Probably not" },
-        { "value":  0.33, "label": "Probably" },
-        { "value":  1.0,  "label": "Yes" }
+        {
+          "value": -1.0,
+          "label": "No"
+        },
+        {
+          "value": -0.33,
+          "label": "Probably not"
+        },
+        {
+          "value": 0.33,
+          "label": "Probably"
+        },
+        {
+          "value": 1.0,
+          "label": "Yes"
+        }
       ]
     },
-    "allocation": {
-      "label": "Allocate 100 points",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 50,
-      "map": "linear",
-      "note": "0 maps to -1 (low pole), 100 maps to +1 (high pole)."
+    "spectrum": {
+      "label": "Where do you sit?",
+      "show_numeric_range": false,
+      "note": "A 5-point spectrum between two named poles. Each question supplies its own pole labels via `spectrum_poles`; the numbers are positions, not quantities.",
+      "options": [
+        {
+          "value": -1.0,
+          "label": "1"
+        },
+        {
+          "value": -0.5,
+          "label": "2"
+        },
+        {
+          "value": 0.0,
+          "label": "3"
+        },
+        {
+          "value": 0.5,
+          "label": "4"
+        },
+        {
+          "value": 1.0,
+          "label": "5"
+        }
+      ]
     }
   },
   "abstain": {

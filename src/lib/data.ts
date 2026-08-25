@@ -17,7 +17,6 @@ import peopleData from '~data/seed/people.json';
 import type { Axis, Question, Target } from './scoring';
 
 export const axes = axesCfg.axes as unknown as Axis[];
-export const axisById = new Map(axes.map((a) => [a.id, a]));
 export const questions = (questionsCfg.questions as unknown as Question[])
   .slice()
   .sort((a, b) => a.order - b.order);
@@ -26,7 +25,6 @@ export const consistencyPairs = questionsCfg.consistency_pairs as unknown as
   { axis: string; a: string; b: string; threshold: number; topic: string }[];
 export const shortForm = questionsCfg.short_form as unknown as string[];
 export const scales = scalesCfg.scales as unknown as Record<string, any>;
-export const abstainCfg = scalesCfg.abstain;
 
 export const agendas = agendasData.agendas as unknown as any[];
 export const orgs = orgsData.orgs as unknown as any[];
@@ -38,7 +36,6 @@ export const institutionTypes = leversData.institution_types as unknown as any[]
 export const readings = readingsData.axes as unknown as Record<string, Record<string, any>>;
 export const caveats = caveatsData.caveats as unknown as any[];
 export const disclaimers = caveatsData.disclaimers as unknown as any;
-export const contentConfig = caveatsData.config as unknown as any;
 export const people = peopleData.people as unknown as any[];
 
 export const DATA_AS_OF = agendasData.generated_at as string;
@@ -47,16 +44,11 @@ export const caveatById = new Map(caveats.map((c) => [c.id, c]));
 export const agendaById = new Map(agendas.map((a) => [a.id, a]));
 export const leverById = new Map(levers.map((l) => [l.id, l]));
 export const metaById = new Map(metaAgendas.map((m) => [m.id, m]));
-export const orgById = new Map(orgs.map((o) => [o.id, o]));
 
 /** Agendas and levers share the id namespace; the UI often needs whichever one an id points at. */
 export function lookupTargetName(id: string | null): string | null {
   if (!id) return null;
   return agendaById.get(id)?.name ?? leverById.get(id)?.name ?? metaById.get(id)?.name ?? null;
-}
-
-export function isPolicyId(id: string): boolean {
-  return id.startsWith('pol_');
 }
 
 /** Match targets: technical agendas + policy levers, on the same axes. */
@@ -100,14 +92,6 @@ export const orgsByAgenda = (() => {
 /** Roles at field-building orgs, shown under every agenda with a label. */
 export const crossAgendaRoles = roles.filter((r) => r.cross_agenda);
 
-export const rolesByOrg = (() => {
-  const m = new Map<string, any[]>();
-  for (const r of roles) {
-    if (!m.has(r.org_id)) m.set(r.org_id, []);
-    m.get(r.org_id)!.push(r);
-  }
-  return m;
-})();
 
 /** Every distinct value for a role filter, with counts, for the browse surface. */
 export function facet(field: 'role_type' | 'experience_level' | 'location' | 'position', pool = roles) {

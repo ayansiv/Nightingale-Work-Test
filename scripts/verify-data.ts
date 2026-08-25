@@ -71,7 +71,7 @@ console.log('\nSCORING INVARIANTS (spec §18)');
 {
   // Build a response set that abstains on 2 items and answers "unsure" on 2 others.
   const r: Responses = {};
-  for (const q of questions) r[q.id] = q.response_type === 'allocation' ? 0 : 0.5;
+  for (const q of questions) r[q.id] = q.response_type === 'spectrum' ? 0 : 0.5;
   r['q18'] = ABSTAIN;
   r['q19'] = ABSTAIN;   // both internals items -> axis must vanish
   r['q20'] = 0;         // unsure
@@ -135,7 +135,7 @@ console.log('\nCONSISTENCY FLAGS (spec §18)');
 console.log('\nMATCHING (spec §18)');
 {
   const r: Responses = {};
-  for (const q of questions) r[q.id] = q.response_type === 'allocation' ? 0 : 0.5;
+  for (const q of questions) r[q.id] = q.response_type === 'spectrum' ? 0 : 0.5;
   const scores = computeAxes(r, questions, axes);
 
   const targets: Target[] = agendas.map((a) => ({
@@ -172,7 +172,7 @@ console.log('\nPERMALINK (spec §18)');
   // correctly snaps an invalid value to the nearest one — feeding it 0.5 tests the snap, not the
   // round trip.
   const valid = (q: Question): number =>
-    q.response_type === 'allocation' ? 0.4 : q.response_type === 'willingness' ? 0.33 : 0.5;
+    q.response_type === 'willingness' ? 0.33 : 0.5;
   const r: Responses = {};
   for (const q of questions) r[q.id] = valid(q);
   r['q4'] = ABSTAIN;
@@ -221,6 +221,40 @@ console.log('\nCOORDINATE DERIVATION CALIBRATION');
     const nonNull = agendas.filter((a) => a.coordinates[axis] != null);
     check(`${axis} is null on all technical agendas (nothing imputed)`,
       nonNull.length === 0, nonNull.slice(0, 3).map((a) => a.name).join(', '));
+  }
+}
+
+// ---------------------------------------------------------------------------------------------
+console.log('\nRESPONDENT CALIBRATION (question loadings -> ranked output)');
+{
+  const allTargets: Target[] = agendas.map((a) => ({
+    id: a.id, name: a.name, domain: 'technical' as const, coordinates: a.coordinates,
+  }));
+
+  for (const c of calibration.respondent_expectations.cases) {
+    const scores = computeAxes(c.responses as Responses, questions, axes);
+    const ranked = match(scores, allTargets, axes).technical.slice(0, 10);
+    const top10 = ranked.map((m) => m.target.name);
+    const famOf = new Map(agendas.map((a) => [a.name, a.family]));
+    const famCount = new Map<string, number>();
+    for (const n of top10) {
+      const f = famOf.get(n)!;
+      famCount.set(f, (famCount.get(f) ?? 0) + 1);
+    }
+
+    for (const [fam, min] of Object.entries((c.expect_top_10_families ?? {}) as Record<string, number>)) {
+      check(`${c.id}: at least ${min} of the top 10 are "${fam.split(' (')[0]}"`,
+        (famCount.get(fam) ?? 0) >= min,
+        `got ${famCount.get(fam) ?? 0}; top 3 were ${top10.slice(0, 3).join(', ')}`);
+    }
+    for (const fam of (c.expect_no_family_in_top_10 ?? []) as string[]) {
+      check(`${c.id}: nothing from "${fam.split(' (')[0]}" reaches the top 10`,
+        !famCount.has(fam), `${famCount.get(fam)} did`);
+    }
+    for (const want of (c.expect_top_10 ?? []) as string[]) {
+      check(`${c.id}: "${want}" ranks top 10`, top10.includes(want),
+        `top 5 was ${top10.slice(0, 5).join(', ')}`);
+    }
   }
 }
 
@@ -276,7 +310,6 @@ console.log('\nUI CONTRACTS');
     'policy-returns-may-increase': 'being ignored rather than being early',
     'sensitivity': 'general rather than coy',
     'tag-strength': 'From the organization',
-    'snapshot': 'Snapshot',
     'coordinates-are-derived-not-endorsed': 'rather than being set to the middle',
   };
   const missingIdea = Object.entries(required)

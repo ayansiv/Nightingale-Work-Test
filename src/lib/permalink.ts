@@ -16,7 +16,6 @@
  *   _   abstained   (removed from scoring)
  *   .   unanswered  (never shown to the user)
  *   a-e discrete response levels, per the question's own scale
- *   0-9,A-U  allocation bucket (0-100 in steps of ~3.2)
  *
  * The alphabet deliberately never assigns a digit or letter to abstain, so an abstain can never
  * be silently read as a response by an older or newer parser.
@@ -27,13 +26,13 @@ import { ABSTAIN, type Response, type Responses, type Question } from './scoring
 /**
  * Bump this whenever the question SET changes — adding, removing or reordering an item shifts
  * every character after the change point, so an old link would decode into the wrong answers
- * rather than failing. v1 -> v2 when q29 and q30 were added.
+ * rather than failing. v1 -> v2 when q29 and q30 were added; v2 -> v3 when q10 and q14 became spectrum items.
  *
  * `decode` also refuses a body whose length does not match the current question count, so a
  * forgotten bump fails safe instead of silently misreading. Belt and braces, because the failure
  * mode here is invisible: a misaligned link still produces a plausible-looking result page.
  */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const ABSTAIN_CHAR = '_';
 const UNANSWERED_CHAR = '.';
 
@@ -42,23 +41,13 @@ const DISCRETE: Record<string, number[]> = {
   credence: [-1, -0.5, 0, 0.5, 1],
   agreement: [-1, -0.5, 0, 0.5, 1],
   willingness: [-1, -0.33, 0.33, 1],
+  spectrum: [-1, -0.5, 0, 0.5, 1],
 };
 const LEVEL_CHARS = 'abcde';
-
-/** Allocation is 0-100; 31 buckets keeps it to one char while staying finer than the 5% UI step. */
-const ALLOC_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTU';
-const ALLOC_BUCKETS = ALLOC_CHARS.length;
 
 function encodeOne(q: Question, r: Response): string {
   if (r === ABSTAIN) return ABSTAIN_CHAR;
   if (r === undefined) return UNANSWERED_CHAR;
-
-  if (q.response_type === 'allocation') {
-    // r is the normalised [-1,1] value; recover the 0-100 allocation.
-    const pct = ((r + 1) / 2) * 100;
-    const bucket = Math.round((pct / 100) * (ALLOC_BUCKETS - 1));
-    return ALLOC_CHARS[Math.max(0, Math.min(ALLOC_BUCKETS - 1, bucket))];
-  }
 
   const levels = DISCRETE[q.response_type];
   if (!levels) return UNANSWERED_CHAR;
@@ -76,13 +65,6 @@ function encodeOne(q: Question, r: Response): string {
 function decodeOne(q: Question, ch: string): Response {
   if (ch === ABSTAIN_CHAR) return ABSTAIN;
   if (ch === UNANSWERED_CHAR) return undefined;
-
-  if (q.response_type === 'allocation') {
-    const bucket = ALLOC_CHARS.indexOf(ch);
-    if (bucket === -1) return undefined;
-    const pct = (bucket / (ALLOC_BUCKETS - 1)) * 100;
-    return (pct / 100) * 2 - 1;
-  }
 
   const levels = DISCRETE[q.response_type];
   const idx = LEVEL_CHARS.indexOf(ch);

@@ -50,7 +50,6 @@ export function AxisPlot({ axis, user, overlays = [], showQuestion = false, onPo
               coverage {user.coverage}/{user.contributingItems}
             </span>
           )}
-          <span title="Configured axis weight in the distance metric.">w {axis.weight.toFixed(1)}</span>
         </div>
       </div>
 

@@ -31,6 +31,13 @@ const expRank = (s: string) => {
 
 const FILTER_KEYS = ['agenda', 'type', 'exp', 'loc', 'position', 'maturity', 'view'] as const;
 
+/**
+ * The board writes locations as "City.Country" — "London.UK", and just ".UK" when only the
+ * country is known. Rendered raw, the leading dot reads as a typo.
+ */
+const prettyLocation = (s: string) =>
+  s.startsWith('.') ? s.slice(1) : s.replace(/\.([A-Za-z]+)$/, ', $1');
+
 export function Browse() {
   const [params, setParams] = useSearchParams();
 
@@ -156,13 +163,8 @@ export function Browse() {
           {view === 'roles' ? (
             <>
               <ul className="divide-y divide-ground-line">
-                {filteredRoles.slice(0, 200).map((r) => <RoleRow key={r.id} role={r} />)}
+                {filteredRoles.map((r) => <RoleRow key={r.id} role={r} />)}
               </ul>
-              {filteredRoles.length > 200 && (
-                <p className="text-xs text-ink-faint mt-4">
-                  Showing the first 200 of {filteredRoles.length}. Narrow the filters to see the rest.
-                </p>
-              )}
               {filteredRoles.length === 0 && (
                 <p className="text-sm text-ink-muted py-8">
                   Nothing matches those filters. <button onClick={clearAll} className="underline hover:text-user">Clear them</button>.
@@ -217,7 +219,7 @@ function FacetGroup({ label, value, onChange, options }: {
                 value === opt ? 'text-ink font-medium' : 'text-ink-muted hover:text-ink'
               }`}
             >
-              <span className="truncate">{opt.replace(/_/g, ' ')}</span>
+              <span className="truncate">{label === 'Location' ? prettyLocation(opt) : opt.replace(/_/g, ' ')}</span>
               <span className="tabular text-ink-faint">{count}</span>
             </button>
           </li>
@@ -262,7 +264,7 @@ function RoleRow({ role }: { role: any }) {
         {role.position && role.position !== 'Full-time' && <span className="text-ink-muted">{role.position}</span>}
         {role.role_type.length > 0 && <span>{role.role_type.join(', ')}</span>}
         {role.experience_level.length > 0 && <span>{role.experience_level.join(', ')}</span>}
-        {role.location.length > 0 && <span>{role.location.slice(0, 2).join(', ')}</span>}
+        {role.location.length > 0 && <span>{role.location.slice(0, 2).map(prettyLocation).join(' · ')}</span>}
         {role.salary_display && role.salary_display !== 'Not Found' && (
           <span className="tabular">{role.salary_display}</span>
         )}

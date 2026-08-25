@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-25",
   "what": "Research/policy roles at organizations that work on more than one agenda, where no signal phrase fired. Each currently carries the org primary agenda by inheritance, which is a weaker claim than a content-based tag. Resolve by adding a phrase to signals.json (if the pattern will recur) or a row to role-overrides.json (if it is a one-off).",
   "count": 126,
   "roles": [

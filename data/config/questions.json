@@ -1,5 +1,5 @@
 {
-  "$comment": "Spec §3. Loadings are unvalidated (Additional Context flags this explicitly). Sign errors are caught by scripts/verify-data.ts, which scores the calibration fixtures in data/config/calibration.json. Reverse-scored items (q3, q7, q17, q19, q27, q29, q30) are deliberately interleaved to catch acquiescence bias — do not cluster them. q29 and q30 were added after measurement showed that skipping Q23 alone changed the top-ranked policy lever, because restraint_capacity and inside_outside each rested on a single item while carrying the highest policy weight (1.3) and being the only policy axes every lever has a value on. NOTE: adding or removing a question changes the permalink encoding — bump PERMALINK VERSION in src/lib/permalink.ts when you do.",
+  "$comment": "Spec §3. Loadings are unvalidated (Additional Context flags this explicitly). Sign errors are caught by scripts/verify-data.ts, which scores the calibration fixtures in data/config/calibration.json. Reverse-scored items (q3, q7, q17, q19, q27, q29, q30) are deliberately interleaved to catch acquiescence bias — do not cluster them. q29 and q30 were added after measurement showed that skipping Q23 alone changed the top-ranked policy lever, because restraint_capacity and inside_outside each rested on a single item while carrying the highest policy weight (1.3) and being the only policy axes every lever has a value on. SIGN FIX: q20 and q21 were transcribed from spec §3 with their patch_rebuild loadings inverted against the axis definition (low = make current systems safe, high = design new ones). A user who agreed that formal guarantees are worth pursuing was routed AWAY from Guaranteed-Safe AI. Caught by the user-level calibration fixture in calibration.json, which now scores a synthetic respondent and asserts the agenda they should obviously match. NOTE: adding or removing a question changes the permalink encoding — bump PERMALINK VERSION in src/lib/permalink.ts when you do.",
   "sections": [
     {
       "id": "A",
@@ -123,7 +123,7 @@
       "order": 7,
       "section": "B",
       "response_type": "agreement",
-      "text": "Misaligned systems will mostly fail visibly rather than strategically.",
+      "text": "Most misalignment will look like reward hacking — systems exploiting their training signal in ways we can notice — rather than systems strategically concealing their goals.",
       "loadings": {
         "p_scheme": -0.7
       },
@@ -134,9 +134,9 @@
       "order": 8,
       "section": "B",
       "response_type": "agreement",
-      "text": "Given a scheming system deployed at scale, a well-resourced developer could still catch and contain it before catastrophe.",
+      "text": "A scheming AI system at roughly human level could still be caught and contained by a well-resourced developer.",
       "loadings": {
-        "containment": 0.9
+        "containment": 0.8
       }
     },
     {
@@ -144,24 +144,23 @@
       "order": 9,
       "section": "B",
       "response_type": "agreement",
-      "text": "Safety measures that assume the model is adversarial can work without solving alignment.",
+      "text": "A scheming AI system meaningfully above human level could still be caught and contained by a well-resourced developer.",
       "loadings": {
-        "containment": 0.7,
-        "constraint": 0.2
+        "containment": 0.9
       }
     },
     {
       "id": "q10",
       "order": 10,
       "section": "C",
-      "response_type": "allocation",
-      "text": "Allocate 100 points between two sources of harm.",
-      "allocation_poles": {
-        "low": "People using AI systems for exactly what they intended",
-        "high": "AI systems doing what nobody intended"
-      },
+      "response_type": "spectrum",
+      "text": "Where does the greater risk lie?",
       "loadings": {
         "accident_deliberate": 1.0
+      },
+      "spectrum_poles": {
+        "low": "Human misuse",
+        "high": "Loss of control"
       }
     },
     {
@@ -182,7 +181,8 @@
       "response_type": "agreement",
       "text": "Competition between states is the primary driver of unsafe development.",
       "loadings": {
-        "domestic_intl": -0.8
+        "domestic_intl": -0.8,
+        "constraint": -0.3
       }
     },
     {
@@ -199,10 +199,14 @@
       "id": "q14",
       "order": 14,
       "section": "D",
-      "response_type": "agreement",
-      "text": "If AI goes badly, it's more because we didn't know how to build it safely than because we knew and did it anyway.",
+      "response_type": "spectrum",
+      "text": "If AI goes badly, it's because there was insufficient technical work or a lack of political will.",
       "loadings": {
-        "constraint": 0.9
+        "constraint": -0.9
+      },
+      "spectrum_poles": {
+        "low": "Insufficient technical work",
+        "high": "A lack of political will"
       }
     },
     {
@@ -230,7 +234,7 @@
       "order": 17,
       "section": "D",
       "response_type": "agreement",
-      "text": "Working at a lab mainly confers legitimacy on the lab.",
+      "text": "Working in safety roles at labs enables safety-washing.",
       "loadings": {
         "labs": -0.7
       },
@@ -264,7 +268,7 @@
       "response_type": "agreement",
       "text": "Effort belongs on making current architectures safe rather than designing new ones.",
       "loadings": {
-        "patch_rebuild": 0.8
+        "patch_rebuild": -0.8
       }
     },
     {
@@ -272,9 +276,9 @@
       "order": 21,
       "section": "E",
       "response_type": "agreement",
-      "text": "Formal guarantees are worth pursuing at large cost to practicality.",
+      "text": "Safety should come from formal, provable guarantees about how a system behaves, rather than from empirically testing and patching the models we already have.",
       "loadings": {
-        "patch_rebuild": -0.6
+        "patch_rebuild": 0.6
       }
     },
     {
